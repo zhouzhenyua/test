@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../dist/css/swiper.min.css">
+
+  <script src="../dist/js/swiper.min.js"></script>
+  <script src="../dist/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div class="swiper-container banner">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" ></div>
+    <div class="swiper-slide" ></div>
+    <div class="swiper-slide" ></div>
+  </div>
+  <div class="swiper-pagination banner"></div>
+</div>
+<div class="swiper-container case ">
+  <div style="height:51px;"> </div>
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" ></div>
+    <div class="swiper-slide" ></div>
+    <div class="swiper-slide" ></div>
+  </div>
+  <div class="swiper-pagination case"></div>
+</div>
+
+<script>
+  $(function(){
+    var mySwiper = $('.banner').swiper({
+      mode:'horizontal',
+      loop: true,
+      autoResize:true,
+      pagination:'.banner .swiper-pagination',
+      paginationClickable :true,
+      autoplay : 3000,
+    });
+
+    var swiper = $('.case').swiper({
+      pagination: '.case .swiper-pagination',
+      slidesPerView: 4,
+      slidesPerColumn: 2,
+      paginationClickable: true,
+      spaceBetween: 20
+    });
+  })
+
+</script>
+</body>
+</html>

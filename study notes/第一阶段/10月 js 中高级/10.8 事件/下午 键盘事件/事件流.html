@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件流</title>
+</head>
+<body>
+<script>
+    //DOM0 属性的操作
+    //解绑  = null;
+
+
+    //DOM 2 事件监听  addEventListener
+    //实际开发，经常使用这种方法
+    // 团队开发，多用addEventListener。 因为不会互相影响 。
+    //解绑 ：removeaddEventListener
+
+//    document.addEventListener('click',fn);
+
+        function fn(){
+            console.log(23);
+        }
+        document.addEventListener('click',function(){
+            console.log(233);
+        });
+
+    addEvent(document,'click',fn);
+    //事件监听 兼容写法
+    function addEvent(ele,e,fn){ //添加
+        if(ele.addEventListener){
+            ele.addEventListener(e,fn);
+        }else if(ele.attachEvent){
+            ele.attachEvent('on' + e,fn);
+        }else{
+            ele['on' + e] = fn;
+        }
+    }
+    function removeEvent(ele,e,fn){ //移除
+        if(ele.removeEventListener){
+            ele.addEventListener(e,fn);
+        }else if(ele.detachEvent){
+            ele.detachEvent('on' + e,fn);
+        }else{
+            ele['on' + e] = null;
+        }
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="ul1">
+    <!---->
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<ol id="ol1">
+    <li></li>
+    <li></li>
+    <li></li>
+</ol>
+
+<script>
+//    nodeType 的使用
+
+
+    //nodeName 的使用
+    function myGetElementByClassName(ele,clname){
+        var newArr = [];
+        var arr =  document.getElementsByTagName(ele);
+        for (var i = 0; i < arr.length; i++) {
+            if(arr[i].className.indexof(clname) !== -1){
+                newArr.push(arr[i])
+            }
+        }return newArr;
+
+    }
+console.log(myGetElementByClassName('li','li1'));
+
+    //nodeValue 的使用
+
+
+
+</script>
+</body>
+</html>

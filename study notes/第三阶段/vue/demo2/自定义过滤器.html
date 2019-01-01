@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自定义过滤器 filters</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- {{num | uppercase }} -->
+        <!-- {{num | reverse}} -->
+        <!-- {{num | sum}} -->
+        {{num | currency}}
+    </div>
+    <script>
+        // 双向过滤器  学习react 单向数据流
+
+        // Vue.filter("uppercase",function(el){
+        //     return el.toUpperCase()
+        // })
+        // Vue.filter("reverse",function(el){
+        //     return el.split("").reverse().join("")
+        // })
+        // Vue.filter("sum",{
+        //     result(a){
+        //         console.log(arguments);
+                
+        //     }
+        // })
+        Vue.filter("currency",function(el){
+            if(Number(el)){
+                return el+"$"
+            }else{
+                // alert("不是数字")
+            }
+            
+        })
+        new Vue({
+            el:'#app',
+            data:{
+                num:"hello"
+            },
+            // 局部自定义过滤器 
+            filters:{
+                uppercase(el){
+                    return el.toUpperCase()
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,576 @@
+
+html,body{
+    width: 100%;
+    height: auto;
+    font: 12px/1.5 Tahoma,'\5FAE\8F6F\96C5\9ED1','Microsoft Yahei',"hiragino sans gb", Helvetica, Arial, "\5b8b\4f53", 'sans-serif';
+    color: #333;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.inner{
+    width: 1470px;
+    height: auto;
+    margin: 0 auto;
+}
+.bor{
+    border-bottom: 4px solid #f3f5f7;
+}
+header{
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 299;
+    background: #000;
+    _position: absolute;
+    font-size: 12px;
+    min-width: 1020px;
+}
+header .inner{
+    max-width: 1560px;
+    min-width: 960px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 299;
+}
+header .logo{
+    display: block;
+    width: 242px;
+    height: 49px;
+    margin: 0 0 0 -51px;
+    text-indent: -999em;
+    background: url(../img/22bf723198badac8e45d0be95d7bc291_0x0.png) no-repeat;
+}
+header .nav{
+
+}
+header .nav li{
+    float: left;
+    margin: 0 6px;
+}
+header .nav li a{
+    display: block;
+    line-height: 50px;
+    color: #ccc;
+    font-size: 14px;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 0 7px;
+}
+header  i{
+    width: 9px;
+    height: 5px;
+    cursor: pointer;
+    margin: 23px 0 0 3px;
+    font-size: 0;
+    background: url(../img/topbar_sprite4.png) no-repeat -262px -18px;
+    position: relative;
+}
+header .nav li a:hover{
+    color: #52e2c0;
+    background-color: #222;
+}
+header .nav li a:hover i{
+    transition: all .2s;
+    transform: rotate(180deg);
+}
+.pd{
+    position: relative;
+}
+.pd_box{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 92px;
+    height: auto;
+    opacity: 0;
+    overflow: hidden;
+    background: #222;
+    z-index: 299;
+    border-radius: 2px;
+}
+.pd>.pd_box>a{
+    display: block;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    color: #ccc;
+    font-size: 14px;
+}
+.pd>.pd_box>a:hover{
+    color: #fff;
+    background: #444;
+}
+header .shc{
+    width: 100%;
+    height: auto;
+    background:url("../img/shop2.gif");
+}
+header .login{
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    margin-left: 15px;
+}
+header .login a{
+    color: #ccc;
+}
+header .login .dl{
+    padding-right: 15px;
+    margin-right: 11px;
+    border-right: 1px solid #666;
+}
+header .login a:hover{
+    color: #52e2c0;
+}
+header .sc a{
+    background: url(../img/new_topbar.png) no-repeat -73px 5px;
+    width: 23px;
+    height: 30px;
+    display: inline-block;
+    margin-top: 13px;
+    position: relative;
+    margin-right: 15px;
+    z-index: 300;
+}
+header .sc a:hover{
+    background-position: -50px 5px;
+}
+
+header .yun{
+    position: relative;
+    margin-right: 10px;
+}
+header .yun .top{
+    position: relative;
+    cursor: pointer;
+}
+header .yun a{
+    display: block;
+    padding: 0 16px 0 16px;
+    line-height: 50px;
+    color: #ccc;
+    font-size: 14px;
+    overflow: hidden;
+}
+header .yun a:hover span{
+    color: #52e2c0;
+    background-color: #222;
+    background: url(../img/new_topbar.png) no-repeat -94px 6px;
+}
+header .yun a:hover i{
+    transition: all .2s;
+    transform: rotate(180deg);
+}
+header .yun span{
+    background: url(../img/new_topbar.png) no-repeat -118px 6px;
+    display: block;
+    width: 25px;
+    height: 39px;
+    margin-top: 11px;
+}
+.yun_box{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 92px;
+    height: auto;
+    opacity: 0;
+    overflow: hidden;
+    background: #222;
+    z-index: 299;
+    border-radius: 2px;
+}
+.yun .yun_box>a{
+    display: block;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    color: #ccc;
+    font-size: 14px;
+}
+.yun .yun_box>a:hover{
+    color: #fff;
+    background: #444;
+}
+
+header .pc{
+    position: relative;
+    margin: 0 -7px 0 6px;
+}
+header .pc span{
+    background: url(../img/new_topbar.png) no-repeat -23px 0;
+    width: 25px;
+    height: 33px;
+    margin-top: 17px;
+}
+header .pc .top{
+    position: relative;
+    cursor: pointer;
+}
+header .pc a{
+    display: block;
+    padding: 0 16px 0 16px;
+    line-height: 50px;
+    color: #ccc;
+    font-size: 14px;
+    overflow: hidden;
+}
+header .pc a:hover span{
+    color: #52e2c0;
+    background-color: #222;
+    background: url(../img/new_topbar.png) no-repeat 1px 0;
+}
+header .pc a:hover i{
+    transition: all .2s;
+    transform: rotate(180deg);
+}
+.pc_box{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 106px;
+    height: auto;
+    opacity: 0;
+    overflow: hidden;
+    background: #222;
+    z-index: 299;
+    border-radius: 2px;
+}
+.pc .pc_box>a{
+    display: block;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    color: #ccc;
+    font-size: 14px;
+}
+.pc .pc_box>a:hover{
+    color: #fff;
+    background: #444;
+}
+
+
+header .vip{
+    margin-right: 4px;
+}
+header .vip a{
+    background: url(../img/new_topbar.png) no-repeat -169px 3px;
+    display: block;
+    width: 30px;
+    height: 25px;
+    margin-top: 13px;
+}
+header .vip a:hover{
+    background: url(../img/new_topbar.png) no-repeat -143px 3px;
+}
+/*搜索框*/
+header .search{
+    /*margin-right: 30px;*/
+    position: relative;
+    z-index: 299;
+    width: 218px;
+    height: 30px;
+    margin: 9px auto 0;
+}
+header .search form{
+    width: 218px;
+    height: 30px;
+    /*background: url(../imgs/topbar_sprite4.png) no-repeat -15px 0;*/
+    border-radius: 2px;
+    background: #f1f1f1;
+}
+header .search form .text{
+    z-index: 291;
+    width: 190px;
+    height: 30px;
+    padding: 5px 0;
+}
+header .search form input{
+    text-indent: 1em;
+    width: 174px;
+    color: #898989;
+    background-color: transparent;
+    font-size: 12px;
+}
+header .search button{
+    z-index: 291;
+    width: 20px;
+    height: 20px;
+    text-indent: -999em;
+    cursor: pointer;
+    border: 0 none;
+    margin-top: 5px;
+    margin-right: 5px;
+    background: url(../img/topbar_sprite4.png) no-repeat -262px -25px;
+    outline: none;
+}
+
+/*轮播图*/
+content .banner{
+    position: relative;
+    min-width: 1020px;
+    max-width: 1600px;
+    height: 480px;
+    margin: 41px auto 0;
+}
+content .banner li{
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 480px;
+}
+content .banner li img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+content .banner .R{
+    position: absolute;
+    background: url(../img/title_bg.png) no-repeat;
+    width: 258px;
+    height: 370px;
+    padding-top: 14px;
+    top: 40px;
+    right: 20px;
+    text-align: center;
+    z-index: 2;
+}
+content .banner .R a{
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    width: 230px;
+    line-height: 34px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
+}
+content .banner .R a:hover{
+    color: #52e2c0;
+}
+content .banner {}
+content .banner{}
+content .banner{}
+
+/*首播*/
+content .sb{
+    /*border-bottom: 4px solid #f3f5f7;*/
+}
+/*title*/
+content .title{
+    padding: 34px 0 16px;
+    overflow: hidden;
+    border-bottom: 2px solid #f3f5f7;
+}
+content .title h3{
+    font-size: 20px;
+    color: #000;
+    float: left;
+    line-height: 20px;
+    font-weight: bold;
+}
+content .title ul{
+   float: right;
+}
+content .title ul li{
+    float: left;
+    background: url(../imga/dash_border.png) 0 no-repeat;
+    padding: 0 19px;
+}
+content .title ul li a{
+    color: #666;
+    font-size: 14px;
+    padding-bottom: 16px;
+    line-height: 20px;
+}
+content .title ul li a:hover{
+    color: #52e2c0;
+}
+
+/*内容*/
+
+content .sb_box{
+    padding-top: 17px;
+    height: 398px;
+    overflow: hidden;
+    position: relative;
+}
+content .sb_box .list{
+    width: 4500px;
+    position: absolute;
+    overflow: hidden;
+    left: 0px;
+}
+content .sb_box .list li{
+    float: left;
+    margin-left: 30px;
+    /*width: 220px;*/
+}
+
+content .l_banner{
+    position: relative;
+    /*overflow: hidden;*/
+    height: 378px;
+    /*width: 940px;*/
+    /*margin-left: 0px;*/
+}
+content .l_banner li{
+    float: left;
+    position: relative;
+    overflow: hidden;
+    width: 470px;
+    margin-left: 0;
+}
+content .l_banner li:first-child{
+    margin-left: 0;
+}
+content .l_banner li p{
+    font-size: 14px;
+    line-height: 14px;
+    margin: 0 12px;
+    width: 445px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #a4a4a4;
+}
+content .l_banner li h5{
+    font-size: 16px;
+    line-height: 16px;
+    margin: 12px 12px 12px;
+    width: 445px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+content .l_banner li img{
+    width: 470px;
+    height: 323px;
+    display: block;
+}
+content .l_banner li:hover{
+    color: #52e2c0;
+}
+content .l_banner li:hover p{
+    color: #52e2c0;
+}
+content .mv a:hover h5{
+    color: #52e2c0;
+}
+content .mv a:hover p{
+    color: #52e2c0;
+}
+content .mv img{
+    width: 220px;
+    height: 124px;
+    display: block;
+}
+content .mv h5{
+    font-size: 14px;
+    line-height: 16px;
+    margin: 12px 12px 10px;
+    width: 196px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #000;
+}
+content .mv p{
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0 12px 21px;
+    color: #a4a4a4;
+    width: 196px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+content .l_banner{}
+content .l_banner ul{}
+
+content .rb .sb_box{
+    padding-top: 17px;
+    height: 199px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.hyh{
+    color: #a4a4a4;
+    font-size: 14px;
+    float: right;
+    background: url(../img/change.png) 3px 0 no-repeat;
+    padding-left: 23px;
+    margin-right: 2px;
+    padding-bottom: 2px;
+}
+.zdx{
+    color: #a4a4a4;
+}
+
+
+
+
+
+
+
+/*footer s*/
+footer{
+    margin: 30px auto 0;
+    min-width: 1000px;
+    height: 150px;
+    color: #999;
+    line-height: 22px;
+    text-align: center;
+    background-color: #fff;
+}
+
+footer .p1{
+    font-size: 14px;
+    padding: 35px 0 20px;
+    color: #666;
+}
+footer .p1 a{
+    color: #666;
+}
+footer .p1 span{
+    width: 2px;
+    height: 10px;
+    margin: 0 8px;
+    display: inline-block;
+    overflow: hidden;
+    background: url(../img/ico_index.png) no-repeat -70px 0;
+}
+
+
+footer .p2{
+    font-size: 12px;
+    line-height: 22px;
+}
+footer .p2 a{
+    color: #999;
+}
+footer .p2 a img{
+    vertical-align: top;
+    width: 25px;
+    height: 25px;
+    margin-right: 3px;
+}
+.biaoshi>img{
+    width: 40px !important;
+    height: 48px !important;
+    vertical-align: top;margin-top: -25px
+}
+

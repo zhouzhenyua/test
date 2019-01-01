@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery.min.js"></script>
+    <script>
+
+        $(function(){
+            /*
+            * add 添加    标签
+            * slice 截取
+            *
+            *
+            * */
+            $('#div1').add('span').css('background','red');
+
+            $('div ul li').slice(0,2).css('background','#ff0');
+
+
+        })
+    </script>
+</head>
+<body>
+<div id="div1">111</div>
+<span>span</span>
+<div>
+    <ul>
+        <li>233</li>
+        <li>233</li>
+        <li>233</li>
+        <li>233</li>
+        <li>233</li>
+    </ul>
+</div>
+</body>
+</html>

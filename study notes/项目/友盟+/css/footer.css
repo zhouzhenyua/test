@@ -1,0 +1,127 @@
+.footer{
+    position: relative;
+    background: #f2f2f2;
+}
+.footer a{
+     color: #555;
+}
+
+.footer a:hover{
+    color: #2196f3;
+}
+
+.footer .footer-inner{
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    background: #f2f2f2;
+}
+.footer-top>div{
+    display: inline-block;
+    margin-right: 5.5%;
+    vertical-align: top;
+    margin-top: 30px;
+}
+.footer-top h2{
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.footer-top .tab-about{
+    position: relative;
+    color: #555;
+    float: right;
+    padding-left: 40px;
+    border-left: 1px solid #e0e0e0;
+    margin-right: 0;
+}
+.footer-top li{
+    line-height: 28px;
+    font-size: 12px;
+}
+.footer-top>div li i{
+    font-size: 14px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.tab-about-col{
+    display: inline-block;
+    width: 130px;
+}
+.umsitefont{
+    font-family: 'iconfont' !important;
+    line-height: 1;
+    font-size: 30px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+}
+.tab-about-img img{
+    width: 94px;
+}
+.subscribe-info{
+    display: inline-block;
+    width: 200px;
+    margin-left: 10px;
+    vertical-align: top;
+}
+
+.subscribe-input{
+    border: 1px solid #cdcdcd;
+    font-size: 12px;
+    border-radius: 2px;
+    width: 130px;
+    height: 24px;
+    padding: 0 10px;
+    line-height: 22px;
+    outline: none;
+    vertical-align: top;
+}
+.subscribe-btn{
+    border-radius: 2px;
+    background: #f3f3f3;
+    border: 1px solid #dfdfdf;
+    color: #666;
+    display: inline-block;
+    line-height: 24px;
+    height: 23px;
+    margin-left: 5px;
+    overflow: hidden;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+
+
+
+.footer-bottom{
+    border-top: 1px solid #e0e0e0;
+    margin-top: 35px;
+    font-size: 0;
+}
+.footer-bottom .umeng-common-footer-logo{
+    display: inline-block;
+    width: 10%;
+    color: #797e83;
+    vertical-align: middle;
+    margin: 25px 0;
+}
+.umeng-common-footer-logo i{
+    font-size: 27px;
+}
+.footer-bottom .umsitefont{
+    font-size: 80px;
+}
+.umeng-common-footer-info{
+    display: inline-block;
+    width: 90%;
+    text-align: right;
+    font-size: 12px;
+    color: #797e83;
+    vertical-align: middle;
+}
+.footer-bottom a{
+    color: #797e83;
+}
+.footer-bottom{}

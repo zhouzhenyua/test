@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #aa{
+            width:200px;
+            height:200px;
+        }
+    </style>
+
+</head>
+<body>
+<button>按钮</button>
+<div id="aa" style="background:#ffaaaa;position:relative;left: 0">aaa</div>
+<!--<span id="a">3</span>秒后跳转直接跳转-->
+<!--<a href="http://www.baidu.com">点击这里</a>-->
+<script>
+//    window.onload = function(){
+//        var num = a.innerHTML;
+//        var timer = setInterval(function(){
+//            num--;
+//            if(num==0){
+//                clearInterval(timer);
+//                location.hre='http://www.baidu.com'
+//            }
+//            a.innerHTML = num;
+//        },1000)
+//    }
+
+//js  通过 style 操作样式的时候，只能操作行内样式，
+//通过  getComputedStyle 可以操作css 表里面的样式，不兼容ie 低版本
+// currentStyle 兼容ie低版本
+
+
+
+    var btn = document.getElementsByTagName('button')[0],
+        box = document.getElementById('aa');
+    btn.onclick = function(){
+
+        var timer = setInterval(function(){
+            box.style.left = parseInt(box.style.left) + 10 +'px';
+        },100);
+//        console.log(box.left);
+    };
+
+
+function getStyle(ele,attr){
+    if(ele.currentStyle){
+       return ele.currentStyle[attr];
+    }else {
+       return getComputedStyle(ele)[attr];
+    }
+}
+getStyle(box,'width');
+
+function setStyle(ele,attr,val){
+    ele['style'][attr]=val;
+
+}
+setStyle(box,'width','300px');
+
+</script>
+</body>
+</html>

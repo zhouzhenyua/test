@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery.min.js"></script>
+    <script>
+        $(function(){
+            /*
+            * nextAll()  兄弟
+            * prevAll()
+            *
+            * */
+
+//            $('li:nth-of-type(1)').nextAll().hide();
+
+//            $('li:last-child').prevAll().hide();
+
+
+               /*
+               * until 截至  =>parentsUntil()  nextUntil()  prevUntil()
+               *
+               *
+               *
+               * */
+//            $('.small').parentsUntil('.wrap').css('background','red');
+            $('.wrap').nextUntil('.box').css('background','red');
+//            $('.middle').prevUntil('.wrap').css('background','red')
+
+        })
+    </script>
+</head>
+<body>
+<div class="wrap">wrap
+    <div class="middle">middle
+        <div>2222</div>
+        <div class="small">small</div>
+    </div>
+    <div>54334</div>
+</div>
+<div class="wrap">333</div>
+<div>333</div>
+<div>333</div>
+<div>333</div>
+<div class="box">2222</div>
+<!--<div>-->
+    <!--<ul>-->
+        <!--<li>11</li>-->
+        <!--<li>22</li>-->
+        <!--<li>233</li>-->
+        <!--<li>44</li>-->
+    <!--</ul>-->
+<!--</div>-->
+</body>
+</html>

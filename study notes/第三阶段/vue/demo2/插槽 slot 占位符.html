@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            width: 100%;
+            height: 50px;
+            background-color: #f0f;
+        }
+    </style>
+    <script src="../js/vue.min.js"></script>
+</head>
+<body>
+<!--slot 插槽不写name(匿名插槽)   name(具名插槽)   占位符 
+    slot-scop 作用域插槽 
+    $mount挂载  -->
+<!-- 
+    props 
+    event  emit on
+    bus
+    slot-scope
+    provide
+    inject
+    ref     $refs
+
+    vuex
+ -->
+    <div id="app">
+        <custom ref="custom">
+            <div name="header" class="header">我是头部</div>
+            <div class="min">
+                <p>我内容</p>
+            </div>
+            <div name="footer" class="footer">我是底部</div>
+        </custom>
+        
+    </div>
+    <script>
+        Vue.component("custom",{
+            template:`
+                <div>
+                    <slot name="header"></slot>
+                    <slot></slot>
+                    <slot name="footer"></slot>
+                    我是组件 
+                    <custom-list>
+                        // 作用域插槽  slot-scope="变量名"  2.2版本之后使用slot-scope，之前使用scope
+                        <template slot-scope="props">
+                                <h1>我是子组件内容{{props.data}}</h1>
+                                <div v-for="item in props.listdata">{{item}}</div>
+                        </template>                        
+                    </custom-list>
+                </div>
+            `,
+            data(){
+                return{
+                    custommsg:"56775"
+                }
+            }
+        })
+
+        Vue.component("custom-list",{
+            template:`
+                <div>
+                    <slot :data="msg" :listdata="arr"></slot>
+                </div>
+            `,           
+            data(){
+                return{
+                    msg:"233",
+                    arr:["111","233","456"]
+
+                }
+            }
+        })
+        new Vue({
+            data:{
+                msg:11
+            },
+            mounted() {
+                console.log(this.$refs.custom.custommsg)
+            },
+        }).$mount("#app")
+        
+    </script>
+</body>
+</html>

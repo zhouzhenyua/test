@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>立体盒子</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin: 300px auto;
+            transform-style: preserve-3d ;
+            transform: rotateX(30deg) rotateY(80deg);
+
+            animation: dh 5s linear infinite ;
+        }
+
+        .box div{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: #A1C9FF;
+            opacity: 0.6;
+            color: white;
+            font-size: 30px;
+            line-height: 200px;
+            text-align: center;
+            border: 1px solid #f1f1f1;
+        }
+        .box p{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: #f10180;
+            top: 50px;
+            left: 50px;
+            opacity: 0.6;
+            color: white;
+            font-size: 16px;
+            line-height: 100px;
+            text-align: center;
+            border: 1px solid #A1C9FF;
+        }
+
+        @keyframes dh {
+            0%{
+                transform: rotateX(0deg) rotateY(0deg)
+            }
+            30%{
+                transform: rotateX(90deg) rotateY(180deg)
+            }
+            50%{
+                transform: rotateX(0deg) rotateY(0deg)
+            }
+            60%{
+                transform: rotateX(80deg) rotateY(80deg)
+            }
+            75%{
+                transform: rotateX(50deg) rotateY(60deg)
+            }
+            90%{
+                transform: rotateX(90deg) rotateY(180deg)
+            }
+            100%{
+                transform: rotateX(360deg) rotateY(360deg)
+            }
+
+            /*from{*/
+                /*transform: rotateX(0deg) rotateY(0deg);*/
+            /*}*/
+            /*to{*/
+                /*transform: rotateX(360deg) rotateY(360deg);*/
+            /*}*/
+        }
+
+        .box .out_qian{
+            transform: translateZ(100px) ;
+        }
+        .box .out_hou{
+            transform: translateZ(-100px) rotateZ(-180deg);
+        }
+        .box .out_zuo{
+            transform: translateX(-100px) rotateY(-90deg);
+        }
+        .box .out_you{
+            transform: translateX(100px) rotateY(90deg);
+        }
+        .box .out_shang{
+            transform: translateY(-100px) rotateX(90deg);
+        }
+        .box .out_xia{
+            transform: translateY(100px) rotateX(-90deg);
+        }
+        .box .in_qian{
+            transform: translateZ(50px) ;
+        }
+        .box .in_hou{
+            transform: translateZ(-50px) rotateZ(-180deg);
+        }
+        .box .in_zuo{
+            transform: translateX(-50px) rotateY(-90deg);
+        }
+        .box .in_you{
+            transform: translateX(50px) rotateY(90deg);
+        }
+        .box .in_shang{
+            transform: translateY(-50px) rotateX(90deg);
+        }
+        .box .in_xia{
+            transform: translateY(50px) rotateX(-90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="out_qian">前</div>
+        <div class="out_hou">后</div>
+        <div class="out_zuo">左</div>
+        <div class="out_you">右</div>
+        <div class="out_shang">上</div>
+        <div class="out_xia">下</div>
+
+        <p class="in_qian">前</p>
+        <p class="in_hou">后</p>
+        <p class="in_zuo">左</p>
+        <p class="in_you">右</p>
+        <p class="in_shang">上</p>
+        <p class="in_xia">下</p>
+    </div>
+</body>
+</html>

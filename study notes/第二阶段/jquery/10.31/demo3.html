@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery.min.js"></script>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: #ff3f38;
+            border: 10px solid #2196F3;
+            padding: 20px;
+            margin: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="box">233</div>
+<script>
+
+    /*
+    * 1、offsetWidth 不可以获取隐藏元素的宽度
+    * 2、outerWidth()  相反 可以获取隐藏元素的宽度
+    *
+    * */
+//    console.log($('.box').get(0).offsetWidth);
+    console.log($('.box').outerWidth());
+
+
+    // text()  获取文本内容 ，不会获取标签
+//    console.log($('.box').text());
+
+//    var oDiv = $('div').remove(); // 删除dom节点  不保留
+//    console.log(oDiv);
+//    var oDiv1 = $('div').detach(); //保留删除的操作行为从而转换为 obj
+//    console.log(oDiv1);
+//    $('body').append(oDiv)
+
+</script>
+</body>
+</html>

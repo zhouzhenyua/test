@@ -1,0 +1,303 @@
+body {
+    font-family: "Microsoft YaHei", 微软雅黑, 新宋体, 宋体, Verdana;
+
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.inner {
+    width: 1200px;
+    margin: auto;
+    height: 100%;
+    /*background: yellow;*/
+}
+/*========================header  s ================*/
+header nav {
+    background: #181818;
+    color: white;
+    height: 50px;
+    overflow: hidden;
+}
+
+header nav a {
+    color: white;
+}
+
+header nav .logo {
+    width: 105px;
+    height: 35px;
+    overflow: hidden;
+}
+
+header nav .nav-bar {
+    font-size: 17px;
+    line-height: 50px;
+}
+
+header nav .nav-bar ul {
+}
+
+header nav .nav-bar ul li {
+    float: left;
+    padding: 0px 20px;
+}
+
+header nav .nav-bar ul li:hover a {
+    color: #feca2e;
+}
+
+header nav .nav-bar ul li a {
+}
+
+header nav .nav-nei {
+}
+
+header nav .nav-nei ul {
+    padding-left: 16px;
+}
+
+header nav .nav-nei ul li {
+    float: left;
+    line-height: 50px;
+    padding: 0px 10px;
+    color: #d0d0d0;
+}
+
+i {
+    display: inline-block;
+    background: url("../img/icon.png") no-repeat;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+}
+
+header .mnx {
+    background-position: -230px -26px;
+}
+
+header .kwej {
+    background-position: -229px -48px;
+}
+
+header .vip {
+    background-position: -230px -26px;
+}
+
+header .it {
+    background-position: -105px -26px;
+}
+
+header nav .nav-nei ul li span {
+    font-size: 14px;
+}
+
+header nav .more {
+}
+
+header nav .more ul {
+}
+
+header nav .more ul li {
+    float: left;
+    font-size: 12px;
+    line-height: 50px;
+    padding-right: 13px;
+}
+
+header nav .more span {
+}
+
+header nav .more > ul > li li {
+    float: none;
+}
+
+header nav .more > ul > li:hover .gd {
+    display: block;
+}
+
+header nav .more > ul > li:hover .dl {
+    display: block;
+}
+
+header nav .more .gd, header nav .more .dl {
+    position: absolute;
+    background: rgba(0, 0, 0, .8);
+    top: 50px;
+    width: 200px;
+    z-index: 999;
+    display: none;
+}
+
+header nav .more > ul > li {
+    position: relative;
+    cursor: pointer; /*鼠标小手状态*/
+}
+
+header nav .more .gd li {
+    line-height: 30px;
+}
+
+header nav .more .dl li {
+
+}
+
+header nav .search {
+    width: 180px;
+    height: 25px;
+    position: relative;
+    margin-top: 13px;
+}
+
+header nav .search input {
+    position: absolute;
+    color: white;
+    left: 10px;
+    top: 5px;
+    background: transparent;
+}
+
+.banner {
+    height: 600px;
+    background: url("../img/1533524467294_.jpg") no-repeat top center;
+    position: relative;
+}
+
+.banner .layer{
+    background-color: rgba(0,0,0,.3);
+    height: 600px;
+}
+.banner .prev, .banner .next {
+    width: 50px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 50%;
+    margin-top: -100px;
+}
+
+.banner .next {
+    right: 0;
+}
+
+.banner .text {
+    text-align: center;
+    color: white;
+}
+
+.banner h1 {
+    font-size: 48px;
+}
+
+.banner h2 {
+    font-size: 32px;
+}
+
+.banner .xz {
+    width: 300px;
+    height: 80px;
+    border-radius: 40px;
+    border: 5px solid white;
+    text-align: center;
+    font-size: 34px;
+    line-height: 80px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    bottom:145px;
+}
+.banner .tzd{
+    position: absolute;
+    bottom: 54px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.banner .tzd ul li{
+    float: left;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: white;
+    margin: 0 10px;
+}
+/*========================list1================*/
+.list1{
+    background: #f2f2f2;
+    padding: 40px 0;
+}
+
+/*========================歌单歌手列表  article================*/
+.tit{
+    line-height: 60px;
+}
+.tit span{
+    font-size: 12px;
+    cursor: pointer;
+}
+.cont ul{
+    width: 1225px;
+}
+.cont li{
+    width: 220px;
+    float: left;
+    margin-right: 25px;
+}
+.cont li img{
+    width: 100%;
+}
+.list-gd li{
+    height: 280px;
+}
+.list-gd li p{
+    line-height: 50px;
+}
+.list-gs li{
+    height: 360px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.gs-layer{
+    width: 188px;
+    padding: 16px;
+    overflow: hidden;
+    background: rgba(0,0,0,.5);
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+.gs-layer1{
+    height: 53px;
+}
+.gs-layer1 strong{
+    font-weight: normal;
+    display: inline-block;
+}
+.gs-layer1 strong i.yy{
+    background-position-x:-105px ;
+}
+.gs-layer1 strong i.gz{
+    background-position-x:-230px ;
+}
+.gs-layer2{
+    left: 0;
+    top:0;
+    height: 328px;
+}
+.gs-layer2 .stit{
+    line-height: 40px;
+}
+.gs-layer2 .stit h2{
+    font-weight: normal;
+}
+.gs-layer2 ol li{
+    line-height: 20px;
+    height: 20px;
+}

@@ -1,0 +1,96 @@
+progress
+meter
+time
+
+video
+audio
+
+figcer
+figcaption
+
+header
+footer
+aside
+ariticle
+section
+nav
+
+
+
+表单
+
+标签
+input
+datalist  通过id
+
+option
+keygen
+
+类型
+email
+number
+search
+tel
+time
+
+正则表达式  pattern 属性直接书写正则表达式
+
+
+form  method =get/post
+get 提交的内容会以 ?name=xx&qwd=xx
+
+post 提交的内容 index.html
+
+
+canvas
+
+
+
+
+
+ html4 和 html5 和xhtml 的区别？
+ html5直接书写html 规范就可以 ，html4 需要书写规范
+ xhtml 严格按照书写规格执行 否则会报错
+
+
+1、能使用CSS代替的元素：
+  basefont（设置字体像素）、big、center、font、s、strike（贯穿线）、tt、u（下划线）
+2、不在使用frame框架 
+  对于frameset元素、frame元素与noframes元素，由于frame框架对页面可用性存在负面影响，
+  在html5里面已经不支持frame框架，只支持iframe框架，同时废除以上这三个元素。
+
+3、只有部分浏览器支持的元素
+  对于applet元素、bgsound、blink、marquee元素，由于只有部分浏览器支持这些元素，
+  特别是bgsound元素以及marquee元素，只被IE浏览器支持，所以在HTML5里面被废除！
+  而applet元素可以由embed元素或者object元素代替，bgsound元素由audio元素代替，marquee可以使用javascript来代替！
+
+
+4、其他被废除的元素
+  A、废除rb元素，使用ruby元素代替
+  B、废除acronym元素，使用abbr元素代替 （缩写）
+  C、废除dir元素，使用ul元素代替
+  D、废除inindex元素，使用form元素与input元素相结合的方式代替
+  E、废除listing元素，使用pre元素代替 （内容原样输出）
+  F、废除xmp元素，使用code元素代替  （代码输出标签）
+  G、废除nextid元素，使用GUIDS代替
+  H、废除plaintext元素，使用“text/plian” MIME类型代替
+
+
+
+CSS3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

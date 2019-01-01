@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>继承</title>
+</head>
+<body>
+<script>
+    /*
+    * 原型继承：让子类的原型指向父类的一个实例
+    *弊端：把私有和共有的都继承过来
+    * */
+//
+//    function A(){
+//        this.x =10;
+//    }
+//    A.prototype = {
+//        constructor:A,
+//        getX:function(){
+//            console.log(this.x);
+//        }
+//    };
+//    function B(){
+//        this.y = 200;
+//    }
+//    B.prototype = new A();
+//    var f =new B();
+//    console.log(f);
+//    console.log(A);
+
+
+
+
+    /*
+    * call继承：
+    *把私有的拿过来变成私有的
+    * */
+//    function A(){
+//        this.x =10;
+//    }
+//    A.prototype = {
+//        constructor:A,
+//        getX:function(){
+//            console.log(this.x);
+//        }
+//    };
+//    function B(){
+//        A.call(this);
+//        this.y = 200;
+//    }
+////    B.prototype = new A();
+//    var f =new B();
+//    console.log(f);
+
+    /*
+    *寄生式组合继承：
+    * 把A的私有变为B的私有，
+    * A的公有变为B的公有
+    *
+    * */
+//    function A(){
+//        this.x =10;
+//    }
+//    A.prototype = {
+//        constructor:A,
+//        getX:function(){
+//            console.log(this.x);
+//        }
+//    };
+//    function B(){
+//        A.call(this);//基于call把a的私有变为b的私有
+//        this.y = 200;
+//    }
+//
+//    B.prototype = A.prototype; //一般不这样处理，因为这样可以轻易改变父级的
+//    //A类原型上面的‘东西’，会导致A的其他实例也受到影响
+//
+//    B.prototype =Object.create(A.prototype);
+//    var f = new B();
+//    console.log(f);
+
+
+    /*
+    * es6 继承
+    *es6中创建类是有自己标准法的（这种语法创建出来的类只能new执行，
+    * 不能当作普通函数执行）
+    * */
+//    class Fn{ //Fn是类名，没有小括号
+//        constructor(n,m){
+//            //等价与传统es5 类的构造体
+//            this.x=n;
+//            this.y=m;
+//        }
+//        //给Fn的原型上设置方法（只能设置方法，不能设置属性）
+//        get(){
+//            console.log(this.x);
+//        }
+//        //把Fn当做一个普通对象设置的私有方法（和实例没有关系），
+//       // 同样（只能设置方法，不能设置属性）
+//        static AA(){
+//
+//        }
+//    }
+//    Fn.prototype.BB =100;
+//    let f = new Fn(10,20);
+//    console.log(f);
+
+//    class Fater{
+//        constructor(){
+//            this.x = 100;
+//        }
+//        getX(){
+//            console.log(this.x);
+//        }
+//    }
+//    class Son extends Fater {
+//        constructor(){
+//            super();//
+//            this.y =200;
+//        }
+//        getY(){
+//            console.log(this.y);
+//        }
+//    }
+//    let f =new Son();
+//    console.log(f);
+
+//
+//
+//    function Animal(){
+//        this.name = 1 ;
+//        this.age = 2;
+//        this.eat = function(){};
+//        function play(){}
+//    }
+//    Animal.prototype.handle = function(){
+//        console.log(this.name);
+//    };
+//    function Person(){
+//        this.name =11;
+//        this.age = 12;
+//    }
+//    Person.prototype.getName =function(){
+//        console.log(this.name);
+//    };
+//    var p =new Person();
+//    console.log(p);
+
+    //es6 实现继承
+
+    class Animal{
+        constructor(){
+            this.name = 1 ;
+            this.age = 2;
+            this.eat = function(){};
+//            function play(){}
+        }
+        handle(){
+            console.log(this.name);
+        }
+    }
+
+    class Person extends Animal{
+        constructor(){
+        super();
+        this.name =11;
+        this.age = 12;
+        }
+        gerName(){
+            console.log(this.name);
+        }
+    }
+
+    let s =new Person();
+    console.log(s);
+
+</script>
+</body>
+</html>

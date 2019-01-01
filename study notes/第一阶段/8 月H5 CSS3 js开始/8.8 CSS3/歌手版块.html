@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .center{
+            width: 1200px;
+            height: auto;
+            margin: 0 auto;
+        }
+        figure{
+            width: 220px;
+            height: 360px;
+            margin: 10px 10px;
+            position: relative;
+            float: left;
+        }
+        img{
+            width: 220px;
+            height: 360px;
+        }
+        .layer{
+            width: 220px;
+            height: 360px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        figure:hover .bg{
+            opacity: 1;
+        }
+        .figure:hover .layer{
+            background: rgba(0,0,0,.5);
+        }
+        .bg {
+            width: 50px;
+            height:50px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            position: absolute;
+            background: url("img/sprite.png") 0 -488px;
+            opacity:0;
+        }
+
+        .div1 ,.div2{
+            width: 100%;
+            box-sizing: border-box;
+            height: 100px;
+            bottom: 0;
+            color: #fff;
+            position: absolute;
+            opacity: 1;
+            background: rgba(0,0,0,0.5);
+        }
+        p{
+            padding: 5px 10px ;
+        }
+        i{
+            /*background: url("../");*/
+        }
+        .div2{
+            height: 100%;
+            top: -10%;
+            opacity: 0;
+
+        }
+        figure:hover .div1{
+            transition: all .3s;
+            opacity: 0;
+            bottom: -30%;
+        }
+        figure:hover .div2{
+            transition: all .5s;
+            top: 0;
+            opacity: 1;
+        }
+        .icon1{
+            background: url("img/sprite.png") 0;
+        }
+    </style>
+</head>
+<body>
+<div class="center">
+
+
+<figure>
+    <img src="img/1.jpg" alt="">
+    <div class="layer"></div>
+    <i class="bg"></i>
+    <div class="div1">
+        <p>林俊杰</p>
+        <p>代表着：醉赤壁</p>
+        <i class="icon1"></i>
+        <i class="icon2"></i>
+    </div>
+    <div class="div2">
+        <p>216565</p>
+        <p>216565</p>
+        <p>216565</p>
+    </div>
+</figure>
+<figure>
+    <img src="img/1.jpg" alt="">
+    <div class="layer"></div>
+    <i class="bg"></i>
+    <div class="div1">
+        <p>周杰伦</p>
+        <p>代表作：告白气球</p>
+        <i class="icon1"></i>
+        <i class="icon2"></i>
+    </div>
+    <div class="div2">
+        <p>推荐歌手</p>
+        <p>推荐歌手</p>
+        <p>推荐歌手</p>
+        <p>推荐歌手</p>
+        <p>推荐歌手</p>
+        <p>推荐歌手</p>
+    </div>
+</figure>
+<figure>
+    <img src="img/1.jpg" alt="">
+    <div class="layer"></div>
+    <i class="bg"></i>
+    <div class="div1">
+        <p>蔡徐坤</p>
+        <p>代表着：Pull up</p>
+        <i class="icon1"></i>
+        <i class="icon2"></i>
+    </div>
+    <div class="div2">
+        <p>216565</p>
+        <p>216565</p>
+        <p>216565</p>
+    </div>
+</figure>
+<figure>
+    <img src="img/1.jpg" alt="">
+    <div class="layer"></div>
+    <i class="bg"></i>
+    <div class="div1">
+        <p>易烊千玺</p>
+        <p>代表作：离骚</p>
+        <i class="icon1"></i>
+        <i class="icon2"></i>
+    </div>
+    <div class="div2">
+        <p>216565</p>
+        <p>216565</p>
+        <p>216565</p>
+    </div>
+</figure>
+<figure>
+    <img src="img/1.jpg" alt="">
+    <div class="layer"></div>
+    <i class="bg"></i>
+    <div class="div1">
+        <p>216565</p>
+        <p>216565</p>
+        <p>216565</p>
+    </div>
+    <div class="div2">
+        <p>216565</p>
+        <p>216565</p>
+        <p>216565</p>
+    </div>
+</figure>
+</div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            border: 0;
+        }
+
+        .all {
+            width: 500px;
+            height: 200px;
+            padding: 7px;
+            border: 1px solid #ccc;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .screen {
+            width: 500px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .screen li {
+            width: 500px;
+            height: 200px;
+            overflow: hidden;
+            float: left;
+        }
+
+        .screen ul {
+            position: absolute;
+            left: 0;
+            top: 0px;
+            width: 3000px;
+        }
+
+        .all ol {
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            margin-left: -80px;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        .all ol li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border: 1px solid #ccc;
+            margin-left: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-family: "Consolas";
+        }
+
+        .all ol li.current {
+            background: yellow;
+        }
+
+        #arr {
+            display: none;
+        }
+
+        #arr span {
+            width: 30px;
+            height: 60px;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            margin-top: -30px;
+            background: #000;
+            cursor: pointer;
+            line-height: 60px;
+            text-align: center;
+            font-weight: bold;
+            font-family: '黑体';
+            font-size: 30px;
+            color: #fff;
+            opacity: 0.3;
+            border: 1px solid #fff;
+        }
+
+        #arr #right {
+            right: 5px;
+            left: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="all" id='box'>
+    <div class="screen">
+        <ul>
+            <li><img src="images/1.jpg" width="500" height="200"/></li>
+            <li><img src="images/2.jpg" width="500" height="200"/></li>
+            <li><img src="images/3.jpg" width="500" height="200"/></li>
+            <li><img src="images/4.jpg" width="500" height="200"/></li>
+            <li><img src="images/5.jpg" width="500" height="200"/></li>
+        </ul>
+        <ol>
+        </ol>
+    </div>
+    <div id="arr">
+        <span id="left">&lt;</span>
+        <span id="right">&gt;</span>
+    </div>
+</div>
+<script src="animate.js"></script>
+<script>
+    var timer = null;
+    var box = document.getElementById("box");
+    var screen = box.children[0];
+    var ul = screen.children[0];
+    var ulLis = ul.children;
+    var ol = screen.children[1];
+    var arr = document.getElementById("arr");
+    var left = document.getElementById("left");
+    var right = document.getElementById("right");
+    var imgWidth = screen.offsetWidth;
+
+    for (var i = 0; i < ulLis.length; i++) {
+        var li = document.createElement("li");
+        li.innerHTML = i + 1;
+        ol.appendChild(li);
+    }
+
+    var olLis = ol.children;
+    olLis[0].className = "current";
+    var firstImg = ulLis[0].cloneNode(true);
+    ul.appendChild(firstImg);
+
+    var target = 0;
+//    alert(olLis.length)
+    for (var i = 0; i < olLis.length; i++) {
+        olLis[i].index = i;
+        olLis[i].onmouseover = function () {
+            for (var j = 0; j < olLis.length; j++) {
+                olLis[j].className = "";
+            }
+            this.className = "current";
+
+            target = -this.index * imgWidth;
+            animate(ul, 30, target);
+            pic = square = this.index;
+        };
+    }
+
+    box.onmouseover = function () {
+        arr.style.display = "block";
+        clearInterval(timer);
+    };
+    box.onmouseout = function () {
+        arr.style.display = "none";
+        timer = setInterval(playNext, 1000);
+    };
+
+    var pic = 0;//记录当前显示的图片的索引
+    var square = 0;//记录当前亮起的按钮的索引
+
+    right.onclick = function () {
+        if (pic === ulLis.length - 1) {
+            ul.style.left = 0;
+            pic = 0;
+        }
+        pic++;
+        target = -pic * imgWidth;
+        animate(ul, 30, target);
+        if (square < olLis.length - 1) {
+            square++;
+        } else {
+            square = 0;
+        }
+        for (var i = 0; i < olLis.length; i++) {
+            olLis[i].className = "";
+        }
+        olLis[square].className = "current";
+    };
+
+    left.onclick = function () {
+        if (pic === 0) {
+            ul.style.left = -(ulLis.length - 1) * imgWidth + "px";
+            pic = ulLis.length - 1;
+        }
+        pic--;
+        target = -pic * imgWidth;
+        animate(ul, 30, target);
+        if (square > 0) {
+            square--;
+        } else {
+            square = olLis.length - 1;
+        }
+        for (var i = 0; i < olLis.length; i++) {
+            olLis[i].className = "";
+        }
+        olLis[square].className = "current";
+    };
+
+    //添加自动滚动
+    timer = setInterval(playNext, 1000);//每隔一秒钟播放下一张
+    function playNext() {
+        right.onclick();
+    }
+</script>
+</body>
+</html>

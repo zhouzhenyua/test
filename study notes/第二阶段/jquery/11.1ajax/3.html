@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>delay</title>
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+<button id="btn">按钮</button>
+<div style="width: 100px;height: 100px;background: #f23030"></div>
+<script>
+
+    //delay 延时
+
+    $('#btn').click(function(){
+        $('div').delay(1000).animate({'width':'300'});
+    })
+</script>
+</body>
+</html>

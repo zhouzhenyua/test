@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            margin: 50px;;
+            font-family: 华文彩云;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!--<body onload="startTime()">-->
+
+<!--<div id="txt"></div>-->
+<h1 id="oDiv"></h1>
+</body>
+<script>
+        var oDiv = document.getElementById('oDiv');
+//            var myDate = new Date();
+//            document.write(myDate+'</br>');
+//            document.write(myDate.toLocaleString()+'</br>');
+
+//            alert(myDate.getDate());
+//            alert(myDate.getDay());
+//            alert(myDate.getFullYear());
+//            alert(myDate.getHours());
+//            alert(myDate.getSeconds());
+//            alert(myDate.getTime());
+//            alert(myDate.getMonth());
+//            alert(myDate.getMinutes());
+
+        function checkTime(i){
+            if (i<10){
+                i="0" + i;
+            }
+            return i;
+        }
+            var mDate = new Date(2018,10,11);
+            var gg1 =mDate.getTime();
+
+//            console.log(gg1);
+            function clock(){
+                var oDate =new Date();
+                var gg2 = oDate.getTime();
+                var total = parseInt((gg1-gg2)/1000);
+                var day = parseInt(total/86400);
+                total=total%86400;
+                var h =parseInt(total/3600);
+                total = total%3600;
+                var m =parseInt(total/60);
+                var s = total%60;
+                oDiv.innerHTML = '距离抢购还剩'+checkTime(day)+'天'+checkTime(h)+'时'+checkTime(m)+'分'+checkTime(s)+'秒';
+            }
+        setInterval(clock);
+
+
+
+            //    function startTime(){
+//        var today=new Date();
+//        var h=today.getHours();
+//        var m=today.getMinutes();
+//        var s=today.getSeconds();// 在小于10的数字前加一个‘0’
+//        m=checkTime(m);
+//        s=checkTime(s);
+//        document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+//        t=setTimeout(function(){startTime()},500);
+//    }
+
+        checkTime();
+</script>
+</html>

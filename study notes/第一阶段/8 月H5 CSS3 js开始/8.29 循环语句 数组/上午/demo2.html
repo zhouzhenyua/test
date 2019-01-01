@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+        var a = window.prompt('请输入数字');
+        a = Number(a);
+
+       var b=( a%3 == 0);
+       var c=( a%5 == 0);
+        b = Number(b);
+        c = Number(c);
+
+        if(a%3 && a%5 == 0){
+            console.log(3, 5);
+        }else if(a%3 == 0){
+            alert('3')
+        }else if(a%5 == 0){
+            alert('5')
+        }
+
+//        switch (a){
+//            case ( a%3 == 0):
+//                alert('3');
+//                break;
+//            case ( a%5 == 0):
+//                alert('5');
+//                break;
+//            case ( a%3 == 0) && ( a%5 == 0):
+//                alert('15');
+//                break;
+////            default:
+////                alert('你好！');
+////                break;
+//        }
+    </script>
+</body>
+</html>

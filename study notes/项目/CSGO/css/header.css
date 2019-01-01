@@ -1,0 +1,284 @@
+#header{
+    position: relative;
+    width: 100%;
+    /* height: 329px; */
+    min-width: 1230px;
+    border-top: 2px solid #6b9ac8;
+    background: #111521;
+    line-height: 1.35;
+    z-index: 100;
+    top: 0;
+}
+.nav{
+    width: 1230px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative;
+}
+.nav .logo{
+    width: 134px;
+    height: 64px;
+    margin-right: 100px;
+    padding: 8px 0 8px 23px;
+    float: left;
+    box-sizing: content-box;
+}
+.nav .logo a{
+    width: 100%;
+    height: 64px;
+    display: block;
+}
+.nav .logo a img{
+    width: 100%;
+    display: block;
+}
+.nav .nav_list{
+    padding-top: 20px;
+    float: left;
+}
+.nav .nav_list a{
+    height: 57px;
+    margin: 0 25px;
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+    float: left;
+}
+.nav .nav_list a:hover{
+    border-bottom: 3px solid #566e95;
+}
+.nav .nav_list a span{
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #3b92e6;
+    display: none;
+}
+.nav .nav_list a h4{
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+}
+.nav .nav_list a p{
+    cursor: pointer;
+    font-size: 12px;
+}
+
+
+/*隐藏的盒子按钮*/
+.nav-btn{
+    width: 100%;
+    height: 34px;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    line-height: 32px;
+    font-size: 18px;
+    background: url(../img/bg_nav_btn.jpg) no-repeat center center;
+}
+.nav-btn em{
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+    font-style: normal;
+    font-family: microsoft yahei;
+}
+.nav-btn span{
+    width: 14px;
+    height: 7px;
+    margin-left: 76px;
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    background: url(../img/icon_navBtn.png) no-repeat center top;
+}
+.nav-btn.on span{
+    background-position: center bottom;
+}
+/*隐藏的盒子*/
+.nav_process_box{
+    width: 100%;
+    max-width: 1920px;
+    height: 232px;
+    margin: 0 auto;
+    background: #d7d7d7;
+    overflow: hidden;
+    position: relative;
+}
+.nav_process_box .nav_process{
+    width: 1230px;
+    height: 178px;
+    margin: 0 auto;
+    padding-top: 22px;
+}
+.nav_process_box .nav_process .process{
+    width: 1240px;
+    height: 136px;
+}
+.nav_process_box .process li{
+    width: 236px;
+    height: 80px;
+    margin-right: 12px;
+    padding-top: 56px;
+    float: left;
+    cursor: default;
+    position: relative;
+    background-image: url(../img/process.jpg);
+    background-repeat: no-repeat;
+    box-sizing: content-box;
+}
+.process li p{
+    width: 100%;
+    margin-bottom: 10px;
+    padding-top: 22px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+}
+.process li p a{
+    color: #ff8054;
+    text-decoration: underline;
+    padding-right: 20px;
+    background: url(../img/icon_notes.png) no-repeat right center;
+}
+.process li span{
+    width: 100%;
+    height: 107px;
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 100;
+}
+.step_01 .step_btn{
+    width: 182px;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 auto;
+    margin-top: 18px;
+    text-align: center;
+    background: #453318;
+    border-radius: 20px;
+}
+.step_01 .step_btn a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 16px;
+}
+
+.step_02 span{
+    background-image: url(../img/tab_csgo.png);
+}
+.step_03 span{
+    background-image: url(../img/tab_txz.png);
+}
+.process .step_04 p{
+    white-space: nowrap;
+    color: #fff;
+    text-align: left;
+    width: 200px;
+    line-height: 20px;
+    margin: 0 auto;
+    padding-top: 0;
+    font-size: 12px;
+}
+.process .step_04 p:nth-of-type(1){
+    margin-top: 6px;
+}
+.step_05 p{
+    margin-bottom: 5px;
+}
+.step_01{
+    background-position: 0 0;
+}
+.step_02{
+    background-position:0 -136px;
+}
+.step_03{
+    background-position: 0 -272px;
+}
+.step_04{
+    background-position: 0 -408px;
+}
+.step_05{
+    background-position: 0 -544px;
+}
+
+
+
+.process_1{
+    width: 216px;
+    height: 30px;
+    float: left;
+    position: relative;
+    background: url(../img/process_bottom02.png) no-repeat center bottom;
+}
+.process_1 span{
+    color: #826c4c;
+    font-size: 16px;
+    position: absolute;
+    top: 16px;
+    left: 66px;
+}
+.process_2{
+    width: 504px;
+    height: 30px;
+    float: left;
+    margin-left: 146px;
+    position: relative;
+    background: url(../img/process_top.png) no-repeat center bottom;
+}
+.process_2 span{
+    color: #27354e;
+    font-size: 18px;
+    position: absolute;
+    top: 16px;
+    left: 190px;
+}
+.process_3{
+    width: 216px;
+    height: 30px;
+    float: left;
+    margin-left: 138px;
+    position: relative;
+    background: url(../img/process_bottom03.png) no-repeat center bottom;
+}
+.process_3 span{
+    color: #826c4c;
+    font-size: 16px;
+    position: absolute;
+    top: 16px;
+    left: 21px;
+}
+.process_3 a{
+    color: #ff8054;
+    text-decoration: underline;
+    padding-right: 20px;
+    background: url(../img/icon_notes.png) no-repeat right center;
+    position: absolute;
+    top: 37px;
+    left: 58px;
+    font-size: 16px;
+}
+.process_3 a:hover{
+    text-decoration: none;
+}
+.process_3 span.notes{
+    width: 236px;
+    height: 107px;
+    position: absolute;
+    left: -42px;
+    top: -88px;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 100;
+    /*background: url(../img/tab_stem.png) no-repeat;*/
+}

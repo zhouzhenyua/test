@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .active{
+            width: 100px;
+            height: 200px;
+            border: 2px solid #0febc1;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<script>
+
+//    div1.classList.add('active'); //添加    不兼容低版本ie
+    div1.classList.remove('active');// 移除   不兼容低版本ie
+    div1.className = 'active';
+
+
+</script>
+</body>
+</html>

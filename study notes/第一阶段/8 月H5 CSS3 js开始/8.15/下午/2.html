@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .box{
+            width: 600px;
+            height: 30px;
+            background: #A1C9FF;
+            margin: 50px auto;
+            position: relative;
+            transform-style: preserve-3d ;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            width: 100px;
+            height: 30px;
+            position: relative;
+            padding: 0 10px;
+            line-height: 30px;
+            text-align: center;
+            float: left;
+            transform-style: preserve-3d ;
+
+            animation: dh 2s linear;
+        }
+
+        @keyframes dh {
+            from{
+                transform: rotateX(0deg) ;
+            }
+            to{
+                transform: rotateX(-90deg) ;
+            }
+        }
+        li:hover{
+            transform:translateX(90px) rotateX(90deg);
+        }
+    </style>
+</head>
+<body>
+    <nav class="box">
+        <ul>
+            <li>前端</li>
+            <li>前端</li>
+            <li>前端</li>
+            <li>前端</li>
+            <li>前端</li>
+        </ul>
+    </nav>
+</body>
+</html>

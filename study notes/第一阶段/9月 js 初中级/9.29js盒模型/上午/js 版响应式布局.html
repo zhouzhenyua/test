@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var timer =null;
+    window.onresize = function(){
+        clearInterval(timer); //添加节流阀  函数节流  减少向服务器的请求次数
+        timer = setInterval(reponsive,1000);
+    };
+    reponsive();
+    function reponsive(){
+        if(client().width > 960){
+            document.body.style.background = '#524';
+            document.body.innerHTML = '电脑';
+        }else if(client().width > 640){
+            document.body.style.background = '#f85';
+            document.body.innerHTML = '平板';
+        }else {
+            document.body.style.background = '#f55';
+            document.body.innerHTML = '手机';
+        }
+    }
+    function client(){
+        return{
+            width:window.innerWidth || document.documentElement.clientWidth||document.body.clientWidth||0,
+            height:window.innerHeight || document.documentElement.clientHeight||document.body.clientHeight||0
+        }
+    }
+</script>
+</body>
+</html>

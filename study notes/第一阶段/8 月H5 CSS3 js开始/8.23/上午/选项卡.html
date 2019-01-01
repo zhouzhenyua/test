@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            border: 2px solid#0AA6E8;
+            text-align: center;
+            display: none;
+        }
+
+        .box1{
+            background: #0AA6E8;
+        }
+        .box2{
+            background: #f9d8b4;
+        }
+        .box3{
+            background: #f19000;
+        }
+
+        button.now{
+            background: #fe533b;
+            color: #fff;
+        }
+        div.now{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <script>
+//        1、找人 通过标签名 获取 dom 元素
+        var aBtn=document.getElementsByTagName('button');
+
+        var aDiv=document.getElementsByTagName('div');
+//          2、绑定事件
+//        var array =[0];
+        for (var i = 0; i < aBtn.length; i++) {
+            aBtn[i].index =i; //为每个按钮设置一个 index 属性
+            aBtn[i].onclick=function(){
+                for (var j = 0; j <aBtn.length; j++) {
+                    aDiv[j].classList.remove('now');
+                    aDiv[j].style.display = 'none';
+                }
+                aDiv[this.index].style.display = 'block';
+                aDiv[this.index].classList.add('now');
+            }
+
+        }
+
+
+//        aBtn[0].onclick =function(){
+//            aDiv[0].classList.add('now');
+//            aBtn[0].classList.add('now');
+//
+//            aDiv[1].classList.remove('now');
+//            aDiv[2].classList.remove('now')
+//
+//        };
+//        aBtn[1].onclick =function(){
+//            aDiv[1].classList.add('now')
+//
+//
+//        };
+//        aBtn[2].onclick =function(){
+//            aDiv[2].classList.add('now')
+//
+//
+//        };
+
+//        console.log(aBtn, aDiv);
+    </script>
+</body>
+</html>

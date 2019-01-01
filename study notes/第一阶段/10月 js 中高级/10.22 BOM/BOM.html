@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM</title>
+</head>
+<body>
+<script>
+    window.innerHeight = '';
+
+    document.write(window.innerHeight);  //放大缩小影响
+     document.write(window.outerHeight) ; //放大缩小不影响
+
+    window.open();// 打开新的页面
+
+    window.close();//
+    window.onClick = function(){
+        // 谷歌  新页面
+        //ie 弹窗提示
+        //ff 火狐  脚本不到关闭非脚本
+
+        window.close();
+    }
+
+</script>
+</body>
+</html>

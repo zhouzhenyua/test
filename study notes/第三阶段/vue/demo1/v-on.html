@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+<body>
+    <!-- mvvm -->
+    <div id="app">
+        <!-- v-on @-->
+        <button @click="click">点击</button>
+        <button @mouseover="mouseover">mouseover</button>
+        <button @mouseout="mouseout">mouseout</button>
+        <button @mouseenter="mouseenter">mouseenter</button>
+        <button @mouseleave="mouseleave">mouseleave</button>
+        <button @move="move">move</button>
+        <button @click="click">点击</button>
+        <button @click="click">点击</button>
+        <button @dblclick="db">双击</button>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",  //element 元素  声明  渲染
+            methods:{ // 方法池 
+                click(){
+                    console.log("点击");
+                },
+                move(){
+                    console.log("移动");
+                },
+                mouseover(){
+                    console.log("mouseover");
+                },
+                mouseout(){
+                    console.log("mouseout");
+                },
+                mouseenter(){
+                    console.log("mouseenter");
+                },
+                mouseleave(){
+                    console.log("mouseleave");
+                },
+                db(){
+                    console.log("dblclick");
+                },
+            }
+        })
+    </script>
+</body>
+</html>

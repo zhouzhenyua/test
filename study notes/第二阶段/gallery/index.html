@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>自适应瀑布流+baguetteBox.js画廊效果 </title>
+<link rel="stylesheet" href="css/baguetteBox.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script> 
+<script src="js/baguetteBox.js"></script>
+</head>
+<body>
+ 
+ <!-- 瀑布流 -->
+<section class = "gallery">
+   <div>
+     <a href="img/2-2.jpg" data-caption="标题">
+        <img src="img/thumbs/2-2.jpg" alt="First image">
+    </a>
+   </div>
+   <div>
+     <a href="img/2-3.jpg" data-caption="标题">
+        <img src="img/thumbs/2-3.jpg" alt="First image">
+     </a>
+   </div>
+   <div>
+        <a href="img/2-4.jpg" data-caption="标题">
+        <img src="img/thumbs/2-4.jpg" alt="First image">
+    </a>
+   </div>
+   <div>
+     <a href="img/4-1.jpg" data-caption="标题">
+        <img src="img/thumbs/4-1.jpg" alt="First image">
+    </a>
+   </div>
+
+     <div>
+     <a href="img/4-2.jpg" data-caption="标题">
+        <img src="img/thumbs/4-2.jpg" alt="First image">
+    </a>
+   </div>
+   <div>
+       <a href="img/4-3.jpg" data-caption="标题">
+        <img src="img/thumbs/4-3.jpg" alt="First image">
+    </a>
+   </div>
+     <div>
+     <a href="img/4-4.jpg" data-caption="标题">
+        <img src="img/thumbs/4-4.jpg" alt="First image">
+    </a>
+   </div>
+    <div>
+       <a href="img/4-3.jpg" data-caption="标题">
+        <img src="img/thumbs/4-3.jpg" alt="First image">
+    </a>
+   </div>
+ <div>
+     <a href="img/2-2.jpg" data-caption="标题">
+        <img src="img/thumbs/2-2.jpg" alt="First image">
+    </a>
+   </div>
+   <div>
+     <a href="img/2-3.jpg" data-caption="标题">
+        <img src="img/thumbs/2-3.jpg" alt="First image">
+     </a>
+   </div>
+   <div>
+        <a href="img/2-4.jpg" data-caption="标题">
+        <img src="img/thumbs/2-4.jpg" alt="First image">
+    </a>
+   </div>
+   <div>
+     <a href="img/4-1.jpg" data-caption="标题">
+        <img src="img/thumbs/4-1.jpg" alt="First image">
+    </a>
+   </div>
+
+     <div>
+     <a href="img/4-2.jpg" data-caption="标题">
+        <img src="img/thumbs/4-2.jpg" alt="First image">
+    </a>
+   </div>
+   <div>
+       <a href="img/4-3.jpg" data-caption="标题">
+        <img src="img/thumbs/4-3.jpg" alt="First image">
+    </a>
+   </div>
+     <div>
+     <a href="img/4-4.jpg" data-caption="标题">
+        <img src="img/thumbs/4-4.jpg" alt="First image">
+    </a>
+   </div>
+    <div>
+       <a href="img/4-3.jpg" data-caption="标题">
+        <img src="img/thumbs/4-3.jpg" alt="First image">
+    </a>
+   </div>
+ <div>
+     <a href="img/2-2.jpg" data-caption="标题">
+        <img src="img/thumbs/2-2.jpg" alt="First image">
+    </a>
+   </div>
+   <div>
+     <a href="img/2-3.jpg" data-caption="标题">
+        <img src="img/thumbs/2-3.jpg" alt="First image">
+     </a>
+   </div>
+   <div>
+        <a href="img/2-4.jpg" data-caption="标题">
+        <img src="img/thumbs/2-4.jpg" alt="First image">
+    </a>
+   </div>
+   <div>
+     <a href="img/4-1.jpg" data-caption="标题">
+        <img src="img/thumbs/4-1.jpg" alt="First image">
+    </a>
+   </div>
+
+     <div>
+     <a href="img/4-2.jpg" data-caption="标题">
+        <img src="img/thumbs/4-2.jpg" alt="First image">
+    </a>
+   </div>
+   <div>
+       <a href="img/4-3.jpg" data-caption="标题">
+        <img src="img/thumbs/4-3.jpg" alt="First image">
+    </a>
+   </div>
+     <div>
+     <a href="img/4-4.jpg" data-caption="标题">
+        <img src="img/thumbs/4-4.jpg" alt="First image">
+    </a>
+   </div>
+    <div>
+       <a href="img/4-3.jpg" data-caption="标题">
+        <img src="img/thumbs/4-3.jpg" alt="First image">
+    </a>
+   </div>
+     <div>
+       <a href="img/4-3.jpg" data-caption="标题">
+        <img src="img/thumbs/4-3.jpg" alt="First image">
+    </a>
+   </div>
+   <div>
+     <a href="img/2-2.jpg" data-caption="标题">
+        <img src="img/thumbs/2-2.jpg" alt="First image">
+    </a>
+   </div>
+   <div>
+     <a href="img/2-3.jpg" data-caption="标题">
+        <img src="img/thumbs/2-3.jpg" alt="First image">
+     </a>
+   </div>
+
+       <div>
+       <a href="img/4-3.jpg" data-caption="标题">
+        <img src="img/thumbs/4-3.jpg" alt="First image">
+    </a>
+   </div>  
+</section>
+
+<div id="goTopBtn"><span class="icon_top"></span></div>
+<script>
+ baguetteBox.run('.gallery', {
+  // 配置参数
+  buttons:Boolean,//是否显示导航按钮。
+  noScrollbars:true,//是否在显示时隐藏滚动条。
+  titleTag:true,//是否使用图片上的title属性作为图片标题
+  async:false,//是否异步加载文件。
+
+  afterShow:function(){//显示遮罩层之后的回调函数。   
+       $(".pressing").fadeIn();
+    },
+  afterHide:function(){//隐藏遮罩层之后的回调函数。 
+      $(".pressing").fadeOut(); 
+    }
+  //preload:5 预加载多少个文件。
+  // onChange: function(currentIndex, imagesCount){} 图片改变时的回调函数 
+  // overlayBackgroundColor:'rgba(0,0,0,0.8)' 遮罩层的背景颜色
+});
+
+$(function(){
+
+    //返回顶部 
+    $(window).scroll(function(){
+        var sc=$(window).scrollTop();
+        var rwidth=$(window).width()
+        if(sc>500){
+            $("#goTopBtn").css("display","block");
+            $("#goTopBtn").css("left",(rwidth-106)+"px")
+        }else{
+            $("#goTopBtn").css("display","none");
+        }
+    })
+    $("#goTopBtn").click(function(){
+        var sc=$(window).scrollTop();
+        $('body,html').animate({scrollTop:0},100);
+    })
+
+    $(".allnews").click(function () {
+        $("#allcon").css("height", "auto");
+        $(this).hide(1000);
+    });
+})
+
+</script>
+    </body>
+</html>

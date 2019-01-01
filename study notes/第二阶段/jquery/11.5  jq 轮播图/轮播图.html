@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <script src="../jquery.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul li {
+            list-style: none;
+        }
+        .wrap{
+            width: 800px;
+            height: 400px;
+            margin: 50px auto;
+            background: #ff3f38;
+            position: relative;
+        }
+        .pic ul li{
+            width: 800px;
+            height: 400px;
+            background: #0febc1;
+            display: none;
+        }
+        .pic ul li:nth-of-type(1){
+            display: block;
+        }
+        .pic ul li:nth-of-type(2){
+            background: #f3ca6f;
+        }
+        .pic ul li:nth-of-type(3){
+            background: #6fe859;
+        }
+        .left,.right{
+            width: 30px;
+            height: 50px;
+            background: #0a56bb;
+            opacity: .5;
+            position: relative;
+            margin-top: -25%;
+        }
+        .right{
+            top:35%;
+            left: 770px;
+        }
+    </style>
+    <script>
+        /*
+        * 1、第一张显示出来
+        * 2、点击左按钮时需要 获取当前的索引
+        * 3、索引进行自增或自减
+        * 4、和索引对应的li进行显示隐藏
+        *
+        * */
+
+        $(function(){
+            var num =0;
+            $('.left').click(function(){
+                num--;
+                if(num<0){
+                    num = $('.pic ul li').length-1;
+                }
+                $('.pic ul li').eq(num).show().siblings().hide()
+            });
+            $('.right').click(function(){
+//                alert(1);
+                num++;
+                if(num<$('.pic ul li').length-1){
+                    num = 0;
+                }
+                $('.pic ul li').eq(num).show().siblings().hide()
+            });
+
+
+            // 无缝轮播
+
+            /*
+            * jq 操作方法  appendTo  prependTo animate  改变left值
+            *
+            *
+            * */
+//            $('.pic').animate({
+//                left:"50px"
+//            },function(){
+//
+//            })
+
+        })
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <div class="pic">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+</body>
+</html>

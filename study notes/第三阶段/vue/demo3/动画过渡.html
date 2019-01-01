@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/vue.min.js"></script>
+    <link rel="stylesheet" href="../animate.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* .fade-enter,.fade-leave-to{
+            transform: translateX(300px);
+            opacity: 0;
+        }
+        .fade-leave{
+            opacity: 1;
+        }
+        .fade-enter-active,.fade-leave-active{
+            transition: all .9s ease-in-out
+        } */
+    </style>
+</head>
+<body>
+    <!-- 
+        Vue的内置组件 
+        v-enter(定义进入过渡的开始状态 在元素插入被调用)     
+        v-enter-active(定义进入过渡的状态 在元素插入被调用)  
+        v-enter-to(定义进入过渡的结束状态)
+        v-lezve     v-leave-active  v-leave-to  (离开)
+
+
+     -->
+    <div id="app">
+        <button @click="toggle">按钮</button>
+        <transition enter-active-class="animate tada" leave-active-class="animate jello">
+            <div v-if="show" style="width: 100px;height: 100px;background:aqua"></div>
+        </transition>
+    </div>
+    <script>
+        new Vue({
+            data:{
+                show:true
+            },
+            methods: {
+                toggle(){
+                    this.show=!this.show
+                }
+            },
+        }).$mount("#app")
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery.min.js"></script>
+
+    <script>
+        $(function(){
+            $('div').each(function(index){
+                $('.btn').click(function(index){
+                   $('div').hide().siblings().eq($('.btn').index)
+                });
+            });
+            //siblings()  找到所有兄弟节点
+
+        })
+    </script>
+</head>
+<body>
+<!--<div id="div1">234</div>-->
+<!--<div id="div2">234-->
+    <!--<div class="box">box</div>-->
+<!--</div>-->
+
+<div class="box">222</div>
+<div class="box">11</div>
+<div class="box">33</div>
+<div class="box">44</div>
+<div>55</div>
+<button class="btn">233</button>
+<script>
+    /*
+    * parents()  closest()
+    * */
+//  parents() 获取当前元素的所有父级元素节点  不包含本身
+//    console.log($('.box').parents());
+//    $('.box').parents().css('background','red');
+
+
+
+//  closest() 必须传一个参数  包含当前元素本身，找到所有的父节点，进行筛选
+
+//    console.log($('#div2').closest('.box'));
+//    $('div').closest('.box').css('background','red')
+
+
+//    $('div').next();
+
+</script>
+</body>
+</html>

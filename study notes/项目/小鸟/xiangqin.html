@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/xiangqin.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/listData.js"></script>
+</head>
+<body>
+<!--头部-->
+<div class="X-head"></div>
+<!--内容-->
+<div class="content_wrap">
+    <h1 class="title_big">小鸟动态</h1>
+
+    <h2>About Company</h2>
+    <img src="images/three_points01.png">
+
+    <h1 class="title_list">列表<span class="pen"></span></h1>
+
+    <div class="list_content" id="articleList">
+        <!-- 请求回来的数据-->
+    </div>
+    <div class="model"style="display: none">
+        <div class="content_one" articleid="$articleid$" >
+            <div class="img_wrap"><img src=$articleCover$></div>
+            <div class="content_text">
+                <div class="title_small">$articletitle$</div>
+                <div class="date">$Uptime$</div>
+                <p>$descript$</p>
+            </div>
+            <img class="list_img_over_xiaojiantou" src="images/list_img_over_xiaojiantou.png">
+        </div>
+    </div>
+
+    <img style="margin:30px auto 0" src="images/list_gomore_bg.jpg" id="imgList">
+
+    <div class="list_more" id="listMore"></div>
+</div>
+<!--底部-->
+<div class="X-footer"></div>
+</body>
+<!-- <script src="js/xiangqin.js"></script> -->
+<script src="xiangqingye.js"></script>
+</html>

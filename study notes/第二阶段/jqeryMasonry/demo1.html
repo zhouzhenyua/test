@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="dist/stylesheets/chromagallery.css">
+
+    <!--<script src="js/jquery-1.10.1.min.js"></script>-->
+    <!--<script src="js/chromagallery.pkgd.min.js"></script>-->
+
+    <style type="text/css">
+        body,html {
+            height: 100%; background-color: #191919;
+        }
+        .content {
+            width: 80%;
+            height: 80%;
+            margin: 10px auto;
+        }
+        @media screen and (min-width: 980px) /* Desktop */ {
+            .content {
+                width: 70%;
+            }
+        }
+        .mygallery {
+            margin: 25px 0;
+        }
+    </style>
+</head>
+<body>
+<article class="233">
+    <div class="content">
+        <div class="chroma-gallery mygallery">
+            <img src="images/860fc5c46c2eac8c4d1ebead8eba14441541834877.jpg" alt="刘大厨<br>COS<br>CSGO金库危机T" data-largesrc="images/f1f0c4784231b616de4f0029f8c967561541834877.jpg">
+        </div>
+    </div>
+</article>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="dist/scripts/chromagallery.pkgd.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        $(".mygallery").chromaGallery();
+    });
+    $(document).ready(function(){
+        $(".mygallery").chromaGallery
+        ({
+            color:'#000',
+            gridMargin:15,
+            maxColumns:5,
+            dof:true,
+            screenOpacity:0.8
+        });
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #f9d8b4;
+        }
+        li{
+            /*background: #0AA6E8;*/
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        var aLi =document.getElementsByTagName('li');
+
+        for (var i =0; i < aLi.length; i++) {
+            if(i%2 == 1){
+                aLi[i].style.background ='#f00'
+
+            }else {
+                aLi[i].style.background ='#0AA6E8'
+            }
+
+
+        }
+
+
+    </script>
+</body>
+</html>

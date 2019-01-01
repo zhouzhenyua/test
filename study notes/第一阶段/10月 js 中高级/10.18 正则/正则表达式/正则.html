@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则</title>
+</head>
+<body>
+<form>
+
+
+</form>
+<script>
+
+    /*正则：用来描述、匹配一系列符合某个句法规则的字符串。
+    * 正则作用：
+    * 数据验证、文本替换、内容检索/过滤等。
+    *
+    *
+    * text(字符串)：验证内容，匹配为true，否为false
+    * */
+
+//    var reg = new RegExp("\\w{2}");
+    str = '22@qq.com';
+
+
+//    var reg = /^\w{3}$/;
+//    var reg = /^\w{4,20}@\w{2,10}\.\w{2,5}$/;
+
+
+//    var reg = /(?i)^\w+@(qq|sina|163)\.(com|net)$/;
+    var reg1 = /^(http|https):\/\/\w+(\.\w+){2}/;
+    new RegExp('(http|https)://\\w+(\\.\\w+){2}');
+
+    console.log(reg.test(str));
+
+
+</script>
+</body>
+</html>

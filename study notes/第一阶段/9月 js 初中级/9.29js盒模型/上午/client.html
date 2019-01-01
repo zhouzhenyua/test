@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //onresize 窗口大小改变事件
+    window.onresize = function(){
+        console.log(client().width);
+        console.log(client().height);
+    };
+    function client(){
+        return{
+            width:window.innerWidth || document.documentElement.clientWidth||document.body.clientWidth||0,
+            height:window.innerHeight || document.documentElement.clientHeight||document.body.clientHeight||0
+        }
+    }
+
+</script>
+</body>
+</html>

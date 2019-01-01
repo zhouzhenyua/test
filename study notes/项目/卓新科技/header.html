@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>header</title>
+    <script src="js/jquery-1.10.1.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <!--<link rel="stylesheet" href="css/animate.min.css">-->
+    <script src="js/move.js"></script>
+    <link rel="stylesheet" href="css/header.css">
+</head>
+<script>
+    $(function(){
+
+        /*
+        * 1、鼠标经过时需要出现小白点
+        * 2、点击时除了当前显示，其余的都消失
+        * 3、当鼠标经过时，下拉菜单出现 抖动效果
+        * 4、鼠标经过下拉菜单列表时，对应的文字会有一个向右的平移
+        * */
+
+        $('.nav_piece').hover(function(){
+            $(this).find('ul').stop().slideDown(500,"easeInStrong")
+        },function(){
+            $(this).find('ul').slideUp()
+        }).click(function(){
+            $(this).addClass('now').find('ul').hide().end().siblings().removeClass('now');
+        })
+    })
+
+</script>
+<body>
+<header id="header">
+    <div class="center">
+        <div class="logo"><img src="images/logo%20(1).png" alt=""></div>
+        <div class="nav_wrap">
+            <div class="nav_piece now">
+                <h1>首页</h1>
+            </div>
+            <div class="nav_piece ">
+                <h1 class="had_downnav ">翡翠学院<span class="xiaoniao_img"></span>
+                </h1>
+                <ul class="down_box ">
+                    <li><span>小鸟掌学主页  <i></i></span></li>
+                    <li><span>小鸟掌学概述  <i></i></span></li>
+                    <li><span>对企业的价值  <i></i></span></li>
+                    <li><span>小鸟掌云  <i></i></span></li>
+                    <li><span>微课联盟  <i></i></span></li>
+                    <li><span>App下载  <i></i></span></li>
+                </ul>
+            </div>
+            <div class="nav_piece">
+                <h1>卓新动态</h1>
+            </div>
+            <div class="nav_piece ">
+                <h1 class=" had_downnav" >企业文化<span class="xiaoniao_img"></span></h1>
+                <ul class="down_box  ">
+                    <li><span><a href="common.html?aaa=companyIdea">公司理念</a> <i></i></span> </li>
+                    <li><span><a href="common.html?aaa=companyCulture">公司文化</a> <i></i></span> </li>
+                    <li><span><a href="common.html?aaa=companyEnvironment">公司氛围</a> <i></i></span> </li>
+                </ul>
+            </div>
+            <div class="nav_piece ">
+                <h1 class=" had_downnav">人力资源<span class="xiaoniao_img"></span></h1>
+                <ul class="down_box  ">
+                    <li><span><a href="common.html?aaa=talents">人才理念</a> <i></i></span> </li>
+                    <li><span><a href="common.html?aaa=team">团队介绍</a> <i></i></span> </li>
+                    <li><span><a href="common.html?aaa=joinUs">招聘信息</a> <i></i></span> </li>
+                </ul>
+            </div>
+            <div class="nav_piece">
+                <h1> <a class="lx" href="common.html?aaa=telUs">联系我们</a></h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="list" class="233">
+    <li id="li1" class="li1"></li>
+    <li></li>
+    <li></li>
+</ul>
+<script>
+//    innerHTML 获取元素中的内容
+//    innerText获取元素中的文本
+
+//console.log(list.getAttribute('id'));
+//console.log(list.setAttribute('id','ui'));
+//console.log(list.removeAttribute('class'));
+
+
+    var li = document.createElement('div');
+    li.innerHTML ='<a>233</a>';
+
+    li.cloneNode(true);//true 深克隆  false浅克隆
+    list.appendChild(li);
+
+    li.replaceChild(a,li);
+    li.insertBefore(a,li);
+
+</script>
+</body>
+</html>

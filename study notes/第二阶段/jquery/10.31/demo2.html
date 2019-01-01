@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高级</title>
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+<div>233</div>
+<div>2232</div>
+<div class="box">
+    <ul>
+        <li>322</li>
+        <li>322</li>
+        <li>322</li>
+    </ul>
+</div>
+<script>
+
+    /*get 1、可以让js和jq的方法混用  js 获取内容 innerHTML  jq html()
+    *
+    *   2、可以去到元素的下标
+    *
+    *   3、 可以获取到元素的长度和length 一样
+    *
+    *
+    *
+    * */
+    for (var i = 0; i < $('li').length; i++) {
+
+//        $('li').get(i).style.background ='red';
+
+//        $('li').eq(i).css('background','red')
+
+        $('li')[i].style.background = 'red'
+    }
+
+    console.log($('div').get());
+
+
+</script>
+</body>
+</html>

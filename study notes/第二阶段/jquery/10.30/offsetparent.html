@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+<div id="div1" style="width: 100px;height: 100px;background: #ff3f38">
+    <div id="div2" style="width: 50px;height: 50px;background: #0febc1"></div>
+</div>
+<script>
+
+    console.log($('#div1').parent());//获取父级元素
+    console.log($('#div1').offsetParent()); //获取有定位的父级元素
+
+
+
+</script>
+</body>
+</html>

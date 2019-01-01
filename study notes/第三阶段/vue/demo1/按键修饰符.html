@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+<body>
+    <!-- 按键修饰符 -->
+    <div id="app">
+        <!-- <button @keydown.enter="down">down</button>
+        <button @keydown="down">down</button> -->
+        <!-- <button @keydown.esc="down">esc</button>
+        <button @keydown.up="down">up</button>
+        <button @keydown.left="down">left</button>
+        <button @keydown.right="down">right</button> -->
+        <button @keydown.space="down">space</button>
+
+
+    </div>
+    <script>
+        new Vue({
+            el:"#app",  // 挂载元素 
+        
+            methods:{ // 方法池 
+                down(){
+                    console.log("down");
+                },
+            
+            }
+        })
+    </script>
+</body>
+</html>

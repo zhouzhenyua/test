@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>同步异步</title>
+</head>
+<body>
+<script>
+//    let n =0;
+//    setTimeout(()=>{
+//        console.log(++n);
+//    },100);
+//    console.log(n);
+//    while (1===1){
+//        console.log(n);
+//    }
+
+setTimeout(()=>{
+    console.log(1);
+},20)
+console.log(2);
+setTimeout(()=>{
+    console.log(3);
+},10)
+    console.log(4);
+for (var i = 0; i < 90000000; i++) {
+
+}
+console.log(5);
+setTimeout(()=>{
+    console.log(6);
+},8)
+console.log(7);
+setTimeout(()=>{
+    console.log(8);
+},15)
+console.log(9);
+
+//    定时器时间因子设置为零，也不是立即执行，每个浏览器有一个，
+//    自己最小的等待和反应时间（谷歌：5~6，ie：10~13），
+//    所以写零还是异步编程
+</script>
+</body>
+</html>

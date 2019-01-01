@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件委托</title>
+    <style>
+        .mask {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(0,0,0, .7);
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+        .login {
+            width: 400px;
+            height: 300px;
+            background-color: #fff;
+            margin: 200px auto;
+        }
+    </style>
+    <script src="../../event.js"></script>
+</head>
+<body>
+    <a href="#">注册</a>
+    <a href="#">登录</a>
+
+    <div class="mask">
+        <div class="login">
+
+        </div>
+    </div>
+<script>
+    var aArr = document.getElementsByTagName("a");
+    var mask = document.getElementsByClassName("mask")[0];
+    addEvent(aArr[0],'click',function(ev){
+        mask.style.display = 'block';
+        var event = ev || event;
+        if(event && event.stopPropagation){
+            event.stopPropagation();
+        }else {
+            event.cancelable = true;
+        }
+    });
+
+//    addEvent(document,'click',function(ev){
+//        oEvent = ev || window.event;
+//
+//        var ele = oEvent.target || oEvent.srcElement;
+//        if(ele.className !== 'login'){
+//            mask.style.display = 'none';
+//        }
+//    });
+
+    addEvent(document,'click',function(ev){
+        var oEvent = ev || event;
+        var ele = oEvent.target || oEvent.srcElement;
+        if(ele.className !== 'login'){
+            mask.style.display = 'none'
+        }
+
+    })
+
+
+</script>
+
+</body>
+</html>

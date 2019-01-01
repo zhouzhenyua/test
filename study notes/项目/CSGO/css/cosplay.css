@@ -1,0 +1,175 @@
+html,body{
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    background-color: #000;
+}
+*{
+    box-sizing: border-box;
+}
+.banner{
+    height: 966px;
+    background: url(../img/cosplay/bg-banner.jpg) no-repeat top;
+}
+.logo{
+    width: 463px;
+    height: 140px;
+    margin: 0 auto;
+    background-image: url(../img/cosplay/logo.png);
+}
+.logo a{
+    float: right;
+    width: 140px;
+    height: 72px;
+    margin-top: 18px;
+}
+.logo a:first-child{
+    float: left;
+    width: 216px;
+}
+
+.slogan-box{
+    padding-top: 224px;
+}
+.slogan-tit{
+    font-size: 37px;
+    font-style: italic;
+    letter-spacing: 8px;
+}
+.slogan-box span{
+    display: block;
+    width: 592px;
+    height: 268px;
+    margin: 0 auto;
+    background-image: url(../img/cosplay/slogan.png);
+}
+.slogan-time{
+    font-size: 18px;
+    letter-spacing: 4px;
+}
+.banner-btns{
+    margin-top: 40px;
+}
+.banner-btns a{
+    width: 250px;
+    height: 68px;
+    line-height: 65px;
+    display: inline-block;
+    -moz-border-radius: 68px;
+    border-radius: 68px;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 25px;
+}
+.banner-btns a:hover{
+    background: #fff;
+    color: #353535;
+}
+.banner-btns a:first-child{
+    margin-right: 60px;
+}
+.guide{
+    margin-top: 60px;
+    height: 88px;
+    padding-top: 22px;
+}
+.guide i{
+    font: inherit;
+}
+
+.guide>span{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 100%;
+}
+.guide>span i{
+    display: block;
+    font-size: 20px;
+    margin-bottom: 9px;
+}
+.guide>i{
+    width: 17px;
+    height: 13px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 45px;
+    background: url(../img/cosplay/icons.png) no-repeat 100% 0;
+}
+
+
+
+
+
+/*第二部分*/
+
+
+
+.main{
+    max-width: 1903px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding-bottom: 150px;
+}
+.works{
+    padding-top: 52px;
+}
+.works-tab a{
+    display: inline-block;
+    border-bottom: 4px solid #c1c1c1;
+    padding: 9px 30px;
+    font-size: 20px;
+    color: silver;
+}
+.works-tab a:first-child{
+    margin-right: -5px;
+}
+.works-tab a:hover{
+    border-bottom-color: #515151;
+    color: #525050;
+}
+.works-tab .active{
+    border-bottom-color: #515151;
+    color: #525050;
+}
+.works-items{
+    width: 1240px;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 38px;
+}
+.content1 {
+    width: 80%;
+    height: 80%;
+    margin: 10px auto;
+    display: none;
+    position: relative;
+}
+.content2 {
+    width: 80%;
+    height: 80%;
+    margin: 10px auto;
+    display: none;
+    position: relative;
+}
+.works-items .active{
+    display: block;
+}
+@media screen and (min-width: 980px) /* Desktop */ {
+    .content {
+        width: 100%;
+    }
+}
+.mygallery {
+    margin: 25px 0;
+}
+
+
+
+
+
+
+
+
+
+

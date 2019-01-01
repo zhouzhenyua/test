@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包</title>
+</head>
+<body>
+<script>
+//    闭包 :函数执行的时候形成一个私有的作用域，
+//     保护函数内部的变量，不受外界的干扰，保护机制'闭包'。
+//
+//
+//     但是在真实项目中，函数执行的时候，只有形成一个不销毁的的私有作用域，
+//    保护函数内部的变量不受外界的干扰，保护保存机制，为闭包。
+    //柯里化函数思想
+    function kl(){
+        return function fn1(){}
+    }
+
+
+
+    //惰性函数思想
+
+    function dx(){
+        return {
+          sum:function(){},
+          qh:function(){},
+          lunbo:function(){}
+        }
+    }
+
+</script>
+</body>
+</html>

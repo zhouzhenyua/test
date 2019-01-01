@@ -1,0 +1,408 @@
+html,body{
+    width: 100%;
+    height:auto;
+    font: 12px/1.5 '微软雅黑',tahoma,'\5b8b\4f53',sans-serif;
+}
+.inner{
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+/*title开始*/
+header .title{
+    width: 100%;
+    height: 42px;
+    background-repeat: repeat-x;
+    color: #464646;
+    left: 0;
+    top: 0 !important;
+    text-align: left;
+    font-size: 12px;
+    z-index: 8000;
+    font-family: Tahoma;
+    overflow: hidden;
+}
+.bg1{
+    background: url(../img/top.jpg) no-repeat;
+}
+header .t_ul{
+    width: 980px;
+    padding: 0 5px;
+    margin: 0 auto;
+    position: relative;
+}
+header .t_a{
+    width: 205px;
+    height: 42px;
+    padding: 0 15px 0 0;
+    margin: 0 15px 0 0;
+    float: left;
+    background-position: 0 -42px;
+}
+header .t_a a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-indent: -5000px;
+    overflow: hidden;
+}
+header .t_b{
+    width: 230px;
+    height: 42px;
+    float: left;
+    background-position: 0 -84px;
+}
+header .t_b a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-indent: -5000px;
+    overflow: hidden;
+}
+header .t_c{
+    height: 42px;
+    line-height: 42px;
+}
+header .t_c .p1{
+    float: right;
+    width: 80px;
+    height: 30px;
+    padding: 0 0 0 28px;
+    background-position: 10px -127px;
+}
+header .t_c .p2{
+    padding: 0 0 0 28px;
+    background-position: 10px -127px;
+}
+header .t_c .p2 a{
+    border-right: 1px solid #BFC6D7;
+    padding: 0 9px;
+}
+
+/*nav开始*/
+header nav{
+    position: relative;
+    background-position: 0 0px;
+    background-repeat: repeat-x;
+    height: 79px;
+    width: 100%;
+}
+.bg2{
+    background: url(../img/spra.png)
+}
+.bg3{
+    background: url(../img/btns.jpg) no-repeat
+}
+header nav h1{
+
+}
+header .logo{
+    width: 133px;
+    height: 77px;
+    background-position: 0 -233px;
+}
+header .A{
+    width: 193px;
+    height: 77px;
+    background-position: 0 -79px;
+}
+header .A:hover{
+    background-position: 0 -156px;
+}
+header .list{
+    height: 77px;
+    overflow: hidden;
+}
+header .list li{
+    float: left;
+}
+header .list li a{
+    display: block;
+    height: 77px;
+    overflow: hidden;
+}
+header .list .a1{
+    width: 101px;
+    background-position: 0 0;
+}
+header .list .a1:hover{
+    background-position: 0 -77px;
+}
+header .list .a2{
+    width: 117px;
+    background-position: -101px 0;
+}
+header .list .a2:hover{
+    background-position: -101px -77px;
+}
+header .list .a3{
+    width: 105px;
+    background-position: -339px 0;
+}
+header .list .a3:hover{
+    background-position: -339px -77px;
+}
+header .list .a4{
+    width: 122px;
+    background-position: -444px 0;
+}
+header .list .a4:hover{
+    background-position: -444px -77px;
+}
+header .list .a5{
+    width: 103px;
+    background-position: -566px 0;
+}
+header .list .a5:hover{
+    background-position: -566px -77px;
+}
+
+/*内容开始*/
+article .time{
+    overflow: hidden;
+    height: 20px;
+    width: 100%;
+    background: #000000;
+}
+article .time .text{
+    position: relative;
+    font-family: '\5b8b\4f53';
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    z-index: 202;
+    opacity: 0.5;
+}
+section .bg1{
+    width: 100%;
+    height: 987px;
+    background: url(../img/bg1.jpg) no-repeat top center;
+}
+section .cont1{
+    position: relative;
+    width: 1200px;
+    height: 987px;
+    margin: 0 auto;
+    background: url(../img/cont1.jpg) no-repeat top center;
+}
+section .cont1 .a1{
+    position: absolute;
+    top: 280px;
+    left: 50%;
+    margin-left: 390px;
+    width: 82px;
+    height: 82px;
+    opacity: 0.8;
+    background: url(../img/btn-spr.png) no-repeat -24px -93px;
+    text-indent: -999em;
+}
+section .cont1 .a1:hover{
+    color: #ee0000;
+    opacity: 1;
+    transition: all 0.3s;
+}
+section .cont1 .a2{
+    position: absolute;
+    top: 618px;
+    left: 50%;
+    margin-left: -104px;
+    width: 240px;
+    height: 66px;
+    background: url(../img/btn-spr.png) -15px -16px;
+    text-indent: -999em;
+    opacity: 0.8;
+}
+section .cont1 .a2:hover{
+    color: #ee0000;
+    opacity: 1;
+    transition:  0.3s;
+}
+section .cont1 .ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+section .cont1 .ul li{
+    position: absolute;
+    top: 686px;
+    left: 50%;
+    text-indent: -999em;
+ }
+section .cont1 .ul .l1{
+    margin-left: -530px;
+    width: 358px;
+    height: 250px;
+}
+section .cont1 .ul li a{
+    display: block;
+    background: url(../img/enter-btn.png) no-repeat ;
+}
+section .cont1 .ul .l1 a{
+    width: 358px;
+    height: 250px;
+    background-position: -21px -398px;
+}
+section .cont1 .ul .l1 a:hover{
+    background-position: -21px -109px;
+}
+section .cont1 .ul .l2{
+    margin-left: -240px;
+    width: 230px;
+    height: 270px;
+}
+section .cont1 .ul .l2 a{
+    width: 230px;
+    height: 270px;
+    background-position: -434px -398px;
+}
+section .cont1 .ul .l2 a:hover{
+    background-position: -434px -109px;
+}
+section .cont1 .ul .l3{
+    margin-left: 0;
+    width: 240px;
+    height: 250px;
+}
+section .cont1 .ul .l3 a{
+    width: 240px;
+    height: 250px;
+    background-position: -752px -109px;
+}
+section .cont1 .ul .l3 a:hover{
+    background-position: -752px -398px;
+}
+section .cont1 .ul .l4{
+    margin-left: 176px;
+    width: 340px;
+    height: 270px;
+}
+section .cont1 .ul .l4 a{
+    width: 340px;
+    height: 270px;
+    background-position: -1015px -109px;
+}
+section .cont1 .ul .l4 a:hover{
+    background-position:  -1015px -398px;
+}
+
+section .bg2{
+    position: relative;
+    width: 100%;
+    height: 1588px;
+    background: url(../img/bg2.jpg) no-repeat top center;
+}
+section .cont2{
+    position: relative;
+    width: 1200px;
+    height: 1588px;
+    margin: 0 auto;
+    background: url(../img/cont2.jpg) no-repeat top center;
+}
+section .cont2 img{
+    cursor: pointer;
+}
+section .cont2 .L{
+    width: 50%;
+    position: relative;
+}
+section .cont2 .R{
+    width: 50%;
+    position: relative;
+}
+section .bg2 .img01{
+    position: absolute;
+    top: 53px;
+    right: 0;
+    width: 530px;
+    height: 499px;
+}
+section .bg2 .img02{
+    position: absolute;
+    top: 369px;
+    width: 530px;
+    height: 499px;
+}
+section .bg2 .img03{
+    position: absolute;
+    top: 552px;
+    right: 0;
+}
+section .bg2 .img04{
+    position: absolute;
+    top: 677px;
+}
+section .bg2 .img05{
+    position: absolute;
+    top: 861px;
+    right: 0;
+}
+section .bg2 .img06{
+    position: absolute;
+    top: 1176px;
+    margin-left: -222px;
+}
+
+/*footer开始*/
+footer{
+    background: #000;
+    font: 12px/20px "微软雅黑","宋体";
+    min-width: 960px;
+    margin: 0 auto;
+    text-align: left;
+}
+footer .cont{
+    width: 1040px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 30px 20px!important;
+    color: #a5a5a5!important;
+}
+footer .cont .left{
+    display: inline;
+}
+footer .cont .left a{
+    overflow: hidden;
+    float: left;
+    text-indent: -999em;
+    margin-top: 32px!important;
+}
+footer .cont .left .a1{
+    width: 180px;
+    height: 35px;
+    margin: 10px 0 0 10px;
+    background: url("../img/foot-dark.png");
+}
+footer .cont .left .a2{
+    margin: 10px 0 0 10px;
+    width: 126px!important;
+    height: 32px!important;
+    background: url(../img/spr.png) no-repeat 0 -628px;
+}
+footer ul{
+    width: 682px;
+}
+footer ul li{
+    overflow: hidden;
+    line-height: 20px;
+}
+footer ul li p{
+    float: left;
+    line-height: 20px;
+    color: #a5a5a5!important;
+    font-size: 12px;
+    cursor: pointer;
+}
+footer ul li span{
+    float: left;
+    font-size: 12px;
+    margin: 0 2px;
+}

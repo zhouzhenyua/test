@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    var name =233;
+//    let fn = function(){
+//        console.log(this.name);
+//    };
+//    let obj ={
+//        name:'OBJ',
+//        fn:fn,
+//        aa:this
+//    };
+//    let oo ={name:'oo',
+//        aa:this
+//    };
+//    fn();
+//    obj.fn();
+//
+//    fn.call(oo);
+//    fn.call(obj,10,20,30);
+
+
+    function fn1(){console.log(1);
+        console.log(this);}
+    function fn2(){console.log(2);
+        console.log(this);
+    }
+//    fn1.call(fn2());//1
+//    fn1.call.call(fn2);//2
+function call(fn2){
+//    this =fu1.call=>fn2;
+    this(){
+        this =fn2;
+    }
+
+}
+
+//    fn1.call.call.call.call.call(fn2);//2
+
+
+</script>
+</body>
+</html>

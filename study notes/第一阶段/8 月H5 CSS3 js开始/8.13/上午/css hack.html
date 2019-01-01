@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8" />
+    <title>Hack_CSS</title>
+    <style>
+        h1{margin:10px 0;font-size:16px;}
+        span{display:none;}
+        .not-ie{display:inline;}
+    </style>
+    <!--[if IE]>
+    <style>
+        .ie{display:inline;}
+        .not-ie{display:none;}
+    </style>
+    <![endif]-->
+
+    <!--[if IE 5]>
+    <style>
+        .ie5{display:inline;}
+    </style>
+    <![endif]-->
+
+    <!--[if IE 6]>
+    <style>
+        .ie6{display:inline;}
+    </style>
+    <![endif]-->
+
+    <!--[if IE 7]>
+    <style>
+        .ie7{display:inline;}
+    </style>
+    <![endif]-->
+
+    <!--[if IE 8]>
+    <style>
+        .ie8{display:inline;}
+    </style>
+    <![endif]-->
+
+    <!--[if IE 9]>
+    <style>
+        .ie9{display:inline;}
+    </style>
+    <![endif]-->
+    <style>
+        .test {
+            color: #000;          /* For latest Firefox, chrome, Safari */
+            color: #090\0;        /* For Opera15- */
+            color: #00f\9;        /* For IE8+ */
+            *color: #f00;         /* For IE7 */
+            _color: #ff0;         /* For IE6 */
+        }
+    </style>
+
+</head>
+<body>
+<div>
+    您正在使用
+    <span class="not-ie">非IE</span>
+    <span class="ie">IE</span>
+    <span class="ie5">5</span>
+    <span class="ie6">6</span>
+    <span class="ie7">7</span>
+    <span class="ie8">8</span>
+    <span class="ie9">9</span>
+    浏览器
+
+    <!--[if IE]>
+    <p>你在非IE中将看不到我的身影</p>
+    <![endif]-->
+
+    <!--[if IE 9]>
+    <style>
+        .test{color:red;}
+    </style>
+    <![endif]-->
+
+
+    <div class="test">在不同浏览器下看看我的颜色吧</div>
+</div>
+</body>
+</html>

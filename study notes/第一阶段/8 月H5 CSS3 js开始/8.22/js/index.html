@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background: #ff33ff;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!--1、找人-->
+    <!--document dom 根节点-->
+    <!--get ElementById 通过Id 获取元素-->
+
+    <!--2、绑定事件-->
+    <!--on mouse over 当鼠标移入的时候-->
+    <!--on mouse out 当鼠标移出的时候-->
+
+    <!--3、书写事件驱动-->
+
+    <!--计算机 引号 就近原则 -->
+    <!--内单外双/内双外单-->
+
+
+    <div  id="box"
+          onmouseover="tobig()"
+
+          onmouseout="tosmai()"
+    ></div>
+
+
+    javascript 变量命名类型	变量命名前缀
+    array 数组	      a
+    boolean 布尔值	  b
+    float 浮点数	      l
+    function 函数	  fn
+    int 整型  	      i
+    object 对象	      o
+    regular 正则	      r
+    string 字符串	  s
+    <script>
+
+//        多条指令的集合 函数
+//        function 声明函数
+//        var oBox=document.getElementById('box');
+        var aa= document.getElementById('box');
+            function tobig(){
+//                多条指令
+                aa.style.width=200+'px';
+                aa.style.height=200+'px';
+                aa.style.background='#f00';
+            }
+
+            function tosmai(){
+                aa.style.width=100+'px';
+                aa.style.height=100+'px';
+                aa.style.background='#ff0';
+            }
+
+
+
+
+    </script>
+
+</body>
+</html>

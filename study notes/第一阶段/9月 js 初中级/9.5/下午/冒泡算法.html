@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冒泡算法</title>
+</head>
+<body>
+<script>
+//    冒泡
+    var arr = [5,8,3,4,9,215,864,8646,79861,555];
+
+    var a=0;
+    var b=0;
+    for (var i = 0; i < arr.length-1; i++) {
+        var c = true;//假设是排好序的
+        a++;
+        //控制轮数
+        for (var j = 0; j < arr.length-1; j++) {
+            b++;
+           //  控制次数
+            if(arr[j]>arr[j+1]){
+                var temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+                c = false;
+            }
+        }
+        if(c = false){
+            break;
+        }
+    }
+
+console.log(a);
+console.log(b);
+console.log(arr);
+
+
+</script>
+</body>
+</html>

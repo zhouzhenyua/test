@@ -1,0 +1,397 @@
+header{
+    position: relative;
+    width: 100%;
+    top: 0;
+    height: 67px;
+    line-height: 68px;
+    background: #fff;
+    border-bottom: 1px solid #e7e7e7;
+    left: 0;
+    z-index: 10;
+}
+
+.floatLeft{
+    float: left;
+}
+.floatRight{
+    float: right;
+}
+
+.logo{
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.logo img{
+    width: 138px;
+    height: 36px;
+    margin: 17px 10px 0 30px;
+}
+header .fkwProduct{
+    display: inline-block;
+    width: 104px;
+    height: 26px;
+    line-height: 26px;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f3f3f3;
+    color: #333;
+    font-size: 12px;
+    text-align: center;
+}
+header .fkwProduct:hover{
+    border-color: #999;
+}
+.infobox{
+    position: absolute;
+    text-align: center;
+    height: 100%;
+    width: 416px;
+    top: 0;
+    right: 0;
+}
+.infobox .minfo{
+    width: 66px;
+    float: left;
+    box-sizing: border-box;
+    height: 67px;
+    color: #333;
+    line-height: 68px;
+    position: relative;
+    z-index: 15;
+    border-top: solid 4px #fff;
+}
+.infobox .minfo .coupIconBtn{
+    width: 58px;
+    height: 51px;
+    background: url(../img/iconAll7.png?v=201801222017) -121px -1194px no-repeat;
+    position: relative;
+    margin: 9px auto;
+    z-index: 10;
+    cursor: pointer;
+}
+.infobox .minfo:hover{
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+    border-top: solid 4px #329fea;
+}
+.infobox .hsh:hover{
+    border-left: solid 1px #e7e7e7;
+    border-right: solid 1px #e7e7e7;
+}
+.infobox .minfo .coupIconBtn .RedDot{
+    right: 8px;
+    top: 3px;
+}
+.infobox .minfo  .hide{
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background-color: #fe896a;
+    top: 3px;
+    right: 9px;
+    border-radius: 50%;
+    z-index: 999;
+}
+.infobox .minfo .coupListBox{
+    position: absolute;
+    width: 260px;
+    padding: 14px;
+    right: 0;
+    top: 68px;
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+    z-index: 1;
+}
+.coupListBox .faiCoupInfo{
+    width: 260px;
+    height: 65px;
+    background: url(../img/coupon_bg.png?v=201801222017) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+.coupListBox .faiCoupInfo:hover .getToKnowInfo{
+    display:block;
+}
+.coupListBox .faiCoupInfo .hd-left-Info{
+    width: 150px;
+    padding: 0 14px;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+}
+.coupListBox .faiCoupInfo .hd-left-Info .coupNameInfo{
+    font-size: 16px;
+    color: #313131;
+    width: 142px;
+    margin-top: 15px;
+    line-height: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.coupListBox .faiCoupInfo .hd-left-Info .hd-coup-time{
+    font-size: 12px;
+    color: #b5b5b5;
+    line-height: 15px;
+    margin-top: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.coupListBox .faiCoupInfo .hd-right-Info{
+    width: 80px;
+    color: #329fea;
+    font-weight: bold;
+    text-align: center;
+    height: 63px;
+    line-height: 63px;
+    overflow: hidden;
+}
+.coupListBox .faiCoupInfo .hd-right-Info .moneyDan{
+   font-size: 16px;
+}
+.coupListBox .faiCoupInfo .hd-right-Info .moneyNum{
+    font-size: 24px;
+}
+.coupListBox .faiCoupInfo .getToKnowInfo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 65px;
+    background: url(../img/coupon_bg_mask.png?v=201801222017) no-repeat;
+    background-size: 100% 100%;
+    display: none;
+    z-index: 99;
+    text-align: center;
+    transition: all .3s;
+}
+.coupListBox .faiCoupInfo .getToKnowInfo a{
+    display: inline-block;
+    width: 100px;
+    height: 28px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.2);
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    line-height: 28px;
+    margin: 0 auto;
+}
+
+/*功能信息*/
+.infobox .minfo .topBarIcon1{
+    width: 58px;
+    height: 47px;
+    background: url(../img/iconAll7.png?v=201801222017) -706px -1132px no-repeat;
+    position: relative;
+    margin: 9px auto;
+    z-index: 10;
+    cursor: pointer;
+}
+.infobox .minfo .topBarContent {
+    position: absolute;
+    right: -1px;
+    width: 298px;
+    top: 68px;
+    height: auto;
+    display: none;
+    background-color: #fff;
+    border: 1px solid #e7e7e7;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.15);
+    z-index: 1;
+    padding: 0;
+    border-top: 0;
+}
+.topBarContent .leftAside_new{
+    width: 280px;
+    height:3.3rem;
+    padding: 10px 10px 0 10px;
+}
+.infobox .minfo .topBarContent .leftAside_new a{
+    display: inline-block;
+}
+.infobox .minfo .topBarContent .leftAsideTab{
+    width: 124px;
+    line-height: 7px;
+    padding: 12px 6px;
+    cursor: pointer;
+}
+.infobox .minfo .topBarContent .left_myMessage{
+    float: left;
+    border: 1px solid #329fea;
+    border-radius: 6px 0 0 6px;
+}
+.infobox .minfo .topBarContent .right_updateFunction{
+    float: left;
+    border: 1px solid #329fea;
+    border-radius: 0 6px 6px 0;
+}
+.infobox .minfo .topBarContent .right_updateFunction:hover{
+    background-color: #329fea;
+}
+.infobox .minfo .topBarContent .left_myMessage.active{
+    background-color: #329fea;
+}
+.listDiv{
+    padding: 7px 0 7px 9px;
+    float: left;
+    overflow: hidden;
+}
+.promImgBox{
+    float: left;
+    width: 280px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+.promImgBox .promImgBoxInner{
+    width: 855px;
+    height: 100%;
+    position: relative;
+    left: 0;
+}
+.promImgBox .promImgBoxInner a{
+    float: left;
+    width: 285px;
+    height: 100px;
+}
+.promImgBox .promImgBoxInner a img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.littleBtn{
+    width: 25px;
+    height: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    text-align: center;
+}
+.littleBtn span{
+    float: left;
+    margin: 0 2px;
+    width: 7px;
+    height: 7px;
+    cursor: pointer;
+}
+.littleBtn .showNow{
+    background: url(../img/1.png?v=201608301815) no-repeat;
+    background-position: 0 -13px;
+}
+.littleBtn .notShow{
+    background: url(../img/1.png?v=201608301815) no-repeat;
+    background-size: 7px 20px;
+}
+
+
+/*更多*/
+.infobox .minfo .moreBarIcon{
+    width: 63px;
+    height: 47px;
+    background: url(../img/header_moreBar_icon.png?v=201807302024) center 8px no-repeat;
+    position: relative;
+    margin: 9px auto;
+    z-index: 10;
+    cursor: pointer;
+}
+
+
+
+/*个人中心*/
+.infobox .minfo .myInfoIcon{
+    width: 63px;
+    height: 47px;
+    background: url(../img/header_myInfo_icon.png?v=201809251201) center 8px no-repeat;
+    position: relative;
+    margin: 9px auto;
+    z-index: 10;
+    cursor: pointer;
+}
+
+
+/*登录免费版*/
+.infobox .minfo.topBarVer{
+    width: 120px;
+}
+.topBarVer .versionIcon{
+    position: relative;
+    margin: 12px 20px 6px 19px;
+}
+.topBarVer .ver_free_head{
+    border: 1px solid #35d581;
+    color: #35d581;
+    line-height: 35px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+/*搜索框*/
+.searchBoxCont{
+    height: 35px;
+    width: 198px;
+    position: absolute;
+    right: 438px;
+    top: 17px;
+    z-index: 100;
+    border-radius: 18px;
+    border: solid 1px #e7e7e7;
+}
+.searchBoxCont .input{
+    background: 0;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%!important;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0 32px 0 14px;
+    color: #585858;
+    border-color: rgb(204, 204, 204);
+}
+/*处理 placeholder字体颜色兼容问题*/
+.searchBoxCont ::-webkit-input-placeholder{
+    color: #ccc;
+}
+.searchBoxCont :-moz-placeholder{
+    color: #ccc;
+}
+.searchBoxCont ::-moz-placeholder{
+    color: #ccc;
+}
+.searchBoxCont :-ms-input-placeholder{
+    color: #ccc;
+}
+
+.searchBoxCont .searchBtn{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 7px;
+    right: 8px;
+    background: url(../img/iconAll7.png?v=201711272230) no-repeat -110px -488px;
+    cursor: pointer;
+}
+.searchBoxCont .searchBtn:hover{
+    background-position: -154px -488px!important;
+}
+
+.searchBoxCont .clearBtn{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 7px;
+    right: 8px;
+    background: url(../img/iconAll7.png?v=201711272230) no-repeat -202px -488px;
+    cursor: pointer;
+}
+.searchBoxCont .hide{
+    display: none;
+}

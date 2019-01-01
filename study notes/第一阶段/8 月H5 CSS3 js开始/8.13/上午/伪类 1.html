@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            margin: 200px auto;
+            width: 300px;
+            height: 50px;
+            padding: 20px 0;
+            margin-right:  10px;
+            border-radius: 50px;
+            background: #f2d7ab;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            float: left;
+        }
+
+        div::before ,div::after{
+            content: '';
+            display: block;
+            width: 300px;
+            height: 50px;
+            border-radius: 50px;
+            background: #ff00ff;
+            opacity: .5;
+            position: absolute;
+            right: 0; top: 20px;
+        }
+        div:after{
+            left: -100%;
+            background: #0AA6E8;
+        }
+        div:hover::after{
+            transition: all 2s;
+            /*opacity: 1;*/
+            left: 0;
+        }
+        div:hover:before{
+            left: 0;
+            background: #0AA6E8;
+            /*opacity: 0;*/
+        }
+
+    </style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

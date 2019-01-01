@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>event/ev 系列</title>
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+<div style="width: 100px;height: 100px;background: #f23030"></div>
+<script>
+
+    $('div').on('click',{"name":"weee"},function(ev){
+        console.log(ev.type);   //获取事件类型
+        console.log(ev.target);  //获取目标源  常用
+        console.log(ev.data.name);  //获取数据
+    })
+</script>
+</body>
+</html>

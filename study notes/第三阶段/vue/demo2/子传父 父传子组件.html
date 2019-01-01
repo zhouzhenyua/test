@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>兄弟组件</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+<body>
+<!-- 
+     
+        三类： 
+        基础组件 
+            模态框
+        业务组件  
+            包含复杂逻辑，涉及到大型业务处理
+        router-view.vue   
+            承载html  数据获取 页面交互等功能 
+        组件:
+            全局组件    
+            父子  pro 
+            子父 
+             兄弟(同级)
+            局部组件
+        组件api
+        prop     slot    event
+ -->
+
+    <div id="app">
+            <custom-one :@recave="getob"></custom-one>
+            <custom-two :newbgp="parent"></custom-two>
+    </div>
+    <script >
+        //  1、父子传  子父传   2、 bus
+       
+        Vue.component("custom-one",{
+
+            template:`
+                <div>哥哥
+                    <button @click = "send">发送</button>
+                </div>
+                
+            `,
+            data(){
+                return{
+                    obrother:"哥哥"
+                }
+            },
+            methods:{
+                send(){
+                    this.$emit("receve",this.obrother)
+                }
+            }
+        });
+        Vue.component("custom-two",{
+            props: ["newbrother"],
+            template:`
+                <div>
+                     <div>弟弟{{newbrother}}</div>
+                </div>
+            `,
+            data(){
+                return{
+                    newbrother:''
+                }               
+            },
+            methods:{
+              
+            },
+            mounted() {
+               
+            },
+            
+        });
+        new Vue({
+            el:"#app",
+            data:{
+                parent:''
+            },
+            methods:{
+                getob(val){
+                    this.parent= val
+                }
+            }
+        })
+    </script>
+</body>
+</html>

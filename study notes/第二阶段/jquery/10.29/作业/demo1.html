@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jquery.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            position: relative;
+            width: 500px;
+            height: 300px;
+            margin: 50px auto;
+        }
+        #t1{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000000;
+            float: left;
+        }
+        #t2{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000000;
+            float: right;
+        }
+        #text{
+            width: 150px;
+            height: 30px;
+            position: absolute;
+            left: 40px;
+            bottom: 60px;
+        }
+        #submit{
+            width: 60px;
+            height: 30px;
+            position: absolute;
+            right: 220px;
+            bottom: 60px;
+        }
+        #clear{
+            width: 60px;
+            height: 30px;
+            position: absolute;
+            right: 140px;
+            bottom: 60px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <div id="t1">
+
+    </div>
+    <div id="t2">
+
+    </div>
+    <input type="text" id="text" value="">
+    <input type="submit" id="submit" value="发送">
+    <input type="button" id="clear" value="清空记录">
+
+    <input type="button" id="btn1" value="按钮1">
+    <input type="button" id="btn2" value="按钮2">
+
+</div>
+<script>
+
+    var flag = true;
+    $('#submit').click(function(){
+
+        var val = $('#text').val();
+        if(val ==''){
+            alert('请输入内容');
+            val = '';
+            return
+        }
+
+        if(flag){
+            $('#t1').append('<p>'+val+'</p>')
+            flag =false;
+        }else{
+            $('#t2').append('<p>'+val+'</p>')
+            flag = true
+        }
+        $('#text').val('') ;
+    });
+    $('#btn1').click(function(){
+        $('#t1').append('<p>'+$('#t2').html()+'</p>')
+        $('#t2').html('');
+    });
+    $('#btn2').click(function(){
+        $('#t2').append('<p>'+$('#t1').html()+'</p>')
+        $('#t1').html('');
+    });
+    $('#clear').click(function(){
+        $('#t1').html('');
+        $('#t2').html('');
+        $('#text').val('');
+    })
+</script>
+
+</body>
+</html>

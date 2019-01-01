@@ -1,0 +1,422 @@
+body{
+    font-family: "Microsoft YaHei","微软雅黑",'\65B0\5B8B\4F53','\5B8B\4F53',Verdana;
+}
+
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.inner{
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    /*background: #f3d0b0;*/
+}
+header nav{
+    width: 100%;
+    height: 50px;
+    background: #181818;
+    color: #fff;
+}
+header nav a{
+    color: #fff;
+}
+header .logo{
+    width: 105px;
+    height: 35px;
+    overflow: hidden;
+}
+header>.logo img{
+    width: 105px;
+    height: 35px;
+}
+header .nav_bar{
+    color: #fff;
+    font-size: 17px;
+}
+header .nav_bar ul li{
+    float: left;
+    line-height: 50px;
+    padding: 0 20px;
+
+}
+header .nav_bar ul li a:hover{
+    color: #fff6f6;
+}
+header .nav_nei li{
+    float: left;
+    line-height: 50px;
+    padding: 0 10px;
+}
+header .nav_nei  i{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url("../img/icon.png") no-repeat;
+    vertical-align: middle;
+
+}
+header .nav_nei .mvx{
+    background-position:-230px -26px ;
+}
+header .nav_nei .kwej{
+    background-position:-230px -45px;
+}
+header .nav_nei .viphy{
+    background-position: -230px 2px;
+}
+header  .nav_nei .it{
+    background-position:-105px -23px;
+}
+header .nav_nei span{
+    font-size: 14px;
+    color: #acacac;
+}
+header .more{
+
+}
+header .more li{
+    line-height: 50px;
+    padding: 0 10px;
+    float: left;
+}
+header .more span{
+
+}
+header .more>.gd{
+
+    position: relative;
+    cursor: pointer;
+}
+header .gd:hover .downBox1{
+    display: block;
+}
+header .dl:hover .downBox2{
+    display: block;
+}
+header .more .gd .downBox1{
+    position: absolute;
+    top: 50px;
+    right: 600px;
+    width: 110px;
+    display: block;
+    background: rgba(0,0,0,0.8);
+    z-index: 999;
+}
+header .more>.downBox1>ul>li{
+    position: relative;
+    width: 120px;
+    line-height: 31px;
+    cursor: pointer;
+}
+header .more>.downBox2>ul>li{
+    position: relative;
+    width: 110px;
+    line-height: 31px;
+    cursor: pointer;
+}
+header .more>.dl{
+    cursor: pointer;
+    position: relative;
+}
+header .more .downBox2{
+    position: absolute;
+    width: 120px;
+    height: 153px;
+    display: none;
+    background: rgba(0,0,0,0.8);
+    z-index: 999;
+}
+header .search{
+    position: relative;
+    margin: 10px 0;
+    width: 180px;
+    height: 25px;
+}
+header .search img {
+    width: 180px;
+    height: 25px;
+}
+header .search input{
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.banner{
+    /*height: 750px;*/
+    width: 100%;
+    height: auto;
+    background: url("../img/1533524467294_.jpg")no-repeat top center;
+    position: relative;
+}
+.banner .layer{
+    height: 750px;
+    background: rgba(0,0,0,0.3);
+}
+.banner .prev ,.next{
+    width: 80px;
+    height: 220px;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 200px;
+    display: none;
+}
+.banner:hover .prev,.banner:hover .next{
+    display: block;
+}
+.banner .prev img,.next img{
+    position: absolute;
+    top: 90px;
+    left: 24px;
+}
+.banner .next{
+    right: 0;
+}
+.banner .xz{
+    width: 300px;
+    height: 80px;
+    border-radius: 80px;
+    border: 2px solid #fff;
+    position: absolute;
+    bottom: 290px;
+    left: 42%;
+    color: #fff;
+    text-align: center;
+    line-height: 80px;
+    font-size: 34px;
+    display: inline;
+    float: left;
+}
+.banner h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    padding-top: 70px;
+}
+.banner  p{
+    line-height: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    padding-top: 50px;
+}
+.banner .point{
+    position: absolute;
+    bottom: 54px;
+    float: left;
+}
+.banner .point ul{
+    text-align: center;
+}
+.banner .point li{
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    margin-left: 10px;
+    color: #fff;
+    float: left;
+}
+
+.list1{
+    background: #f2f2f2;
+    padding: 40px 0;
+}
+
+/*歌手、歌单开始*/
+article{
+
+}
+article section{
+
+}
+article{
+
+}
+
+/*歌单、歌手列表*/
+.tit{
+    line-height: 60px;
+}
+.tit a{
+    font-size: 12px;
+    color: #999;
+}
+
+.cont{
+    position: relative;
+}
+.cont ul{
+    width: 1225px;
+}
+.cont li{
+    width: 220px;
+    float: left;
+    margin-right: 25px;
+    position: relative;
+}
+.cont li:hover img{
+    transform: rotateX(360deg) scale(0.8) ;
+}
+.cont .gd_img:hover img{
+    transform: rotateX(360deg) scale(0.8) ;
+}
+
+.cont li img{
+    transition: 0.8s;
+    width: 100%;
+}
+.list-gd li{
+    height: 280px;
+}
+.list-gd li p{
+    line-height: 50px;
+}
+.gd_img{
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+.gd_img strong{
+    font-weight: normal;
+    display: inline-block;
+    position: relative;
+    bottom: 15px;
+    right: 5px;
+    left: 5px;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+.gd_img .ej{
+    width: 30px;
+    height: 30px;
+    background-position: 227px 49px ;
+}
+.gd_img .bf{
+    width: 30px;
+    height: 22px;
+    position: absolute;
+    bottom: 15px;
+    left: 5px;
+    right: 5px;
+    background-position: -306px -150px ;
+}
+
+.list-gs li{
+    height: 360px;
+    margin-bottom: 20px;
+}
+.list-gs li:hover .gs_layer2{
+    opacity: 1;
+}
+.list-gs li:hover .gs_layer1{
+    opacity: 0;
+}
+.gs_layer{
+    width: 188px;
+    background: rgba(0,0,0,0.3);
+    padding: 16px;
+    bottom: 0;
+    position: absolute;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 24px;
+    color: #fff;
+}
+.gs_layer1{
+    height: 53px;
+}
+.gs_layer1 strong{
+    font-weight: normal;
+    display: inline-block;
+}
+.gs_layer1 strong i.music{
+    -ms-background-position-x: -105px;
+    background-position-x: -105px;
+}
+.gs_layer1 strong i.gz{
+    -ms-background-position-x: -230px;
+    background-position-x: -230px;
+}
+.gs_layer1 strong span{}
+
+.gs_layer2{
+    left:0;
+    top: 0;
+    height: 328px;
+    opacity: 0;
+}
+.gs_layer2 .stit{
+    line-height: 50px;
+}
+.gs_layer2 .stit h2{
+    font-weight: normal;
+}
+.gs_layer2 ol li{
+    height: 20px;
+    line-height: 20px;
+    float: none;
+}
+.gs_layer2 .bfqb{
+    line-height: 30px;
+    text-align: center;
+    width: 184px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    height: 30px;
+}
+
+
+/*底部开始*/
+
+footer{
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 34px;
+    height: 180px;
+    background: #181818;
+    padding-bottom: 75px;
+    color: #999;
+}
+footer ul {
+    margin-left: 266px;
+    margin-bottom: 10px;
+}
+footer ul li{
+    padding: 0 5px;
+    float: left;
+    height: 12px;
+    line-height: 12px;
+    border-right: 1px solid #999;
+}
+footer ul li a{
+    padding: 0 4px;
+    height: 12px;
+    line-height: 12px;
+}
+footer li:last-of-type{
+    border-right: 0;
+}
+footer a{
+    color: #fff;
+}
+footer p{
+    padding: 30px 0;
+}
+.play_box{
+    height: 60px;
+}
+.play{
+    width: 100%;
+    height: 60px;
+    background: rgba(0,0,0,0.5);
+    position: fixed;bottom: 0;
+}
+

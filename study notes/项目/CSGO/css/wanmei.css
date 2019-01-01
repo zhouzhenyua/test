@@ -1,0 +1,1014 @@
+body {
+    background: #0f121e;
+    font: 14px/22px "Microsoft Yahei";
+    color: #FFF;
+    margin-top: 72px;
+}
+
+.topnav {
+    height: 72px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background: #040404;
+    line-height: 72px;
+    z-index: 10000;
+}
+
+.wrap {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.topnav .logo {
+    width: 80px;
+    height: 56px;
+    font-size: 0;
+    margin: 10px 40px 0 10px;
+}
+
+.fl {
+    float: left;
+}
+
+.movetonav > a {
+    color: white;
+!important;
+}
+
+.topnav .fl a:hover, .topnav .fl a.on {
+    background: url(../img/wanmei/topnavonbg.png) 0 0 repeat-x;
+    color: #FFF;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.topnav .logo img {
+    width: 80px;
+    height: 56px;
+    float: left;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+.fl {
+    float: left;
+}
+
+.topnav .fl a {
+    display: block;
+    float: left;
+    width: 124px;
+    text-align: center;
+    height: 72px;
+}
+
+.topnav .other {
+    display: block;
+    height: 72px;
+    width: 72px;
+    margin-left: 20px;
+    float: right;
+}
+
+.pr {
+    position: relative;
+}
+
+.topnav .other b {
+    display: block;
+    background: url(../img/wanmei/icons.png) 0 -60px no-repeat;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    left: 19px;
+    top: 19px;
+}
+
+.topnav .other .b2 {
+    display: block;
+    background: url(../img/wanmei/icons.png) 0 -100px no-repeat;
+    display: none;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    left: 19px;
+    top: 19px;
+}
+
+.topnav .other .drop {
+    background: #c2c2c2;
+    text-align: center;
+    width: 196px;
+    right: 0;
+    top: 72px;
+    padding: 28px 23px 20px;
+    line-height: 18px;
+    color: #040404;
+    display: none;
+}
+
+.pa {
+    position: absolute;
+}
+
+.topnav .other:hover .drop {
+    display: block;
+}
+
+.topnav .other:hover {
+    background: #c2c2c2;
+}
+
+.topnav .other .drop dl {
+    border-bottom: 1px solid #9e9fa1;
+    margin-bottom: 5px;
+}
+
+.topnav .other .drop dd {
+    padding: 17px 0;
+}
+
+.topnav .other .drop dd h4 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.topnav .other .drop h3 {
+    font: 700 18px/1 "Microsoft Yahei";
+    color: #1e73ae;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+<!-- /*头部结束*/
+-->
+.mnav {
+    height: 100px;
+    overflow: hidden;
+    background: #040404;
+}
+
+.mnav {
+    display: none;
+}
+
+.cl {
+    zoom: 1;
+}
+
+.btncontainers {
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.mfunsintro {
+    display: none;
+    height: 610px;
+    background: url(../img/wanmei/mbgs_05.png) center bottom no-repeat;
+}
+
+.m1 {
+    position: relative;
+    height: 1055px;
+}
+
+.m1 .csgoimg {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: url(../img/wanmei/m1bg-CS.jpg) 100% 0 no-repeat;
+    right: 50%;
+    top: 0;
+}
+
+.m1 .dotaimg {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: url(../img/wanmei/m1bg-dota.jpg) 0 0 no-repeat;
+    top: 0;
+    left: 50%;
+}
+
+.m1 .mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.m1 .mask .left {
+    right: 50%;
+    background: url(../img/wanmei/m1maskleft.png) 100% 0 no-repeat;
+}
+
+.m1 .mask .left, .m1 .mask .right {
+    position: absolute;
+    width: 50%;
+    height: 1029px;
+    top: 0;
+    opacity: 0;
+    transition: opacity .3s ease-in;
+}
+
+.left {
+    text-align: left;
+    padding-left: 45%;
+}
+
+.m1 .mask .right {
+    left: 50%;
+    background: url(../img/wanmei/m1maskright.png) 0 0 no-repeat;
+}
+
+.m1 .mask .left, .m1 .mask .right {
+    position: absolute;
+    width: 50%;
+    height: 1029px;
+    top: 0;
+    opacity: 0;
+    transition: opacity .3s ease-in;
+    cursor: pointer;
+}
+
+.m1 .csgobtn span::before, .m1 .dotabtn span::before {
+    display: inline-block;
+    background: url(../img/wanmei/icons.png) -40px -60px no-repeat;
+    width: 17px;
+    height: 17px;
+    content: "";
+    vertical-align: top;
+    margin-right: 9px;
+}
+
+.m1 .csgobtn, .m1 .dotabtn {
+    position: absolute;
+    left: 0;
+    top: 380px;
+    width: 172px;
+    height: 143px;
+    background: #1e73ae;
+    padding: 20px 18px 0;
+    cursor: pointer;
+    transition: background .2s ease-in;
+}
+
+.m1 .csgobtn h2, .m1 .dotabtn h2 {
+    font: 700 48px/1 "Microsoft Yahei";
+}
+
+.m1 .csgobtn p, .m1 .dotabtn p {
+    font-size: 24px;
+    margin-top: 6px;
+}
+
+.m1 .csgobtn span, .m1 .dotabtn span {
+    display: block;
+    line-height: 17px;
+    margin-top: 40px;
+}
+
+.m1 .dotabtn {
+    right: 0;
+    left: auto;
+    background: #e8272a;
+    text-align: right;
+}
+
+.m1 .solgan {
+    padding-top: 55px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    width: 480px;
+    margin: 0 auto;
+}
+
+.m1 .solgan p {
+    margin-top: 28px;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    background: url(../img/wanmei/icons.png) 0 0 no-repeat;
+    width: 236px;
+    height: 47px;
+    color: #FFF;
+    font: 400 18px/46px "Microsoft Yahei";
+}
+
+.btn:hover {
+    color: #FFF;
+    background-position: -240px 0;
+}
+
+.m1 .m1nav {
+    position: absolute;
+    bottom: 0;
+    width: 1200px;
+    height: 156px;
+    left: 50%;
+    margin-left: -600px;
+}
+
+.m1 .m1nav ul {
+    padding-left: 10px;
+}
+
+.m1 .m1nav li {
+    width: 173px;
+    height: 154px;
+    border: 1px solid rgba(30, 115, 174, 0.4);
+    border-radius: 10px;
+    margin-left: 51px;
+    text-align: center;
+    overflow: hidden;
+    float: left;
+}
+
+.m1 .m1nav li:hover {
+    border-color: rgba(30, 115, 174, 0.8);
+}
+
+.m1 .m1nav li:hover {
+
+}
+
+.m1 .m1nav .icon {
+    height: 76px;
+    margin-top: 10px;
+    line-height: 76px;
+}
+
+.m1 .m1nav .icon b {
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../img/wanmei/icons.png) -65px -55px no-repeat;
+}
+
+.m1 .m1nav .i1 .icon b {
+    background-position: -65px -55px;
+    width: 50px;
+    height: 57px;
+}
+
+.m1 .m1nav .i2 .icon b {
+    background-position: -130px -55px;
+    width: 59px;
+    height: 59px;
+}
+
+.m1 .m1nav .i3 .icon b {
+    background-position: -190px -55px;
+    width: 48px;
+    height: 49px;
+}
+
+.m1 .m1nav .i4 .icon b {
+    background-position: -260px -55px;
+    width: 55px;
+    height: 58px;
+}
+
+.m1 .m1nav .i5 .icon b {
+    background-position: -320px -51px;
+    width: 49px;
+    height: 66px;
+}
+
+.m1 .m1nav p {
+    font-size: 20px;
+    line-height: 1;
+    padding-bottom: 14px;
+}
+
+.m1 .m1nav .link {
+    height: 35px;
+    background: #1e73ae;
+    line-height: 35px;
+    display: table;
+    width: 100%;
+}
+
+.m1 .m1nav .link a {
+    display: table-cell;
+    width: 50%;
+    color: white;
+}
+
+.m1 .m1nav .link a:hover {
+    background: #3999db;
+    color: #FFF;
+}
+
+.m1 .m1nav .link a::after {
+    display: inline-block;
+    content: "";
+    background: url(../img/wanmei/icons.png) -490px 0 no-repeat;
+    width: 7px;
+    height: 6px;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+.m-csgo {
+    position: relative;
+    overflow: hidden;
+    min-height: 1038px;
+    z-index: 2;
+}
+
+.m-csgo .bg {
+    background: url(../img/wanmei/m-csgo.jpg) 100% 0 no-repeat;
+    position: absolute;
+    width: 50%;
+    right: 50%;
+    height: 1038px;
+    top: 0;
+}
+
+.m-csgo .cnt {
+    padding-top: 110px;
+    position: relative;
+    z-index: 2;
+}
+
+.tac {
+    text-align: center;
+}
+
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.swiper-container {
+    width: 1140px;
+    margin: 30px auto 0;
+}
+
+.swiper-container-android .swiper-slide, .swiper-wrapper {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    -ms-transition-property: -ms-transform;
+    transition-property: transform;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.swiper-wrapper {
+    height: 535px;
+}
+
+.swiper-slide {
+    -webkit-flex-shrink: 0;
+    -ms-flex: 0 0 auto;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.swiper-slide-active.animate1 .box {
+    width: 374px;
+    height: 374px;
+    right: 70px;
+    top: 50%;
+    margin-top: -187px;
+    text-align: center;
+}
+
+.swiper-container .box {
+    position: absolute;
+}
+
+.swiper-slide-active.animate1 .box>div:nth-child(1) {
+    -webkit-animation-delay: 0.75s;
+    animation-delay: 0.75s;
+}
+
+.swiper-slide-active.animate1 .box>div {
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    opacity: 0;
+    -webkit-animation: ball-scale-ripple-multiple 3s 0s infinite cubic-bezier(0.21, 0.53, 0.56, 0.8);
+    animation: ball-scale-ripple-multiple 3s 0s infinite cubic-bezier(0.21, 0.53, 0.56, 0.8);
+}
+
+.animate1 .box>div:nth-child(2) {
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+
+.animate1 .box>div:nth-child(3) {
+    -webkit-animation-delay: 2.25s;
+    animation-delay: 2.25s;
+}
+
+.animate1 .box span {
+    background: url(../img/wanmei/f1-1-1.png) 0 0 no-repeat;
+    width: 57px;
+    height: 57px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -28px 0 0 -28px;
+}
+
+.animate2 .box{
+    width: 106px;
+    height: 106px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    text-align: center;
+    line-height: 106px;
+    left: 78px;
+    top: 250px;
+    border-radius: 50%;
+}
+.animate2 .box span{
+    display: inline-block;
+    background: url(../img/wanmei/f1-2-1.png) 0 0 no-repeat;
+    width: 59px;
+    height: 59px;
+    vertical-align: middle;
+}
+.animate3 .box{
+    left: 70px;
+    top: 420px;
+    height: 57px;
+}
+
+.animate3 .box span:nth-child(1){
+    background: url(../img/wanmei/f1-3-1.png) 0 0 no-repeat;
+    width: 88px;
+    height: 57px;
+    display: inline-block;
+    margin-right: 5px;
+}
+.animate3 .box span:nth-child(2){
+    background: url(../img/wanmei/f1-3-1.png) 0 0 no-repeat;
+    width: 88px;
+    height: 57px;
+    display: inline-block;
+    margin-right: 5px;
+}
+.animate3 .box span:nth-child(3){
+    background: url(../img/wanmei/f1-3-2.png) 0 0 no-repeat;
+    width: 50px;
+    height: 61px;
+    position: absolute;
+    right: 26px;
+    margin-right: 0;
+}
+.animate3 .box span:nth-child(4){
+    background: url(../img/wanmei/f1-3-1.png) 0 0 no-repeat;
+    width: 88px;
+    height: 57px;
+    display: inline-block;
+    margin-right: 5px;
+    position: relative;
+    left: 88px;
+}
+.animate4 .box{
+    left: 260px;
+    top: 170px;
+}
+.animate4 .box .fl{
+    text-align: center;
+    width: 98px;
+    margin-right: 72px;
+}
+.animate4 .box .fl dt{
+    width: 98px;
+    height: 98px;
+    box-sizing: border-box;
+    border: 2px solid #ffffff;
+    border-radius: 100px;
+    line-height: 98px;
+}
+.animate4 .box .fl dd{
+    font: 700 24px/1 "Microsoft Yahei";
+    margin-top: 10px;
+}
+.animate5 .box{
+    top: 160px;
+    left: 660px;
+}
+.animate5 .box div:nth-child(1){
+    background: url(../img/wanmei/f1-5-1.png) 0 0 no-repeat;
+    width: 213px;
+    height: 246px;
+}
+.animate5 .box div:nth-child(2){
+    position: absolute;
+    background: url(../img/wanmei/f1-5-4.png) 0 0 no-repeat;
+    width: 72px;
+    height: 72px;
+    left: -78px;
+    top: -44px;
+}
+
+.animate5 .box div:nth-child(3){
+    position: absolute;
+    background: url(../img/wanmei/f1-5-2.png) 0 0 no-repeat;
+    width: 98px;
+    height: 98px;
+    left: 240px;
+    top: -45px;
+}
+.animate5 .box div:nth-child(4){
+    position: absolute;
+    background: url(../img/wanmei/f1-5-5.png) 0 0 no-repeat;
+    width: 106px;
+    height: 106px;
+    left: 250px;
+    top: 180px;
+}
+
+.animate5 .box div:nth-child(5){
+    position: absolute;
+    background: url(../img/wanmei/f1-5-3.png) 0 0 no-repeat;
+    width: 83px;
+    height: 83px;
+    left: -110px;
+    top: 189px;
+}
+
+.animate6 .box{
+    position: absolute;
+    width: 100%;
+    height: 223px;
+    left: 0;
+    top: 100px;
+    overflow: hidden;
+}
+.animate6 .box .c{
+    width: 98px;
+    height: 98px;
+    box-sizing: border-box;
+    border: 2px solid #FFF;
+    border-radius: 98px;
+    text-align: center;
+    line-height: 98px;
+    position: absolute;
+    left: 50%;
+    margin-left: -49px;
+    bottom: 0;
+}
+.animate6 .box .circle{
+    background: url(../img/wanmei/f1-6-3.png) 50% 0 no-repeat;
+    position: absolute;
+    width: 324px;
+    height: 203px;
+    left: 50%;
+    top: 35px;
+    margin-left: -162px;
+}
+.animate6 .box .folder{
+    position: absolute;
+    width: 380px;
+    height: 203px;
+    left: 50%;
+    margin-left: -190px;
+    top: 0;
+}
+.animate6 .box .folder div{
+    position: absolute;
+    background: url(../img/wanmei/f1-6-1.png) 0 0 no-repeat;
+    width: 41px;
+    height: 29px;
+}
+.animate6 .box .folder div:nth-child(1){
+    left: 60px;
+    top: 60px;
+}
+.animate6 .box .folder div:nth-child(2){
+    right: 10px;
+    top: 158px;
+}
+.vm {
+    vertical-align: middle;
+}
+
+.m-csgo .nav {
+    line-height: 0;
+    font-size: 0;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    width: 1078px;
+    margin: 15px auto 0;
+}
+
+.m-csgo .nav li {
+    width: 239px;
+    border-radius: 10px;
+    height: 250px;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    font: 14px/30px "Microsoft Yahei";
+    color: #676767;
+    vertical-align: top;
+    margin: 0 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.m-csgo .nav .icon {
+    height: 76px;
+    line-height: 76px;
+}
+
+.m-csgo .nav .i1:hover .icon b, .m-csgo .nav .i1.on .icon b {
+    background-position: -65px -115px;
+}
+
+.m-csgo .nav .i1 .icon b {
+    background-position: -65px -55px;
+    width: 50px;
+    height: 57px;
+}
+
+.m-csgo .nav .icon b {
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../img/wanmei/icons.png) -65px -55px no-repeat;
+}
+
+.m-csgo .nav li:hover h3, .m-csgo .nav li.on h3 {
+    color: #2291df;
+}
+
+.m-csgo .nav h3 {
+    font: 700 18px/1 "Microsoft Yahei";
+    /*color: #FFF;*/
+}
+
+.m-csgo .nav .info {
+    color: #2291df;
+    font-size: 18px;
+    margin: 5px 0 8px;
+}
+
+.m-csgo .nav .i2 .icon b {
+    background-position: -130px -55px;
+    width: 59px;
+    height: 59px;
+}
+
+.m-csgo .nav .i2:hover .icon b, .m-csgo .nav .i2.on .icon b {
+    background-position: -130px -115px;
+}
+
+.m-csgo .nav .i3 .icon b {
+    background-position: -190px -55px;
+    width: 48px;
+    height: 49px;
+}
+
+.m-csgo .nav .i3:hover .icon b, .m-csgo .nav .i3.on .icon b {
+    background-position: -190px -115px;
+}
+
+.m-csgo .nav .i4 .icon b {
+    background-position: -260px -55px;
+    width: 55px;
+    height: 58px;
+}
+
+.m-csgo .nav .i4:hover .icon b, .m-csgo .nav .i4.on .icon b {
+    background-position: -260px -115px;
+}
+
+.m-csgo .nav .i5 .icon b {
+    background-position: -320px -51px;
+    width: 49px;
+    height: 66px;
+}
+
+.m-csgo .nav .i5:hover .icon b, .m-csgo .nav .i5.on .icon b {
+    background-position: -320px -115px;
+}
+
+.m-csgo .nav .i6 .icon b {
+    background-position: -370px -55px;
+    width: 64px;
+    height: 45px;
+}
+
+.m-csgo .nav .i6:hover .icon b, .m-csgo .nav .i6.on .icon b {
+    background-position: -370px -115px;
+}
+
+.m-dota {
+    position: relative;
+    overflow: hidden;
+    min-height: 880px;
+    margin-top: -40px;
+}
+
+.m-dota .bg {
+    background: url(../img/wanmei/m-dota.jpg) 100% 0 no-repeat;
+    position: absolute;
+    width: 1333px;
+    left: 50%;
+    height: 880px;
+    top: 0;
+    margin-left: -373px;
+}
+
+.m-dota .cnt {
+    padding-top: 110px;
+    position: relative;
+    z-index: 2;
+}
+
+.m-dota .match {
+    position: absolute;
+    height: 182px;
+    width: 100%;
+    top: 136px;
+    left: 0;
+    line-height: 182px;
+    text-align: center;
+}
+
+.m-dota .match span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.m-dota .match span img {
+    margin: 0 -20px;
+}
+
+.m-dota .nav {
+    line-height: 0;
+    font-size: 0;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    width: 1078px;
+    margin: 15px auto 0;
+}
+
+.m-dota .nav .i3 {
+    width: 250px;
+}
+
+.m-dota .nav li {
+    width: 239px;
+    border-radius: 10px;
+    height: 250px;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    font: 14px/30px "Microsoft Yahei";
+    color: #676767;
+    vertical-align: top;
+    margin: 0 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.m-dota .nav .icon {
+    height: 76px;
+    line-height: 76px;
+}
+
+.m-dota .nav .icon b {
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../img/wanmei/icons.png) -65px -55px no-repeat;
+}
+
+.m-dota .nav .i3 .icon b {
+    background-position: -190px -55px;
+    width: 48px;
+    height: 49px;
+}
+
+.m-dota .nav .i3:hover .icon b, .m-dota .nav .i3.on .icon b {
+    background-position: -190px -185px;
+}
+
+.m-dota .nav h3 {
+    font: 700 18px/1 "Microsoft Yahei";
+    color: #FFF;
+}
+
+.m-dota .nav li:hover h3, .m-dota .nav li.on h3 {
+    color: #dd2017;
+}
+
+.m-dota .nav .info {
+    color: #dd2017;
+    font-size: 18px;
+    margin: 5px 0 8px;
+}
+
+.m-dota .nav .i6 .icon b {
+    background-position: -370px -55px;
+    width: 64px;
+    height: 45px;
+}
+
+.m-dota .nav .i6:hover .icon b, .m-dota .nav .i6.on .icon b {
+    background-position: -370px -185px;
+}
+
+.m-dota .nav .i2 {
+    width: 280px;
+}
+
+.m-dota .nav .i2 .icon b {
+    background-position: -130px -55px;
+    width: 59px;
+    height: 59px;
+}
+
+.m-dota .nav .i2:hover .icon b, .m-dota .nav .i2.on .icon b {
+    background-position: -130px -185px;
+}
+
+.footer {
+    padding-top: 140px;
+    text-align: center;
+    padding-bottom: 80px;
+    font: 12px/24px "Microsoft Yahei";
+    color: #858585;
+}
+
+.footer dl {
+    padding-bottom: 50px;
+}
+
+.footer dd {
+    font: 24px/60px "Microsoft Yahei";
+    padding-bottom: 10px;
+}
+
+.footer a {
+    color: #c8c8c8;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    background: url(../img/wanmei/icons.png) 0 0 no-repeat;
+    width: 236px;
+    height: 47px;
+    color: #FFF;
+    font: 400 18px/46px "Microsoft Yahei";
+}
+
+.footer .btn {
+    margin: 0 13px;
+}
+
+
+
+
+

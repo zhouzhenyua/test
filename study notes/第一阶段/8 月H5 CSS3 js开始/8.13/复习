@@ -1,0 +1,82 @@
+H5 的优势
+声明更简洁
+语义化标签
+
+html5 和css3 不兼容ie 6 7 8以下的浏览器
+兼容ie 9以上的浏览器
+
+
+
+js 插件？
+
+面试题
+
+ 如果想要在低版本浏览器中使用html 5 \css3 可以使用那些插件解决这个兼容问题？ （核心原理）
+
+
+
+
+css 3
+
+    css hack
+      条件hack
+      属性hack
+      选择hack
+
+1、私有前缀
+    pc 开发 一定要加上私有前缀
+    -webkit-  谷歌 苹果
+
+    -moz-   火狐
+
+    -o-   欧朋
+
+    -ms-  ie
+
+
+
+2、选择器
+    伪类  :
+    first-of-type{}
+    nth-of-type(odd){} 奇数
+    nth-of-type(even){} 偶数
+    last-of-type{}
+
+    first-child{}
+    nth-child{}
+    last-child{}
+
+    empty 没有内容 不显示
+
+    ta
+    伪元素 ::
+    ::after  ::before
+
+    ::first-letter  ::first-line
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

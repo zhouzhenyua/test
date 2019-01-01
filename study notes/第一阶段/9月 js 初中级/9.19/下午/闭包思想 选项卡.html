@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box1{
+            width: 200px;
+            height: 30px;
+            background: #feeeee;
+        }
+        button{
+            width: 30%;
+            height: auto;
+            background: #ff33ff;
+            margin: auto 2px;
+            float: left;
+        }
+        #box2{
+            width: 200px;
+            height: 200px;
+
+        }
+        #box2>div{
+            width: 200px;
+            height: 200px;
+            display: none;
+        }
+
+        #box2>div:nth-child(1){background: #0b114e}
+        #box2>div:nth-child(2){background: #f23030}
+        #box2>div:nth-child(3){background: #0febc1}
+
+        #box2 .now{
+            display: block;
+        }
+        #box1 .now{
+            background: linear-gradient(#f4f4f4,#0a56bb);
+        }
+
+    </style>
+</head>
+<body>
+<div id="box1">
+    <button class="now">按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+</div>
+<div id="box2">
+    <div class="now">内容1</div>
+    <div>内容2</div>
+    <div>内容3</div>
+</div>
+<script>
+
+    var oBox =document.getElementById('box2');
+    var oBtn =document.getElementsByTagName('button');
+    var oBox1 =oBox.getElementsByTagName('div');
+
+
+    for (var i = 0; i < oBtn.length; i++) {
+        oBtn[i].onclick = (function(i){
+          return function (){
+              for (var j = 0; j < oBox1.length; j++) {
+                  oBox1[j].classList.remove('now');
+                  oBtn[j].classList.remove('now');
+              }
+              oBox1[i].classList.add('now');
+              this.classList.add('now')
+          }
+        })(i)
+    }
+
+//    function teb(i){
+//        for (var j = 0; j < oBox1.length; j++) {
+//            oBox1[j].classList.remove('now');
+//            oBtn[j].classList.remove('now');
+//        }
+//        oBox1[i].classList.add('now');
+//        oBtn[i].classList.add('now');
+//    }
+//    for (var i = 0; i < oBtn.length; i++) {
+//        (function(i){
+//                oBtn[i].onclick =function(){
+//                    teb(i)
+//                }
+//        })(i)
+//    }
+
+</script>
+</body>
+</html>

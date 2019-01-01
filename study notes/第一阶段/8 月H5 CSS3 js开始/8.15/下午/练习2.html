@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        .a{
+            margin: 50px auto;
+            width: 226px;
+            height: 288px;
+            border: 2px solid#ff00ff;
+            position: relative;
+        }
+        .a::before{
+            position: absolute;
+            content: 'b';
+            top:0; left: 0; right: 0; bottom: 0;
+            background: url("../img/1.jpg");
+            width: 226px;
+            height: 288px;
+        }
+        .a::after{
+            position: absolute;
+            content: 'c';
+            top:0; left: 0; right: 0; bottom: 0;
+            background: url("../img/2.jpg");
+            width: 226px;
+            height: 288px;
+            transform-origin: left;
+            transition: all 1s;
+            perspective: 500px;
+        }
+
+        .a:hover:after{
+            transform: rotateY(180deg);
+            backface-visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div class="a"></div>
+</body>
+</html>

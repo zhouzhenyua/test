@@ -1,0 +1,389 @@
+
+#information{
+    position: relative;
+}
+.layout{
+    width: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+}
+.layout .col{
+    float: left;
+    min-height: 1px;
+}
+.layout .col-main{
+    width: 72%;
+    float: left;
+}
+.layout .col-sub{
+    width: 27%;
+    float: right;
+    margin-left: 0;
+}
+/*轮播图*/
+.information-list-banner{
+    width: 100%;
+    font-size: 0;
+    margin-top: 24px;
+    height: 332px;
+    background: #fff;
+    overflow: hidden;
+}
+.list-banner-left{
+    display: inline-block;
+    position: relative;
+    width: 66.5%;
+    height: 332px;
+    background: #141414;
+    overflow: hidden;
+}
+.list-banner-left .items-wrap{
+    height: 332px;
+}
+.list-banner-left .items-wrap .item{
+    position: relative;
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    color: #fff;
+    user-select: none;
+}
+.list-banner-left .items-wrap .item{
+    left: 0;
+    display: none;
+    opacity: 1;
+}
+.list-banner-left .items-wrap .now{
+    display: inline-block;
+}
+.list-banner-left .items-wrap .item .item-bg{
+    height: 332px;
+    left: 0;
+    min-width: 100%;
+    z-index: -1;
+    display: block;
+}
+.list-banner-left .items-wrap .item .item-txt{
+    display: block;
+    width: 92%;
+    height: 30px;
+    position: absolute;
+    background: rgba(0,0,0,.5);
+    left: 0;
+    bottom: 0;
+    font-size: 20px;
+    color: #FFF;
+    line-height: 30px;
+    padding: 16px 4%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.list-banner-left .arrows .arrow-left{
+    left: 2.3%;
+}
+.list-banner-left .arrows .arrow-right{
+    right: 2.3%;
+}
+.list-banner-left .arrows .umsitefont{
+    display: block;
+    position: absolute;
+    top: 42%;
+    padding: 12px 6px;
+    font-size: 28px;
+    font-weight: 200;
+    color: rgba(255,255,255,.6);
+    z-index: 5;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: background .5s ease-out;
+    -moz-transition: background .5s ease-out;
+    -ms-transition: background .5s ease-out;
+    transition: background .5s ease-out;
+}
+.list-banner-left .arrows{
+   display: block;
+}
+.list-banner-left .dots{
+    position: absolute;
+    bottom: 72px;
+    width: 100%;
+    left: 2.3%;
+    padding-left: 6px;
+    z-index: 5;
+}
+.list-banner-left .dots .dots-item{
+    position: relative;
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    margin: 0 5px;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    opacity: .5;
+}
+.list-banner-left .dots .on{
+    width: 32px;
+    opacity: .5;
+}
+
+
+.list-banner-right{
+    display: inline-block;
+    width: 32.5%;
+    margin-left: 1%;
+    vertical-align: top;
+}
+.list-banner-right li{
+    margin-bottom: 8px;
+    position: relative;
+}
+.list-banner-right li .banner-img{
+    display: block;
+    width: 100%;
+    height: 162px;
+    overflow: hidden;
+}
+.list-banner-right li .banner-img img{
+    width: 100%;
+}
+.list-banner-right li .banner-txt{
+    display: block;
+    width: 88%;
+    position: absolute;
+    background: rgba(0,0,0,.5);
+    left: 0;
+    bottom: 0;
+    font-size: 14px;
+    color: #FFF;
+    line-height: 22px;
+    padding: 6px 6%;
+}
+
+/*资讯*/
+.information-list-content{
+    margin-top: 16px;
+    padding-bottom: 30px;
+    background: #fff;
+}
+.tabList{
+    width: 96.25%;
+    background: #fff;
+    height: 64px;
+    border-bottom: 1px solid #E9E9E9;
+    padding-left: 3.75%;
+}
+.tabList li{
+    display: inline-block;
+    margin-right: 40px;
+    font-size: 16px;
+    color: #333;
+    line-height: 64px;
+    cursor: pointer;
+}
+.tabList li.active{
+    border-bottom: 2px #2196F3 solid;
+}
+.tabCon .active{
+    display: block;
+}
+.tabCon div{
+    display: none;
+}
+
+.tabCon .active .visible{
+    display: block;
+}
+.tabCon .active ul{
+    width: 92.5%;
+    margin: 24px auto 0;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #E9E9E9;
+    font-size: 0;
+    display: none;
+}
+/*.tabCon .active .information-list-more{*/
+    /*width: 100%;*/
+    /*font-size: 14px;*/
+    /*color: #999;*/
+    /*text-align: center;*/
+    /*border-bottom: none;*/
+    /*padding-bottom: 0;*/
+    /*cursor: pointer;*/
+/*}*/
+.tabCon .active ul .list-img{
+    width: 32.5%;
+    height: 150px;
+    vertical-align: top;
+    overflow: hidden;
+    display: inline-block;
+}
+.tabCon .active ul .list-img img{
+    height: 100%;
+}
+.tabCon .active ul .list-info{
+    display: inline-block;
+    width: 65.5%;
+    min-height: 120px;
+    vertical-align: top;
+    margin-left: 2%;
+    padding-bottom: 30px;
+    position: relative;
+}
+.tabCon .active ul .list-info h2{
+    font-size: 24px;
+    color: #333;
+    line-height: 36px;
+    font-weight: 400;
+}
+.tabCon .active ul .list-info p{
+    font-size: 12px;
+    color: #999;
+    line-height: 18px;
+}
+.tabCon .active ul .list-info .list-info-source{
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.tabCon .active ul .list-info .list-info-source .time{
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+    font-size: 12px;
+    color: #999;
+    line-height: 18px;
+}
+.tabCon .active ul .list-info .list-info-source .time i{
+    left: 70px;
+    top: 2px;
+    position: relative;
+    width: 20px;
+    height: 18px;
+    display: block;
+    float: left;
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-image: url("../img/钟表.png") ;
+}
+.tabCon .active ul .list-info .list-info-source .column{
+    display: inline-block;
+    width: 70%;
+    font-size: 12px;
+    color: #999;
+    line-height: 18px;
+}
+.tabCon .active ul .list-info .list-info-source .column i{
+    width: 20px;
+    height: 18px;
+    display: block;
+    float: left;
+    background-size: 15px 18px;
+    background-repeat: no-repeat;
+    background-image: url("../img/资讯.png") ;
+}
+
+
+.layout.col-sub{
+    width: 27%;
+    float: right;
+    margin-left: 0;
+}
+.layout .information-hot{
+    width: 85%;
+    background: #fff;
+    padding: 0 7.5% 1px;
+    margin-top: 16px;
+}
+.layout .information-hot-title{
+    font-size: 16px;
+    color: #333;
+    line-height: 24px;
+    padding: 16px 0;
+}
+.layout ul{
+    width: 100%;
+}
+.layout .information-hot ul li{
+    line-height: 22px;
+    margin-bottom: 20px;
+    font-size: 0;
+}
+.layout ul li i{
+    width: 16px;
+    font-size: 14px;
+    color: #2196F3;
+    font-style: normal;
+    display: inline-block;
+    vertical-align: top;
+}
+.layout ul li a{
+    width: 94%;
+    font-size: 14px;
+    color: #333;
+    display: inline-block;
+    vertical-align: top;
+}
+.layout ul li a:hover{
+    color: #2196F3;
+}
+.layout .information-contact{
+    width: 85%;
+    background: #fff;
+    padding: 0 7.5% 1px;
+    margin-top: 16px;
+}
+.layout .information-contact-title{
+    font-size: 16px;
+    color: #333;
+    line-height: 24px;
+    padding: 16px 0;
+}
+/*.layout ul li{*/
+    /*margin-bottom: 16px;*/
+    /*font-size: 0;*/
+/*}*/
+.layout .contact-img{
+    width: 88px;
+    height: 88px;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.layout .contact-img img{
+    width: 100%;
+}
+.layout  .contact-txt{
+    display: inline-block;
+    width: 60.5%;
+    vertical-align: middle;
+    margin-left: 12px;
+}
+.layout .contact-txt-title {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    line-height: 22px;
+}
+.layout .contact-txt-info {
+    font-size: 12px;
+    color: #999;
+    line-height: 24px;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="ul1">
+    <!---->
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<ol id="ol1">
+    <li></li>
+    <li></li>
+    <li></li>
+</ol>
+
+<script>
+    /*
+    * 获取元素方式
+    * 1、通过id获取
+    * 2、通过标签名tagName获取
+    * 3、通过类名ClassName获取（不兼容ie6/7/8）
+    * 4、通过标签名tagName获取，指定元素下面的标签
+    * 5、通过querySelectorAll获取多个元素，不兼容，适用于移动端
+    * 属于静态获取：dom结构发生变化，需要重新获取
+    * querySelector获取一个元素
+    * 6、获取body
+    * var oBody = document.body ||document.documentElement;
+     *
+     * 7、获取一屏的宽高
+     *  var h = oBody.clientHeight;//高
+        var w = oBody.clientWidth;//宽
+    * */
+
+//    var oBody = document.body ||document.documentElement;
+//
+//
+//   var h = oBody.clientHeight;//高
+//   var w = oBody.clientWidth;//宽
+
+    var oUl =document.getElementById('ul1');
+//    children      获取所有元素子节点  (IE 8 不能用)
+//    parentNode   物理结构的父节点
+//    offsetParent  实际定位的父节点  (定义元素的父节点)
+//    nextSibling     下一个兄弟节点  有可能是文本节点
+//    nextElementSibling   下一个元素兄弟节点
+//    previousSibling    上一个兄弟节点  有可能是文本节点
+//    previousElementSibling   上一个元素兄弟节点
+//    firstElementChild  第一个子元素节点
+//    lastElementChild  最后一个子元素节点
+var li1 = oUl.childNodes;
+    console.log(li1);
+    console.log(li1[0].nodeValue,li1[0].nodeName,li1[0].nodeType);
+
+
+</script>
+</body>
+</html>

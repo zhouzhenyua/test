@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>获取下拉列表内容</title>
+    <script type="text/javascript" src="../js/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <custom :ishide="hide" :data="arr" btn="查询"></custom>
+        <custom :ishide="hide" :data="arr" btn="添加"></custom>
+    </div>
+    <script>
+        Vue.component("custom",{
+            props:["ishide","data","btn"],
+            template:`
+                <div>
+                    <input type="text" v-model="childmasg" @click="show"/>    
+                    <input type="button" :value="btn"/>    
+                    <custom-list v-show="ishide" :listData="data" @receve="getchild"></custom-list>
+                </div>
+            `,
+            data(){
+                return{
+                    childmasg:''
+                }
+            },
+            methods:{
+                show(){
+                    this.ishide =!this.ishide
+                },
+                getchild(val){
+                    this.childmasg=val
+                }
+            },
+            mounted() {
+                
+            },
+        })
+        Vue.component("custom-list",{
+            props: ["listData"],
+            template:`
+                <div>
+                    <ul>
+                        <li v-for="item in listData" @click="childsend(item)">{{item}}</li>
+                    </ul>
+                </div>
+            `,
+            methods:{
+                childsend(item){
+                    this.$emit("receve",item)
+                }
+            }
+        })
+
+        new Vue({
+            el:"#app",
+            data:{
+                hide:false,
+                arr:["vue","react","angualr"]
+            },
+            methods:{
+
+            }
+        })
+    </script>
+</body>
+</html>

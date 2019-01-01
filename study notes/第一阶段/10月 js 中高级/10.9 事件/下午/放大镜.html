@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>放大镜</title>
+    <style>
+        * {margin: 0;padding: 0;}
+        .box {
+            width: 350px;
+            height: 350px;
+            margin:100px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+        .big {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 0;
+            left: 360px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            display: none;
+        }
+        .mask {
+            width: 175px;
+            height: 175px;
+            background: rgba(255, 255, 0, 0.4);
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: move;
+            display: none;
+        }
+        .small {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="fdj">
+    <div class="small">
+        <img src="07 放大镜/images/001.jpg" alt=""/>
+        <div class="mask"></div>
+    </div>
+    <div class="big">
+        <img src="07 放大镜/images/0001.jpg" alt=""/>
+    </div>
+</div>
+<script src="07 放大镜/my.js"></script>
+<script>
+    var fdj = $('fdj');
+    var small = fdj.children[0];
+    var big = fdj.children[1];
+    var mask = small.children[1];
+
+    small.onmouseover = function(){
+        mask.style.display = 'block';
+        big.style.display = 'block';
+    };
+    small.onmouseout = function(){
+        mask.style.display = 'none';
+        big.style.display = 'none';
+    };
+
+    small.onmousemove = function(ev){
+        var oEvent = ev || event;
+        var pagex = oEvent.pageX ||oEvent.clientX +scroll().left;
+        var pagey = oEvent.pageY ||oEvent.clientY +scroll().top;
+
+        var x = pagex - small.parentNode.offsetLeft -mask.offsetWidth /2;
+        var y = pagey - small.parentNode.offsetTop -mask.offsetHeight /2;
+        if(x<0){
+            x = 0
+        }else if(x>small.offsetWidth - mask.offsetWidth){
+            x = small.offsetWidth - mask.offsetWidth
+        }
+        if(y<0){
+            y = 0
+        }else if(y>small.offsetHeight - mask.offsetHeight){
+            y =small.offsetHeight - mask.offsetHeight
+        }
+
+        mask.style.left = x +'px';
+        mask.style.top = y +'px';
+        var Img = big.children[0];
+        var xx = (Img.offsetWidth - big.offsetWidth)/(small.offsetWidth - mask.offsetWidth);
+        Img.style.marginLeft = -x *xx +'px';
+        Img.style.marginTop = -y *xx +'px';
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--声明字符编码-->
+    <meta charset="UTF-8">
+    <!--移动端和响应式布局必须设置-->
+
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!--
+        设计稿： 280 (320 480 2015年之前)   640  750(主流)
+        单位：物理单位 =>pt  设备单位=> dpi    css单位 =>px
+
+        viewport 视图容器
+        width 宽度 可以设置为固定宽度
+        device-width 试图宽度
+    -->
+
+    <!--viewport  用最低版本的ie和谷歌  不做重点-->
+    <meta http-equiv="x-ua-compatible" content="ie=edge chrome=1">
+    <!--避免ie的兼容模式  重点 相对于上面重点 -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!--网页描述-->
+    <meta name="description" content="字符长度不能超过150个字符">
+    <!--网站关键字-->
+    <meta name="keywords" content="">
+    <!--网址作责-->
+    <meta name="author" content="">
+    <!--便于搜索引擎抓取 -->
+    <meta name="robots" content="index about ">
+
+    <!-- 针对于ios设备开始     x5==uc-->
+    <!--<meta name="web-mobile-app-title" content="">-->
+    <meta name="apple-mobile-web-app-title" content="">
+    <!--设置ios智能的进度条 iphone6  safari-->
+    <meta name="apple-mobile-web-app-status-bar-style" charset="">
+
+
+    <!--强制竖屏/横屏   uc、qq   -->
+    <!--强制竖屏  => qq/X5    portrait竖屏设置 -->
+    <meta name="x5-orientation" content="portrait">
+    <!--强制竖屏  => uc    portrait竖屏设置 -->
+    <meta name="screen-orientation" content="portrait">
+
+    <!--强制uc横屏 -->
+    <meta name="full-screen" content="yes">
+    <!--强制x5横屏 -->
+    <meta name="x5-fullscreen" content="true">
+
+
+    <title>Title</title>
+    <style>
+
+        html{
+         /*750 rem  根据根的字体大小进行改变*/
+
+            /*1em =16px
+            16*62.5%=10px
+             1rem= 10px
+             谷歌最小12px bug
+            */
+
+            /*1px border 兼容性*/
+            font-size: 62.5%;
+            /*移动端布局方式
+            1、62.5%
+            2、百分比
+            3、动态计数 (现在推荐)
+            4、vh  vw
+            5、flex  (现在不推荐 )
+
+            */
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+
+            /*宽度不设置时 为device-width 100% */
+            width: 7.5rem;
+            font-size: 20px;
+            height: 100px;
+            background: #0f0;
+        }
+        .l {
+            /*width:50%;*/
+            height: 100%;
+            background-color: #6f42c1;
+            float: left;
+        }
+        .r{
+            /*width:50%;*/
+            height: 100%;
+            background-color: #ff3f38;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+
+<!--<button>233</button>-->
+
+
+<div id="wrap">
+
+    gggg
+    <div id="l" class="l"> </div>
+    <div id="r" class="r"></div>
+</div>
+<script>
+    /*750 rem  根据根的字体大小进行改变*/
+
+//    DOMcontendlodt
+    var sise = document.documentElement.clientWidth/7.5+'px';
+
+    document.documentElement.style.fontSize=sise;
+
+    console.log(document.documentElement.clientWidth);
+
+//    console.log(l);
+    l.style.with=sise;
+
+</script>
+</body>
+</html>

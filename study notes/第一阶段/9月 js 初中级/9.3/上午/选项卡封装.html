@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//      形参
+//    function showHide(tit,cont){
+//        tit.onclick = function(){
+//            if(cont.style == 'block'){
+//                cont.style = 'none'
+//            }else {
+//                cont.style = 'block'
+//            }
+//        }
+//    }
+////      实参
+//    showHide(tit,cont);
+
+
+    function teb(tit1,cont1,ev){
+        for (let i = 0; i < tit1.length; i++) {
+            this[i][ev] = function(){
+                for (var j = 0; j < cont1.length; j++) {
+                    cont1[j].classList.remove('active');
+                    this[j].classList.remove('active');
+                }
+                cont1[i].classList.add('active');
+                this.classList.add('active')
+            }
+        }
+    }
+    teb(tit2,cont2,'onclick')
+
+
+</script>
+</body>
+</html>

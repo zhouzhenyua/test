@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> trigger</title>
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+<div style="width: 100px;height: 100px;background: #f23030"></div>
+<script>
+    /**
+     * trigger 主动触发
+     *
+     */
+//    $('div').click(function(){
+//        alert(1)
+//    });
+//
+//    $('div').trigger('click');
+
+    $('div').on('show',function(){
+        alert(22)
+    });
+    $('div').trigger('show');
+
+
+
+</script>
+</body>
+</html>

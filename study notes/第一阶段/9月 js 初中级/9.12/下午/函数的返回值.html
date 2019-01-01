@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<a id="aa" href="">444</a>-->
+<script>
+// aa.onclick = function(){
+//     console.log(aaa);
+//     return false; //去除默认行为
+// };
+//    function sum(x,y){
+//        var tot = 0;
+//        tot =x+y;
+//        return tot;
+//    }
+//    console.log(sum(1, 2)/8);
+
+
+//    function fn(){
+//        return s;
+//    }
+
+//    var fn =x=>{var sum =0;return;}(sum)=>{sum+=sum;return;}(sum)=>(x+5);
+    var fn = x=>{var sum =0;return sum=>{sum+=sum;return sum=>x+5+sum;}}
+    console.log(fn(1)(5)(1));
+
+</script>
+</body>
+</html>

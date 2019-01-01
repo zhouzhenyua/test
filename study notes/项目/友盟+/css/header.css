@@ -1,0 +1,213 @@
+body,html{
+    font: 12px/1.5 'PingFangSC-Light','microsoft yahei',tahoma,arial,'Hiragino Sans GB',sans-serif;
+}
+.inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+.header{
+    background: #fff;
+    box-shadow: 3px 3px 5px rgba(0,0,0,.1);
+    /*position: relative;*/
+}
+.now{
+    display: block;
+}
+.header .h80{
+    height: 80px;
+}
+.header .logo{
+    display: inline-block;
+    width: 15.8%;
+    vertical-align: top;
+}
+.header .logo a{}
+.header .logo img{
+    width: 114px;
+    padding-top: 20px;
+    display: inline;
+}
+
+.header .unav-info{
+    display: inline-block;
+    width: 67%;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.unav-info-menu{
+    display: inline-block;
+    /*vertical-align: top;*/
+    color: #515151;
+    padding: 0 2%;
+    cursor: pointer;
+    box-sizing: content-box;
+    text-decoration: none;
+}
+.header .unav-info>a:hover{
+    color: #2196f3
+}
+.header .unav-info-menu{
+    font-size: 16px;
+    padding-top: 28px;
+    height: 52px;
+}
+.header .unav-info-menu span{
+    position: relative;
+}
+.header .unav-info-menu>span:hover{
+    color: #2196f3
+}
+.header .umsitefont{
+    display: none;
+    width: 30px;
+    height: 30px;
+    background: url("../img/sanjiao.png");
+}
+.header .arrow{
+    bottom: -34px;
+    margin-left: -15px;
+}
+.header .arrow{
+    bottom: -36px;
+}
+.header .arrow{
+    position: absolute;
+    left: 50%;
+    color: #eee;
+    z-index: 1001;
+}
+.header .unav-set{
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+    width: 16%;
+    vertical-align: top;
+    text-align: right;
+    box-sizing: border-box;
+}
+.header .unav-set{
+    font-size: 16px;
+    padding-top: 24px;
+}
+.unav-set .login{
+    color: #515151;
+    text-decoration: none;
+}
+.unav-set .register {
+    height: 40px;
+    line-height: 40px;
+}
+.unav-set .register{
+    display: inline-block;
+    width: 50%;
+    max-width: 64px;
+    background: #2196f3;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+}
+.unav-info-m{
+    font-size: 16px;
+    height: 52px;
+    padding: 28px 2%  0;
+}
+.unav-info-menu .unav-hover-bg{
+    top: 79px;
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    background: #f6f6f6;
+    left: 0;
+    padding-top: 30px;
+    background-image: -webkit-gradient(linear,0 0,0 10%,from(#eee),to(#f6f6f6));
+    box-shadow: 3px 3px 5px rgba(0,0,0,.1);
+}
+.unav-product{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 14.3%;
+    font-size: 0;
+    box-sizing: border-box;
+}
+.unav-product li{
+    width: 25%;
+    margin-right: 5%;
+    font-size: 12px;
+    color: #aaacb0;
+    display: inline-block;
+    vertical-align: top;
+}
+.unav-product li h4{
+    font-size: 24px;
+}
+.unav-product h4 a{
+    color: #3f4551;
+}
+.unav-product h4 span{
+    font-weight: 400;
+    display: block;
+}
+.unav-product h4 a:hover span{
+    color: #2196f3
+}
+.unav-product .product-info{
+    font-weight: 400;
+    font-size: 12px;
+    color: #aaacb0;
+    display: block;
+}
+.unav-product-three{
+    border-top: 1px solid #dcdcdc;
+    margin-top: 18px;
+    padding-top: 18px;
+}
+.unav-product-three li{
+    width: 100%;
+    margin-bottom: 26px;
+    position: relative;
+    line-height: 18px;
+}
+.unav-product-three li a{
+    color: #aaacb0;
+}
+.unav-product-three li a:hover h3{
+    color: #2196f3
+}
+.unav-product-three li h3{
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #71757c;
+}
+.unav-product-three li span{
+    color: #aaacb0;
+}
+
+.unav-product h2{
+    font-size: 16px;
+    font-weight: 400;
+    color: #3f4551;
+    line-height: 28px;
+}
+.fangan li{
+    margin-bottom: 26px;
+    position: relative;
+}
+.pingtai li{
+    width: auto;
+    margin-bottom: 26px;
+}
+.unav-product a {
+    color:#aaacb0 ;
+}
+.unav-product a:hover h2 {
+    color: #2196f3
+}
+
+
+
+

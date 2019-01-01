@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            border: 2px solid#0AA6E8;
+            text-align: center;
+            display: none;
+        }
+
+        .box1{
+            background: #0AA6E8;
+        }
+        .box2{
+            background: #f9d8b4;
+        }
+        .box3{
+            background: #f19000;
+        }
+
+        button.now{
+            background: #fe533b;
+            color: #fff;
+        }
+        div.now{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+
+    <script>
+//        1、找人 通过标签名 获取 dom 元素
+        var aBtn=document.getElementsByTagName('button');
+
+        var aDiv=document.getElementsByTagName('div');
+
+//2、绑定事件
+
+        for (var i = 0; i < aBtn.length; i++) {
+            aBtn[i].index = i;
+//            console.log(i);
+            aBtn[i].onclick =function(){
+//                console.log(this);
+                for (var j = 0; j < aDiv.length; j++) {
+//                    aDiv[i].style.display='block';
+                    aDiv[this.index].style.display='none';
+                    this.classList.remove('now')
+                }
+                aDiv[this.index].style.display='block';
+                aDiv[this.index].classList.add('now')
+            }
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

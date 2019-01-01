@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 2000px;
+        }
+        .titie{
+            width: 1200px;
+            height: 50px;
+            /*margin: 10px auto;*/
+            background: #0febc1;
+        }
+        .fixed{
+            position: fixed;
+            top: 0;
+        }
+    </style>
+</head>
+<div id="titie" class="titie">
+    <div class="ss"></div>
+</div>
+<body>
+<script>
+    var ot = document.getElementById('titie');
+    window.onscroll = function(){
+        if(scroll().top >ot.offsetHeight){
+            ot.className = 'titie fixed'
+
+        }else {
+            ot.className = 'titie'
+        }
+    };
+    function scroll() {
+        return {
+            top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0,
+            left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0
+        };
+    }
+
+</script>
+</body>
+</html>

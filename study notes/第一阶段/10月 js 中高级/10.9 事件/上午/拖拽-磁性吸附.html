@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽-磁性吸附</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background:pink;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+
+</head>
+<body>
+<script>
+    window.onload = function(){
+        var oDiv = document.getElementsByTagName('div')[0];
+        oDiv.onmousedown = function(ev){
+            var oEvent = ev ||event;
+            var x = oEvent.clientX-oDiv.offsetLeft;
+            var y = oEvent.clientY-oDiv.offsetTop;
+            document.onmousemove = function(ev){
+                var oEvent = ev || event;
+                var l = oEvent.clientX -x;
+                var t = oEvent.clientY -y;
+                if(l<50){
+                    l =0
+                }
+                if(l>document.documentElement.clientWidth - oDiv.offsetWidth -50){
+                    l = document.documentElement.clientWidth - oDiv.offsetWidth;
+                }
+                if(t<50){
+                    t = 0;
+                }
+                if(t>document.documentElement.clientHeight - oDiv.offsetHeight -50){
+                    t = document.documentElement.clientHeight - oDiv.offsetHeight;
+                }
+
+                oDiv.style.left = l +'px';
+                oDiv.style.top = t +'px';
+            };
+            document.onmouseup =function(){
+                document.onmousemove = null;
+            }
+
+        }
+    }
+
+</script>
+<div></div>
+</body>
+</html>

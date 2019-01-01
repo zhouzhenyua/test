@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #box1{
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            border: 5px solid#0febc1;
+            background: #0b114e;
+        }
+        #box2{
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            margin: 20px;
+            border: 5px solid#0febc1;
+            background: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">安安</button>
+<div id="box1">
+    <div id="box2"></div>
+</div>
+<script>
+    console.log(box1.offsetWidth);
+    console.log(box1.offsetHeight);
+    console.log(box2.offsetWidth);
+    console.log(box2.offsetHeight);
+    console.log(box2.offsetParent);
+    box1.offsetLeft ='200'+'px';
+    console.log(box2.offsetLeft);
+    btn.onclick = function(){
+        box1.offsetLeft = 200+'px';
+    };
+
+    /*
+     * JS盒子模型属性
+     *   =>在JS中通过相关的属性可以获取(设置)元素的样式信息,这些属性就是盒子模型属性（基本上都是有关于样式的）
+     *
+     *   client
+     *      top
+     *      left
+     *      width
+     *      height
+     *
+     *   offset
+     *      top
+     *      left
+     *      width   盒子本身宽度+padding+border
+     *      height  盒子本身高度+padding+border
+     *      parent  默认找的父元素：有定位的就近上级
+     *      parentNode  物理结构上面的父节点
+     *
+     *   scroll
+     *      top
+     *      left
+     *      width
+     *      height
+     */
+
+
+</script>
+</body>
+</html>

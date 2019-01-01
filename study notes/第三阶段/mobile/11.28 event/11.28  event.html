@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: #6f42c1;
+        }
+    </style>
+</head>
+<body>
+<!--
+
+touch   三大事件
+    touchstart  手指按下
+    touchmove   手指滑动
+    touchend    手指抬起
+
+    注：在开发移动端时，模拟器时好时坏，绑定事件时，
+    不采用 ("on"+)，要采用 addEventListener()去绑定事件
+
+-->
+<div id="box">
+
+</div>
+
+
+<script>
+
+    var oBox = document.getElementById('box');
+
+//    oBox.touchstart =function(){
+//        alert(1)
+//    };
+    oBox.addEventListener('touchstart',start);
+    function start(){
+        console.log('手指按下')
+    }
+    oBox.addEventListener('touchmove',move);
+    function move(){
+        console.log('手指滑动')
+    }
+    oBox.addEventListener('touchend',end);
+    function end(){
+        console.log('手指抬起')
+    }
+
+
+</script>
+</body>
+</html>

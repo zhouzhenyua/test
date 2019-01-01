@@ -1,0 +1,168 @@
+11.20
+
+bootstrap 2015-至今   响应式布局       layui
+
+html5+css3
+
+twiter bootstrap
+vue 尤雨溪
+react facebook
+angular 谷歌
+
+
+使用方式 ：
+1、cdn
+2、link 引入 或者 script
+3、npm 下载资源   npm install找回项目依赖  需要有package.json文件
+
+特点：
+1、简洁美观
+2、依赖jquery
+
+版本  1.0 2.0 时代   浏览器的兼容性
+3.0 4.0 时代  ie9以下版本放弃 firefox 3.0
+
+适用与扁平化的网站风格
+
+扁平化设计时不添加任何效果，主色调黑、白、灰。
+
+布局方式
+flex
+自适应布局
+grid
+
+双飞翼/圣杯布局
+响应式布局
+css3 @media(媒体设备查询) 根据设备窗口的大小，页面进行相应的变化
+
+320     480     640     750     1280    1680    1920    主流分辨率
+
+栅格系统
+12栏(列)col
+lg 大屏幕
+md笔记本
+sm ipad
+xs 手机
+
+行row  一行可以包含十二列
+
+container（1140/960）  固定的宽度  并且居中显示
+container-fluid     全屏展示 100%
+
+
+11.21
+
+bootstrap
+简介：
+什么是bootstrap？
+bootstrap是一个用于开发web应用程序和网页的前端框架
+基于html、css、js 进行开发
+作者：twitter 2015年下半年火爆  2011用于GitHub开源
+
+bootstrap的特点？
+1、移动设备优先
+2、浏览器支持 谷歌 safari 火狐  ie>9  欧朋  uc浏览器(需要做很多兼容)
+3、容易上手
+
+bootstrap 包含什么内容？
+1、css   default
+css预处理器 ：
+优势：
+less 首选
+sass  ruby 扩展性强 难度较高
+2、组件    模态框 提示框
+3、插件    日历插件
+4、基本网页结构    container   container——fluid    row  col
+5、定制 (自己创作内容)   定制自己的组件 或插件
+
+环境配置
+1、链接引入
+2、下载（npm 、包下载）
+3、cdn（引用网上资源）
+
+
+
+网页结构：
+WebStorm 移动端配置快捷键 meta:vp + tab键
+charset 编码格式 utf-8(UTF8)推荐使用 gdk ascii  ansi
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+针对bootstrap：响应式必备
+viewport 视图容器  device-width设备宽度   缩放比例1
+
+UA浏览器标识符 Navgatior userAgent
+bootstrap css应用
+
+网格系统 grid system    针对于移动设备优先
+栅格系统
+
+共同点：都是按照行列布局 12
+
+@media 媒体设备查询
+
+
+table
+table-hover 鼠标经过变色
+table-striped   条纹表格
+table-bordered  边框表格
+table-responsive   响应式表格
+
+img
+img-circle  圆显示
+img-thumbnail   块显示
+img-rounded     圆角显示(默认4px)谷歌6px
+img-responsive  响应式图片
+
+
+针对于元素的布局
+pull-left   左边
+pull-right  右边
+clearfix    清除浮动
+
+下拉菜单
+aria-expanded 判断是否展开 true/false
+aria-haspopup 判断展开元素是否是浮动元素或其他
+role=""; 增强语义化 增强浏览渲染性能(浏览器端)
+
+
+导航
+标签式导航
+
+
+data-toggle指以什么事件类型触发  常见的
+
+data-toggle="dropdown"//下拉菜单
+data-toggle="model" //模态框事件
+data-toggle="tooltip"//提示框事件
+data-toggle="tab"//标签页
+data-toggle="collapse"//折叠
+data-toggle="popover"//弹出框
+data-toggle="button"//按钮事件
+
+一般事件会作用到一个标签对象，如果是其他标签对象，
+就需要使用data-target指事件的标签目标。
+所以data-loggle和data-target有时会结合一起使用
+
+移动端的tuchstart tuchmove tuchend不能单独使用，
+pc端 onmouseend,onmosemove ,onmosedown可单独使用
+
+
+
+移动端字体
+ios 系统
+
+默认中文字体是Heiti SC
+默认英文字体是Helvetica
+默认数字字体是HelveticaNeue
+无微软雅黑字体
+android 系统
+
+默认中文字体是Droidsansfallback
+默认英文和数字字体是Droid Sans
+无微软雅黑字体
+winphone 系统
+
+默认中文字体是Dengxian(方正等线体)
+默认英文和数字字体是Segoe
+无微软雅黑字体
+

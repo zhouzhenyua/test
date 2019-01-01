@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<select id="s1">
+    <option value="">选择吃的</option>
+    <option value="0">水果</option>
+    <option value="1">西餐</option>
+    <option value="2">中餐</option>
+</select>
+<select id="s2">
+    <option value="">选择吃的</option>
+</select>
+
+
+
+<script>
+
+    var arr =[['苹果','香蕉','梨'],['汉堡','匹萨','意大利面'],['面条','大盘鸡','烤羊腿']];
+//    var arr1 =[['苹果','香蕉','梨'],['汉堡','匹萨','意大利面'],['面条','大盘鸡','烤羊腿']];
+
+
+    var oS1 = document.getElementById('s1');
+    var oS2 = document.getElementById('s2');
+
+    oS1.onchange = function(){
+        oS2.options.length = 0;
+        for (var i = 0; i < arr[oS1.value].length; i++) {
+            oS2.add(new Option(arr[oS1.value][i]))
+
+        }
+    }
+
+
+
+</script>
+</body>
+</html>

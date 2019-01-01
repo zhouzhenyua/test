@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+<div style="width: 100px;height: 100px;background: #A1C9FF;position: absolute;"></div>
+<script>
+    /*
+    * 1、按下盒子，获取到坐标点
+    * 2、移动盒子 left  top
+    * 3、释放盒子
+    *
+    * */
+
+
+    var disX = 0;
+    var disY = 0;
+    $('div').on('mousedown',function(ev){
+        disX = ev.pageX-$(this).offset().left;
+        disY = ev.pageY-$(this).offset().top;
+        $(document).mousemove(function(ev){
+            $('div').css('left',ev.pageX-disX);
+            $('div').css('top',ev.pageY-disY);
+        });
+        //释放事件
+        $(document).mouseup(function(){
+            $(document).off();
+        })
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+     <title>jQuery弹出层 模态框</title>
+     
+    <script src="../../jquery.min.js" type="text/javascript"></script>
+     
+    <style>
+          .btn {
+            height: 100px;
+        }
+
+          .black_over {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 1001;
+            top: 0;
+            left: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .white_content {
+            display: none;
+            position: fixed;
+            z-index: 1002;
+            overflow: auto;
+        }
+         </style>
+     
+    <script type="text/javascript">
+        $(function () {
+            //弹出隐藏层
+            function ShowDiv(show_div, bg_div) {
+                document.getElementById(show_div).style.display = 'block';
+                document.getElementById(bg_div).style.display = 'block';
+                var _windowHeight = $(window).height(),//获取当前窗口高度
+                        _windowWidth = $(window).width(),//获取当前窗口宽度
+                        _popupHeight = $("#" + show_div).height(),//获取弹出层高度
+                        _popupWeight = $("#" + show_div).width();//获取弹出层宽度
+                _posiTop = (_windowHeight - _popupHeight) / 2;
+                _posiLeft = (_windowWidth - _popupWeight) / 2;
+                $("#" + show_div).css({"left": _posiLeft + "px", "top": _posiTop + "px", "display": "block"});//设置position
+            }
+            //关闭弹出层
+            function CloseDiv(show_div, bg_div) {
+                document.getElementById(show_div).style.display = 'none';
+                document.getElementById(bg_div).style.display = 'none';
+            }
+            $(".btn").click(function () {
+                var src = $(this).attr("src");
+                $("#showcont").attr("src", src);
+                ShowDiv('MyDiv', 'fade')
+            });
+            $("#fade").click(function () {
+                CloseDiv('MyDiv', 'fade')
+            });
+        });
+    </script>
+</head>
+<body style="height: 2000px;">
+<!--<input id="Button1" type="button" value="点击弹出层" onclick="ShowDiv('MyDiv','fade')" />-->
+<!--图片请换成自己的，点击图片弹出-->
+<img src="../../../../img/2.jpg" alt="sd" class="btn">
+<img src="../../../../img/3.jpg" alt="sd" class="btn">
+<!--弹出层时背景层DIV-->
+<div id="fade" class="black_over">
+</div>
+<!--弹出层的内容-->
+<div id="MyDiv" class="white_content">
+    <img src="../../../../img/1.jpg" alt="" id="showcont">
+</div>
+</body>
+</html>

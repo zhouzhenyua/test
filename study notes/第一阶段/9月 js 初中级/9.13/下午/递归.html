@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+// 函数内部调用自己本身  递归
+//var num=0;
+//    function story(){
+//        num++;
+//        document.write('>>>1222');
+//        if(num>2){return}
+//        story();
+//    }
+//    story();
+
+//    function jc(n){
+//        if(n == 1){
+//            return 1;
+//        }
+//       return n*jc(n-1);
+//    }
+//console.log(jc(6));
+
+
+//斐波那契数列
+//    function fibon(a,b,n) {
+//        if (n<=2){
+//            return a;
+//        }
+//        return fibon(a+b,a,n-1);
+//    }
+//    console.log(fibon(1,1,5));
+
+//    function fibo(n){
+//        if(n==1||n==2){
+//            return 1;
+//        }
+//        return fibo(n-1) + fibo(n-2)
+//    }
+//    console.log(fibo(n));
+
+
+//杨辉三角
+//    function pascalsTriangle(n) {
+//            //指定数组
+//            var array = [];
+//            var traverse = function foo(current){
+//                if(current.length <= n){
+//                    //合并到指定数组
+//                    array = array.concat(current);
+//                    //构建新的一层
+//                    var newArray = [];
+//                    newArray[0] = 1;
+//                    newArray[current.length] = 1;
+//                    for(var i=0;i<current.length-1;i++){
+//                        newArray[i+1] = current[i] + current[i+1];
+//                    }
+//                    foo(newArray);
+//                }
+//            };
+//            traverse([1]);
+//            document.write(array,'<br>');
+//            return array;
+//        }
+//    pascalsTriangle(5)
+
+//var arr = [5,8,2,8,58,684,1321,65];
+
+    //求和
+//    function sum(n){
+//        if(n==1){
+//            return 1;
+//        }
+//        return n+sum(n-1);
+//    }
+//console.log(sum(arr));
+
+//    function sun(n,i){  //n代表索引
+//        if(n==0){
+//            return 0;
+//        }
+//        var sum =0;
+//        for (var i = 0; i < n; i++) {
+//            sum+=arr[i];
+//        }
+//        return sum;
+//    }
+//console.log(arr);
+
+
+    var arr = [1,2,[1,2,3,[1,2,3],[1,2,[1,2,3,[1,2,3,[1,2,3],[1,2,3]]],3]],3];
+
+    function zk(arr){
+        var sum =0;
+        for (var i = 0; i < arr.length; i++) {
+            if(Array.isArray(arr[i])){
+                sum +=zk(arr[i])
+            }else {
+                sum +=arr[i];
+            }
+        }
+        return sum;
+    }
+    console.log(zk(arr));
+
+    function zz(arr){
+    var sum =0;
+        for (var i = 0; i < arr.length; i++) {
+            if(Array.isArray(arr[i])){
+                sum+=zz(arr[i])
+            }else{
+                sum+=arr[i];
+            }
+        }
+        return sum;
+    }
+    console.log(zz(arr));
+
+
+</script>
+</body>
+</html>

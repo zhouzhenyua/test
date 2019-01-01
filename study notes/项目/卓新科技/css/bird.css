@@ -1,0 +1,490 @@
+.inner {
+    width: 1100px;
+    margin: 0 auto;
+    /*background-color: pink;*/
+    position: relative;
+}
+
+body {
+    font-family: "STKaiti";
+    background-color: #f1f2f6;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+/*=============================header*/
+header {
+    width: 100%;
+    height: 50px;
+    background: url("../images/aboutxiaoniao/beader_bg.jpg") no-repeat center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 998;
+}
+
+.logo {
+    height: 50px;
+    padding: 4.5px 0;
+    line-height: 50px;
+}
+
+.logo span {
+    position: relative;
+    top: -15px;
+    font-size: 20px;
+    color: #fff;
+    margin-left: 20px;
+}
+
+nav ul li {
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 30px;
+    position: relative;
+}
+
+nav ul li a {
+    color: rgba(254, 254, 254, 0.702);
+}
+nav ul li:hover .d{
+    display: block;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    transition: 2s;
+}
+.d {
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+}
+
+.d.active {
+    display: block;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+
+
+article {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+}
+
+.content{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+}
+.content_all{
+    position: absolute;
+    top:0;
+    transition: top 0.5s;
+    width: 100%;
+
+}
+
+.welcome {
+    background-color: #299ad6;
+    z-index: 999;
+    display: none;
+}
+
+.center {
+    width: 560px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-top: 50px;
+}
+
+.center .cen_img {
+    margin-top: 150px;
+}
+
+.center .cen_text {
+    display: none;
+}
+
+.center h3 {
+    font-size: 44px;
+    line-height: 0.364;
+}
+
+.center h6 {
+    font-family: "Arial";
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 20px;
+    letter-spacing: 5px;
+}
+
+.xue {
+    font-size: 48px;
+    position: relative;
+    margin: 20px 0;
+
+}
+
+.xue:before {
+    background: url("../images/aboutxiaoniao/yinhao1_zuo.png") no-repeat;
+    left: 0;
+    top: 0;
+}
+
+.xue:before, .xue:after {
+    height: 18px;
+    width: 20px;
+    position: absolute;
+    display: block;
+    content: "";
+}
+
+.xue:after {
+    background: url("../images/aboutxiaoniao/yinhao1_you.png") no-repeat;
+    right: 0;
+    bottom: 0;
+}
+
+.center .cen_text {
+    color: rgb(254, 254, 254);
+
+}
+
+
+.model_one {
+    background-color: #221236;
+}
+
+.model_one .cen_text {
+    display: block;
+}
+
+.model_one .cen_img {
+    margin: 0;
+}
+
+.model_one .next_i {
+    background: url("../images/aboutxiaoniao/donext.png") no-repeat;
+    width: 58px;
+    height: 58px;
+    background-position: 0 -58px;
+    margin: 20px auto 0;
+}
+
+.model_one .next_i:hover {
+    background-position: 0 0;
+}
+
+/* 概述*/
+.model_two {
+    /*background-color: pink;*/
+    text-align: center;
+}
+
+.model_two h2 {
+    font-size: 50px;
+    color: #311859;
+    line-height: 100px;
+    margin-top: 50px;
+}
+
+.model_two .xue {
+    font-size: 20px;
+    color: #6b6a6f;
+    width: 750px;
+    margin: 0 auto 50px;
+    line-height: 30px;
+    text-indent: 4em;
+    text-align: left;
+}
+
+.model_two .b_a_img img {
+    margin: 0 20px;
+}
+.m_t_box{
+    width: 300%;
+    left: 0;
+    position: absolute;
+    transition: 2s;
+}
+.m_t_box .box_a{
+    width: 33.3%;
+    float: left;
+    /*height: 754px;*/
+}
+.m_t_left,.m_t_right{
+    width: 58px;
+    height: 58px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%  );
+}
+.m_t_left{
+    background: url("../images/aboutxiaoniao/goleft.png") no-repeat;
+    left: 137px;
+}
+.m_t_left:hover{
+    background-position: -58px 0;
+}
+.m_t_right{
+    background: url("../images/aboutxiaoniao/goright.png") no-repeat -58px 0;
+    right: 175px;
+}
+.m_t_right:hover{
+    background-position: 0 0;
+}
+/* 价值*/
+.model_three {
+    background-color: #311859;
+    text-align: center;
+}
+
+.model_three h2 {
+    font-size: 50px;
+    color: #fff;
+    line-height: 100px;
+    margin:50px 0 100px;
+}
+
+.m_t_con {
+    width: 980px;
+    height: 380px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.jiant {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+.z_s {
+    background: url("../images/aboutxiaoniao/jiazhi_border_11.png") no-repeat;
+    left: 0;
+    top: 0;
+    animation: s1 2s linear infinite;
+}
+
+@keyframes s1 {
+    50% {
+        background: url("../images/aboutxiaoniao/jiazhi_border_12.png") no-repeat;
+
+    }
+    100% {
+        background: url("../images/aboutxiaoniao/jiazhi_border_11.png") no-repeat;
+    }
+}
+
+.y_s {
+    background: url("../images/aboutxiaoniao/jiazhi_border_21.png") no-repeat;
+    right: 0;
+    top: 0;
+    animation: s2 2s linear infinite;
+}
+
+@keyframes s2 {
+    50% {
+        background: url("../images/aboutxiaoniao/jiazhi_border_22.png") no-repeat;
+
+    }
+    100% {
+        background: url("../images/aboutxiaoniao/jiazhi_border_21.png") no-repeat;
+    }
+}
+
+.z_x {
+    background: url("../images/aboutxiaoniao/jiazhi_border_31.png") no-repeat;
+    left: 0;
+    bottom: 0;
+    animation: s3 2s linear infinite;
+}
+
+@keyframes s3 {
+    50% {
+        background: url("../images/aboutxiaoniao/jiazhi_border_32.png") no-repeat;
+
+    }
+    100% {
+        background: url("../images/aboutxiaoniao/jiazhi_border_31.png") no-repeat;
+    }
+}
+
+.y_x {
+    background: url("../images/aboutxiaoniao/jiazhi_border_41.png") no-repeat;
+    right: 0;
+    bottom: 0;
+    animation: s4 2s linear infinite;
+}
+
+@keyframes s4 {
+    50% {
+        background: url("../images/aboutxiaoniao/jiazhi_border_42.png") no-repeat;
+
+    }
+    100% {
+        background: url("../images/aboutxiaoniao/jiazhi_border_41.png") no-repeat;
+    }
+}
+
+.m_t_con ul {
+    width: 980px;
+}
+
+.m_t_con ul li {
+    width: 490px;
+    height: 126.6px;
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+    float: left;
+}
+
+.m_t_con ul li .yuan {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, .3);
+    margin: 23px;
+    font-size: 18px;
+    color: white;
+    line-height: 80px;
+    /*text-align: center;*/
+    font-weight: bolder;
+}
+
+.m_t_con ul li p {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    line-height: 1.333;
+    width: 450px;
+    height: 42px;
+    text-align: left;
+    margin: 35px 0 0 20px;
+}
+
+/*翡翠掌云*/
+.model_four {
+    text-align: center;
+}
+
+.model_four h2 {
+    font-size: 50px;
+    color: #311859;
+    line-height: 100px;
+    margin-top: 50px;
+    font-weight: 300;
+}
+.m_four_box{
+    width: 920px;
+    height: 420px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.m_four_move{
+    width: 1840px;
+    height: 420px;
+    position: absolute;
+    left: 0;
+    transition: 2s;
+}
+.m_f_con {
+    width: 920px;
+    height: 420px;
+    float: left;
+}
+
+.m_f_con p {
+    text-align: left;
+    border-bottom: 1px dashed #ccc;
+    color: rgb(113, 112, 116);
+    line-height: 2.375;
+}
+
+.model_four ul li {
+    width: 78px;
+    height: 8px;
+    border-radius: 4px;
+    float: left;
+    background-color: #acacac;
+    margin: 10px;
+}
+
+.model_four ul {
+    width: 200px;
+    height: 40px;
+    margin: 30px auto 0;
+}
+
+.model_four ul li.active {
+    background-color: #006fd6;
+}
+
+/*尾部*/
+.model_footer {
+    background: url("../images/aboutxiaoniao/app&contacts_bg.gif") no-repeat center;
+
+}
+
+.m_fot_c_left {
+    position: relative;
+    background: url("../images/aboutxiaoniao/app_downcode.png") no-repeat;
+    width: 317px;
+    height: 315px;
+    left: 100px;
+    top: 100px;
+    text-align: center;
+    color: white;
+}
+
+.m_fot_c_left .jiant {
+    animation: none;
+}
+
+.m_fot_c_right {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 435px;
+    left: 480px;
+}
+
+.m_fot_c_right p:first-of-type {
+    font-size: 24px;
+    color: rgb(25, 25, 25);
+    line-height: 40px;
+    border-bottom: 1px dashed #ccc;
+    position: relative;
+    font-weight: bolder;
+    width: 300px;
+}
+
+.m_fot_c_right p:first-of-type span {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    display: block;
+    right: 0;
+    bottom: -2px;
+    background: blue;
+}
+
+.m_fot_c_right p {
+    margin: 10px 0;
+}

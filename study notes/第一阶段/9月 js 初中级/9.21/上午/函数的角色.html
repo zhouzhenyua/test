@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>构造函数的执行</title>
+</head>
+<body>
+<script>
+
+    /*
+    *构造函数
+    * */
+
+
+//    function Person(){
+//        this.name = 2;
+//        return function (){};
+//    }
+//    var zz = new Person();
+//    console.log(zz);
+
+
+    /*
+    * 原型重定向
+    *
+    * */
+
+//  function fun(){
+//      this.a=0;
+//      this.b = function () {
+//          console.log(this.a);
+//      }
+//  }
+//  fun.prototype ={
+//     b:function(){
+//         this.a=20;
+//         console.log(this.a);
+//     },
+//      c:function(){
+//          this.a=30;
+//          console.log(this.a);
+//      }
+//    };
+//    var my_fun = new fun();
+//    my_fun.b();//0
+//    my_fun.c();//30
+
+
+/*
+* 原型扩展 :尽量加一个前缀，因为重名会覆盖
+*
+*
+* 数组去重
+* */
+//        Array.prototype.mayUnique = function(){
+//            var obj ={},newArr =[];
+////            this=arr
+//
+//            for (var i = 0; i < this.length; i++) {
+//                !obj[this[i]]?obj[this[i]]=true:null;
+//            }
+//            for(var k in obj){
+//                newArr.push(k)
+//            }return newArr;
+//        };
+//    var arr =[23,323566,736,356,356,4,5,4,5,7,3,23];
+//    console.log(arr.mayUnique());
+
+
+    //统计字符串
+
+    var str ='adfsdfdsfwf';
+    String.prototype.myString =function(){
+        var obj ={};
+        for (var i = 0; i < this.length; i++) {
+            if(!obj[this.charAt(i)]){
+                obj[this.charAt(i)] =1;
+            }else {
+                obj[this.charAt(i)]++;
+            }
+        }
+        return obj;
+    };
+    console.log(str.myString());
+
+</script>
+</body>
+</html>

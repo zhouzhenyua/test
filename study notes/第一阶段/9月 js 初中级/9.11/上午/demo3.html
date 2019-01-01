@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    <!---->
+////es5 变量提升
+//console.log(i);
+//    var i =10;
+////把var i；进行变量提升， i没有进行赋值所以返回undefined
+//
+//    fn();
+//    var fn = function () {
+//    alert(1);
+//};
+////把 var fn；进行变量提升，没有全局找不到fn这个，企图返回一个不存在的
+////所以会报错
+//
+//    fn1();
+//    function fn1(){
+//        alert(1);
+//    }
+//    // 把函数进行变量提升，不仅提升变量，还提升值；
+//
+
+/*
+*
+*
+    function fn(){
+        let a = 10;
+        console.log(a);
+//        let a = 10;
+    }
+ //   console.log(a);//因为变量提升只存在当前作用域   所以报错
+    fn();
+
+ */
+
+/*
+
+    console.log(a);
+    var a = 10;
+    function a(){
+        alert(1)
+    }
+    a=20;
+//等价于
+    var a;
+    function a(){
+        alert(1)
+    }
+    console.log(a);
+    a = 10;
+    a=20;
+
+*/
+//
+//    fn();
+//    function fn(){
+//        console.log(1);
+//    }
+//    fn();
+//    function fn(){
+//        console.log(2);
+//    }
+//    fn();
+//    var fn = 100;
+//
+//    fn();
+//    function fn(){
+//        console.log(3);
+//    }
+//    fn();
+//    function fn(){
+//        console.log(4);
+//    }
+//    fn();
+// 等价与
+//    function fn(){
+//        console.log(1);
+//    }
+//    function fn(){
+//        console.log(2);
+//    }
+//    var fn;
+//    function fn(){
+//        console.log(3);
+//    }
+//    function fn(){
+//        console.log(4);
+//    }
+//
+//    fn();
+//
+//    fn();
+//
+//    fn();
+//
+//    fn = 100;
+//
+//    fn();
+//
+//    fn();
+//
+//    fn();
+
+    //条件判断下的变量提升
+    if( 1 === 1){
+        console.log(fn); //整个函数
+        function fn(){
+            alert('ok');
+        }
+    }
+    console.log(fn);
+//    if( 2 === 1){
+//        console.log(fn);
+//        function fn(){
+//            alert('ok');
+//        }
+//    }
+
+
+</script>
+</body>
+</html>

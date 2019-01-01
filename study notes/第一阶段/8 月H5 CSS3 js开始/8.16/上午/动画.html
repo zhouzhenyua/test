@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        div{
+            position: relative;
+            margin: 100px 0;
+            width: 200px;
+            height: 200px;
+            /*background: #A1C9FF;*/
+            animation: dh 2s linear  forwards ;
+        }
+        /*infinite*/
+        img{
+            position: absolute;
+            width: 100%;
+            height: auto;
+        }
+        @keyframes dh {
+            0%{
+                transform:translate(0) skew(0deg)
+            }
+            50%{
+                transform:translate(500px) skew(-20deg)
+            }
+            75%{
+                transform:translate(700px) skew(-10deg)
+            }
+            85%{
+                transform:translate(900px) skew(20deg)
+            }
+
+            100%{
+                transform:translate(1000px) skew(0deg)
+            }
+
+            /*0%{*/
+                /*transform: rotateY(0deg) scale(1.5);*/
+            /*}*/
+            /*20%{*/
+                /*!*border-radius: 50%;*!*/
+                /*transform: rotateZ(90deg) scale(1.3);*/
+            /*}*/
+            /*50%{*/
+                /*transform: rotateX(180deg) scale(0.5);*/
+            /*}*/
+            /*60%{*/
+                /*!*border-radius: 50%;*!*/
+                /*transform: rotateZ(90deg) scale(1.3);*/
+            /*}*/
+            /*75%{*/
+                /*transform: rotateY(180deg) scale(0.5);*/
+            /*}*/
+            /*100%{*/
+                /*transform: rotateX(3600deg) scale(1);*/
+            /*}*/
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <img src="car.jpg" alt="">
+    </div>
+</body>
+</html>

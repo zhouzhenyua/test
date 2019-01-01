@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            width: 100px;
+            height: 100px;
+            background: #CCCCCC;
+            list-style: none;
+            float: left;
+            margin: 15px;
+            text-align: center;
+            line-height: 100px;
+        }
+        #div1 {
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 30px;
+            margin: 20px auto 0;
+            border: 5px solid yellow;
+            cursor: pointer;
+        }
+        #div2 {
+            width: 500px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 30px;
+            border: 5px solid yellow;
+            position: absolute;
+            top: 550px;
+            left: 450px;
+        }
+        #btn {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            top: 20px;
+            left: 1000px;
+        }
+        #ul1 {
+            width: 1200px;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">一阳指</div>
+<ul id="ul1">
+    <li>段誉</li>
+    <li>王语嫣</li>
+    <li>乔峰</li>
+    <li>虚竹</li>
+    <li>慕容复</li>
+    <li>阿朱</li>
+    <li>阿紫</li>
+    <li>阮星竹</li>
+    <li>木婉清</li>
+    <li>阿碧</li>
+    <li>南海鳄神</li>
+    <li>叶二娘</li>
+    <li>丁春秋</li>
+    <li>天山童姥</li>
+    <li>段正淳</li>
+    <li>鸠摩智</li>
+    <li>康敏</li>
+    <li>无涯子</li>
+    <li>梦姑</li>
+    <li>玄渡</li>
+    <li>乌老大</li>
+    <li>段正淳</li>
+    <li>鸠摩智</li>
+    <li>康敏</li>
+    <li>无涯子</li>
+    <li>梦姑</li>
+    <li>玄渡</li>
+</ul>
+<div id="div2"></div>
+<input id="btn" type="button" value="去屎吧">
+<script>
+    var oStart =document.getElementById('div1');
+    var oStop =document.getElementById('btn');
+    var oTex =document.getElementById('div2');
+    var aLis =document.getElementsByTagName('li');
+
+
+    var index;
+    var timer =null;
+    oStart.onclick = function(){
+        clearInterval(timer);
+        timer = setInterval(st,100);
+    function st(){
+        index = Math.floor(Math.random()*aLis.length);
+        for (var i = 0; i < aLis.length; i++) {
+            aLis[i].style.background = '#ccc';
+        }
+        aLis[index].style.background = '#fcc';
+    }
+    };
+    oStop.onclick =function(){
+        clearInterval(timer);
+        oTex.innerHTML = aLis[index].innerHTML+'233';
+    }
+
+</script>
+</body>
+</html>

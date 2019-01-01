@@ -1,0 +1,74 @@
+#frame {
+    left: 50%;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 5px
+}
+
+#dis {
+    position: absolute;
+    left: -50px;
+    top: -10px;
+    opacity: .5
+}
+
+#dis li {
+    display: inline-block;
+    width: 200px;
+    height: 20px;
+    margin: 0 50px;
+    float: left;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    background: #000
+}
+
+#photos .img {
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-left: 1px solid blue;
+}
+
+#photos {
+    position: absolute;
+    z-index: 9;
+    /*width: 1204px; !*---修改图片数量的话需要修改下面的动画参数*!*/
+    width: calc(200px * 5); /*---修改图片数量的话需要修改下面的动画参数*/
+
+}
+
+.play {
+    animation: banner 4s ease-out infinite ;
+}
+
+@keyframes banner {
+    0%, 20% {
+        margin-left: 0px;
+        opacity: 1;
+    }
+    25%, 40% {
+        margin-left: -300px;
+        opacity:0.8;
+    }
+    45%, 60% {
+        margin-left: -600px;
+        opacity: 0.6;
+    }
+    65%, 80% {
+        margin-left: -900px;
+        opacity: 0.4;
+    }
+    85%, 100% {
+        margin-left: -1200px;
+        opacity: 0.2;
+    }
+
+    25%, 40% {
+        margin-left: -300px;
+    }
+}

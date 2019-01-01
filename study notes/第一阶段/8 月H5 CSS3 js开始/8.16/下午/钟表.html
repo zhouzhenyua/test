@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            border: 5px solid #A1C9FF;
+            border-radius: 50%;
+            position: relative;
+        }
+        .aa{
+            width: 180px;
+            position: absolute;
+            height: 180px;
+            border-radius: 50%;
+            background: #fff;
+            left: 10px;
+            top: 10px;
+            z-index: 999;
+        }
+        .line1{
+            position: absolute;
+            display: inline-block;
+            top: 0;
+            left: 97px;
+            width: 5px;
+            height: 202px;
+            background: #000000;
+        }
+        .line2{
+            position: absolute;
+            display: inline-block;
+            top: 0;
+            left: 97px;
+            width: 3px;
+            height: 202px;
+            transform: rotate(30deg);
+            background: #000000;
+        }
+        .line3{
+            transform: rotate(60deg);
+        }
+        .line4{
+            transform: rotate(90deg);
+        }
+        .line5{
+            transform: rotate(115deg);
+        }
+        .line6{
+            transform: rotate(145deg);
+        }
+        /*!*steps*!步数*/
+
+
+        .dian{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #00A78B;
+            top: 46%;
+            left: 46%;
+            position: absolute;
+        }
+        .a{
+            position: absolute;
+            display: inline-block;
+            width: 5px;
+            height: 50px;
+            left: 50%;
+            top: 10px;
+            background: #A1C9FF;
+            border-radius: 5px;
+            transform-origin: top center;
+            animation: dh 6s steps(6) infinite;
+        }
+        .b{
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: -60px;
+            width: 5px;
+            height: 70px;
+            background: #ff00ff;
+            border-radius: 5px;
+            transform: rotate(90deg);
+            transform-origin: bottom center;
+            animation: dh 10s steps(10) infinite;
+        }
+        .c{
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: -20px;
+            width: 5px;
+            height: 30px;
+            background: #2f2f2f;
+            border-radius: 5px;
+            transform: rotate(30deg);
+            transform-origin: bottom center;
+            animation: dh 60s steps(60) infinite;
+        }
+        @keyframes dh {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="aa">
+            <div class="dian">
+                <span class="a"></span>
+                <span class="b"></span>
+                <span class="c"></span>
+            </div>
+
+        </div>
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3 line1"></span>
+            <span class="line4 line2"></span>
+            <span class="line5 line1"></span>
+            <span class="line6 line2"></span>
+
+
+    </div>
+</body>
+</html>

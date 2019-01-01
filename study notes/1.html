@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="animate.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .aa{
+            margin: 50px 40%;
+        }
+        .box1{
+            width: 210px;
+            clear: both;
+        }
+        button{
+            width: 70px;
+            height: 50px;
+            text-align: center;
+            float: left;
+            background: linear-gradient( #bc01f5,#4ac2e6);
+        }
+        .list{
+            width: 210px;
+            height: 300px;
+            background: #ff33ff;
+            text-align: center;
+            list-style: none;
+        }
+        li{
+            width: 210px;
+            height: 300px;
+            text-align: center;
+            float: left;
+            display: none;
+        }
+
+        .list .bb{
+            width: 50px;
+            height: 50px;
+            background: #00aa00;
+            animation: dh1 1s ;
+            position: relative;
+            left: 0;
+            top:0;
+            float: left;
+            margin: 10px;
+        }
+        .list .cc{
+            width: 50px;
+            height: 50px;
+            background: #00aa00;
+            animation: dh2 1s ;
+            position: relative;
+            left: 0;
+            top:130px;
+            float: left;
+            margin: 10px;
+        }
+        .list .dd{
+            width: 50px;
+            height: 50px;
+            background: #00aa00;
+            animation: dh 1s ;
+            position: relative;
+            left: 0;
+            top:0;
+            float: left;
+            margin: 10px;
+        }
+        @keyframes dh {
+            from{
+                transform: rotate(30deg);
+                left: 20px;
+                top: 50px;
+            }
+            to{
+                transform: rotate(0deg);
+                left: 0;
+                top:0;
+            }
+        }
+        @keyframes dh1 {
+            from{
+                transform: rotate(30deg);
+                left: 200px;
+                top: 150px;
+            }
+            to{
+                transform: rotate(0deg);
+                left: 0;
+                top:0;
+            }
+        }
+        @keyframes dh2 {
+            from{
+                transform: rotate(30deg);
+                left: 220px;
+                top: 5px;
+                background: #0a56bb;
+                border-radius: 50%;
+            }
+            to{
+                transform: rotate(0deg);
+                left: 0;
+                top:130px;
+            }
+        }
+        @keyframes dd {
+            0%,50%,100%{
+            -webkit-transition: all 500ms cubic-bezier(0.880, 0.810, 0.915, 0.170);
+            -moz-transition: all 500ms cubic-bezier(0.880, 0.810, 0.915, 0.170);
+            -o-transition: all 500ms cubic-bezier(0.880, 0.810, 0.915, 0.170);
+            transition: all 500ms cubic-bezier(0.880, 0.810, 0.915, 0.170);
+
+            -webkit-transition-timing-function: cubic-bezier(0.880, 0.810, 0.915, 0.170);
+            -moz-transition-timing-function: cubic-bezier(0.880, 0.810, 0.915, 0.170);
+            -o-transition-timing-function: cubic-bezier(0.880, 0.810, 0.915, 0.170);
+            transition-timing-function: cubic-bezier(0.880, 0.810, 0.915, 0.170);
+            }
+
+        }
+        .list .active{
+            display: block;
+        }
+        .ee{
+            font-family: 华文琥珀;
+        }
+        .now{
+            background: linear-gradient( #8568ec,#6fe859);
+        }
+    </style>
+</head>
+<body>
+<div class="aa">
+<div class="box1">
+    <button class="now ee">选项1</button>
+    <button>选项2</button>
+    <button>选项3</button>
+</div>
+    <ul class="list">
+        <li class="active ee">
+            <div class="bb"></div>
+            <div class="cc"></div>
+            <div class="dd"></div>
+            内容1
+        </li>
+        <li>
+            <div class="bb"></div>
+            <div class="cc"></div>
+            <div class="dd"></div>
+            内容2
+        </li>
+        <li>
+            <div class="bb"></div>
+            <div class="cc"></div>
+            <div class="dd"></div>
+            内容3
+        </li>
+    </ul></div>
+<script>
+
+    var oBox = document.getElementsByTagName('button'),
+        oList = document.getElementsByTagName('li');
+//    for (var i = 0; i < oBox.length; i++) {
+////        var index=0;
+//        oBox[i].index = i;
+//        oBox[i].onclick = function(){
+//            for (var j = 0; j < oList.length; j++) {
+//                oList[j].classList.remove('now');
+////                oBox[j].classList.remove('now');
+//                index = this.index;
+//            }
+//            oList[index].classList.add('now');
+////            oBox[i].oBox.classList.add('now');
+//        }
+//    }
+
+    function teb(tit,cont,ev){
+        for (let i = 0; i < tit.length; i++) {
+            tit[i][ev] = function(){
+                for (var j = 0; j < cont.length; j++) {
+                    cont[j].classList.remove('active');
+                    cont[j].classList.remove('ee');
+                    tit[j].classList.remove('now');
+                    tit[j].classList.remove('ee')
+                }
+                this.classList.add('now');
+                this.classList.add('ee');
+                cont[i].classList.add('active');
+                cont[i].classList.add('ee')
+            };
+        }
+    }
+    teb(oBox,oList,'onclick');
+</script>
+</body>
+</html>

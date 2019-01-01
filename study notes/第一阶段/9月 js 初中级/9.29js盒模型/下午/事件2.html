@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            display: none;
+            list-style: none;
+            position: absolute;
+        }
+        ul li:hover{
+            background: #ff00ff;
+        }
+    </style>
+</head>
+<body>
+<ul id="ul1">
+    <li>233</li>
+    <li>233</li>
+    <li>233</li>
+    <li>233</li>
+</ul>
+<script>
+    function getpos(oEvent) {
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;// scrollTop 兼容
+        var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;// scrollLeft 兼容
+        return {
+            x : oEvent.clientX + scrollLeft,
+            y : oEvent.clientY + scrollTop
+        }
+    }
+    var oUl = document.getElementById('ul1');
+    document.oncontextmenu = function(ev){
+        oUl.style.display = 'block';
+        var oEvent = ev||event;
+        var pos = getpos(oEvent);
+        oUl.style.left = pos.x + "px";
+        oUl.style.top = pos.y + "px";
+        return false;
+    } ;
+    document.onclick = function(){
+        oUl.style.display = 'none';
+    };
+
+
+</script>
+</body>
+</html>

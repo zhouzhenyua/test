@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>delegate</title>
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+<div>
+    <ul>
+        <li>11</li>
+        <li>22</li>
+        <li>33</li>
+    </ul>
+</div>
+<script>
+    // delegate
+
+//    $('li').on('click',function(){
+//        alert($(this).index())
+//    })
+
+
+    /*delegate 的应用场景
+
+    可以使动态数据事件不丢失
+    *
+    * undelegate()  解绑
+    *
+    * */
+    $('ul').delegate('li','click',function(){
+        alert($(this).html());
+//        $('ul').undelegate();
+    })
+
+</script>
+</body>
+</html>

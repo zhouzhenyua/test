@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #div{
+            width: 100px;
+            height: 100px;
+            background-color: #6f42c1;
+        }
+    </style>
+</head>
+<body>
+    <div id="div"></div>
+
+<script>
+/*
+*
+*  当某个元素绑定后，都会存在一个事件对象
+*   事件对象：
+*       当在浏览器端触发一些行为，事件对象会把 细节行为记录下来。
+*
+*   touches     位于当前(屏幕)的所有手指列表
+*   targetTouches   针对当前dom元素的手指列表
+*   changedTouches   针对当前事件的手指列表
+* */
+
+    var oDiv = document.getElementById('div');
+
+    oDiv.addEventListener('touchstart',function(ev){
+        console.log(ev);
+//        console.log(ev.touches[0]);
+//        console.log(ev.targetTouches[0]);
+        console.log(ev.changedTouches[0]);
+    })
+
+</script>
+</body>
+</html>

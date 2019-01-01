@@ -1,0 +1,52 @@
+#footer{
+    position: relative;
+}
+footer{
+    color: #959595;
+    font-size: 12px;
+    height: 160px;
+    z-index: 1;
+    font-family: Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,Arial,Helvetica Neue,Helvetica,"sans-serif";
+    background-color: #000;
+    background-repeat: no-repeat;
+}
+footer .rel1100{
+    width: 1104px;
+    margin: 0 auto;
+    position: relative;
+}
+footer .foot_dl{
+    position: absolute;
+    top: 40px;
+}
+footer .foot_dl dt{
+    float: left;
+    padding-left: 7px;
+}
+footer .foot_dl dt a{
+    padding: 0 12px;
+    float: left;
+}
+footer .foot_dl dd{
+    font-size: 12px;
+    line-height: 1.25;
+    margin: 0;
+    float: right;
+    max-width: 796px;
+}
+footer .certificate{
+    color: #555;
+    font-size: 12px;
+    line-height: 1.5;
+    position: absolute;
+    left: 230px;
+    top: 85px;
+    text-align: center;
+}
+footer .certificate a{
+    color: #53bdfa;
+}
+footer .certificate a img{
+    vertical-align: middle;
+}
+

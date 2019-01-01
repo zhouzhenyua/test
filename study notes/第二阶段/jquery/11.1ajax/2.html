@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animate</title>
+    <script src="../jquery.min.js"></script>
+    <style>
+        div{
+
+        }
+    </style>
+</head>
+<body>
+<button class="btn">233</button>
+<button class="btn1">22</button>
+<div style="width: 100px;height: 100px;background: #f23030;"></div>
+
+<script>
+    /**
+     * animate(1 2 3 4) 动画
+     * 三个参数
+     * 1、属性
+     * 2、时间  默认400
+     * 3、运动方式 linear(线性)  swing(慢 快 慢)
+     *4、回调函数 callback
+     *
+     *
+     * stop()
+     */
+
+    $('.btn').click(function(){
+        $('div').animate({'width':'200','height':'200'},3000,"swing",function(){
+            alert('运动完成')
+        }).animate({'opacity':'0.1'})
+    });
+    $('.btn1').click(function(){
+        $('div').stop();  // 阻止当前运动 后续所有动画继续执行
+
+//        $('div').stop(true);   //阻止当前运动  阻止后续动画
+
+
+//        $('div').stop(true,true);   //可以立即执行到目标点
+
+        $('div').finish();// 完成动画
+
+
+
+    })
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全屏滚动 需要掌握的知识点</title>
+</head>
+<body>
+<script>
+
+//    window.onmousewheel = function(){
+//        alert('1');
+//    };
+
+//    事件监听
+//    ele元素
+//    type 事件类型
+//    listener  监听的事件驱动 (函数名称)
+//      ele.add  Event   listener   添加事件监听 (dom2事件)
+
+//    function onmousewheel1(){
+//        alert(1)
+//    }
+    function addEvent(ele,type,listener){
+        if(ele.addEventListener){   //click
+            ele.addEventListener(type,listener);//非ie
+        }else {     //onclick
+            ele.attachEvent('on'+type,listener);  //ie
+        }
+    }
+
+
+
+    //chrome   ie
+    addEvent(window,'mousewheel',mousewheel);
+    // ff 火狐
+    addEvent(window,'DOMMouseScroll',mousewheel);
+
+
+ //   滚轮事件函数
+
+    function mousewheel(ev){
+        var oEvent = window.event || ev;
+
+//        事件对象：存储了 此刻浏览器中操作的所有信息
+
+        //火狐浏览器 使用 detail 属性判断方向
+        //当 detail >0 向下滚动  detail < 0 向上滚动
+        //chrome  使用 wheelDelta 属性判断方向
+        //wheelDelta <0 向下滚动   wheelDelta >0 向上滚动
+
+        if(oEvent.detail){
+            if(oEvent.detail >0){ //下滚动
+                scrollDown()
+            }else {  //上滚动
+                scrollUp()
+            }
+        }else if(oEvent.wheelDelta){
+            if(oEvent.wheelDelta > 0){ //上滚动
+                scrollUp()
+            }else {     //下滚动
+               scrollDown()
+            }
+
+        }
+    }
+
+    function  scrollDown(){
+        alert('1')
+    }
+    function  scrollUp(){
+        alert('2')
+    }
+
+</script>
+</body>
+</html>

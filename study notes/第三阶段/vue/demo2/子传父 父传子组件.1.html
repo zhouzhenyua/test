@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="../js/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+          <custom-one @receve="getoldbrother"></custom-one>
+          <custom-two :newbrothergetparent="parentgetoldbrother"></custom-two>
+    </div>
+    <script type="text/javascript">
+       //父子传  子父传     bus 
+       Vue.component("custom-one",{
+
+            template:`
+              <div>
+                 哥哥 
+                 <button @click="sendbrother">发送</button>
+              </div>
+            `,
+            data(){
+                return{
+                    oldbrother:"老哥"
+                }
+            },
+            methods:{
+                 sendbrother(){
+                     this.$emit("receve",this.oldbrother)
+                 }
+            }
+       })
+       Vue.component("custom-two",{
+           props:["newbrothergetparent"],
+           template:`
+              <div>
+                  弟弟{{newbrothergetparent}}
+              </div>
+           `,
+           data(){
+               return{
+                 newbrother:""
+               } 
+           },
+           methods:{
+    
+           },
+           mounted() {
+            
+           },
+      })
+       new Vue({
+           el:"#app",
+           data:{
+              parentgetoldbrother:""
+           },
+           methods:{
+               getoldbrother(val){
+                   this.parentgetoldbrother=val
+               }
+           }
+       })
+    </script>
+</body>
+</html>

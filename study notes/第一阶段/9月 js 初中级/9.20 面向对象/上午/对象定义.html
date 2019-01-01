@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //单例模式
+    // 变量名 也称命名空间   域名
+    //避免全局变量冲突
+    //每个空间都是一个单独的实例 => 单例
+
+    var obj ={name:11};
+    var obj1 ={name:11};
+
+    //高级单例模式
+    //保护 私有变量不受全局的干扰
+    //我们可以写 很多方法，但是只把 想要给用户展示的 暴露出来即可
+
+
+  /* 优点：团队项目开发的时候，把每一个成员写的项目，都
+    封闭在私有的作用域中（不消毁），保护内部的变量，不受干扰
+
+    缺点： 消耗内存空间
+            内存溢出、内存泄漏
+
+   */
+     var util = (function(){
+        function getCss(){}
+        function setCss(){}
+        function setGroupCss(){}
+        function Css(){
+//            setCss();
+//            setGroupCss();
+//            getCss();
+        }
+        return {
+            Css:getCss,
+           setCss,
+           setGroupCss
+        };
+    })();
+    util.Css();
+
+
+
+</script>
+</body>
+</html>

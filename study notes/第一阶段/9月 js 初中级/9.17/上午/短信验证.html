@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="a" type="text" value="请输入验证码" >
+<input id="b" type="button" value="点击发送验证码">
+<script>
+
+    var oBtn =document.getElementById('b');
+
+
+    var num=5;
+    var timer = null;
+
+    oBtn.onclick = function(){
+
+        this.disabled = true; //按钮变为不可编辑状态  disabled 按钮不可选中
+
+        timer =setInterval(function(){
+            num--;
+            oBtn.value = num + '秒后可再次发送';
+            if(num === 0){
+                clearInterval(timer);
+                oBtn.value = '点击发送验证码';
+                oBtn.disabled = false;
+                num =5;
+            }
+        },1000);
+    }
+
+</script>
+</body>
+</html>

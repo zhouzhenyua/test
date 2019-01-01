@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        .content{
+            width:400px;
+            float:left;
+            margin:20px 50px 0 20px;
+        }
+        .title{
+            font-size:18px;
+            font-weight:bold;
+            text-align:center;
+            margin-bottom:30px;
+        }
+        input{
+            border:1px solid #a9a9a9;
+            height:32px;
+            line-height:34px;
+            width:280px;
+            margin-bottom:20px;
+            padding-left:5px;
+            float:left;
+            margin-right:10px
+        }
+        button{
+            background:#3498db;
+            color:#fff;
+            font-size:14px;
+            text-align:center;
+            width:100px;
+            line-height:34px;
+            border:none 0;
+            cursor:pointer;
+            float:left;
+        }
+        .message_box{
+            border:1px solid #a9a9a9;
+            background:#f0f0f0;
+            min-height:200px;
+            margin-bottom:20px;
+        }
+        .time{
+            padding:5px 5px 0 5px;
+            font-size:14px;
+        }
+        .message_content{
+            padding:5px 5px 10px 5px;
+            font-size:16px;
+        }
+        .right{
+            text-align:right;
+            color:#039;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="title">用户1</div>
+    <div class="message_box " id="messageBox1">
+        <div class="time right">2017/7/4 下午9:34:26  我</div>
+        <div class="message_content right">1111</div>
+
+        <div class="time">2017/7/4 下午9:34:26</div>
+        <div class="message_content">1111</div>
+    </div>
+    <div><input id="myInput1" type="text" placeholder="请输入留言类容"><button id="doPost1">提交</button></div>
+</div>
+<div class="content">
+    <div class="title">用户2</div>
+    <div class="message_box" id="messageBox2"></div>
+    <div><input id="myInput2" type="text" placeholder="请输入留言类容"><button id="doPost2">提交</button></div>
+</div>
+</body>
+<script>
+var oMessageBox1 = document.getElementById('messageBox1');
+var oInput1 = document.getElementById('myInput1');
+var oPostBtn1 = document.getElementById('doPost1');
+
+var oMessageBox2 = document.getElementById('messageBox2');
+var oInput2 = document.getElementById('myInput2');
+var oPostBtn2 = document.getElementById('doPost2');
+
+oPostBtn1.onclick = function(){
+    if(oInput1.value){
+        newMessage( oMessageBox1 , oInput1 ,true);
+        newMessage( oMessageBox2 , oInput1);
+        oInput1.value ='';
+    }
+};
+oPostBtn2.onclick = function(){
+    if(oInput2.value){
+        newMessage( oMessageBox1 , oInput2);
+        newMessage( oMessageBox2 , oInput2 ,true);
+        oInput2.value ='';
+    }
+};
+
+function newMessage(box,oInput,ifMy){
+    var rightClass ='';
+    var myName = '';
+    if(ifMy){
+        rightClass = 'right';
+        myName = '我'
+    }
+    //写入发表留言时间
+    var oTime = document.createElement('div');
+    oTime.className = 'time' + rightClass;
+    var myDate = new Date();
+    oTime.innerHTML = myDate.toLocaleString() + myName;
+    box.appendChild(oTime);
+    //写入留言内容
+    var oMessageContent = document.createElement('div');
+    oMessageContent.className = 'message_content'+ rightClass;
+    oMessageContent.innerHTML = oInput.value;
+    box.appendChild(oMessageContent)
+}
+
+
+
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //原型对象：一个函数中就会有prototype属性，这个属性指向一个对象，这个对象称之为原型对象
+
+    //扩展原型对象：在原型对象中添加一些属性和方法
+
+    function Person(){
+        this.x=1;
+    }
+    //往原型对象中添加属性和方法都可以被构造函数的实例所共享（——>继承）
+    Person.prototype.s1=function(){};
+
+    Person.prototype.s2=function(){};
+
+    var p1=new Person();
+    function Plant(){
+        this.xx=1;
+    }
+    Plant.prototype.s3 = function(){
+
+    };
+    var p2 = new Plant();
+    p2.__proto__ = Person.prototype;
+    p1.s1();
+    p1.s2();
+    //    p2.s1();
+    //    p2.s2();
+    console.log(p2);
+    p2 =Object.create(Person.prototype);
+    console.log(p2);
+
+
+</script>
+</html>

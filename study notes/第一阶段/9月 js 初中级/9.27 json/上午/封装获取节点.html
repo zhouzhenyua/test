@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="ul">
+    <li id="li"></li>
+    <li></li>
+    <li></li>
+</ul>
+<script>
+    function myLastElementChild(father,ele){
+        var last = father.lastElementChild || father.getElementsByTagName(ele)[father.length-1];
+
+        last.style.background = 'red';
+        return last;
+    }
+
+
+    function myNextSibling(ele){ //nextSibling ie 封装
+        var next;
+        if(ele.nextElementSibling){
+            next = ele.nextElementSibling
+        }else {
+            next = ele.nextSibling;
+            while (next.nodeType !== 1){
+                next = next.nextSibling;
+                if(next.nodeType = 1){break;}
+            }
+        }
+        return next;
+    }
+    var next = li.nextElementSibling || li.nextSibling;
+    var prev = li.previousElementSibling || li.previousSibling;
+ //   nextSibling  封装 在ie低级版本中，直接获取的都是元素节点
+    console.log(myNextSibling(li));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

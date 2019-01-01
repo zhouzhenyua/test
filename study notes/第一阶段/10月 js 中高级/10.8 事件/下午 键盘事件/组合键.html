@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组合键</title>
+</head>
+<body>
+<script>
+
+    window.onload = function(){
+        document.onkeydown = function(ev){
+            var oEvent = ev || event;
+            console.log(oEvent.keyCode);
+//            console.log(oEvent);
+            if(oEvent.keyCode == 65 && oEvent.altKey && oEvent.shiftKey&&oEvent.ctrlKey){
+                alert('233')
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

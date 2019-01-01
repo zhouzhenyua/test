@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    function Fn(){
+//        this.x = 100;
+//        this.y = 200;
+//        getX = function () {
+//            console.log(this.x);
+//        }
+//    }
+//    Fn.prototype.getX = function(){
+//        console.log(this.x);
+//    };
+//    Fn.prototype.getY = function(){
+//        console.log(this.y);
+//    };
+//    function getX(){
+//        console.log(this.y);
+//    }
+//    var x=y=10;
+//    var f1 = new Fn;
+//    var f2 = new Fn;
+//    console.log(f1.getX === f2.getX);//true
+//    console.log(f1.getY === f2.getY);//true
+////    console.log(f1._proto_.getY === Fn.prototype.getY);
+////    console.log(f1._proto_.getX === f2.getX);
+//    console.log(f1.getX === Fn.prototype.getX); //false
+//
+//    console.log(f1.constructor);// fn
+////    console.log(Fn.prototype._proto_.constructor);//object
+//    f1.getX(); //100
+//    f1.__proto__.getX();//undefined
+//    f2.getY();//200
+//    console.log(Fn.prototype.getY());//undefined
+//    console.log(f2.getY());
+//    console.log(f1.getY);
+
+
+
+function Foo(){
+    geName = function(){
+        console.log(1);
+    };
+    return this;
+}
+    Foo.getName =function(){
+        console.log(2);
+    };
+    Foo.prototype.getName = function(){
+        console.log(3);
+    };
+    var getName = function(){
+        console.log(4);
+    };
+    function geName(){
+        console.log(5);
+    }
+    Foo.getName();//2
+    getName();//4
+    Foo().getName();//4
+    getName();//4
+    new Foo.getName();//2
+    new Foo().getName();//3
+    new new Foo().getName();//3
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

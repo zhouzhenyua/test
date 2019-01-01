@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="../js/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+         <custom>
+             <!-- 插槽   占位符-->
+             <slot></slot>
+         </custom>
+    </div>
+    <script>
+        Vue.component("custom",{
+            //向下注册服务      相披靡于bus  vuex
+            //在业务组件不推荐使用
+            provide:{
+                name:"tom"
+            },
+
+            template:`
+               <div>父组件
+                  <custom-list></custom-list>
+               </div>
+            `
+        })
+        Vue.component("custom-list",{
+            // 注入
+            inject:["name"],
+            template:`
+               <div>子组件</div>
+            `,
+            mounted() {
+                console.log(this.name)
+            },
+        })
+        new Vue({
+            el:"#app"
+        })
+    </script>
+</body>
+</html>

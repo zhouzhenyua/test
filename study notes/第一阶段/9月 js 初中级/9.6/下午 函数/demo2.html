@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr =[2,8,93,15,875,12,94];
+//    function aa(arr){
+//        arr.sort(function(a,b){
+//            return a-b;
+//        });
+//        console.log(arr[0]);
+//    }
+//    aa(arr);
+//    function bb(arr){
+//        arr.sort(function(a,b){
+//            return b-a;
+//        });
+//        console.log(arr[0]);
+//    }
+//    bb(arr);
+
+
+//    var ee= 87,dd=88;
+//
+//    function cc(n,m){
+//        var arr = [];
+//        if(n<m){
+//            var temp = n;
+//            n = m;
+//            m = temp;
+//        }console.log(n);
+//    }
+//    cc(ee,dd);
+
+
+//    function ff (num) {
+//        if (num < 0) {
+//            return -1;
+//        } else if (num === 0 || num === 1) {
+//            return 1;
+//        } else {
+//            for (var i = num - 1; i >= 1; i--) {
+//                num *= i;
+//            }
+//        }
+//        return num;
+//    }
+//    ff(5);
+//    console.log(ff(5));
+
+    function fff(n, total) {
+        if (n === 1) return total;
+        return factorial(n - 1, n * total);
+    }
+    console.log(fff(6, 1));
+
+</script>
+</body>
+</html>

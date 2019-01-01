@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this总结</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    /*
+    * js 中的this汇总
+    * this：当前方法执行的主体（谁执行这个方法，this就是谁）
+    * */
+
+//    1.给元素的某个事件绑定方法，方法中的this都行当前操作的元素本身。
+//    document.body.onclick = function(){
+//        console.log(this);
+//    };
+
+
+    //2、函数执行，看函数前面是否有点，有点时，点前面是谁，
+    //this就是谁，没有点，this是window （在js的严格模式下，没有点的this 是undefined）
+//    "use strict";
+//    let fn = function(){
+//        console.log(this);
+//    };
+//    let obj = {
+//      name : '哈哈啦',
+//        fn : fn
+//    };
+//    fn(); //this=>window
+//
+//    fn(); //严格模式 this=>undefined
+//    obj.fn(); //this:obj
+
+
+    /*
+    * 3、构造函数执行，方法中的this一般都在当前类的实例
+    * */
+//    let Fn = function(){
+//        this.x = 100;
+//    };
+//    let f =new Fn;
+
+
+    /*
+    * 4、回调函数，自执行函数 this=>window
+    * 在严格模式下
+    * 自执行函数 this => undefined
+    * 回调函数 this=> window
+    * */
+//    "use strict";
+
+//    ~function (){
+//        console.log(this);
+//    }();//window
+//
+//    setTimeout(function(){
+//        console.log(this);
+//    },1000); //undefined
+
+
+    /*
+    * 5、箭头函数中没有自己的this，this是上下文中的this
+    *
+    * */
+
+//    let obj = {
+//        fn: function(){
+//            console.log(this); //obj
+//            setTimeout(() => {
+//                console.log(this); //obj
+//            }, 1000)
+//        }
+//    };
+//    obj.fn();
+//
+//    let obj1 = {
+//        fn: function(){
+//            console.log(this); //obj
+//            setTimeout(() => {
+//                console.log(this); //obj
+//        },1000)
+//        }
+//    };
+//    obj1.fn();
+//
+
+    /*
+    * 6、在小括号表达式中，会影响this的指向
+    *
+    * */
+
+//    let obj ={
+//        fn :function(){
+//            console.log(this);
+//        }
+//    };
+//    obj.fn();//this:obj
+//    ('',obj.fn)();// this:window
+
+    /*
+    * 7、使用call/apply/bind可以改变this指向
+    *
+    * */
+
+    fn.call(obj);// this=>obj
+    fn.call(12);// this =>12
+    fn.call();// this=>window
+//非严格模式下call/apply/bind第一个参数不写或者写null和undefined，this都是window，严格模式
+//    下写谁this就是谁，不写就是undefined
+
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>学生档案</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #F7F7F7;
+        }
+
+        form {
+            max-width: 640px;
+            width: 100%;
+            margin: 32px auto 0;
+            font-size: 32px;
+        }
+
+        label {
+            display: block;
+            margin: 30px 0;
+        }
+
+        input {
+            width: 100%;
+            height: 32px;
+            margin-top: 10px;
+            display: block;
+        }
+        meter {
+            width: 100%;
+            height: 32px;
+            margin-top: 10px;
+            display: block;
+        }
+        progress {
+            width: 100%;
+            height: 32px;
+            margin-top: 10px;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+<form action="" method="post">
+    <fieldset>
+        <legend>学生档案</legend>
+        <label for="">
+            姓名: <input type="text" name="name">
+        </label>
+        <label for="">
+            手机号码: <input type="tel" name="tel">
+        </label>
+        <label for="">
+            邮箱地址: <input type="email" name="email" required  autocomplete="on">
+        </label>
+        <label for="">
+            所属学院: <input type="text" name="collage">
+        </label>
+        <label for="">
+            入学成绩: <input type="text" name="">
+        </label>
+        <p>
+            基础水平：<br>
+            <meter value="60" max="100"></meter>
+        </p>
+        <label for="">
+            入学日期: <input type="date" name="date">
+        </label>
+        <label for="">
+            毕业时间: <input type="date" name="date">
+        </label>
+        <p>
+           课程进度：<br>
+            <progress max="100" value="30"> </progress>
+        </p>
+
+        <input type="submit" value="保存">
+    </fieldset>
+</form>
+</body>
+</html>

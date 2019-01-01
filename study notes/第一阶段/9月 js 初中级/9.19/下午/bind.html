@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    function fn(){
+        console.log(this);
+        console.log(1);
+    }
+    setInterval(fn.bind(1),1000);
+    setInterval(fn.apply(1),1000);
+    setInterval(fn.call(1),1000);
+
+</script>
+</body>
+</html>

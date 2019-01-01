@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>组件</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+<body>
+<!-- 
+     
+        三类： 
+        基础组件 
+            模态框
+        业务组件  
+            包含复杂逻辑，涉及到大型业务处理
+        router-view.vue   
+            承载html  数据获取 页面交互等功能 
+        组件:
+            全局组件
+            局部组件
+        组件api
+        prop     slot    event
+ -->
+
+    <div id="app">
+            <custom :parent-info="parent"></custom>
+    </div>
+    <script>
+        Vue.component("custom",{
+            // props 传递的过程
+            props:["parentInfo"],
+            template:`
+                <div>
+                    <div>我是全局组件</div>
+                    <div>{{parentInfo}}</div>
+                </div>
+            `,
+            methods:{
+                send(){
+                    console.log(1);
+                }
+            },
+            data(){
+                return{
+                    msg:1
+                }
+            }
+        });
+        new Vue({
+            el:"#app",
+            data:{
+                parent:"23334"
+            },
+            methods:{
+
+            }
+        })
+    </script>
+</body>
+</html>

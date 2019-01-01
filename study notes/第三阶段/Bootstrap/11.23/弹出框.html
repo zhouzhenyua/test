@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+    <script src="../Bootstrap/js/jquery-3.3.1.min.js"></script>
+    <script src="../Bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+
+//            $('[data-toggle="tooltip"]').tooltip();
+
+//            $('#myModal1').on('shown.bs.modal',function(){
+//                $('#myModal2').focus();
+//            })
+        })
+    </script>
+</head>
+<body>
+    <!--<div class="container">-->
+        <!--<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">-->
+            <!--Launch demo modal-->
+        <!--</button>-->
+
+        <!--&lt;!&ndash; Modal &ndash;&gt;-->
+        <!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
+            <!--&lt;!&ndash;fade动画方式&ndash;&gt;-->
+            <!--&lt;!&ndash;tabindex 属性规定元素的 tab 键控制次序（当 tab 键用于导航时）。几乎所有浏览器均 tabindex 属性，除了 Safari &ndash;&gt;-->
+            <!--<div class="modal-dialog" role="document">-->
+                <!--<div class="modal-content">-->
+                    <!--<div class="modal-header">-->
+                        <!--&lt;!&ndash;data-dismiss="modal" 点击模态框消失&ndash;&gt;-->
+                        <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                        <!--<h4 class="modal-title" id="myModalLabel">Modal title</h4>-->
+                    <!--</div>-->
+                    <!--<div class="modal-body">-->
+                        <!--...-->
+                    <!--</div>-->
+                    <!--<div class="modal-footer">-->
+                        <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+    <button class="btn btn-default" data-target="#modal" data-toggle="modal">模态框</button>
+    <div id="modal" class="modal fade">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                    <h4>消息提示</h4>
+                </div>
+                <div class="modal-body">233</div>
+                <div class="modal-footer">
+                    <button class="btn btn-success">确定</button>
+                    <button class="btn btn-info" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+        $(function(){
+
+//show.bs.modal   show显示   hide.bs.modal消失
+//  bs是bootstrap缩写  modal代表模态框
+
+            
+
+//            $('#modal').on("show.bs.modal",function(){
+//                alert(11)
+//            })
+
+        })
+
+    </script>
+</body>
+</html>

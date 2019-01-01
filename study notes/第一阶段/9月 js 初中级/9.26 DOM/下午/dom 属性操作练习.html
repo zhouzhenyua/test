@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="btn" value="开灯" type="button">
+</body>
+<script>
+
+    var btn = document.getElementById('btn');
+    var oBody = document.body;
+
+   var isOpen = true;
+    btn.onclick =function(){
+        if(!isOpen){
+            oBody.style.background = '#fff';
+            this.value = '关灯';
+        }else {
+            oBody.style.background = '#000';
+            this.value = '开灯';
+        }
+        isOpen = !isOpen;
+    };
+
+
+
+</script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        //match
+        var pattern = /box/ig;									//没有开启全局
+        var str = 'This is a Box! That is a Box!';
+        console.log(str.match(pattern));							//匹配到字符串返回数组
+
+        //
+        //        var pattern = /Box/ig;								//开启了全局
+        //        var str = 'This is a Box!That is a Box!';
+        //        console.log(pattern.exec(str));						//匹配不到返回null 将所有匹配的字符串组合成数组返回
+        //   console.log(pattern.exec(str));
+
+        //     search
+
+        //        var pattern = /Box/i;
+        //        var str = 'This is a Box! That is a Box!';
+        //   console.log(str.search(pattern));							//返回的第一个匹配的位置
+
+        //        var pattern = /xox/i;
+        //        var str = 'This is a Box! That is a Box!';
+        //        alert(str.search(pattern));							//找不到匹配，返回-1
+
+
+
+        //    replace
+        //        var pattern = /box/ig;								//没有开启全局
+        //        var str = 'This is a Box! That is a Box!';
+        //        console.log(str.replace(pattern, 'Tom'));			//返回替换后的字符串，只限第一个
+
+
+
+        //        var pattern = /Box/ig;								//开启全局
+        //        var str = 'This is a Box! That is a Box!';
+        //        alert(str.replace(pattern, 'Tom'));			//返回替换后的字符串，所有匹配都会被替换
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

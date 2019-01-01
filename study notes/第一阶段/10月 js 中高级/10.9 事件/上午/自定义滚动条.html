@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义滚动条</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            height: 5000px;
+        }
+        .box {
+            width: 300px;
+            height: 450px;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid red;
+        }
+        .content {
+            padding: 10px;
+            line-height: 24px;
+            position: absolute;
+            background-color: #b1ff66;
+        }
+        .scroll {
+            width: 24px;
+            height: 450px;
+            background-color: #ccc;
+            position: absolute;
+            right: 0;
+        }
+        .bar {
+            width: 24px;
+            cursor: pointer;
+            background-color: red;
+            border-radius: 11px;
+            position: absolute;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+<script>
+    window.onload = function(){
+        var box = document.getElementById('box');
+        var content = box.children[0];
+        var scroll = box.children[1];
+        var bar = scroll.children[0];
+
+        var barH = box.offsetHeight*scroll.offsetHeight/content.offsetHeight;
+        bar.style.height = barH + 'px';
+        bar.onmousedown = function(ev){
+            var oEvent = ev || event;
+            var pagey = oEvent.pageY || scroll().top + oEvent.clientY;
+            var y = pagey - bar.offsetTop;
+            document.onmousemove = function(ev){
+                var oEvent = ev || event;
+                var parey = oEvent.pageY|| scroll().top + event.clientY;
+                parey = parey-y;
+                if(parey<0){
+                    parey = 0;
+                }
+                if(parey>scroll.offsetHeight -bar.offsetHeight){
+                    parey = scroll.offsetHeight -bar.offsetHeight
+                }
+                bar.style.top = parey+'px';
+
+                var s = parey*(content.offsetHeight - box.offsetHeight)/(scroll.offsetHeight-bar.offsetHeight);
+                content.style.marginTop = -s + 'px';
+
+                window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();
+            }
+        };
+        document.onmouseup = function(){
+            document.onmousemove = null;
+        }
+
+    }
+</script>
+<div class="box" id="box">
+    <div class="content">
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        老僧不识英雄汉，只管潇潇问姓名。<br>
+        杀尽江南百万兵，腰中宝刀血尤腥。<br>
+        </div>
+    <div class="scroll">
+        <div class="bar"></div>
+    </div>
+    </div>
+</body>
+</html>

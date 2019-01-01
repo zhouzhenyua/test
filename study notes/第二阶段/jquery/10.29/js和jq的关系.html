@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+
+<div>233</div>
+<input type="text" value="11" id="text"/>
+<script>
+    /*js 如何获取233 innerHTML
+    *
+    * jq html();
+    *
+    * js和jq的方法不能混用   方法函数化
+    *
+    * */
+//    console.log($('div').html());
+//    console.log($('div').innerHTML);
+
+    // val() 和 value() 低版本的jq value也是一个方法
+    console.log($('#text').val());
+
+</script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="../dist/css/swiper.min.css">
+  <script src="../dist/js/swiper.min.js"></script>
+  <!-- Demo styles -->
+  <style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-box1 .swiper-container {
+      width: 100%;
+      height: 300px;
+    }
+    /*.swiper-box2 .swiper-container2 {*/
+      /*width: 500px;*/
+      /*height: 300px;*/
+    /*}*/
+    .swiper-box1 .swiper-slide {
+      /*background-position: center;*/
+      /*background-size: cover;*/
+    }
+    /*.swiper-box2 .swiper-slide {*/
+      /*background-position: center;*/
+      /*background-size: cover;*/
+    /*}*/
+
+    /*.swiper-box2 .swiper-pagination {*/
+      /*background-color: #6f42c1;*/
+    /*}*/
+  </style>
+</head>
+<body>
+  <!-- Swiper -->
+  <div class="swiper-box1">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-color: #6f42c1"></div>
+      <div class="swiper-slide" style="background-color: #0febc1"></div>
+      <div class="swiper-slide" style="background-color: #4f4941"></div>
+      <div class="swiper-slide" style="background-color: #f7a831"></div>
+      <div class="swiper-slide" style="background-color: #ff3f38"></div>
+    </div>
+    <!-- Add Pagination -->
+    <!--<div class="swiper-pagination swiper-pagination-white"></div>-->
+    <!-- Add Arrows -->
+    <div class="swiper-button-next swiper-button-white"></div>
+    <div class="swiper-button-prev swiper-button-white"></div>
+  </div>
+  </div>
+  <!--<div class="swiper-box2">-->
+  <!--<div class="swiper-container">-->
+    <!--<div class="swiper-wrapper">-->
+      <!--<div class="swiper-slide" style="background-color: #6f42c1"></div>-->
+      <!--<div class="swiper-slide" style="background-color: #0febc1"></div>-->
+      <!--<div class="swiper-slide" style="background-color: #4f4941"></div>-->
+      <!--<div class="swiper-slide" style="background-color: #f7a831"></div>-->
+      <!--<div class="swiper-slide" style="background-color: #ff3f38"></div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; Add Pagination &ndash;&gt;-->
+    <!--<div class="swiper-pagination swiper-pagination-white"></div>-->
+    <!--&lt;!&ndash; Add Arrows &ndash;&gt;-->
+    <!--<div class="swiper-button-next swiper-button-white"></div>-->
+    <!--<div class="swiper-button-prev swiper-button-white"></div>-->
+  <!--</div>-->
+  <!--</div>-->
+  <!-- Swiper JS -->
+
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper1 = new Swiper('.swiper-container', {
+      spaceBetween: 30,
+      effect: 'fade',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      loop:true
+    });
+//    var swiper2 = new Swiper('.swiper-container', {
+//      spaceBetween: 30,
+//      effect: 'fade',
+//      pagination: {
+//        el: ' .swiper-pagination',
+//        clickable: true,
+//      },
+//      navigation: {
+//        nextEl: '.swiper-button-next',
+//        prevEl: '.swiper-button-prev',
+//      },
+//      loop:true
+//    });
+  </script>
+</body>
+</html>

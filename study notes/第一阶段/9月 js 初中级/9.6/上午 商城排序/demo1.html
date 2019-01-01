@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var arr1 = [64,84,21,848,9];
+    function a(arr){
+        for (var i = 0; i < arr.length-1; i++) {
+            var a =true;
+            for (var j = 0; j < arr.length-1; j++) {
+                if (arr[j] < arr[j + 1]) {
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    a =false;
+                }
+            }if(a){
+                break;
+            }
+        }console.log(arr)
+    } //普通封装
+   a(arr1);
+    Array.prototype.a= function a(){
+        for (var i = 0; i < this.length-1; i++) {
+            var a =true;
+            for (var j = 0; j < this.length-1; j++) {
+                if (this[j] < this[j + 1]) {
+                    var temp = this[j];
+                    this[j] = this[j + 1];
+                    this[j + 1] = temp;
+                    a =false;
+                }
+            }if(a){
+                break;
+            }
+        }console.log(this)
+    };//封装在原型上
+
+
+
+    function c(arr){
+        var a = 0,b = 0;
+        for (var i = 0; i < arr.length; i++) {
+            a++;
+            for (var j = i; j>0; j--) {
+                b++;
+                if(arr[j]<arr[j-1]){
+                    var temp =arr[j];
+                    arr[j] = arr[j-1];
+                    arr[j-1] = temp;
+                }else {
+                    break
+                }
+            }
+        }
+        console.log(arr,a,b);
+    }
+    function b(arr){
+        var a = 0,b = 0;
+        for (var i = 0; i < arr.length; i++) {
+            a++;
+            for (var j = i; j>0; j--) {
+                b++;
+                if(arr[j]<arr[j-1]){
+                    var temp =arr[j];
+                    arr[j] = arr[j-1];
+                    arr[j-1] = temp;
+                }else {
+                    break
+                }
+            }
+        }
+        console.log(arr,a,b);
+    }
+
+    Array.prototype.c = function b(){
+    var a = 0,b = 0;
+    for (var i = 0; i < this.length; i++) {
+        a++;
+        for (var j = i; j>0; j--) {
+            b++;
+            if(this[j] > this[j-1]){
+                var temp = this[j];
+                this[j] = this[j-1];
+                this[j-1] = temp;
+            }else {
+                break
+            }
+        }
+    }
+    console.log(arr,a,b);
+};
+    c(arr);
+//    Array.prototype.c = function c(){
+//    var a = 0,b = 0;
+//    for (var i = 0; i < this.length; i++) {
+//        a++;
+//        for (var j = i; j>0; j--) {
+//            b++;
+//            if(this[j] < this[j-1]){
+//                var temp = this[j];
+//                this[j] = this[j-1];
+//                this[j-1] = temp;
+//            }else {
+//                break
+//            }
+//        }
+//    }
+//    console.log(arr,a,b);
+//};
+//
+//    a(arr1);
+//    c(arr1)
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .a{
+            display: flex;
+            /*align-items: center;*/
+            /*flex-wrap: wrap;*/
+            flex-direction: column;
+        }
+
+        .aa,.bb,.cc{
+            height: 200px;
+        }
+        .bb>div:nth-child(1){
+            height: 200px;
+            background: #00a383;
+            flex: 1;
+        }
+        .bb>div:nth-child(2){
+            height: 200px;
+            background: #f10180;
+            flex: 3;
+        }
+        .aa{
+            background: #f5d185;
+            /*flex: 1;*/
+        }
+        .bb{
+            background: #0AA6E8;
+            display: flex;
+            /*flex: 1;*/
+        }
+        .cc{
+            background: #ff33ff;
+            /*flex: 1;*/
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="a">
+        <div class="aa"></div>
+        <div class="bb">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="cc"></div>
+    </div>
+</body>
+</html>

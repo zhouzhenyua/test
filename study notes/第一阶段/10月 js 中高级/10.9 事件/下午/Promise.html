@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promise</title>
+</head>
+<body>
+<script type="text/javascript">
+    new Promise(()=>{
+        /*执行一个异步的任务 （new Promise的时候，创建Promise 的一个实例，
+        立即会把当前函数体中的异步操作执行）=> 'Promise是同步的，它可以管理异步操作'
+        *
+        * */
+        setTimeout(()=>{
+        console.log(3);
+    },1000);
+    console.log(1);
+    }).then();
+    console.log(2);
+
+</script>
+</body>
+</html>

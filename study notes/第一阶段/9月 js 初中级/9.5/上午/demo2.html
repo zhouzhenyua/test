@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select id="s1">
+    <option value="">数字</option>
+    <option value="0"></option>
+    <option value="1"></option>
+</select>
+<select id="s2">
+    <option value="">数字</option>
+</select>
+<script>
+    var oS1 =document.getElementById('s1');
+    var oS2 =document.getElementById('s2');
+    var arr = [];
+    for (var i = 0; i < 100; i++) {
+        arr[i] = [];
+        for (var j = 0; j < 100; j++) {
+          arr[i][j] = j+1;
+        }
+
+    }
+
+    console.log(arr);
+    oS1.onchange = function(){
+        oS2.options.length = 0;
+        for (var i = 0; i < num[oS1.value].length; i++) {
+            oS2.add(new Option(oS1.value[i]))
+
+        }
+    }
+
+</script>
+</body>
+</html>

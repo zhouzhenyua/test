@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+<body>
+    <!-- mvvm -->
+    <div id="app">
+        <div style="width: 1000px;height: 1000px;background-color: #0ff;" @click="parent">
+            <div @click.stop="child" style="width: 100px;height: 100px;background-color: #0f0;"></div>
+        </div>
+        <button @contextmenu.prevent="right">right</button>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",  //element 元素  声明  渲染
+            data:{
+               msg:"222"
+            },
+            methods:{ // 方法池 
+                parent(){
+                    console.log("parent");
+                },
+                child(){
+                    // var ev = ev||event;
+                    console.log("child");
+                    // ev.stopPropagation();  // 阻止事件冒泡
+                    // ev.cancelBubble=true;   // js中的阻止冒泡
+                },
+                right(){
+                    console.log("right");
+
+                  //  prevent=== preventDefault();
+                    
+                }
+            }
+        })
+    </script>
+</body>
+</html>

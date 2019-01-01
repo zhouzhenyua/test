@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>【友盟+】品牌活动</title>
+    <link rel="icon" href="img/icon.ico">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/品牌活动.css">
+    <script src="js/ajax.js"></script>
+    <script src="js/jquery-1.10.1.js"></script>
+</head>
+<body>
+<div id="headerBox"></div>
+
+
+<div id="pphd">
+    <div class="main focus" id="focus">
+        <ul class="focus-pic" id="focus-pic" style="transition-property: none; transform: translateX(-1519px); transition-duration: 0.3s; margin-left: 0px;">
+            <!--<li style="background-color: rgb(34, 124, 255);" class="now1">-->
+                <!--<a href="javascript:;" title="2018云栖大会" target="_blank" _id="0">-->
+                    <!--<imgs src="imgs/5b519d34d462a.jpg">-->
+                <!--</a>-->
+            <!--</li>-->
+            <li style="background-color: rgb(0, 0, 0);" >
+                <a href="2018UBDC.html" title="2018UBDC峰会" target="_blank" _id="1">
+                    <img src="img/5b5fdf2cbea7e.jpg">
+                </a>
+            </li>
+            <li style="background-color: rgb(34, 124, 255);">
+                <a href="javascript:;" title="2018云栖大会" target="_blank" _id="2">
+                    <img src="img/5b519d34d462a.jpg">
+                </a>
+            </li>
+            <!--<li style="background-color: rgb(0, 0, 0);">-->
+                <!--<a href="2018UBDC.html" title="2018UBDC峰会" target="_blank" _id="3">-->
+                    <!--<imgs src="imgs/5b5fdf2cbea7e.jpg">-->
+                <!--</a>-->
+            <!--</li>-->
+        </ul>
+        <ul class="focus-dot" id="focus-dot"><li class="active"></li><li class=""></li></ul>
+    </div>
+
+<div class="main items" id="main">
+    <div class="item">
+        <a target="_blank" href="2018UBDC.html" title="2018UBDC全域大数据峰会">
+            <img src="img/5b5fdbb1cd62a.jpg">
+            <p style="color:#333333">2018UBDC全域大数据峰会</p>
+            <font>2018.10.16 北京</font><span class="on">参与活动</span>
+        </a>
+    </div>
+    <div class="item">
+        <a target="_blank" href="javascript:;" title="手机行业前沿论坛">
+            <img src="img/5a9f9485d0542.jpg">
+            <p style="color:#333333">手机行业前沿论坛</p>
+            <font>2018.3.30 深圳</font><span class="off">已结束</span>
+        </a>
+    </div>
+</div>
+</div>
+
+
+
+
+<div id="footerBox"></div>
+</body>
+<script>
+    $(function(){
+        $("#headerBox").load("header.html");
+        $("#footerBox").load("footer.html");}
+    );
+</script>
+<script>
+    let oMain =document.getElementById('main');
+    let xhr = new XMLHttpRequest;
+    let prDate = null;
+
+    xhr.open('GET','json/pphd.json',false);
+
+    xhr.onreadystatechange =function(){
+        if( xhr.readyState ==4 && xhr.status ==200){
+            prDate = JSON.parse(xhr.responseText);
+        }
+    };
+    xhr.send();
+    ~function(){
+        let str =``;
+        for (var i = 0; i < prDate.length; i++) {
+           var {title,img,p,font,open,span} = prDate[i];
+            str +=`<div class="item">
+            <a target="_blank" href="javascript:;" title="${title}">
+            <img src="${img}">
+            <p style="color:#333333">${p}</p>
+            <font>${font}</font><span class="${open}">${span}</span>
+            </a>
+            </div>`
+        }
+        oMain.innerHTML = str;
+    }();
+
+
+//    var dot = document.querySelectorAll('#focus-dot li');
+//    var oList = document.getElementById('focus-pic');
+//    var screen = oList.getElementsByTagName('li')[0];
+//    var aScreen = oList.getElementsByTagName('li');
+//    var imgWidth = screen.offsetWidth;
+////    var target = 0;
+//    for (let   i = 0; i < dot.length; i++) {
+////        dot[i].index = i;
+//        dot[i].onclick = function(){
+//            for (var j = 0; j < aScreen.length; j++) {
+//                dot[j].classList.remove('active');
+//                aScreen[j].style.opacity = '0';
+//            }
+//            this.classList.add('active');
+//            this.style.opacity = 1;
+
+
+//            oList.style.marginLeft = '50%';
+//            target = -this.index * imgWidth;
+//            animate(oList ,30 , target);
+//            pic = square = this.index;
+//        }
+//    }
+//    var pic = 0;
+//    var square = 0;
+
+
+//    timer = setInterval(playNext, 1000);//每隔一秒钟播放下一张
+//    function playNext() {
+//       ~function (){
+//           if(pic === oList.length-1 ){
+//               oList.style.left = 0;
+//               pic = 0;
+//           }
+//           pic++;
+//           target = -pic * imgWidth;
+//           animate(oList ,30 , target);
+//           if(square < dot.length-1){
+//               square++;
+//           }else {
+//               square =0;
+//           }
+//           for (var j = 0; j < dot.length; j++) {
+//               dot[j].classList.remove('active')
+//           }
+//           dot[square].classList.add('active');
+//       }()
+//    }
+
+    function animate(obj, step, target) {
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function () {
+            var leader = obj.offsetLeft;
+            step = Math.abs(step);
+            step = leader < target ? step : -step;
+            //Math.abs(target - leader)  当前位置到目标的位置
+            if (Math.abs(target - leader) > Math.abs(step)) {
+                leader += step;
+                obj.style.left = leader + "px";
+            } else {
+                obj.style.left = target + "px";
+                clearInterval(obj.timer);
+            }
+        }, 15);
+    }
+
+</script>
+</html>

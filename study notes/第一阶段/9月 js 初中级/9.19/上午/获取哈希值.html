@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = "http://www.yxl.cn/stu?lx=1&name=AA&age=20#teacher";
+
+   var str1 = str.indexOf('?');
+   var str2 = str.indexOf('#');
+   var str3 = str.substring(str1 + 1,str2);
+   var str6 = str.substring(str2 + 1);
+   var str4 = str3.split('&');
+   var str5 = {};
+
+    for (var i = 0; i < str4.length; i++) {
+        var item = str4[i];
+        itrmAry = item.split('=');
+                key=itrmAry[0];
+                value=itrmAry[1];
+        str5[key] = value;
+    }
+    str5['HASH'] = str6;
+
+
+    console.log(str5);
+
+</script>
+</body>
+</html>

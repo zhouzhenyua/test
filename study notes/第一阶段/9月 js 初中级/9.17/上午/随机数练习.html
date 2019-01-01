@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            margin: 20px 40%;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<button id="btn1">开始</button>
+<button id="btn2">停止</button>
+<script>
+
+    var timer;
+   function timeFun(){
+       clearInterval(timer);
+        timer = setInterval(function(){
+            var sz = Math.floor(Math.random()*arr.length);
+            box.innerHTML= arr[sz]
+        },1000)
+    }
+    btn1.onclick = function (){
+        timeFun()
+    };
+    btn2.onclick = function(){
+        clearInterval(timer);
+    }
+</script>
+</body>
+</html>

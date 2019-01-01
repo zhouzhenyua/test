@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background: #ffaaaa;
+            position: relative;
+            left: 20px;
+            top: 60px;
+            border: 2px solid #02A787;
+        }
+
+    </style>
+    <script src="../../jquery-1.10.1.js"></script>
+</head>
+<body>
+<button>按钮</button>
+<div id="box" class="box"></div>
+
+<script src="../../utils.js"></script>
+<script>
+
+//    console.log(getCss(box, 'height'));
+//    setCss(box,'top','100px');
+    console.log(getStyle(box, 'height'));
+    getStyle(box, 'height','100px');
+
+    var obj ={
+        'width':'20px',
+        'height':'20px'
+    };
+
+    for(var key in obj){
+        console.log(key);
+        console.log(obj[key]);
+    }
+
+</script>
+</body>
+</html>

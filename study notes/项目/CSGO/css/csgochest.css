@@ -1,0 +1,129 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+header{
+    box-sizing: content-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: -webkit-linear-gradient(top, #151515, #010101);
+    background: linear-gradient(to bottom, #151515, #010101);
+    z-index: 8;
+    overflow: hidden;
+    min-width: 1260px;
+}
+.m-mainwarp{
+    /*height: 90px;*/
+    /*overflow: hidden;*/
+    margin: 0 auto;
+    position: relative;
+}
+.m-link{
+    height: 88px;
+    text-align: center;
+}
+.m-link a{
+    display: inline-block;
+    margin: 8px 5px 0 5px;
+    height: 73px;
+    line-height: 73px;
+    color: #fff;
+    width: 240px;
+    font-size: 17px;
+}
+
+.m-link a.active,.m-link a:hover{
+    display: inline-block;
+    color: #fff;
+    background-image: url(../img/csgochenst/s-navlink.png);
+    background-size: 100% 100%;
+}
+.m-btline{
+    position: relative;
+    height: 2px;
+    width: 100%;
+    background: -webkit-linear-gradient(left, rgba(195, 158, 91, 0.4) 0%, #c39e5b 30%, #c39e5b 70%, rgba(195, 158, 91, 0.4) 100%);
+    background: linear-gradient(to right, rgba(195, 158, 91, 0.4) 0%, #c39e5b 30%, #c39e5b 70%, rgba(195, 158, 91, 0.4) 100%);
+}
+
+/*头部结束*/
+
+
+.container{
+    padding-top: 90px;
+    background: #000;
+}
+.banner{
+    padding-top: 672px;
+    height: 770px;
+    background: url(../img/csgochenst/bg-banner.jpg) no-repeat top;
+}
+.main{
+    height: 966px;
+    background: url(../img/csgochenst/bg.jpg) no-repeat top;
+}
+
+.row-box{
+    width: 1422px;
+    margin: 0 auto;
+    padding: 0 243px;
+    height: 100%;
+    position: relative;
+    top: -80px;
+}
+.row-box .col-2{
+    width: 236px;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+.col-body{
+    width: 910px;
+    margin: 0 auto;
+    position: relative;
+}
+.unlogin{
+    padding-top: 197px;
+}
+.login-btn{
+    display: inline-block;
+    text-align: center;
+    width: 190px;
+    font-size: 14px;
+    height: 36px;
+    line-height: 36px;
+    color: #fff;
+    background-color: rgba(135,155,176,.7);
+}
+.statement{
+    background-color: rgba(0,0,0,.43);
+    height: 529px;
+    padding: 18px 18px 0 26px;
+}
+.statement h2{
+    font-weight: 700;
+    font-size: 18px;
+    margin: 10px 0;
+}
+.statement h2:first-child{
+    margin-top: 0;
+}
+.statement p{
+   line-height: 180%;
+}
+.col-left{
+    left: 0;
+}
+.sec-right{
+    right: 0;
+}
+
+
+
+
+

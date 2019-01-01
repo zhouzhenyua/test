@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+<div class="box"><span>22</span></div>
+<div title="aa">33</div>
+<div class="div">33</div>
+<script>
+    /*
+    * has not filter next  prev  find  eq  index attr
+    *
+    * has:有、包含  父子
+    * not: 没有  兄弟/同级
+    * filter 过滤
+    * next 下一个 同级
+    * prev 上一个  同级
+    * find 寻找  父子
+    * eq() 取到节点 下标
+    *
+    *index
+    *
+    * attr
+    *
+    *
+    * */
+
+    //has
+//    $('div').has('span').css('background','red');
+    //not
+//    $('div').not('.box').css('background','red');
+    // next
+//    $('div').next().css('background','red');
+
+    //prev
+//    $('div').prev().css('background','red');
+
+    //find
+//    $('div').find('span').css('background','red');
+
+    //eq()
+//    console.log($('div').eq(0).html());
+
+
+
+
+    //index
+//    $('div').filter($('div[title="aa"]')).css('background','red');
+
+//    html  取值 html 取内容的时候，只取第一个 ，当设置值时，改变所有
+    $('.div li').html('');
+
+
+</script>
+</body>
+</html>

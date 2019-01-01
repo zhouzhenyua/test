@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工厂模式创建对象</title>
+</head>
+<body>
+<script>
+    //工厂模式 批量生产，相同的代码进行封装，
+    //减少代码的冗余，实现 低耦合高内聚
+    //真实项目开发 基本不用，只做了解
+    function factory(name,age){
+        //原料
+        var obj ={};
+        //加工
+        obj.name =name;
+        obj.age =age;
+        //出厂
+        return obj;
+    }
+    console.log(factory('2', 55));
+    /*
+    * 1、原料 var obj = {};
+    * 2、加工
+    * 3、出厂
+    *
+    * */
+
+
+
+</script>
+</body>
+</html>

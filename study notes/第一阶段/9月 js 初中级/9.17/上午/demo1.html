@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 200px;
+            height: 50px;
+            background: #feeeee;
+        }
+        ul{
+            list-style: none;
+        }
+        ul li{
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+            background: #ff33ff;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+
+</div>
+<button id="btn">开始</button>
+<ul id="list">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<script>
+    var oBox =document.getElementById('box'),
+        oList = document.getElementById('list'),
+        oLi = oList.getElementsByTagName('li');
+
+    var arr =[];
+    for (var i = 0; i < oLi.length; i++) {
+        arr.push(oLi[i])
+    }
+
+    function r(num){
+        return Math.floor(Math.random()*num)
+    }
+    function bg(){
+        var rc = 'rgb('+random(255)+','+random(255)+','+random(255)+')';
+        return rc;
+    }
+
+
+    btn.onclick = function(){
+        for (var i = 0; i < oLi.length; i++) {
+
+
+        }
+    }
+
+
+</script>
+</body>
+</html>

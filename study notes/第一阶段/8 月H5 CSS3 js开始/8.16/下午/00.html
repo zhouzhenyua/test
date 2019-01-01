@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        @media screen and (min-width: 640px){
+            .box{
+                width: 640px;
+                height: auto;
+                overflow: hidden;
+            }
+            .left{
+                width: 200px;
+                height: 100px;
+                background: #00A78B;
+            }
+            .center{
+                width: 200px;
+                height: 100px;
+                background: #f3ca6f;
+                margin: 10px 0;
+            }
+            .right{
+                width: 200px;
+                height: 100px;
+                background: #f56a00;
+            }
+        }
+        @media screen and (min-width:800px){
+            .box{
+                width: 700px;
+                height: auto;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            .left{
+                float: left;
+                width: 180px;
+                height: 300px;
+                background: #00A78B;
+            }
+            .center{
+                float: left;
+                width: 300px;
+                height: 300px;
+                background: #f3ca6f;
+                margin-left: 20px;
+            }
+            .right{
+                float: left;
+                width: 500px;
+                height: 100px;
+                background: #f56a00;
+            }
+        }
+        @media screen and (min-width: 1200px){
+            .box{
+                width: 1000px;
+                height: auto;
+                margin: 10px auto;
+                overflow: hidden;
+
+            }
+            .left{
+                float: left;
+                width: 200px;
+                height: 600px;
+                background: #00A78B;
+            }
+            .center{
+                float: left;
+                width: 580px;
+                height: 600px;
+                background: #f3ca6f;
+                margin: -10px 10px;
+            }
+            .right{
+                float: left;
+                width: 200px;
+                height: 600px;
+                background: #f56a00;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="left">left</div>
+        <div class="center">center</div>
+        <div class="right">right</div>
+    </div>
+</body>
+</html>

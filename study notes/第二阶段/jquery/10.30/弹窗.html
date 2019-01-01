@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>alert</title>
+    <script src="../jquery.min.js"></script>
+    <style>
+
+        .box{
+            width: 500px;
+            height: 500px;
+            background: #ff3f38;
+            display: none;
+            position: absolute;
+            /*top:0;*/
+        }
+
+
+
+    </style>
+</head>
+<body style="height: 2000px;">
+<button id="btn">按钮</button>
+<div class="box"></div>
+
+<script>
+
+    $('#btn').click(function(){
+        /* 1、点击按钮显示盒子
+        2、给予当前盒子一个定位
+        3、居中
+            3、1、left (屏幕的宽度 - 盒子的宽度)/2
+            3、2、left (屏幕的高度 - 盒子的高度)/2
+        *
+        *
+        * */
+
+        $('div').css('display','block');
+//
+        $('div').css('left',($(window).width() - $('div').outerWidth())/2);
+        $('div').css('top',($(window).height() - $('div').outerHeight())/2);
+
+
+        $(window).on('resize scroll',function (){
+            $('div').css('left',($(window).width()-$('div').outerWidth())/2);
+            $('div').css('top',($(window).height()-$('div').outerHeight())/2+$(window).scrollTop())
+        })
+    });
+    console.log(($(window).width() -  $('.box').outerWidth())/2);
+//    $('#btn').bind('click','')
+
+</script>
+</body>
+</html>

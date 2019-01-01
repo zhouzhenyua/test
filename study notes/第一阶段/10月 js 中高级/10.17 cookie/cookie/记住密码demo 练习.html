@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>记住密码</title>
+    <script src="../cookie.js"></script>
+</head>
+<body>
+    <form id="form">
+        <p>姓名</p>
+        <input type="text" value="" id="name">
+        <p>密码</p>
+        <input type="password" value="" id="password">
+        <input type="checkbox" id="checkbox">
+        <input type="submit" id="submit" value="提交">
+    </form>
+    <script>
+
+        var oForm= document.getElementById('form');
+        var oName = document.getElementById('name');
+        var oPassword = document.getElementById('password');
+        var oSubmit = document.getElementById('submit');
+        var oCheckbox = document.getElementById('checkbox');
+
+        oForm.onsubmit = function(){
+            var name = oName.value;
+            var password = oPassword.value;
+
+            if(oCheckbox.checkbox){
+                setCookie('name',name,10);
+                setCookie('password',password,10);
+            }else {
+                removeCookie('name');
+                removeCookie('password');
+            }
+        };
+        if()
+
+        var name = getCookie('name');
+        var password = getCookie('password');
+        if(name){
+            oName.value= name;
+            oPassword.value= password;
+        }
+
+
+    </script>
+</body>
+</html>

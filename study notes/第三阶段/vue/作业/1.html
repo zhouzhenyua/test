@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div>
+                <input @keydown.13="add" v-model="msg">
+                <button  @click="add">添加</button>
+        </div>
+        <ul>
+            <li v-for="(item,index) in list" :key="index">{{item}}
+                <button @click ="updateP(index,alertad[val]);alertad()">编辑</button>
+                <button @click ="remove(index)">删除</button>
+            </li>
+        </ul>
+    </div>
+    <script>
+        // var setvu =null;
+        // setvu = new Vue({
+        //     el:"#app",
+        // })
+      
+            
+        new Vue({
+            el: '#app',
+            data :{
+                msg:'',
+                list:[]
+            },
+            methods:{
+                add(){
+                
+                    if(this.msg==""){
+                        alert("请输入内容！")
+                        return
+                    }
+                    this.list.push(this.msg);
+                    this.msg = "";
+                },
+                updateP(index,newL){
+                    this.list.splice(index,1,newL)
+                },
+                
+                remove(index){
+                    // alert("是否删除？")
+                    this.list.splice(index,1)
+                },
+                alertad(){
+                    // prompt("请输入更新内容！")
+                    var val = prompt();
+                },
+                
+            }
+        })
+       
+    </script>
+</body>
+</html>

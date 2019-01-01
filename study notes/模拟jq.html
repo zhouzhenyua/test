@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="div" id="div1" style="width:100px;height:100px;background:#f00">3434<p>12</p>
+    </div>
+    <script>
+        /**
+         * 必备：
+         * 面向对象
+         *   调用：new  实例化
+         * 兼容性
+         * 事件
+         * 
+        */
+        //   obj 元素  events 事件  click  mouseover  fn  回调函数
+        function bindEvent(obj, events, fn) {
+
+            if (obj.addEventListener) {
+                //谷歌
+                obj.addEventListener(events, function (ev) {
+                    // fn  =false  fn=undefined   
+                    if (fn == false) {
+                        ev.preventDefault();
+                        ev.cancelBubble = true
+                    } else {
+                        fn()
+                    }
+                }, false)
+            } else {
+                //ie
+                obj.attachEvent("on" + events, function (ev) {
+                    if (fn == false) {
+                        window.event.cancelBubble = true
+                        return false
+                    }
+                })
+            }
+        }
+        //封装class获取
+        function getByClass(oParents, aClass) {
+            var arr = []
+            var elems = oParents.getElementsByTagName("*")
+            for (var i = 0; i < elems.length; i++) {
+                if (elems[i].className == aClass) {
+                    arr.push(elems[i])
+                }
+            }
+            return arr
+        }
+
+        //封装style
+        function getStyle(obj, attr) {
+            if (obj.currentStyle) {
+                return obj.currentStyle[attr]
+            } else {
+                //false  兼容火狐浏览器的低版本   true  
+                //getComputedStyle 兼容谷歌
+                return getComputedStyle(obj, false)[attr]
+            }
+        }
+        //封装转数组的函数
+        function toArray(elems) {
+            var arr = []
+            for (var i = 0; i < elems.length; i++) {
+                arr.push(elems[i])
+            }
+            return arr
+        }
+        function getByStr(aParent, str) {
+            //用来存放选中的元素的数组 这个数组在getTag存在，为了每次执行的时候都需要清空，所以使用局部函数的变量
+            var aChild = [];
+            //aParent开始是[document],再执行完getByStr的时候getEle将aParent指向了getByStr函数的返回值aChild数组以确保循环父级下面的所有匹配元素
+            for (var i = 0; i < aParent.length; i++) {
+                switch (str.charAt(0)) {
+                    //id选择器  eg: #box  使用document.getElementById选取
+                    case '#':
+                        var obj = document.getElementById(str.substring(1));
+                        aChild.push(obj);
+                        break;
+                    //类选择器  
+                    case '.':
+                        //由于一个标签可以有多个类选择器 所以需要进行循环选取
+                        var aTag = getByClass(aParent[i], str.substring(1));
+                        for (var j = 0; j < aTag.length; j++) {
+                            aChild.push(aTag[j]);
+                        }
+                        break;
+                    default:
+                        // 如果是div.active  那么用正则来判断 /\w+\.\w+/g.test(str)
+                        if (/\w+\.\w+/g.test(str)) {
+                            //先选择标签，在选择类选择器  使用类选择器的时候重复选择器函数即可
+                            var aStr = str.split('.');
+                            var aTag = aParent[i].getElementsByTagName(aStr[0]);
+                            var reg = new RegExp('\\b' + aStr[1] + '\\b', 'g');
+                            //循环选取标签，注意外层已经有i的循环
+                            for (var j = 0; j < aTag.length; j++) {
+                                if (reg.test(aTag[j].className)) {
+                                    aChild.push(aTag[j]);
+                                }
+                            }
+                        } else if (/\w+\:\w+(\(\d+\))?/g.test(str)) {
+                            //讲str进行整理  
+                            var aStr = str.split(/\:|\(|\)/);
+                            //aStr[2]是eq传入的参数，这里使用n来保存
+                            var n = aStr[2];
+                            //在父级下获取所有匹配aStr[0]项的标签
+                            var aTag = aParent[i].getElementsByTagName(aStr[0]);
+                            //这时候会循环判断aStr[1]项是的内容，jquery中经常使用的为eq、odd、first、last
+                            switch (aStr[1]) {
+                                //如果是eq则把第n项传入aChild数组即可
+                                case 'eq':
+                                    aChild.push(aTag[n]);
+                                    break;
+                                 //如果是odd是从第一项开始的
+                                case 'odd':
+                                    for (var j = 1; j < aTag.length; j += 2) {
+                                        aChild.push(aRes[j]);
+                                    }
+                                    break;
+                                //如果是first，则将aRes[0]推入aChild
+                                case 'first':
+                                    aChild.push(aTag[0]);
+                                    break;
+                                case 'last':
+                                    aChild.push(aTag[aTag.length - 1]);
+                                    break;
+                            }
+                            //属性选择器  属性选择器/\w+\[\w+\=\w+\]/g.test(str)
+                        } else if (/\w+\[\w+\=\w+\]/g.test(str)) {
+                            //将属性选择器切成数组   [input,type,button]
+                            var aStr = str.split(/\[|\=|\]/g);
+                            var aTag = aParent[i].getElementsByTagName(aStr[0]);
+                            //在选中标签中选出有aRes[1]的属性
+                            for (var j = 0; j < aRes.length; j++) {
+                                //把属性值为aRes[2]的标签推入aChild中
+                                if (aTag[j].getAttribute(aStr[1]) == aStr[2]) {
+                                    aChild.push(aTag[j]);
+                                }
+                            }
+                            //标签选择器  div、p
+                        } else {
+                            var aTag = aParent[i].getElementsByTagName(str);
+                            for (var j = 0; j < aTag.length; j++) {
+                                aChild.push(aTag[j]);
+                            }
+                        }
+                        break;
+                }
+            }
+            return aChild;
+        }
+       //获取标签选择器
+        function getTag(str) {
+            //去除空格
+            var arr = str.replace(/^\s+|\s+$/g, '').split(/\s+/g);
+            var aChild = [];
+            var aParent = [document];
+            for (var i = 0; i < arr.length; i++) {
+                aChild = getByStr(aParent, arr[i]);
+                aParent = aChild
+            }
+            return aChild;
+        }
+        //定义父级函数
+        function Squery(sArg) {
+            //arguments  typeof 数据类型    $()  函数  字符串：#  . elemets  object
+            this.elements = [];  //push
+            switch (typeof sArg) { //校验数据类型
+                //  function =>window
+                case "function":
+                    bindEvent(window, "load", sArg)
+                    break;
+                case "string":
+                    this.elements = getTag(sArg);
+                    break;
+                case "object":
+                    if (sArg.constructor == Array) {
+                        this.elements = sArg
+                    } else {
+                        this.elements.push(sArg)
+                    }
+
+                //对象
+            }
+        }
+
+        function $(sArg) {
+            return new Squery(sArg)
+        }
+        Squery.prototype.click = function (fn) {
+            //  封装on
+            //for
+            for (var i = 0; i < this.elements.length; i++) {
+                bindEvent(this.elements[i], "click", fn)
+            }
+        }
+        Squery.prototype.html = function (str) {
+            //html()  获取内部内容  html("<div></div>") 设置
+            if (str) {
+                //设置
+                for (var i = 0; i < this.elements.length; i++) {
+                    this.elements[i].innerHTML = str
+                }
+            } else {
+                //获取
+                return this.elements[0].innerHTML
+            }
+            return this
+
+        }
+
+
+
+
+        // 1.$()  //$ is not defind 
+        // 解决方案：
+        /**
+         * 思路：
+         * 1.回顾jq写法  $() 函数
+         * 2.定义一个$函数
+         *    2.1 var $=function(){}
+         *    2.2 function $(){}
+         * 
+        */
+        // 2.$()  没有任何功能 
+        /**
+         * 添加功能：
+         *  1.获取元素  绑定事件  
+         *  2.事件监听  addEventListener(event,fn,true/false)
+         *  3.如何获取到元素  方案：进行传参
+         *  4.封装函数  bindEvent
+         * 
+        */
+        $(function () {
+            $(".div p").html("2323")
+        })
+
+
+
+
+        //  var $=function(){
+
+        //  }
+
+
+         //函数   原生不存在  封装    event()
+       // $("obj") // 获取元素   addEventlistener(元素,事件,回调,true) 谷歌
+                             //attachEvent("on"+eventtype)  ie
+     //
+    </script>
+
+
+</body>
+
+</html>

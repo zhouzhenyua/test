@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            position: relative;
+            overflow: hidden;
+        }
+        .banner>div{
+            position: absolute;
+            top:0;
+            transition: .5s;
+        }
+        .banner>div:nth-child(1){
+            background: #0AA6E8;
+        }
+        .banner>div:nth-child(2){
+            background: #f9d8b4;
+        }
+        .banner>div:nth-child(3){
+            background: #fe533b;
+        }
+        .banner>div:nth-child(4){
+            background: #00b957;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="banner">
+        <div class="list"></div>
+        <div class="list"></div>
+        <div class="list"></div>
+        <div class="list"></div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+ 
+    <script src="../js/vue.min.js"></script>
+</head>
+<body>
+    <!-- 自定义指令 -->
+    <div id="app">
+        <input type="text" v-pic="search">
+        {{num}}
+    </div>
+
+    <!-- 执行
+        
+    
+    -->
+
+    <script>
+        // 自定义指令  第一个参数指令名称
+        Vue.directive("pic",{
+            
+            inserted(el,binding){
+                let time;
+                el.addEventListener("keyup",()=>{
+                    if(time){
+                        clearInterval(time)
+                    }
+                    time =setTimeout(()=>{
+                        binding.value()
+                    },3000)
+                })
+            },
+            
+        })
+
+       new Vue({
+           el:"#app",
+           data:{
+               num:1
+           },
+           methods: {
+                search(){
+                    this.num++
+                }
+            }
+       })
+    
+
+    </script>
+</body>
+</html>

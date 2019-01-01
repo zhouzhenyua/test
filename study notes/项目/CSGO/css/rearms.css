@@ -1,0 +1,298 @@
+
+html,body{
+    width: 100%;
+    height: auto;
+}
+body{
+    background: url(../img/rearms/bg_list_ffb8125a.png) 50% 0 repeat-y;
+}
+
+.rank{
+    background: url("../img/rearms/icon-rank-sprites.png") no-repeat;
+    width: 44px;
+    height: 18px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+}
+i.rank02{
+    background-position-y: -18px;
+}
+i.rank03{
+    background-position-y: -36px;
+}
+i.rank04{
+    background-position-y: -54px;
+}
+
+
+.wrapper*,.wrapper:after,.wrapper:before{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.wrapper{
+    word-wrap: break-word;
+    word-break: break-word;
+}
+.page-index{
+    background: url(../img/rearms/5032aae6aac53034bdd2e13567b506d81538209495.jpg) top no-repeat;
+    height: 1000px;
+    padding-top: 663px;
+    position: relative;
+    box-sizing: border-box;
+}
+.page-index-nav{
+    width: 1085px;
+    height: 121px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+.page-index-nav a:not(:last-child){
+    margin-right: 45px;
+}
+
+.page-index-nav a{
+    font-size: 0;
+    float: left;
+    position: relative;
+    top: 0;
+    -webkit-transition: top .3s ease-in;
+    -o-transition: top .3s ease-in;
+    transition: top .3s ease-in;
+    position: relative;
+}
+.page-index-nav a:hover{
+    top:-15px;
+}
+.page-index-nav .ssjs{
+    width: 329px;
+    height: 104px;
+    background-image: url(../img/rearms/sprite_d80bda99.png?v=1011);
+    background-position: -334px -218px;
+}
+.page-index-nav .ssjs:hover{
+    background-position: 0 0;
+}
+.page-index-nav .kstp{
+    width: 329px;
+    height: 104px;
+    background: url(../img/rearms/temp1.png) 0 0;
+}
+.page-index-nav .kstp:hover{
+    width: 329px;
+    height: 104px;
+    background: url(../img/rearms/temp1_hover.png) 0 0;
+}
+.page-index-nav .wytg{
+    width: 329px;
+    height: 104px;
+    background-image: url(../img/rearms/sprite_d80bda99.png?v=1011);
+    background-position: -334px 0;
+}
+.page-index-nav .wytg:hover{
+    background-position: -334px -109px;
+}
+
+/*内容部分*/
+.prize-container{
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.prize-container h2{
+    text-align: center;
+    font-size: 36px;
+    color: #fff;
+    font-weight: normal;
+}
+
+/*table*/
+.prize-main-tab{
+    display: table;
+    table-layout: fixed;
+    background-color: rgba(0,0,0,.4);
+    width: 900px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.prize-main-tab a{
+    display: table-cell;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 18px;
+}
+.prize-main-tab a:hover{
+    background: #fff;
+}
+.prize-main-tab a.active{
+    background: #fff;
+}
+.prize-main-tab .grade1{
+    color: #fd4a4a;
+}
+.prize-main-tab .grade2{
+    color: #df36f6;
+}
+.prize-main-tab .grade3{
+    color: #8e68ff;
+}
+.prize-main-tab .grade4{
+    color: #3d6fff;
+}
+.prize-main-tab .grade5{
+    color: #3aa9ff;
+}
+/*item*/
+.prize-main-tab-panel{
+    padding: 42px 0 0 55px;
+    overflow: hidden;
+    width: 1300px;
+    margin: 0 auto;
+}
+.prize-main-panel{
+    text-align: center;
+    margin: 0 auto 30px;
+    box-sizing: border-box;
+    display: none;
+}
+.prize-main-panel.active{
+    display: block;
+}
+.prize-main-panel .item{
+    border: 1px solid rgba(255,255,255,.4);
+    text-align: left;
+    position: relative;
+    top: 0;
+    z-index: 0;
+    height: 366px;
+    width: 380px;
+    color: #fff;
+    -webkit-transition: top 0.3s ease-out;
+    -o-transition: top 0.3s ease-out;
+    transition: top 0.3s ease-out;
+    display: inline-block;
+    margin-right: 32px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+}
+.prize-main-panel .item{
+    vertical-align: top;
+}
+.prize-main-panel .thumbnail {
+    width: 100%;
+    overflow: hidden;
+    height: 212px;
+    position: relative;
+}
+.prize-main-panel .thumbnail img{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.prize-main-panel  .caption{
+    height: 152px;
+    padding: 18px;
+    /*position: relative;*/
+}
+
+.prize-main-panel  .caption .name{
+    font-size: 24px;
+    line-height: 25px;
+    margin-bottom: 5px;
+    height: 27px;
+    display: -webkit-box;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.prize-main-panel  .caption .design{
+    margin-bottom: 5px;
+    height: 18px;
+    line-height: 18px;
+    display: -webkit-box;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.prize-main-panel  .caption .summary{
+    display: -webkit-box;
+    height: 52px;
+    line-height: 18px;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.prize-main-panel  .caption .vote{
+    text-align: center;
+    min-width: 87px;
+    height: 23px;
+    padding: 0 2px;
+    line-height: 23px;
+    position: absolute;
+    left: -1px;
+    bottom: -1px;
+    border: 1px solid rgba(255,255,255,.4);
+    color: #fff;
+    background: rgba(255,255,255,0);
+    transition: .3s linear;
+}
+.prize-main-panel  .caption .more{
+    text-align: center;
+    width: 87px;
+    height: 23px;
+    line-height: 23px;
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    border: 1px solid rgba(255,255,255,.4);
+    color: #fff;
+    background: rgba(255,255,255,0);
+    transition: .3s linear;
+}
+.prize-main-panel  .caption .share{
+    border: 1px solid #fff;
+    font-size: 14px;
+    text-align: center;
+    width: 128px;
+    height: 34px;
+    line-height: 34px;
+    position: absolute;
+    left: 50%;
+    margin-left: -64px;
+    bottom: -50px;
+    z-index: 2;
+    opacity: 0;
+    background: rgba(255,255,255,0);
+    color: #fff;
+    display: none;
+    -moz-transition: .3s linear;
+    -webikt-transition: .3s linear;
+    transition: .3s linear;
+}
+.prize-main-panel  .item:hover .share{
+    opacity: 1;
+    display: block;
+}
+.prize-main-panel  .item:hover{
+    top: -20px;
+    border: 1px solid #fff;
+}
+.prize-main-panel  .item:hover .vote{
+    background-color: rgba(255,255,255,1);
+    color: #0b448a;
+}
+.prize-main-panel  .item:hover .more{
+    background-color: rgba(255,255,255,1);
+    color: #0b448a;
+}

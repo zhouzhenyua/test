@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>类数组</title>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<script>
+
+    var arrLi = document.getElementsByTagName('li');
+
+//    var arr = [];
+//    for (var i = 0; i < arrLi.length; i++) {
+//        arr.push(arrLi[i])
+//    }
+//    var arr = Array.prototype.slice.call(arrLi);   //通过 slice
+//    var arr = Array.from(arrLi);    //es6
+
+    var arr = arrLi._proto_ = Array.prototype;
+
+    console.log(arrLi);
+    console.log(arr);
+
+</script>
+</body>
+</html>

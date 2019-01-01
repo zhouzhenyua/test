@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="draw('canvas')">
+
+    <!--<audio src="See%20You%20Again.mp3" controls loop></audio>-->
+    <!--controls 添加控件-->
+    <!--loop 结束后重新播放（无限循环）-->
+
+    <!--<video src="movie.mp4" width="500px ;height:200px" preload="none" controls >-->
+        <!--<source src="movie.mp4">-->
+    <!--</video>-->
+
+    <canvas id="canvas" width="500px" height="400px"></canvas>
+
+    <script>
+
+            function draw(id){
+                var canvas=document.getElementById(id);
+                var context = canvas.getContext('2d');
+
+                context.fillStyle ='#f00'; //背景填充设置
+                context.strokeStyle ='#fff'; // 线条的样式
+
+                context.lineWidth= 5;  //线条的宽度
+
+                context.fillRect(0,0,400,300)    ; //  填充的是矩形
+                context.strokeRect(60,60,180,120);
+                context.strokeRect(110,110,180,120);
+
+
+            }
+
+
+
+    </script>
+</body>
+</html>

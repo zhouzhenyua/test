@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            margin: 50px auto;
+            background: url("../img/1.jpg");
+            position: absolute;
+            bottom: -250px;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            /*background: #ff00ff;*/
+            transform-origin: top;
+            transition: all 1s;
+            perspective: 10000px;
+        }
+        .box{
+            margin: 50px auto;
+            background: url("../img/2.jpg");
+            position: relative;
+            width: 200px;
+            height: 200px;
+            /*background: #A1C9FF;*/
+        }
+
+        .box1:hover{
+            transform: rotateX(-180deg);
+            backface-visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1"></div>
+    </div>
+
+</body>
+</html>

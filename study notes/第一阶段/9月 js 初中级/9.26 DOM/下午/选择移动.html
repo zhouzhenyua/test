@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        select {
+            width: 180px;
+            height: 260px;
+            font-size: 18px;
+            margin: 0 20px;
+            background-color: #64ff57;
+        }
+        input {
+            width: 50px;
+        }
+    </style>
+
+</head>
+<body>
+
+<select id="sel1" size="2" multiple>
+    <option value="0">香蕉</option>
+    <option value="1">苹果</option>
+    <option value="2">鸭梨</option>
+    <option value="3">榴莲</option>
+</select>
+
+<input type="button" value=">>>"/>
+<input type="button" value="<<<"/>
+<input type="button" value=">"/>
+<input type="button" value="<"/>
+
+<select id="sel2" size="2" multiple>
+
+</select>
+
+
+<script>
+
+    var sel1 = document.getElementById('sel1');
+    var sel2 = document.getElementById('sel2');
+    var inpArr = document.getElementsByTagName('input');
+
+//    inpArr[0].onclick = function(){
+//        var optArr = sel1.children;
+//        for (var i = optArr.length-1; i>=0;i--) {
+//            sel2.appendChild(optArr[0]);
+//        }
+//    };
+//    inpArr[1].onclick = function(){
+//        var optArr = sel2.children;
+//        for (var i = optArr.length-1; i>=0;i--) {
+//            sel1.appendChild(optArr[0]);
+//        }
+//    };
+//    inpArr[2].onclick = function(){
+//        var optArr = sel1.children;
+//        for (var i = optArr.length-1; i>=0;i--) {
+//            if(optArr[i].selected ==true){
+//                optArr[i].selected =false;
+//                sel2.appendChild(optArr[i]);
+//            }
+//        }
+//    };
+//
+//    var aa =  function(){
+//        var optArr = sel1.children;
+//        for (var i = optArr.length-1; i>=0;i--) {
+//            if(optArr[i].selected ==true){
+//                optArr[i].selected =false;
+//                sel2.appendChild(optArr[i]);
+//            }
+//        }
+//    };
+//    inpArr[3].onclick = function(){
+//        var optArr = sel2.children;
+//        for (var i = optArr.length-1; i>=0;i--) {
+//            if(optArr[i].selected ==true){
+//                optArr[i].selected =false;
+//                sel1.appendChild(optArr[i]);
+//            }
+//        }
+//    };
+
+    inpArr[0].onclick = function(){fn2(sel1,sel2)};
+    inpArr[1].onclick = function(){fn2(sel2,sel1)};
+    inpArr[2].onclick = function(){fn1(sel1,sel2)};
+    inpArr[3].onclick = function(){fn1(sel2,sel1)};
+    function fn1(x,y){
+        var opt = x.children;
+        for (var i = opt.length-1;i>=0; i--) {
+            if(opt[i] == true){
+                opt[i] = false;
+                y.appendChild(opt[i])
+            }
+        }
+    }
+    function fn2(sel1,sel2){
+        var opt = sel1.children;
+        for (var i = opt.length-1;i>=0; i--) {
+            sel2.appendChild(opt[0])
+        }
+    }
+
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+Node.js 底层C++ (V8底层C++)
+
+
+v8引擎特点
+1、没用同步i/o。不会出现一个同步I/O导致时间循环性能急剧降低的情况
+2、V8性能足够好，远比Python Ruby等脚本语言的引擎快
+3、js中的闭包特性、比c中的回调函数好用
+
+2009年创建Node.js
+2016年由于前后端分离  开始火爆
+
+done
+Node.js是让js运行在服务器端的开发平台。
+服务器端语言 PHP JSP Python ASP
+不是一种独立的语言，‘ PHP JSP Python ASP ’既是语言、也是平台。
+运行在javascript v8引擎上
+
+
+node跳过了Apache Nginx IIS(sap)等HTTP服务器 。不用建立在
+任何服务器软件之上运行。
+拥有强大的伸缩性。
+
+node.js 花最小的硬件成本，追求更高的并非、更高的处理性能。
+
+
+Java、PHP每个客户端创建一个新的线程、每个线程需要消耗 2MB内存 ，
+8GB 最多用户数为4000个。
+node.js 8GB 处理超过4万个用户。但一个出错全部崩溃(阻塞I/O)。
+
+
+
+node的特点？
+1、单线程
+    如果有用户进行链接，那么就会触发内部事件(事件驱动),
+    和非阻塞I/O来进行处理，只有一个线程运行
+
+线程和进程的区别？
+    线程：独立运行或单个执行的功能或程序，
+    一个进程里面可以同时运行多个线程
+    进程：具有独立功能的程序包含在某个数据集合的场景
+
+2、非阻塞I/O
+    执行代码时，前置事件不影响后续代码的执行，而是把它放入到
+    事件回调函数中，通过事件循环依次执行
+
+3、事件驱动
+    事件循环（函数执行中途时，可以转到后续事件的执行）
+
+Node.js应用场景    websocket  nginx
+
+    用户表单收集
+    考试系统
+    实时聊天
+    图文直播
+    博客
+
+
+arguments.callee
+这个属性保存的是当前执行的函数对象
+
+http createServer 服务器
+    状态吗
+
+fs  文件系统    读文件     readfile(path,callback)
+url     路径      url.parse()     true 解析成对象
+host    port    path    pathname    search  hash    href
+
+全局对象
+console.log()
+setTimeout()
+setInterVal()
+_dirname()
+_filename()
+
+
+require和import的区别？
+module.expiort和exports?
+nvm npm nrm ?
+
+ module.exports和exports的区别？（node面试必问 ）
+
+ 1、module.exports是exports的引用
+ 2、module.exports和exports的初始值为空
+ 3、module.exports和exports被 require返回时，
+ 返回的值是module.exports的值 。
+
+
+Buffer 缓冲区
+数据的缓冲区，用来存储前台接收和即将发往前台的数据
+Buffer.from(str) 将一个字符串转换为buffer
+Buffer.alloc(size) 创建一个指定大小的Buffer
+Buffer.alloUnsafe(size) 创建一个指定大小的Buffer，
+但是可能包含敏感数据（性能好但不推荐使用）
+buf.toString() 将缓冲区的数据转换为字符串
+buf.toString(2) 将缓冲区的数据转换为二进制的内容
+
+
+fs 文件系统（File System）
+
+fs.readFile(path,[,options],callback)
+fs.readFileSync(path,[,options])
+    读取文件
+fs.readFile() 会缓存整个文件。为了最小化内存占用，尽可能优先使用 fs.createReadStream()。
+fs.writeFile(path,[,options],callback)
+fs.writeFileSync(path,[,options])
+    写文件
+    options中可传递
+         flag 参数
+           r 读取文件，如果不存在报错
+           w 写文件，如果不存在创建
+           a  追加，如果不存在创建
+
+fs.truncate(path,len,callback)
+fs.truncateSync(path,len)
+    截断文件，将文件修改为指定的大小
+
+fs.readdir("."function(err,files){});
+fs.readdirSync(path[,options]);
+   读取一个目录的目录结构
+        files是一个字符串数组，每一个元素就是一个文件夹或文件的名字
+
+fs.mkdir(path,[,mode],callback);
+    mode中 recursive:true 设置后可创建多个嵌套文件
+fs.mkdirSync(path,[,mode]);
+    创建一个目录
+
+fs.rmdir("hello",[,mode],callback);
+fs.rmdirSync("hello");
+    删除一个目录
+
+fs.rename(oldPath,newPath,callback)
+fs.renameSync(oldPath,newPath)
+    对文件重命名
+    可实现文件移动/剪切功能
+fs.watchFile(filename{,options},listener)
+    监视文件的修改
+    -参数
+        filename 要监视文件的名字
+        options  配置选项
+        listener    回调函数，当文件发生变化时，回调函数会执行
+            在回调函数中有两个参数
+                curr    当前文件的状态
+                prev    修改文件的状态
+                    这两个对象都是stats对象
+
+fs.lstat(path[, options], callback)
+fs.lstatSync(path[, options])
+    callback中可传递两个参数
+    err 错误的信息
+    stat
+    size 文件的大小
+    isFile() 是否是一个文件
+    isDirectory() 是否是一个文件夹（目录）
+
+
+querystring 查询字符串
+
+
+
+node_modules 项目依赖文件
+
+npm install 找回项目依赖
+
+放在node_modules下的文件 会被项目默认当作是一个项目依赖
+
+npm 包管理工具（包管理器）
+nvm 包版本管理工具
+nrm 镜像源管理工具 （切换下载源）
+
+包管理器 :
+    npm(下载node时自动生成)
+    cnpm 淘宝镜像 需npm下载
+    bower(需要npm下载【中国】) bower install
+    yarn(需要npm下载【中国】) yarn add
+    => window
+
+    brewer  brewer install
+    => mac  linux
+
+何为 web容器 ？ node没有外部容器
+wamp phpstudy www（web容器）=>前端页面
+
+
+路由
+模板引擎
+ejs
+jade
+Nunjucks
+Express 是一个简洁而灵活的 node.js Web应用框架, 提供了一系列强大特性帮助你创建各种 Web 应用，和丰富的 HTTP 工具。
+
+
+MongoDB是一种文档导向数据库管理系统，由C++撰写而成。

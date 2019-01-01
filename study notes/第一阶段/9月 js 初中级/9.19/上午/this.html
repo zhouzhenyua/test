@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this</title>
+</head>
+<body>
+<button id="btn">按钮</button>
+<script>
+    var oBtn = document.getElementById('btn');
+
+    oBtn.onclick = function(){
+        alert(1);
+        console.log(this);
+    };
+
+//    call(arg,2,5)
+   // arg.call(this的指向，后面的参数arg 的参数)
+
+//    function call(obj,...arg){
+//        var that = obj;
+//        function arga(...arg){
+//            this = that;
+//        }
+//        arga();
+//    }
+
+
+</script>
+</body>
+</html>

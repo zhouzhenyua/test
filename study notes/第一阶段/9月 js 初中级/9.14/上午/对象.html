@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象</title>
+</head>
+<body>
+<script>
+
+    //数组存储的时候，索引容易出错，引申出对象
+    // 对象-万物皆对象   以键值对 存储
+ //字面量定义对象
+//    var sun = {
+//        'name':'233',
+//        'age':'55',
+//        'tel':110,
+//        'p':''
+//    };
+////    console.log(sun['p']);
+//    console.log(sun['age']);
+//    console.log(sun['name']);
+//    console.log(sun['']);
+//    // 构造函数定义对象
+//    var obj = new Object(
+//            'a','aa'
+//    );
+//
+//    console.log(obj[1]);
+
+
+    var banka = {
+        'name':'张耀',
+        'gander':'男',
+        'age':'18',
+        '地址':'未知',
+        '身份证':'4101422444',
+        '月收入':'0',
+        '银行卡':'254852',
+        '学习':function(){
+            console.log('教育儿子');},
+        'eat':function(){
+            console.log('大盘鸡');
+        },
+        'slep':function(){
+            console.log('一天');
+        }
+    };
+
+
+    for(var a in banka){
+//        console.log(a);
+//        console.log(banka[a]);
+    }
+
+    for(var b of banka){
+        console.log(b);
+    }
+//    console.log(banka[a]);
+
+//    console.log(banka.name);
+//    console.log(banka.学习());
+
+
+
+
+</script>
+</body>
+</html>

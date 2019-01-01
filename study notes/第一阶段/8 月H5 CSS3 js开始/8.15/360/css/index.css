@@ -1,0 +1,117 @@
+/**{*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+/*}*/
+/*html,body{*/
+    /*width: 100%;*/
+    /*height: auto;*/
+/*}*/
+
+/*div{*/
+    /*width: 600px;*/
+    /*height: 400px;*/
+    /*border: 3px solid pink;*/
+    /*margin: 20px auto;*/
+/*}*/
+
+/*.box1{*/
+    /*position: relative;*/
+/*}*/
+/*.box2{*/
+    /*position: relative;*/
+/*}*/
+/*.box3{*/
+    /*position: relative;*/
+/*}*/
+/*.box4{*/
+    /*position: relative;*/
+/*}*/
+/*.a{*/
+    /*position: absolute;*/
+    /*width: 50px;*/
+    /*height: 50px;*/
+    /*background: #ff00ff;*/
+/*}*/
+/*.b{*/
+    /*position: absolute;*/
+    /*width: 60px;*/
+    /*height: 40px;*/
+    /*background: #A1C9FF;*/
+/*}*/
+/*.c{*/
+    /*position: absolute;*/
+    /*width: 150px;*/
+    /*height: 150px;*/
+    /*background: #2f2f2f;*/
+/*}*/
+/*.d{*/
+    /*position: absolute;*/
+    /*width: 150px;*/
+    /*height: 100px;*/
+    /*background: #f7a831;*/
+/*}*/
+/*.e{*/
+    /*position: absolute;*/
+    /*width: 200px;*/
+    /*height: 120px;*/
+    /*background: #2fc3d0;*/
+/*}*/
+/*.box1 .a{*/
+    /*top: 30px;*/
+    /*left: 40px;*/
+/*}*/
+/*.box1 :hover .a{*/
+    /*background: #FFFFFF;*/
+/*}*/
+/*.box1>.b{*/
+    /*top: 40px;*/
+    /*left: 200px;*/
+/*}*/
+/*.box1>.b:hover{*/
+    /*top: 40px;*/
+    /*left: 20px;*/
+/*}*/
+/*.box1 .cc{*/
+    /*position: relative;*/
+    /*transition: all 2s;*/
+/*}*/
+/*.box1 :hover .cc{*/
+    /*transform: translate(50px,100px);*/
+/*}*/
+/*.box1 .d{*/
+    /*top: 50px;*/
+    /*left: 40px;*/
+/*}*/
+/*.box1 .d:hover{*/
+    /*top: 50px;*/
+    /*left: 40px;*/
+/*}*/
+/*.box1 .e{*/
+    /*top: 50px;*/
+    /*left: 50px;*/
+/*}*/
+
+/*.box1 .e:hover {*/
+    /*top: 50px;*/
+    /*left: 5px;*/
+    /*background: #FFFFFF;*/
+/*}*/
+
+.box1{
+    width: 300px;
+    height: 300px;
+    background: #0AA6E8;
+    position: relative;
+}
+.a{
+    width: 20px;
+    height: 20px;
+    background: #ff1581;
+    position: relative;
+    transition: all 2s;
+}
+.box1:hover .a{
+    transform: matrix(50px,90px);
+
+    background: #FFFFFF;
+}

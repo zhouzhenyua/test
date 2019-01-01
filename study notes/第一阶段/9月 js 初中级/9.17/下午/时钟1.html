@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .clock{
+            width: 600px;
+            height: 600px;
+            background: url("../images/clock.jpg") no-repeat center;
+            position: relative;
+            margin: auto;
+        }
+        .clock div{
+            width: 600px;
+            height: 600px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        #hour{
+            background: url("../images/hour.png") no-repeat center;
+        }
+        #minute{
+            background: url("../images/minute.png") no-repeat center;
+        }
+        #second{
+            background: url("../images/second.png")no-repeat center;
+        }
+
+    </style>
+</head>
+<body>
+<div class="clock">
+    <div id="hour"></div>
+    <div id="minute"></div>
+    <div id="second"></div>
+</div>
+</body>
+<script>
+    var oh = document.getElementById('hour');
+    var om = document.getElementById('minute');
+    var os = document.getElementById('second');
+
+    function clock(){
+        var oDat =new Date();
+        var mi = oDat.getMilliseconds();
+        var s = oDat.getSeconds() + mi / 1000;
+        var m = oDat.getMinutes() + s / 60;
+        var h = oDat.getHours() + m / 60;
+
+        oh.style.transform = 'rotate('+h*30+'deg)';
+        om.style.transform = 'rotate('+m*6+'deg)';
+        os.style.transform = 'rotate('+s*6+'deg)';
+    }
+    clock();
+    setInterval(clock,1000);
+
+//    var dd =new Date(milliseconds);
+//    var aa =dd.getMilliseconds();
+    var d = new Date(dateString);
+    console.log(d);
+
+</script>
+</html>

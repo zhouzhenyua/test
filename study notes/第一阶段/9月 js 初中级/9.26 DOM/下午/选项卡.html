@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom实现选项卡</title>
+    <style>
+        .xuan{
+            width:600px;
+            height: 80px;
+            margin: auto;
+        }
+        a{
+            text-decoration: none;
+            display: inline-block;
+            width: 100px;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+            border: 2px solid #a3d9ff;
+            margin-right: 20px;
+            color: black;
+            font-size: 24px;
+        }
+        .nei{
+            width: 1000px;
+            height: 200px;
+            margin: auto;
+            list-style: none;
+        }
+        .nei ul li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            margin-right: 20px;
+            background: palegreen;
+            float: left;
+            text-align: center;
+            line-height: 200px;
+        }
+        .xuan a.now{
+            background: papayawhip;
+        }
+        .nei ul li.now{
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+<div class="xuan">
+    <a href="#" class="now">标题一</a>
+    <a href="#">标题二</a>
+    <a href="#">标题三</a>
+    <a href="#">标题四</a>
+</div>
+<div class="nei" id="nei">
+    <ul>
+        <li class="now">内容一</li>
+        <li>内容二</li>
+        <li>内容三</li>
+        <li>内容四</li>
+    </ul>
+</div>
+<script>
+    var oList = document.getElementsByTagName('a'),
+        oUl = document.getElementsByTagName('li');
+    console.log(oUl);
+    for (let i = 0; i < oList.length; i++) {
+        oList[i].onclick = function(){
+            for (var j = 0; j < oUl.length; j++) {
+                oUl[j].removeAttribute('class');
+                oList[j].removeAttribute('class')
+            }
+            oUl[i].setAttribute('class','now');
+            oList[i].setAttribute('class','now')
+        }
+    }
+
+</script>
+</body>
+</html>

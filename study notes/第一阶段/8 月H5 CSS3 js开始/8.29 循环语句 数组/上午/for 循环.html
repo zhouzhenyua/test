@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+//    for (声明变量并初始化; 条件; 变量运算(++/--)) {
+////         满足条件 执行循环体
+////        不满足条件 跳出循环体
+//    }
+//for(;;){
+//    console.log(1);
+//} //没有条件陷入 死循环
+
+//        for (var i = 1; i <= 100; i++) {
+//            console.log(i);
+//        }
+
+//    for (var i = 1; i <= 100; i++) {
+//        if(i%2 ==0){
+//            console.log(i);
+//        }
+//    }
+//    var num = 0;
+//    var x = 0;
+//    for (var i = 1; i <= 100; i++) {
+//        if(i%2 == 1){
+//            x++;
+//            num+=i;
+//        }
+//    }
+//
+//    console.log(num/x);
+//    console.log(num);
+
+
+
+//for (var i = 0; i < 100; i++) {
+//    if(i%7 !=0){
+//
+//    }
+//
+//}
+//console.log(i);
+
+
+//for (var i = 1; i < 5; i++) { //决定行
+//
+//    for (var j = 1; j < 5; j++) { //决定列
+//        document.write('&&')
+//    }
+//    document.write('<br/>')
+//}
+//
+//for (var i = 1; i < 10; i++) {
+//
+//    for (var j = 0; j < i; j++) {
+//        document.write(j)
+//    }
+//    document.write('<br/>')
+//}
+
+document.write('<table border="1" >');
+for (var i = 1; i < 10; i++) {
+    document.write('<tr>');
+    for (var j = 0; j < i; j++) {
+
+        document.write('<td bgcolor="#50f000">'+i+ '*'+i+ '='+(i*j));
+        document.write('</td>');
+    }
+    document.write('</tr>');
+}
+document.write('<table/>');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/vue.min.js"></script>
+    <link rel="stylesheet" href="../animate.min.css">
+    <style>
+        .run{
+            transition: all .3s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        Vue的内置组件 
+        v-enter(定义进入过渡的开始状态 在元素插入被调用)     
+        v-enter-active(定义进入过渡的状态 在元素插入被调用)  
+        v-enter-to(定义进入过渡的结束状态)
+        v-lezve     v-leave-active  v-leave-to  (离开)
+     -->
+    <div id="app">
+        <button @click="toggle">按钮</button>
+        <transition @before-enter="beforeenter" @enter="enter" @after-enter="afterenter">
+            <div v-if="hide" style="width: 100px;height: 100px;background:aqua" class="run"></div>
+        </transition>
+    </div>
+    <script>
+        new Vue({
+            data:{
+                hide:false
+            },
+            methods: {
+                toggle(){
+                    this.hide =!this.hide
+                },
+                beforeenter(el){
+                    
+                    // 定义元素的初始位置
+                    el.style.transform="translate(100px,0)"
+                },
+                // 第一个el =>指代元素本身   done =>回调函数
+                enter(el,done){
+                    // 设置刷新元素的状态   重置
+                    el.offsetWidth;
+                    el.style.transform="translate(0,0)";
+                    // 动作完成  结束   解决元素的卡顿
+                    done()
+                },
+                afterenter(){
+                    // 让动画回归与初始状态
+                    this.hide =!this.hide
+                },
+
+            },
+        }).$mount("#app")
+    </script>
+</body>
+</html>

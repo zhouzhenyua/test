@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+<div class="box1" style="width: 200px;height: 200px;position: absolute;background: #0febc1">
+    <div class="box2" style="padding: 10px;width: 100px;height: 100px;background: #ff3f38;position: relative">
+        <p>2222</p>
+    </div>
+</div>
+<script>
+    $('.box1').click(function(){
+        $('.box2').offsetParent().css('background','red')
+    })
+
+</script>
+</body>
+</html>

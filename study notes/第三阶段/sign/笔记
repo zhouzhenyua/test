@@ -1,0 +1,35 @@
+bin => 启动文件
+model  数据库文件
+public  静态资源文件
+views  视图文件
+app.js 真正的启动文件
+package.json 项目配置文件
+
+
+dependencies 生产环境
+线上运行的项目需要用到的一些依赖
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:wq cmd退出

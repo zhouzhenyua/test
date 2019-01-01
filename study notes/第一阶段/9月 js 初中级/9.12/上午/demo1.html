@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+////    console.log(a);
+//    a=12;
+//    function fn(){
+//        console.log(a);
+//        a=22;
+//    }
+//    fn();
+//    console.log(a);
+
+//    var foo = 1;
+//    function ba(){
+//        var foo;
+//        if(!foo){
+//           foo = 10;
+//        }
+//        console.log(foo);//10
+//    }
+//    ba();
+
+
+//    var a;
+//    var b;
+//    var c;
+//    function tx(a){
+//        a=1;
+//        var b=2;
+//        c=3;
+//    }
+//     a =10;b=11;
+//    c=12;
+//
+//
+//
+//    tx(100);// c=3
+//    console.log(a);//10
+//    console.log(b);//11
+//    console.log(c);//3
+
+
+    var n;
+    function a(){
+    var n;
+    function b(){
+            n++;
+            console.log(n);//11
+        }
+        n=10;
+        b();
+        return b;
+    }
+    var c;
+    n=0;
+
+    c = a();
+    c();//12
+    console.log(n);//0
+
+
+</script>
+</body>
+</html>

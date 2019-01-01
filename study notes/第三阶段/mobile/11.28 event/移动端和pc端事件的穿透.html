@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>移动端和pc端事件的穿透</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div{
+            width: 100px;
+            height: 100px;
+            background-color: #ff3f38;
+            position: absolute;
+            left: 0;
+            top:0;
+            opacity: .8;
+        }
+
+    </style>
+</head>
+<body>
+<!--
+    1、移动端和pc端事件的穿透
+        注：
+        当点击上层元素，下层元素也有点击或焦点 的（属性）
+        click 移动端会有300毫秒的延迟，下层元素会漂浮在当前元素上面。
+        触发下层当前事件
+        解决方案：
+            1、不能设置带有事件或焦点的元素
+            2、阻止pc的事件 ev.preventDefault()   chrome5\6(click无效) 需要设置passive:false
+            3、
+        zepto.js    tap()
+    2、移动端的点击穿透
+
+
+-->
+<div id="div">
+
+</div>
+<a id="span" href="#">www.baidu.com跳转</a>
+<script>
+    document.addEventListener('touchstart',function(ev){
+        ev.preventDefault();
+    },{passive:false});
+    var oDiv= document.getElementById('div');
+    var oSpan= document.getElementById('span');
+
+
+
+    oDiv.addEventListener('touchend',end);
+    oSpan.addEventListener('touchstart',start);
+
+    function start(){
+        change();
+//        alert(1)
+    }
+    function end(ev){
+        this.style.display = 'none';
+        document.addEventListener('touchstart',function(ev){
+            ev.preventDefault();
+        },{passive:true});
+
+    }
+
+    function change(){
+        document.addEventListener('touchstart',function(ev){
+            ev.preventDefault();
+        },{passive:false});
+    }
+
+</script>
+</body>
+</html>

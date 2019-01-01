@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<!--
+click 延时300ms
+解决方案
+    1、fastclick();  引入js FastClick.js
+    2、zepto.js   小型的jq   tap
+    3、touch
+        html {touch-action: manipulation;}
+-->
+
+<div id="div" style="width: 100px;height: 100px;background-color: #ff3f38"></div>
+
+<script>
+
+    var oDiv = document.getElementById('div');
+
+//    oDiv.onclick =function(){
+//        console.log(1);
+//    };
+    //封装移动端click事件
+    /*
+    * click事件放在移动端会有 300ms的延时
+    *点击一下 300ms 点击两下就会变成双
+击 dbclick
+    * touch 事件 模拟一个点击事件
+    *
+    * 兼容性
+    *
+    *
+    * iscroll.js 上拉加载 下拉刷新插件
+    *
+    * qq列表  ajax  上拉加载
+    *
+    * 盒模型  transform
+    * */
+
+    function tap(dom,callback){
+        //touch
+        // 手指是否触发
+        var isMove= false;
+        dom.addEventListener('touchstart',function(ev){
+
+        });
+        dom.addEventListener('touchmove',function(ev){
+            //当移动(滑动) 事件触发
+            isMove=true;
+        });
+        dom.addEventListener('touchend',function(ev){
+            if(isMove==false){
+                //点击后 执行回调函数
+                callback()
+            }
+            // 事件重置
+            isMove=false;
+        })
+    }
+
+// tap == click (针对于移动端)
+    tap(oDiv,function(){
+        console.log(1);
+    })
+
+</script>
+</body>
+</html>

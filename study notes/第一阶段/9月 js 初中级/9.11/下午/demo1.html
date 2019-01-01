@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+/*
+    f = function(){return true;};
+    g = function () {return false;};
+    ~function () {
+        g = function (){return true;};
+        if(g() && [] == ![]){
+            function g() {return false;}
+            f = function () {return false;};
+            g();
+        }
+    }();
+    console.log(f());
+    console.log(f);
+    console.log(g());
+
+ */
+
+
+//    var num = 10;
+//    fun();
+//    function fun(){
+//
+//        console.log(num);//10
+//        var num = 20;
+//    }
+
+//var a = 1;
+//    f1();
+//    function f1(){
+//        var b = 9;
+//        a++;
+//        console.log(a);
+//        console.log(b);
+//        var a = '11';
+//    }
+
+
+
+
+
+//    var f1 = function(){
+//        var a;
+//        a = b = c = 9;
+//        console.log(a);
+//        console.log(b);
+//        console.log(c);
+//    };
+//
+//    f1();
+//    console.log(c);
+//    console.log(b);
+//    console.log(a);
+
+
+//    var ary = [12,23];
+//    function fn(ary){
+//        //var ary = [12,23]; //创建
+//        console.log(ary);//12  23
+//        ary[0] = 100;
+//        ary = [100];//开辟一个新的堆内存空间，并返回给ary 它的地址
+//        ary[0] =0;
+//        console.log(ary);//0
+//    }
+//    fn(ary);
+//    console.log(ary);// 100 23
+
+
+    var i;
+    function fn(){
+        i+=2;
+        return function(n){
+            console.log((n + (--i)));
+        }
+    }
+    var f;
+
+    i=2;
+    f=fn();
+    f(2);
+    f(3);
+    fn()(2);
+    fn()(3);
+    f(4);
+
+</script>
+</body>
+</html>

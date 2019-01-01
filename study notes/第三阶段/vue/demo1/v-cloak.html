@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+<body>
+    <!-- mvvm -->
+    <div id="app">
+        <div v-clock>{{msg}}</div>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",  //element 元素  声明  渲染
+            data:{
+               msg:"222"
+            },
+            methods:{ // 方法池 
+
+            }
+        })
+    </script>
+</body>
+</html>

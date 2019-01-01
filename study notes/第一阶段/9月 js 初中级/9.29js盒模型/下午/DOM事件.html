@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="btn" style="width: 200px;height: 200px;background: #A1C9FF"></div>
+<input id="text" type="text" style="width: 200px;height: 30px;" value="0">
+<script>
+    /*
+    * onclick	    鼠标点击某个对象
+     ondblclick	鼠标双击事件
+     oncontextmenu  鼠标右击
+
+     onmousedown	   鼠标按键被按下
+     onmouseup	   鼠标按键被松开
+     onmousemove	鼠标被移动
+     onmouseout	鼠标从某元素移开
+     onmouseover	鼠标被移到某元素之上
+     onmouseleave	鼠标从某元素移开
+     onmouseenter	鼠标被移到某元素之上
+     oninput
+     onfocus 元素获得焦点
+     onblur  元素失去焦点
+     onchange  用户改变内容
+    * */
+    btn.ondblclick =function(){
+        document.body.style.background = '#f85'
+    };
+    btn.oncontextmenu =function(){
+
+        btn.style.background = '#fhh';
+        return false;
+    };
+    btn.onmousedown =function(){
+        btn.style.background = '#f00'
+    };
+    btn.onmouseup =function(){
+        btn.style.background = '#f0f'
+    };
+//    btn.onmousemove =function(){
+//        btn.document.write('')
+//    };
+    text.onfocus =function(){
+        console.log('获取焦点');
+    };
+    text.onblur =function(){
+        console.log('失去焦点');
+    };
+    text.onchange =function(){
+        console.log('焦点');
+    };
+    btn.onmouseenter =function(){
+        console.log('获取焦点');
+    };
+    btn.onmouseleave =function(){
+        console.log('失去焦点');
+    };
+</script>
+</body>
+</html>

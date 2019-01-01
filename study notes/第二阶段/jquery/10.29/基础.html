@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../jquery.min.js"></script>
+<!--设计思想 获取网页元素-->
+
+<div id="div" class="box">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<div title="aa">aa</div>
+<div title="bb">bb</div>
+<div title="cc">cc</div>
+<div title="dd">dd</div>
+<div title="ee">ee</div>
+<!--为社么把js放在body下面
+    因为代码自上而下执行，可以加上window.onload 使js变成全局变量
+
+-->
+
+
+<script>
+
+    // js  o object   a  array
+
+    var oDiv =document.getElementById('div');
+    var aLi = oDiv.getElementsByTagName('li');
+
+    //jq
+//    alert($('#div'));
+
+//    $('#div').css('background',"#f0f");
+
+    // 独有表达式  odd 奇数行 even 偶数行
+    $('div:odd').css('background','#ff0');
+
+//    $('div:even').css('background','#ff0');
+
+
+    //eq 获取的是索引 aBtn[i].index =i;
+//    $('div:eq(0)').css('background','#ff0');
+
+
+    // 改变css的背景颜色  filter  过滤
+//    $('div').filter('[title=cc]').css('background','#ff0');
+
+
+</script>
+
+</body>
+</html>

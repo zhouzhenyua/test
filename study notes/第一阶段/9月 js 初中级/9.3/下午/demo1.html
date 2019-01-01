@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .banner{
+            width: 1024px;
+            height: 768px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .banner img{
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+        .banner img.active{
+            display: block;
+        }
+        .banner ul{
+            position: absolute;
+            left: 45%;
+            bottom: 30px;
+        }
+        .banner ul li{
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            float: left;
+            border-radius: 50%;
+            background: blueviolet;
+            margin-right: 10px;
+
+        }
+        .banner ul li.active{
+            background: white;
+        }
+        .banner .arrow{
+            font-size: 50px;
+            text-align: center;
+            line-height: 2em;
+            display: none;
+        }
+        .banner .arrow.active{
+            display: block;
+        }
+        .banner .arrow div{
+            position: absolute;
+            top: 50%;
+            height: 100px;
+            margin-top: -50px;
+            width: 60px;
+            background: #fff;
+        }
+        .banner .arrow .next{
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="banner" id="banner">
+    <img class="active" src="../../img/1.jpg" alt="">
+    <img src="../../img/2.jpg" alt="">
+    <img src="../../img/3.jpg" alt="">
+    <img src="../../img/4.jpg" alt="">
+    <img src="../../img/5.jpg" alt="">
+    <ul>
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="arrow">
+        <div class="prev"> < </div>
+        <div class="next"> > </div>
+    </div>
+</div>
+<script>
+
+    var oList = document.querySelectorAll('.banner ul li'),
+        oBox = document.querySelectorAll('.banner img'),
+        oBtn = document.querySelectorAll('.arrow div');
+
+    var oBtbox = document.querySelector('.banner .arrow');
+//    console.log(oBtbox);
+
+
+    oBtn[0].onmouseover = function(){
+        alert(1)
+    };
+    ddd();
+    function ddd(){
+        time = setInterval(function(){
+            right()
+        },500)
+    }
+
+    banner.onmouseover = function(){
+        oBtbox.classList.add('active');
+        clearInterval(time)
+    };
+    banner.onmouseout = function(){
+        oBtbox.classList.remove('active');
+//        time = setInterval(right,500);
+        ddd()
+    };
+
+    oBtn[0].onclick =left;
+    function left(){
+        index--;
+        if(index<0){
+            index = oBox.length-1;
+        }
+        aaa();
+    }
+    oBtn[1].onclick = right;
+    function right(){
+        index++;
+        if(index>oBox.length-1){
+            index =0;
+        }
+        aaa();
+    }
+
+
+
+    function aaa(){
+        for (var j = 0; j < oList.length; j++) {
+            oList[j].classList.remove('active');
+            oBox[j].classList.remove('active')
+        }
+        oBox[index].classList.add('active');
+        oList[index].classList.add('active');
+    }
+
+
+
+
+    index =0;
+    function teb(tit,cont,ev){
+        for (let i = 0; i < tit.length; i++) {
+            tit[i][ev]=function(){
+                for (var j = 0; j < cont.length; j++) {
+                    cont[j].classList.remove('active');
+                    tit[j].classList.remove('active')
+                }
+                cont[i].classList.add('active');
+                this.classList.add('active');
+                index = i;
+            }
+
+        }
+    }
+    teb(oList,oBox,'onmouseover')
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="box1" style="width: 100px;height: 100px;background: #ff3f38"></div>
+    <div  class="box2" style="width: 100px;height: 100px;background: #A1C9FF"></div>
+<script>
+
+    // hover 鼠标经过
+    $('.box1').hover(function(){
+//        $('div').css('background','#f0f')
+//        $('.box2').hide(1000);
+//        $('.box2').fadeOut(1000); // 改变透明度   默认时间 400
+        // opacity :0-1      ie 低版本678 : Alpha:1-100
+
+//        $('.box2').slideDown(1000);     //默认时间 400
+
+        $('.box2').fadeTo(1000,.1);  // 第一个参数时间     第二个是透明度
+
+
+    },function(){
+//        $('.box1').css('background','#ff0');
+//        $('.box2').show(2000);
+//        $('.box2').fadeIn(2000); // 改变透明度
+//        $('.box2').slideUp();
+
+        $('.box2').fadeTo(1000,.9)
+
+    })
+
+</script>
+</body>
+</html>

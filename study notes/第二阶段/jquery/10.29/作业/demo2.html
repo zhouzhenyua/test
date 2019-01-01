@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jquery.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            position: relative;
+            width: 500px;
+            height: 300px;
+            margin: 50px auto;
+        }
+        #t1{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000000;
+            float: left;
+        }
+        #t1 .p1{
+            display: block;
+            text-align: left;
+        }
+        #t1 .p2{
+            display: block;
+            text-align: right;
+        }
+        #text{
+            width: 150px;
+            height: 30px;
+            position: absolute;
+            left: 0px;
+            bottom: 60px;
+        }
+        #submit{
+            width: 45px;
+            height: 34px;
+            position: absolute;
+            left: 155px;
+            bottom: 60px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <div id="t1"></div>
+    <input type="text" id="text" value="">
+    <input type="submit" id="submit">
+</div>
+<script>
+
+    var flag = true;
+    $('#submit').click(function(){
+        var val = $('#text').val();
+        if(flag){
+            $('#t1').append('<p class="p1">'+val+'</p>');
+            flag =false;
+        }else{
+            $('#t1').append('<p class="p2">'+val+'</p>');
+            flag = true
+        }
+        $('#text').val('') ;
+    });
+
+</script>
+</body>
+</html>

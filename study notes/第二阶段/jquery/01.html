@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="div" style="width: 100px;height: 100px;background-color: #ff3f38"></div>
+    <script>
+        /**
+         * 必备：
+         * 面向对象
+         *   调用：new  实例化
+         * 兼容性
+         * 事件
+         * 
+        */
+    //   obj 元素  events 事件  click  mouseover  fn  回调函数
+        function bindEvent(obj,events,fn){
+            if(obj.addEventListener){
+                //谷歌
+                 obj.addEventListener(events,function(ev){
+                    // fn  =false  fn=undefined   
+                    if(fn==false){
+                        ev.preventDefault();
+                        ev.cancelBubble=true 
+                    } 
+                 },false)
+            }else{
+                //ie
+                obj.attachEvent("on"+events,function(ev){
+                    if(fn==false){
+                       window.event.cancelBubble=true;
+                       return false
+                    }
+                })
+            }
+        }
+        //封装class获取
+        function getByClass(oParents,aClass){
+            var arr=[];
+            var elems=oParents.getElementsByTagName("*");
+            for(var i=0;i<elems.length;i++){
+                if(elems[i].className==aClass){
+                    arr.push(elems[i])
+                } 
+            }
+            return arr
+        }
+        //封装style
+        function getStyle(obj,attr){
+              if(obj.currentStyle){
+                  return obj.currentStyle[attr]
+              }else{
+                  //false  兼容火狐浏览器的低版本   true  
+                  //getComputedStyle 兼容谷歌
+                  return getComputedStyle(obj,false)[attr]
+              }
+        }
+        //封装转数组的函数
+        function toArray(elems){
+           var arr=[];
+           for(var i=0;i<elems.length;i++){
+               arr.push(elems[i])
+           }
+           return arr
+        }
+//      定义父级函数
+        function Squery(sArg){
+             //arguments    typeof instanceof    $()   函数  字符串:# . elements    object
+             this.elements=[];  //push
+             switch(typeof sArg){   //校验数据类型
+                //  function =>window
+                  case "function" :
+                     bindEvent(window,"load",sArg);
+                  break;
+                  case "string":
+                      switch(sArg.charAt(0)){
+                        case "#":
+                        this.elements.push(document.getElementById(sArg.substring(1)));
+                        break;
+                        case ".":
+                        this.elements=getByClass(document,sArg.substring(1));
+                        break;
+                        default:
+                        this.elements=toArray(document.getElementsByTagName(sArg.substring(1)));
+                        break;
+                      }
+                  break;
+                 case "object":
+                     if(sArg.constructor == Array){
+                         this.elements=sArg;
+                     }else{
+                         this.elements.push(sArg)
+                     }
+             }
+        }
+    
+     function $(sArg){
+         return new Squery(sArg)
+     }
+     Squery.prototype.click=function(fn){
+         //on
+//        this.on("click",fn);
+//         return this;
+        //for
+         for (var i = 0; i < this.elements.length; i++) {
+             bindEvent(this.elements[i],'click',fn)
+
+         }
+     };
+     Squery.prototype.html=function(str){
+        // html() 获取内部内容    html("<div></div>") 设置
+         if(str){
+             //设置
+             for(var i=0;i<this.elements.length; i++){
+                 this.elements[i].innerHTML=str;
+             }
+         }else{
+             return this.elements[0].innerHTML;
+         }
+         return this;
+
+     };
+
+
+        // 1.$()  //$ is not defind 
+        // 解决方案：
+           /**
+            * 思路：
+            * 1.回顾jq写法  $() 函数
+            * 2.定义一个$函数
+            *    2.1 var $=function(){}
+            *    2.2 function $(){}
+            * 
+           */
+        // 2.$()  没有任何功能 
+        /**
+         * 添加功能：
+         *  1.获取元素  绑定事件  
+         *  2.事件监听  addEventListener(event,fn,true/false)
+         *  3.如何获取到元素  方案：进行传参
+         *  4.封装函数  bindEvent
+         * 
+        */
+        //  var $=function(){
+             
+        //  }
+        
+
+         //函数   原生不存在  封装    event()
+       // $("obj") // 获取元素   addEventlistener(元素,事件,回调,true) 谷歌
+                             //attachEvent("on"+eventtype)  ie
+    </script>
+<script>
+    var o = document.getElementById('div');
+
+    $(function(){
+        $('#div').click(function(){
+            alert(1)
+        });
+    })
+
+</script>
+</body>
+</html>

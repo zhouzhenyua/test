@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <script src="../rem.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap{
+            width: 100%;
+            height: 5rem;
+            /*background-color: #ff3f38;*/
+            border:  1px solid #ff3f38;
+            overflow: hidden;
+        }
+        #list{
+            width: 9999999px;
+            height: 5rem;
+            position: relative;
+        }
+        #list li{
+            float: left;
+            height: 5rem;
+            width: 7.5rem;
+            list-style: none;
+            text-align: center;
+            line-height: 5rem;
+        }
+        #dot{
+            position: absolute;
+            top: 4rem;
+            left: 2rem;
+        }
+        #dot li{
+            width: .2rem;
+            height: .2rem;
+            border-radius: 50%;
+            border: 1px solid #ff3f38;
+            float: left;
+            margin: 0 .2rem;
+            background-color: #fff;
+            list-style: none;
+        }
+        #dot li.active{
+            background-color: #0a56bb;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+   <ul id="list">
+       <li style="background-color: #ff3f38">11</li>
+       <li style="background-color: #6f42c1">22</li>
+       <li style="background-color: #f6a828">33</li>
+       <li style="background-color: #ebcccc">44</li>
+       <li style="background-color: #7f7d83">55</li>
+   </ul>
+    <ul id="dot">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<script>
+    document.addEventListener('touchstart',function(ev){
+       ev.preventDefault()
+    },{passive:false}); //解决事件穿透
+
+
+    var oWrap =document.getElementById('wrap');
+    var oList =document.getElementById('list');
+    var oDot =document.getElementById('dot');
+    var aL = oDot.querySelectorAll('li');
+
+    disX = 0;   //按下的坐标
+    listL = 0;   //移动的距离
+    len=0;
+    n=0;    //默认第一个焦点为白色
+    w = oWrap.clientWidth; //第一张图片的宽度
+
+    //  复制一份 dom节点
+    oList.innerHTML+=oList.innerHTML;
+    len=oList.children.length;
+
+    //    oList.style.left=
+    oList.addEventListener('touchstart',start);
+    oList.addEventListener('touchmove',move);
+    oList.addEventListener('touchend',end);
+
+    function start(ev){
+        var pos = ev.changedTouches[0];
+        disX =  pos.pageX;
+
+        oList.style.transition ='none';
+        listL = this.offsetLeft;
+
+        // 当按下时应该知道当前点击的是第一张图片，
+        //如果是第一张，应把最后一张拿过来
+        var num = Math.round(oList.offsetLeft/w);
+//        listL = this.offsetLeft;
+        if(num == 0 ){
+            num = aL.length;
+            oList.style.left= -num * w+'px';
+        }
+        if(-num == len-1){
+            num=aL.length-1;
+//            console.log(num);
+            oList.style.left = -num*w+'px'
+        }
+        listL = this.offsetLeft;
+//        console.log(listL);
+    }
+
+    //  列表移动
+    function move(ev){
+
+    /*
+    * 1、获取当前事件的触发
+    * 2、oList.style.left = (pos.pageX-disX)+listL+'px'
+    * */
+        var pos =ev.changedTouches[0];
+        oList.style.left =(pos.pageX-disX)+listL+'px';
+//        console.log(oList.style.left);
+    }
+    function end(ev){
+        var num = Math.round(oList.offsetLeft/w);
+        console.log(num);
+
+        oList.style.transition ='1s';
+        oList.style.left =num*w+'px';
+        aL[n].className='';
+        //2倍的长度 相当于 n%2=0 赋值重新设置
+        aL[-num%aL.length].className='active';
+        n=-num%aL.length;
+    }
+
+    clearInterval(tim);
+   var tim= setInterval(function(){
+
+    },3000)
+
+</script>
+</body>
+</html>

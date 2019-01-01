@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn1">200</button>
+<button id="btn2">400</button>
+<button id="btn3">200</button>
+<button id="btn4">400</button>
+<div id="box" style="width: 200px;height: 200px;background: #0febc1;position: relative;left: 0;top: 0;" ></div>
+<script>
+    btn1.onclick = function(){
+        animate(box,20,200)
+    };
+    btn2.onclick = function(){
+        animate(box,20,400)
+    };
+    btn3.onclick = function(){
+        animate1(box,20,200)
+    };
+    btn4.onclick = function(){
+        animate1(box,20,400)
+    };
+    function animate(obj,speed,target){
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function(){
+            var jl =obj.offsetLeft;
+            speed =Math.abs(speed);
+            speed = jl<target ? speed:-speed;
+            if(Math.abs(jl-target)>Math.abs(speed)){
+                jl+=speed;
+                obj.style.left = jl + 'px'
+            }else{
+                obj.style.left = target+'px';
+                clearInterval(obj.timer);
+            }
+        },15)
+    }
+    function animate1(obj,speed,target){
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function(){
+            var jt =obj.offsetTop;
+            speed =Math.abs(speed);
+            speed = jt<target ? speed:-speed;
+            if(Math.abs(jt-target)>Math.abs(speed)){
+                jt+=speed;
+                obj.style.top = jt + 'px'
+            }else{
+                obj.style.top = target+'px';
+                clearInterval(obj.timer);
+            }
+        },15)
+    }
+
+
+</script>
+</body>
+</html>

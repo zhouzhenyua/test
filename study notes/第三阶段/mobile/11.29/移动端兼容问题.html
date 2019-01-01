@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--移动端禁止把数字当作手机号-->
+    <meta name="format-detection" content="telPhone=no">
+    <!--邮箱-->
+    <meta name="format-detection" content="Email=no">
+    <title>Title</title>
+</head>
+<body>
+<!--
+    1、移动端中字体
+        如果是中文字体读取默认
+        英文 Helvetica
+        font-family:Helvetica
+
+
+ios 系统
+
+默认中文字体是Heiti SC
+默认英文字体是Helvetica
+默认数字字体是HelveticaNeue
+无微软雅黑字体
+
+android 系统
+
+默认中文字体是Droidsansfallback
+默认英文和数字字体是Droid Sans
+无微软雅黑字体
+
+winphone 系统
+
+默认中文字体是Dengxian(方正等线体)
+默认英文和数字字体是Segoe
+无微软雅黑字体
+
+    2、去除ios的圆角属性
+        -webkit-appearance:none
+    3、解决事件点击穿透 fastclick.attach()
+    4、移动端调取摄像头
+    <input type="file" accept="image/*" capture="camera">  相机
+    <input type="file" accept="video/*" capture="camera">   摄像
+    5、键盘遮挡
+        解决方案
+            1/动态计算
+            2/css处理 fixed
+
+    6、安卓手机点击按钮 <input> textarea 会出现背景
+
+    -webkit-tap-highlight-color:rgba(255,255,255,0)
+
+    7、ios禁止调整字体大小
+    body {
+    text-size-adjust: 100% !important;
+    -webkit-text-size-adjust: 100% !important;
+    -moz-text-size-adjust: 100% !important;
+    }
+    8、视频在移动端全屏显示
+    video标签中加几条属性x5-playsinline="" playsinline="" webkit-playsinline=""可以解决移动端video点击播放自动全屏问题
+    <video type="" x5-playsinline="" playsinline="" webkit-playsinline=""></video>
+-->
+
+
+</body>
+</html>

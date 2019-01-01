@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" id="j_btnAddData" value="按钮1">
+<input type="button" id="j_mask" value="按钮2">
+<input type="button" id="j_formAdd" value="按钮3">
+
+</body>
+<script>
+    window.onload = function () {
+        var j_btnAddData = document.getElementById("j_btnAddData");
+        var j_mask = document.getElementById("j_mask");
+        var j_formAdd = document.getElementById("j_formAdd");
+
+        j_btnAddData.onclick = function () {
+            //点击显示盒子，显示两个。
+            j_mask.style.display = "block";
+            j_formAdd.style.display = "block";
+        };
+
+        var j_hideFormAdd = document.getElementById("j_hideFormAdd");
+        j_hideFormAdd.onclick = function () {
+            //点击显示盒子，显示两个。
+            j_mask.style.display = "none";
+            j_formAdd.style.display = "none";
+        };
+
+        var tbody = document.getElementById("j_tb");
+        var aArr = tbody.getElementsByTagName("a");
+        //for循环绑定事件
+        for(var i=0;i<aArr.length;i++){
+            aArr[i].onclick = function () {
+                tbody.removeChild(this.parentNode.parentNode);
+            }
+        }
+
+        var j_btnAdd = document.getElementById("j_btnAdd");
+        var j_txtLesson = document.getElementById("j_txtLesson");
+        var j_txtBelSch = document.getElementById("j_txtBelSch");
+
+        j_btnAdd.onclick = function () {
+            //1.获取课程名称和所属院校中的内容
+            var val1 = j_txtLesson.value;
+            var val2 = j_txtBelSch.value;
+
+            //bug4:输入内容不能为空
+            if(val1 === ""){
+                alert("输入内容不能为空！");
+                return;
+            }
+
+            //2.组成一个tr，添加到tbody的最末尾
+            var tr = document.createElement("tr");
+            tr.innerHTML =  '<td>'+val1+'</td>'+
+                    '<td>'+val2+'</td>'+
+                    '<td><a href="javascrip:;" class="get">GET</a></td>';
+
+            tbody.appendChild(tr);
+            j_txtLesson.value = "";
+            j_mask.style.display = "none";
+            j_formAdd.style.display = "none";
+            var trA = tr.children[2].lastElementChild || tr.children[2].lastChild;
+            trA.onclick = function () {
+                tbody.removeChild(this.parentNode.parentNode);
+            }
+        }
+    }
+</script>
+
+<script>
+
+
+</script>
+</html>

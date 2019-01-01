@@ -1,0 +1,40 @@
+dom
+1、获取（7）
+2、节点的访问
+    children
+3、节点类型 ：
+文本 3
+ 元素 1
+  注释 8
+docunment 9
+4、操作元素
+    1、创建 、添加、头部插入、替换
+    2、操作元素的内容  innerHTML  innerText
+    3、操作元素的属性 set/get/remove attribute()
+5、操作css
+    1、div.style.width; 操作行内样式
+    2、currentStyle/getComputedStyle()
+    兼容问题 封装getStyle
+    utils 包 高级单例模式 暴露出 css
+    css('div',width)
+    css('div',{width:'100px'})
+    3、通过类名
+        1、xxx.className
+        2、xxx.classList.add()
+6、DOM映射
+   DOM重绘（静态样式）
+   DOM回流 （位置结构等改变）  => 文档碎片
+
+
+3、遍历 键值对
+4、json 对象
+
+
+
+
+
+
+
+
+
+

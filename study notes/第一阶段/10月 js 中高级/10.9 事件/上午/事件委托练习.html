@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件委托</title>
+    <style>
+        li {
+            background-color: greenyellow;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="../../event.js"></script>
+</head>
+<body>
+<button>穿件新的元素</button>
+
+
+<ul>
+    <li>我是原生土著li</li>
+    <li>我是原生土著li</li>
+
+    <li>我是原生土著li</li>
+
+    <li>我是原生土著li</li>
+
+</ul>
+<script>
+    var btn = document.getElementsByTagName("button")[0];
+    var ul = document.getElementsByTagName("ul")[0];
+    btn.addEventListener("click", function () {
+        var newLi = document.createElement("li");
+        newLi.innerHTML = "我是新创建出来的li";
+        ul.appendChild(newLi);
+    });
+
+    addEvent(ul,'click',function(ev){
+        var oEvent = ev || event;
+        var ele = oEvent.target || oEvent.srcElement;
+        if(ele.tagName === 'LI'){
+            alert('我是LI');
+        }
+     })
+
+</script>
+</body>
+</html>

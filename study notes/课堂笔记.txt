@@ -1,0 +1,1654 @@
+1、html
+    是什么：超文本标记语言 用来描述网页
+
+    基本语法： <div class="" id="" >
+
+    掌握 ：
+    行元素：a span i em strong
+    块元素 ：div h1-h6 p 列表 表格 表单
+    行快元素：img input(表单里面的大部分元素都是 行快元素)
+
+  特点：
+    行元素：共处一行 宽高不可控 盒模型(padding  margin 不起作用)
+    块元素：独占一行 宽高可控 盒模型
+    行块元素： 共处一行 宽高可控 盒模型
+
+    h1-h6
+
+    h1: 36px
+    h2: 24px
+    h3: 18px
+    在一个html 文档中h1 推荐使用一次
+
+    嵌套的元素：span a p time hgroup address markup
+
+
+    p标签
+    1、行高
+    2、不嵌套的元素 ：p  div
+        嵌套的元素： 修饰文本的元素
+
+    span 标签
+        修饰一小段文本
+
+    i/em/strong/del/sub/sup等：放置精灵图/字体图标
+
+
+    超链接a
+    1、a href="" 跳转/自动刷新
+    2、锚链接 id #id
+        url: index.html#img1
+        哈希传值 (hash) #
+    3、简单的tab选项卡/轮播图
+
+
+    img:
+    1、路径  img/a.png  ../img/a.png
+    /img 根目录下面的img 目录
+    2、提示信息 alt/title
+
+
+
+    列表：有序 无序 自定义
+    1、css 有序和无序列表之间可以相互转换 ：list-style-type: ;
+    2、heml 5 start='' 自定义开始的数字
+    3、summary合起列表  detail展开列表 <summary> 标签包含 details 元素的标题，"details" 元素用于描述有关文档或文档片段的详细信息。
+
+
+    表格：
+
+        table caption tr th/td
+
+        cellpadding:单元格和文字的间距  cellspacing：单元格直接的间距
+
+        colspan rowspan
+
+        细线表格 css属性
+        border-collapse
+        单元格 border-spacing
+
+        thead 、tbody 、tfoot
+
+    表单：
+    1、加不加form的区别？
+    2、get 与post 的区别？ ajax请求 axios/sync
+    3、只读模式  和不可编辑模式 区别
+
+
+    单行文本域：input  搜索/用户名/密码框
+    多行文本域: textarea 留言板
+    按钮
+
+    默认选中：checked selected
+    单选：
+    多选：全选
+    下拉菜单：二级联动/三级联动菜单
+
+
+    html 5
+        新增的：
+            header nav footer main article section aside figure figcaption
+            keygen process meter time markup  video audio  mark  progress address
+            summary detail  datalist
+
+        废弃的：font center s big  strike
+
+
+
+
+2、css
+    什么是css 层叠样式表  修饰html  组成：选择器和属性值
+    1、css引入 ：
+        内联样式/行内样式
+        内嵌样式
+        外部样式 link
+        导入样式 @import
+
+    2、css选择器
+        权重值:important>行内>id>类>标签>通配符>继承>默认
+
+        基本选择器 id>类class>标签>通配符
+        组合选择器：
+            后代：空格 div span{}
+            子代 ：> div>span{}
+            群组： , div,span{}
+            直接：中间没有任何符号 div#span{}
+            相邻的弟弟 :+ div+span{}
+            相邻的所有弟弟 : ~ div~span{}
+
+        伪类：
+            a:link visited hover active
+         css3
+            奇偶:first-of-type   first-child
+                 nth-of-type     nth-child
+                 last-of-type    last-child
+
+            empty(设置空元素的背景)/not /target
+
+        伪元素
+            after   content:''
+            before  content:''
+            first-line  首行
+            first-letter    首字下沉 浮动会出现文本环绕
+            selection   选中
+        属性选择器：
+            [属性]
+            [属性=值]
+            [属性^=值] 开始
+            [属性$=值] 结尾
+
+
+
+3、盒模型
+    4个属性：content(width/height) margin padding border
+        box-sizing:border box;
+    标准盒模型 :
+        盒子的宽度=width+左右margin+左右padding+左右border
+    css3盒模型/低版本ie(怪癖模式)
+        盒子的宽度=width(padding+border)+左右margin
+
+
+    1、行元素的padding/margin-top/bottom 不可设置 但是背景可以填充 不占位
+    2、margin存在负值 padding不存在负值
+    3、margin塌陷
+    解决方案：1、父盒子:overflow:hidden 2、父盒子： 1px 透明边框  3、父盒子：padding-top
+    4、外边距重叠：
+    解决方案：重叠结果：上下 同正同负 取绝对值大的
+                           一正一负 求和
+    5、使用场景
+         父子间距 padding
+         兄弟间距 margin
+
+
+
+4、常用属性
+    元素之间的转换(元素的展示方式)
+    display :inline block inline-block none  展示方式
+    display:flex table  布局方式
+
+    显示隐藏：
+    display: block none  (不能用transition属性)
+    opacity:1  0
+    visibility: visible hidden
+
+    文本：
+        实现省略号（4）：
+            将height设置为line-height的整数倍，防止超出的文字露出。
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+
+        字间距：letter-spacing
+        一行文本居中:text-align ling-height
+        多行文本居中: padding
+        图文居中：vertical-align:
+        color:rgb() #fff  red  hsl()
+    透明：
+        background:tranparent;
+        background:rgba()
+        opacity: ; filter:alpha(opacity=20)
+
+    盒模型属性:
+        margin/padding: 10px;  上下左右
+        margin/padding: 0 auto; 上下   左右
+        margin/padding: 0 auto 0; 上   左右  下
+        margin/padding: 0 0 0 0; 上 右 下 左
+
+        border: ;
+        border-width: ;
+        border-color: ;
+        border-style: solid dashed;
+
+        border:none;
+
+        实现三角形
+        with/height: 0;
+
+        实现圆:border:50%;
+
+    列表属性
+        list-style:none;
+        list-style-type;
+        list-style-image:;
+        list-style-position: outside | inside;
+    背景属性：
+        background:red  url()  no-repeat fixed;
+        background-color: red;
+        background-image: url()
+        background-position:20px 20px;
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+
+
+        多背景图引入:
+        background:url(),url(),url();
+        调整背景图的大小:
+        background-size: 100% 100%;
+
+
+
+    css sprites (图像合成技术/雪碧图)
+        主要目的：减少http请求次数
+
+
+
+5、浮动
+    属性：float:left right none
+    浮动的元素：（理解为变成了 行快元素）
+    脱离标准文档流： 不占位（高度显示为0）
+    margin:auto 不齐作用
+    绝对定位和相对定位
+
+    由于浮动元素 高低不统一会出现 “拦路虎的现象”
+
+    浮动塌陷：清除浮动
+    清除浮动方式 ：clear:both
+    1、父盒子设置定高
+    2、通过伪元素：after :before清除  (大型项目)
+        clear:after{
+            content:"";
+            display:block;
+            clear:both;
+        }
+    5、浮动的结尾 加一个空元素 设置clear:both;
+
+    3、父盒子浮动
+    4、父盒子设置 overflow:hidden;
+
+
+6、定位
+    属性： position:
+    子绝父相：前景图上面放文章或者放图片 遮罩层
+
+    相对：
+        margin:auto 可以居中
+        相对于元素本身的位置
+    绝对：
+        脱离文档流
+        相对与就近的有定位的上级元素定位 如若找不到就相对与body
+    固定:
+        脱离文档流
+        相对于浏览器窗口
+
+    居中：让一个浮动的元素居中，使用定位
+
+    1、固定宽高的盒子
+        top\left:50%; margin-left\top:- (width\height)/2
+
+    2、固定宽高的盒子   (不兼容ie 6 7 8)
+        上下左右都为0  然后设置 margin:auto
+    3、盒子无具体的宽高 (不兼容ie 6 7 8)
+        top|left:50%;
+        transfrom:translate(-50%,-50%)
+
+7、精灵图
+8、字体图标
+
+
+
+【css 3】
+
+盒模型
+    box-sizing:border-box;
+    border-radius:;
+    border-top-left-radius:
+    border-top-right-radius:
+    border-bottom-left-radius:
+    border-bottom-right-radius:
+
+    长方形
+    border--radius:10px/20px;
+    box-shadow: x  y 10px  red ,x  y 10px  red;
+
+文本
+     text-shadow: x  y 10px  red;
+
+背景
+
+            background-origin: 设置背景图片大小;
+            background-size: 设置背景图片大小;
+            background-clip: 设置背景图片位置 ;
+    渐变
+        线性渐变：background-image:linear-gradient 30deg form to  color;
+
+        径向渐变 :radial-gradient:10px at 0 0 color;
+
+边框
+    border-image: ;用图片填充边框
+
+时间过渡
+    transition:属性 2s ease-in 2s;
+    贝塞尔曲线
+2d
+    transform
+    旋转 缩放 位移 斜切
+3d
+    perspective:;设置透视点
+    transform-style: ;设置显示立体的效果
+    backface--visibility:;显示/隐藏背面
+
+动画
+   定义动画
+    @keyframes 动画名{0%-100%}
+   使用动画
+    animation:动画名 2s linear 2s 3;
+
+animate.css的使用
+
+
+
+布局
+    css1.0/2.0
+    静态布局
+    液态布局
+    流式布局
+    圣杯布局
+    双飞翼布局
+
+    css3.0
+    css3盒模型
+    flex布局
+    @midia screen and (){} 响应式布局
+    多列布局
+
+    移动端页面
+
+
+
+网页的构成三部分： html结构层、css样式层、js交互层
+
+JavaScript
+    1、js 是什么？  轻量级，直译式 客户端脚本语言
+    2、js 的语法？
+
+
+    JavaScript组成部分：ECMAScript DOM  BOM
+
+    ECMAScript是一套标准，定义了一种语言(如javascript)是什么样子、如何书写。
+
+    BOM (browser object model) 浏览器对象模型
+
+    DOM ()文档对象模型
+
+
+js基本语法：
+    js的引入方式：1、行内导入 2、内嵌导入  3、外部导入
+
+    1、找人 2、绑定事件 3、书写事件驱动
+
+语法注意 ：
+    1、每一条语句之间用 ; 隔开
+    2、引号的使用 内双外单  内单外双
+    3、=  ==  ===
+    4、js通过style 操作的行内样式
+    5、var 变量名 ;function 函数名(){}
+    6、输出语句 console.log() 控制台
+    7、调试错误 控制台
+    8、条件语句 if{} else{}
+    9、window.onload(){}
+    10、事件 onclick onmouseover onmouseout
+    11、变量命名规范
+            驼峰式命名法
+            匈牙利命名法：按照功能命名
+    12、获取dom 元素 通过id/class/tag/选择器/ 获取
+
+
+
+
+变量
+
+    ！注意：
+        1、var a=b=1; 等同于 var a=1 ;b=1;
+           var a,b=1; 等同于 var a=1 ;var b=1;
+
+        2、变量声明的时候重名
+            es5 中下面的代码覆盖上面的
+            es6 直接报错
+        3、映射（变量和window之间的映射）: es5中 window中的变量和window存在一一对应关系
+            es5 中存在映射 es6之后 不存在映射
+        4、变量提升
+            变量的作用域
+
+    1、关键字：let var
+    2、变量命名的时候
+        1、必须以字母、下划线、或$开头
+        可以包含数字
+        2、大小写有严格的区别，对大小写敏感 ，
+        3、不能以js保留字和关键字 命名
+          break、else、new、var、 case、
+          finally 、 return、 void 、 catch  、for  、
+          switch 、 while 、 continue、  function  、this 、
+           with 、default 、 if 、 throw 、 delete 、 in 、  try 、do 、
+            instranceof、  typeof
+              变量命名必须以字母或是下标符号”_”或者”$”为开头。
+              2.变量名长度不能超过255个字符。
+              3.变量名中不允许使用空格，首个字不能为数字。
+              4.不用使用脚本语言中保留的关键字及保留符号作为变量名。
+              5.变量名区分大小写。(javascript是区分大小写的语言)
+              6.汉语可以作为变量名。但是不建议使用！！！（low）
+     命名规则
+         驼峰式命名法：遇到每一个有意义的单词首字母大写
+         小驼峰: get Element By Id
+         大驼峰  Get Element By Id :构造函数定义/类
+
+         匈牙利命名法： 按照功能划分（数据类型）
+         string   s
+         arr      a
+         object   o
+         function  fn
+         number  num
+
+
+输出语句 :alert console.log   document.write
+
+    1、弹窗输出
+      调试  alert () 返回值 undefined
+        confirm() 有确定和取消按钮   返回值 确定:true  取消:false
+        prompt() 有确定和取消按钮以及输入框  返回值 确定:输入的内容 取消：null
+
+    2、控制台打印输出
+     调试   console.log(a);
+        console.dir(a); //以列表形式输出一个对象的所有属性，有点和你查看DOM窗口相类似。
+
+        console.info(a);  在控制台输出一条带有“信息”图标的消息和一个指向代码调用位置的超链接。
+        console.warn(a);  在控制台输出一条带有“警告”图标的消息和一个指向代码调用位置的超链接。
+        console.error(a);  在控制台输出一条带有“错误”图标的消息和一个指向代码调用位置的超链接。
+        console.assert(a);   测试表达式expression是否为真。如果不是真，会在控制台写一条消息并抛出异常
+
+        console.time(name)
+            创建一个名字为name的计时器，调用console.timeEnd(name)停止计时器并输出所耗时间（毫秒）。
+        console.timeEnd(nam)
+     调试
+        alert ()
+        console.log()
+        断点调试
+
+    3、在网页中打印输出
+        document.write();
+        document.writeln(); 可以自动换行
+
+js 的数据类型：7种
+
+    基本数据类型：
+        number
+        string
+        boolean
+        null
+        undefined
+
+    引用数据类型：
+        function
+        object
+            Array类
+            普通对象类
+            Date类
+    1、这种数据类型包含的情况？
+    2、强制转换：
+        【数字number】
+        1、有效数字 ：整数  浮点数
+        2、无效数字 ：NaN
+            NaN（非数） 全称 not a number
+            NaN 不等于任何数据类型中的值
+            NaN 不等于任何数字 和任何数字做运算结果都是NaN，
+            和任何数字比较结果都是false
+            NaN 不等于 NaN
+        isNaN() 判断一个内容是否为非数
+            是数字 为false
+            不是数字 为true
+        强制转换
+        typeof 检测一个变量存储的数据类型
+
+        2、转换
+            数据类型转换为number类型
+            显示转换（强制转换）
+
+                Number()
+                parseInt    强制转换为整型
+                parseFloat  强制转换为浮点型
+
+                利用parseInt和parseFloat转换时，从左至右 只要遇到非数直接截至转换
+            隐式转换 ：- * / % isNaN ==
+        3、其他数据类型 转换number 类型时候对应的值
+            string :利用Number转换的时候 只要遇到非数 结果为NaN
+                    Number('') =>0
+                    Number('1') =>1
+                    Number('1.1') =>1.1
+                    Number('a1.2') =>NaN
+                    Number('1.1a') =>NaN
+
+
+            boolean=>number
+                    true => 1
+                    false => 0
+
+            null/undefined =>number
+                null => 0
+                undefined => NaN
+            引用数据类型
+            object =>    NaN
+            function =>     NaN
+
+            [] => 0
+            [1] => 1
+            ['1'] => 1
+            ['1a'] => NaN
+
+             console.log(typeof typeof typeof undefined); //string
+
+
+    【string】
+      1、用一对单引号 或者 双引号包含的内容 既为字符串
+        字符串特点：
+            1、原样输出
+            2、单双引号的使用
+                外双内单 外单内双
+                转义字符  \   \n:换行   \t:Tab键空格 占位四个空格
+
+         2、强制转换字符串
+              String(变量名)
+              变量名.toSting()
+            隐式转换：
+                + 号左右两边只要有一边为字符串，结果为字符串的拼接
+         3、其他数据类型 转换为字符串 只需要加一对引号
+
+    【boolean】
+        1、布尔类型
+            真true 假false
+
+        2、强制转换 boolean
+              强制转换: Boolean()
+              隐式转换: ! !!  if(条件)
+
+        3、其他类型转换为 boolean
+            js中除了 0/NaN/''/null/undefined 转换为false
+            其余的转换为true
+
+    【null和undefined】
+        1、区别：
+        2、特点：
+            null和undefined不等于任何其他数据类型
+            null == undefined
+        3、null 和 undefined 转换为其他数据类型对应的值
+
+
+
+        千万不要把两个概念弄混淆了，“一个变量存在，
+        但是没有数值”和“一个变量并不存在” — 他们完全是两回事 — 在前面你看到的盒子的类比中，
+        不存在意味着没有可以存放变量的“盒子”。
+        没有定义的值意味着有一个“盒子”，但是它里面没有任何值。
+
+
+
+
+运算符 ：算数（一/二/三元运算符） =>  比较（=  ==  ===） => 逻辑（！ & || ）=> 三目运算符 => 赋值（+= -= *= /= ）=> 逗号（ , ）
+
+    算术运算符：
+        一元运算符：正数  负数  平方 ++  --
+        二元运算符： +  -  *  /  %
+
+        三目运算符： 表达式1？  表达式2：  表达式3
+           if (a>b){
+                console.log(a);
+            }else {
+                console.log(b);
+            }
+            a>b? console.log(a): console.log(b);
+
+
+    比较运算符:
+        > >=  < <=  ==  ===  !=  !==
+
+        == : 强制转换 !=
+         只比较值 不比较数据类型
+        === :  !==
+        比较值 比较数据类型
+
+
+    赋值运算符
+        =  +=  -=  *=  /=  %=
+        a=a+b 等同于 a+=b
+
+    逻辑运算符
+        ！ &&  ||
+        与 &&   两边同时为真才为真  其余为假
+        或 ||   两边同时为假才为假  其余为真
+
+        短路与
+        短路或
+
+    逗号运算符
+        只取最后一个逗号后面的值
+
+        var a = (1,2,1,3);
+            alert(a); //3
+
+
+
+流程控制
+    顺序控制：代码自上而下 从左往右依次执行
+    分支（选择）结构
+        if (){}else{}  用以范围的判断
+
+        switch(){case :; }
+
+        1、用于固定值的判断
+        2、每一条case语句用 break结束
+        3、条件不同 结果相同
+        4、只写一个结果 减少代码的冗余
+
+    循环结构
+        while
+        for   先判断是否满足条件，然后执行
+
+        for (声明变量并初始化; 条件; 变量运算(++/--)) {
+              满足条件 执行循环体
+             不满足条件 跳出循环体
+        }
+
+
+        do while 无论是否满足条件 先执行一次
+
+        break; 中断整个循环
+        continue ; 跳过当前循环，进入下次循环
+
+数组
+    object的数据类型
+    【js堆栈内存】
+    js代码在浏览器中执行的时候，浏览器都会为js 的执行提供一个作用域。
+    这个作用域 称作:"全局作用域"。
+
+        栈内存 (存储的是值)
+            所有的js代码执行都在栈内存中
+            基本数据类型 在栈内存存储 (值)
+        堆内存 (存储的是地址)
+            引用数据类型全部存储在堆内存中
+            var a = [2,2,3,4]
+            首先开辟一个新的堆内存空间，
+            把引用数据类型中的值 以键值对的形式存储，
+            计算机会默认给你开辟的这个空间分配一个16进制的地址，
+            然后把这个地址 返回给变量。(地址)
+
+    0、数组的概述
+        数组是一种数据类型。 （把很多数据装入一个盒子中，用的时候取出来）
+    1、数组定义：开辟一个空间，去存储所有的数据类型
+        字面量定义:
+            var arr = [];
+        构造函数定义:
+            var arr = new Array(); //创建一个空数组
+            var arr = new Array(一个数值表示array的长度 ); //一个数值表示array的长度
+              var arr = new Array(2); //创建一个长度为2的数组
+            var arr = new Array(两个或以上的值表示array这个数组的内容); //两个或以上的值表示array这个数组的内容
+              var arr = new Array(2,5); //创建一个长度为2,内容是2,5的数组
+
+    2、数组的遍历
+        三种方法 :for循环  for in循环  for of循环
+            首选for 循环
+
+
+    3、数组的操作
+
+    4、数组的方法
+    console.dir(Array.prototype) //控制台 打印输出
+        push(原数组改变)   尾部添加
+            返回数组的长度
+        pop(原数组改变)      尾部删除
+            返回数组删除的那一项
+        shift(原数组改变)    头部删除
+            返回数组删除的那一项
+        unshift(原数组改变)   头部添加
+            返回数组的长度
+
+
+
+
+        检索当前值 在数组中是否是存在的
+        存在      返回索引
+        不存在     返回 -1
+        indexOf  返回 从前面索引
+        lastindexOf  返回 从前面索引 从后面开始查找
+
+        concat(原数组不改变)  数组的拼接   arr.concat(arr1)
+                返回值 拼接的数组
+
+        sort(原数组改变) (快速排序)   数组的排序 arr.sort(function(a,b){return a-b});
+
+
+                返回值 排序后的数组
+
+        reverse(原数组改变) 数组的反转
+                返回值 反转后的数组
+
+        slice(原数组不改变)   数组的截取/克隆
+                slice(m) 从索引为m的位置开始 一直截取到末尾
+                slice(a,b) 从索引a的位置开始截取到b-1 的位置结束
+                slice(-a,-b) 从索引a的位置开始截取到b 的位置结束 倒着查看
+
+                克隆数组：slice()
+                返回截取的内容
+
+        splice(原数组改变)   数组的增删改 splice(index , 删除的个数 ,变更的数)
+            删   splice(2,2) 从索引为2 的位置开始删除 2个
+            改   splice(2,1,3) 从索引为2 的位置开始 删除1 个 改为3
+            增   splice(2,0,7) 从索引为2的位置 删除 0个 增加 7
+                返回值 改变后的数组
+
+        toString()    数组转换为字符串
+
+
+
+        join('插入的内容')   数组转换为字符串
+        split('插入的内容')   字符串转换为数组
+        配合eval() 使用
+
+        eval() 把一个字符串 转换为表达式 (运算)
+
+
+
+
+        values
+
+        toLocaleString
+
+
+    5、多维数组  哈希表/二级联动
+        var arr = [[1,2,3],[2,3,4],[5,8,9]];
+            console.log(arr[1][2]);
+           //   循环找到数组中的每一项
+            for (var i = 0; i < arr.length; i++) {
+                for (var j = 0; j < arr.length; j++) {
+                    console.log(arr[i][j]);
+                }
+
+            }
+
+
+
+    6、类数组
+        类似于数组 但不是数组
+        具有length 和 index 属性
+        但是没有数组的方法
+
+        【类数组转换数组】
+            1、slice
+            Array.prototype.slice.call(arrLi);
+            [].slice.call;
+
+
+            2、原型继承转换 ：
+            把类数组从字符串的: HTMLCollection 转换为 Array 类型 。成为数组
+            arrLi._proto_ = Array.prototype
+
+            3、建立一个空数组  push 进去
+
+
+            es6
+                Array.from(arrLi);
+                var args = [...arrLi]
+
+
+    5、数组中的算法
+        冒泡算法
+            每个数 依次进行 两两比较 ，
+            每轮比较完，都会拿出最大的数 排好序
+
+            外循环控制 轮数
+             内循环控制 两两比较次数
+        插入算法
+            每次都取出一个数 和已经插入的数 进行比较
+            外循环 插入的数
+            内循环  比较
+
+        sort 快速排序/二分法
+
+
+
+        选择算法
+        希尔算法
+        时间复杂度/空间复杂度
+
+
+
+
+
+
+    6、数组的去重
+
+        es6  去重
+                //Set数据结构，它类似于数组，其成员的值都是唯一的
+                return Array.from(new Set(arr)); // 利用Array.from将Set结构转换成数组
+
+        原型去重
+
+
+    7、数组的迭代
+
+        every 对数组中的每一项运行给定函数，如果该函数对每一项都返回true ，则返回true。
+        some    对数组中的每一项运行给定函数，如果该函数对任意一项都返回true ，则返回true。
+
+
+        filter  对数组中的每一项运行给定函数，返回该函数会返回true 的项组成的数组
+        forEach 对数组中的每一项运行给定函数。这个方法没有返回值
+        map     对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组。
+        forEach
+
+
+        reduce
+        reduceRight
+
+        includes
+
+        fill
+
+        find
+        findIndex
+
+
+
+
+
+【函数】
+    引用数据类型
+    函数-function
+
+    1、函数的概念
+        可重复执行的代码块
+        哪部分代码复用性强，就用function 包起来，
+        其他部分调用
+
+        面向对象的三大特点 ：继承、封装、多态
+        利用函数实现 封装
+        原型 原型链 实现 继承
+    2、函数的定义
+            函数定义的步骤
+            1、首先开辟一个新的堆内存空间
+            2、函数的值 是以字符串的形式原样存储在堆内存中
+            3、分配一个16进制的地址
+            4、最后把这个地址 赋值给 变量
+        三种形式
+        function fn(){} //有名字的函数
+        var fnn = function(){};// 匿名函数
+        var fnnn =new Function ();  // 构造函数定义
+
+        es5 这个最常用
+            var fnn = function(){};// 匿名函数
+        es6 箭头函数
+            (参数)=>{内容}
+
+    3、函数的执行
+        有名的 fn()
+        匿名函数的执行
+            会形成一个私有的栈内存空间，保护函数内部的变量，
+            不受外界干扰，我们把这种保护机制称为‘闭包’。
+            函数执行完成，栈内存立即销毁(一般情况下)
+              (function(){})();
+              ~function(){}();
+              +function(){}();
+              -function(){}();
+
+    4、函数的作用域
+              全局作用域
+
+              私有(局部)作用域
+        私有变量
+            在函数内部用 var 定义的变量 属于私有变量
+            函数的形参
+        全局变量
+            在函数外部 用var  定义的变量 属于全局变量
+            没有用关键字声明，直接赋值的变量
+
+            全局变量和window存在 映射关系
+
+        es6 块级作用域{}  (私有作用域)
+            function(){}
+            if(){}
+            for(){}
+            setInterval(){}
+
+        变量提升 (变量提升只存在于当前作用域,没有用关键字定义的变量不提示 )
+            es5：js代码在执行的时候，会把js中所有的
+            变量都放在最上面提前声明，然后代码自上而下执行，这种状况为变量提升
+            用var 关键字定义的变量，只提升变量名，不提升变量值
+            用function 关键字定义的变量，提升变量名和值
+            【变量提升的场景】
+                1、重名变量的提升
+                2、条件判断下的变量提升
+                    无论条件是否满足，都会进行变量提升（只会提升变量名/函数名）
+                    模拟块级作用域
+
+    5、作用域链
+
+            1、自己有 不用别人的
+            2、函数内部出现一个变量的时候
+            首先在函数内部查看，如果函数内部有，
+            那么就用自己的，如若没有，则一级一级向上级作用域查找，
+            直到找到window（全局作用域）为止 。
+            这种查找机制为作用域链
+        js代码的执行
+            变量提升
+            自上而下
+        函数执行的步骤
+
+            1、形参赋值
+            2、变量提升
+            3、自上而下执行
+            4、内存销毁
+
+
+    4、函数的封装
+         数组的求和功能
+            eval(arr.join('+'))
+            //尽量减少eval 的使用 因为 eval定义的方法是全局的
+
+    5、函数的参数
+        实参
+            真实的值
+        形参(私有变量)
+            函数进行封装时 ，为了实现所有的变量都可以调用此方法
+            只是变量
+            函数的入口
+
+        实参个数 = 形参个数  正常执行
+        实参个数 < 形参个数  对应形参的值
+        如果没有传递，默认传递undefined
+
+        实参个数 > 形参个数  正常执行
+        从左往右，依次赋值，剩余的不做操作
+
+        es5 可变参  es5:类数组
+            接受所有的实参(实参的集合)
+
+            arguments 和实参存在映射关系
+            arguments.callee 打印输出函数本身，严格模式下不支持
+
+        es6 可变参  数组     不存在映射  ...有展开的意思
+             function sum(...arg){
+                console.log(arg); //数组
+                }
+                sum();
+    6、函数的返回值    return  需要外部用一个变量接受return
+        由于函数内部的私有变量，在函数外部访问不到
+        所以利用return （搭建了 函数内外部沟通的桥梁）
+
+        函数没有写return;     返回undefined
+        函数只写return;     返回undefined
+        函数只写return xxx;    返回xxx;
+        函数只写 return; return xxx;    返回undefined;
+
+        return 可以中断函数
+        break  可以中断循环/case语句
+
+        return false; // 阻止默认行为
+        a href = 'javascript:;' //阻止默认行为
+
+    7、回调函数
+         callback  把函数作为一个对象回调
+         同步异步
+         sort(function(){})
+    8、递归
+        函数自己调用本身
+           function story(){ story();}
+
+    7、闭包
+        函数作为返回值  =>闭包
+        原型模式
+            柯里化函数思想 ：只能调用一个函数
+            function fn(){
+                return function(){}
+            }
+            var f =fn()
+            惰性函数思想 (高级单例模式): 可以调用多个函数
+            function fn(){
+                function sum(){}
+                function f(){}
+                return{
+                    x:1,
+                    f:f,
+                    sum:sum
+                }
+            }
+            var f =fn()
+        书本定义：
+        闭包 :函数执行的时候形成一个私有的作用域，
+        保护函数内部的变量，不受外界的干扰，我们把这种保护机制称为'闭包'。
+
+
+
+        但是在真实项目中，函数执行的时候，只有形成一个不销毁的的私有作用域，
+        保护函数内部的变量不受外界的干扰，保护保存机制，为闭包。
+
+        真实项目中：
+
+        函数执行的时候，返回一个值，返回的值被外部变量所占用，
+        形成一个不消毁的私有 作用域，保护函数内部变量不受外界的干扰。
+
+
+        闭包的两个特点/功能
+            1、保护  函数执行
+            2、保存  随机数案例/选项卡案例
+
+
+
+    8、对象
+        对象的定义
+            1、字面量定义
+                    var sun = {
+                        'name':'233',
+                        'age':'55',
+                        'tel':110,
+                        'p':''
+                    };
+            2、构造函数定义
+                    var obj = new Object(
+                            'a','aa'
+                    );
+
+        对象的操作   :增删查改
+            键值对构成
+            查：
+            对象名.键  -obj.name
+            对象名[键] -obj[name]
+            改：对象名.要改的值  -obj.要改的值
+            增：对象名.要增的值  -obj.要增的值
+
+            删：对象名.null  -obj.undefined  只删除值
+                delete 对象名.键     删除键和值
+
+        对象的遍历
+
+
+
+
+    obj[name]和obj['name']的区别？
+    obj['name'] 访问的
+    obj[name]
+
+
+
+    Math
+    Date
+    Number
+        toExponential(x)	把对象的值转换为指数计数法。
+        toFixed(x)	把数字转换为字符串，结果的小数点后有指定位数的数字。
+        toPrecision(x)	把数字格式化为指定的长度。
+        toString()	把数字转换为字符串，使用指定的基数。
+        valueOf()	返回一个 Number 对象的基本数字值。
+
+
+    String
+
+
+
+    【this】
+        谁调用这个函数，this就是谁，arr.pop() => arr
+        谁执行这个事件，this就是谁  div.onclick => div
+
+        构造函数中 this 指向所属类的实例
+
+        对象中
+
+
+
+        回调函数  //指向window
+        自执行函数 //指向window
+
+        强制改变this的指向
+
+
+        立即执行
+        call()
+            arg.call(第一个参数是this的指向,(实参)后面的参数是 arg的参数)
+            call()函数执行的时候
+
+            注意点：
+                普通模式
+                sum.call(undefined);//window
+                sum.call(null);//window
+                sum();//window
+                严格模式
+                sum.call(undefined);//undefined
+                sum.call(null);//null
+                sum();//undefined
+
+        apply()
+            arg.apply(1,[1,2,3])
+            arg.apply(第一个参数是this的指向, [实参的集合])
+
+            虽然传递的是数组，但是执行函数的时候，
+            还是吧数组里面的值，一个一个传递给形参。
+
+
+        预执行
+        bind()
+            arg.bind(第一个参数是this的指向, (实参)后面的参数是 arg的参数)
+
+
+
+
+    对象定义的方式
+        单例模式/高级单例模式
+        工厂模式
+        构造函数模式
+        原型结合原型链模式
+
+    原型  prototype
+    原型链 _proto_
+        实例查找属性、方法的时候，如果自己的内存空间中存在，
+        就使用自己的属性、方法。如果没有则
+        实例通过_proto_一级一级向所属类的原型对象查找，
+        一直查找到Object基类的原型对象位置，这种查找机制，
+        称作原型链。
+
+
+
+        作用域链:函数的执行的时候，
+        函数内部想使用这个变量的时候，如果
+        在自己的私有作用域中，存在就使用这变量，
+        如果没就向上级函数查找，直至找到window
+
+    原型继承
+
+
+    函数的三重角色
+        普通函数
+
+        对象
+
+
+        类
+
+
+    函数三种角色
+        普通函数
+            执行步骤
+                1、形参赋值
+                2、变量提升
+                3、自上而下
+                4、内存销毁（栈内存立即销毁）
+        构造函数
+            执行步骤：
+                1、形参赋值
+                2、变量提升
+                3、自上而下
+                自动生成一个空的堆内存空间
+                让this指向这个空间
+                当指向完毕，自动把堆内存空间返回
+                return this;
+                4、不销毁
+
+                尽量不要手动返回  因为return{} 会覆盖
+                this 返回的地址
+        对象
+
+    构造函数 执行原理
+    原型重定向
+        一旦重定向后，自带的constructor 属性就会消失
+        需要手动添加(原型对象名称)
+
+    原型扩展
+        尽量不要和原来原型上的方法重名
+    原型继承
+        通过原型对象继承(_proto_)
+
+
+
+    js 继承
+        原型继承(_proto_)
+        call继承
+        组合继承
+        寄生式组合继承
+
+    最终版原型链图
+    this总结
+
+
+    null和undefined 总结
+
+
+
+
+    dom
+    dom中获取html元素
+    获取元素方式
+         1、通过id获取
+         2、通过标签名tagName获取
+         3、通过类名ClassName获取（不兼容ie6/7/8）
+         4、通过标签名tagName获取，指定元素下面的标签
+         5、通过querySelectorAll获取多个元素，不兼容，适用于移动端
+            属于静态获取：dom结构发生变化，需要重新获取
+            querySelector获取一个元素
+         6、获取body
+           var oBody = document.body ||document.documentElement;
+
+         7、获取一屏的宽高
+          var h = oBody.clientHeight;//高
+            var w = oBody.clientWidth;//宽
+
+    通过节点获取
+        children      获取所有元素子节点  (IE 8 不能用)
+        parentNode   物理结构的父节点
+        offsetParent  实际定位的父节点  (定义元素的父节点)
+        nextSibling     下一个兄弟节点  有可能是文本节点
+        nextElementSibling   下一个元素兄弟节点
+        previ  ousSibling    上一个兄弟节点  有可能是文本节点
+        previousElementSibling   上一个元素兄弟节点
+        firstElementChild  第一个子元素节点
+        lastElementChild  最后一个子元素节点
+
+        处理兼容问题
+        var next = li.nextElementSibling || li.nextSibling;
+        var prev = li.previousElementSibling || li.childrenNodes;
+        var prev = li.children || li.previousSibling;
+        var prev = li.lastElementChild || li.lastChild;
+        var prev = li.firstElementChild || li.firstChild;
+
+
+
+
+
+
+
+        节点          节点类型        节点值     节点名
+                       nodeType      nodeValue   nodeName
+        document        9
+        元素节点         1
+        文本节点         3
+        注释节点         8
+
+        方法
+        属性
+        获取元素的方式
+
+    dom操作html元素
+        1、操作元素的内容
+        获取元素中的内容   innerHTML
+        获取元素中的文本      innerText
+
+
+        2、操作元素的属性
+        获取getAttribute
+        设置setAttribute
+        删除removeAttribute
+        3、元素的动态操作
+        创建元素 :var a = document.createElement('a')
+                    a.innerHTML = 1;
+        appendChild(变量名) 末尾追加（子元素）
+        cloneNode(true) 克隆（深拷贝）
+        replaceChild(新，旧) 替换
+        insertBefore(新，旧) 插入一个元素
+        removeChild（变量名）  移除元素
+
+
+
+
+    操作css样式
+        1、操作行内样式
+            ul.style.xx = 'xx'
+        2、操作引入样式
+          function getStyle(ele,attr){
+                if( ele.currentStyle){
+                   return ele.currentStyle[attr]
+                }else {
+                   return getComputedStyle(ele)[attr]
+                }
+            }
+            getStyle(div1,'width')
+        3、操作类名
+            div1.classList.add/remove('active');//不兼容低版本ie
+            div1.className = 'active';
+
+
+
+        dom执行
+            1.计算DOM结构(DOM TREE)
+            2.加载CSS
+            3.生成渲染树(RENDER TREE)，渲染树是和样式相关的
+            4.浏览器基于GPU(显卡)开始按照RENDER TREE画页面
+
+        dom映射
+            html元素和js属性/方法操作样式，存在映射
+            xxx.style.color='red' : 把xxx元素对象对应堆内存中的style属性下的color
+                 属性值修改为'red'（本质操作的是JS堆内存） ；但是由于DOM映射关系，
+             *   页面中的标签和XXX元素对象是绑在一起的，我们修改元素对象空间的值，
+             *   页面中的元素会按照最新的值进行渲染；
+        dom重绘
+            元素静态样式改变(color/opacity 等)造成
+            dom元素重新渲染  比较耗内存
+
+        dom回流
+           元素样式改变（位置，大小，顺序等改变）
+           造成重新计算DOM结构，造成dom回流。 非常耗内存
+
+
+            解决方案：
+            1、文档碎片（虚拟容器 -基本不用）
+            let frg = document.createDocumentFragment();
+            box.appendChild(frg);
+
+
+
+
+    js 盒模型
+        通过JS盒模型获取值的特点
+        1、获取的都是数字不带单位
+        2、获取的都是整数，不会出现小数点（一般）
+
+
+。。。323
+
+
+    定时器：
+        使用三步骤
+            1、var timer = null；
+            2、关闭定时器
+            3、开启定时器
+
+        间隔定时器
+          setInterval(callback,time,改变this指向的);
+        延时定时器
+          setTimeout(callback,time,改变this指向的);
+
+        location.href
+        innerHTML
+
+
+    全屏滚动
+        滚轴事件
+            window.onmousewheel 不兼容 火狐
+            dom2事件
+                事件监听
+                addEvent兼容
+                    addEventListener 非ie浏览器
+                    attachEvent     ie浏览器
+                addEvent方法 ，用来绑定事件
+                绑定滚轴事件
+                    mousewheel  chrome  ie
+                    DOMMouseScroll 兼容 ff
+                判断滚轴走向：
+                    事件对象: event 存储所有的行为动作信息
+                    var oEvent = window.event || ev ;
+
+                    火狐浏览器 使用 detail 属性判断方向
+                    当 detail >0 向下滚动  detail < 0 向上滚动
+
+                    chrome  使用 wheelDelta 属性判断方向
+                    wheelDelta <0 向下滚动   wheelDelta >0 向上滚动
+
+                知道滚轴走向之后 需要执行   向下/向上滚动等 函数
+                   scrollUp() 向下滚动
+                   scrollDown() 向上滚
+    一屏的宽度和高度
+
+
+
+
+     document.title   可以设置 网页中title中的内容
+     onresize 窗口大小改变事件
+
+    function scroll(){
+            return{
+                top:window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0,
+                left:window.pageXOffset||document.documentElement.scrollLeft||document.body.scrollLeft||0
+            };
+        }
+
+     function client(){
+            return{
+                width:window.innerWidth || document.documentElement.clientWidth||document.body.clientWidth||0,
+                height:window.innerHeight || document.documentElement.clientHeight||document.body.clientHeight||0
+            }
+        }
+
+    DOM Event 对象
+
+            screenX/Y：鼠标位置相对于屏幕的坐标
+
+        　　pageX/Y：相对于文档边缘（包含滚动条距离）
+
+        　　clientX/Y：相对于当前页面且不包含滚动条距离
+
+        　　offsetX/Y：相对于当前元素（块或行内块），除safari外不包含边框。
+
+        　　其他：
+
+        　　X/Y：与clientX/Y相同，firefox不支持
+
+        　　layerX/Y：除IE外与pageX/Y相同，IE11下与clientX/Y相同。非官方属性。
+
+
+          1、client系列(当前元素的几个私有的属性)
+
+      　　内容的宽度和高度:我们设置的width/height这两个样式就是内容的宽和高，如果没有设置height值，容器的高度会根据里面的内容自己进行适应，这样获取的值就是真实内容的高；
+          如果设置固定了高度了，不管内容是多了还是少了，其实我们内容的高度指的都是设定的那个值。
+
+      　　真实内容的宽度和高度:这个代指的是实际内容的宽高（和我们设置的height没有必然的联系），例如我设置高度为200px，如果内容有溢出，
+          那么真实内容的高度就是要把溢出的内容高度加进来的
+
+      　　clientWidth/clientHeight  内容的宽度/高度 + 左右/上下  填充（和内容溢出没有关系）
+
+      　　clientLeft:左边框的宽度  clientTop:上边框的高度 （border[Left/Top]Width）
+
+      　　2、offset系列
+
+      　　offsetWidth/offsetHeight：clientWidth/clientHeight+左右/上下边框（和内容是否溢出也是没有任何的关系的）
+
+      　　offsetParent:当前元素的父级参照物
+
+      　　offsetLeft/offsetTop：当前元素的外边框距离父级参照物的内边框的偏移量
+
+      　　3、scroll系列
+
+      　　scrollWidth/scrollHeight:和我们的clientWidth/clientHeight一模一样（前提是:容器中的内容没有溢出的情况下） 如果容器中的内容有溢出，我们获取的结果如下规则
+
+      　　scrollWidth：真实内容的宽度（包含溢出）+左填充
+
+      　　scrollHeigh：真实内容的高度（包含溢出）+上填充
+
+      　　获取到的结果都是约等于的值，因为：同一个浏览器，我们是否设置overflow=“hidden”对于最终的结果是有影响的；在不同的浏览器下取到的结果也是不同的。
+
+      　　scrollLeft/scrollTop:滚动条卷去的宽度和高度
+
+
+    函数节流
+    函数节流是指一定时间内执行的操作只执行一次，也就是说即预先设定一个执行周期，
+    当调用动作的时刻大于等于执行周期则执行该动作，然后进入下一个新周期
+
+    函数防抖
+    函数防抖（debounce）是指在一定时间内，在动作被连续频繁触发的情况下，动作只会被执行一次，
+
+    函数节流和函数防抖 都是优化高频率js请求的
+    函数节流（throttle）与 函数防抖（debounce）都是为了限制函数的执行频次，
+    以优化函数触发频率过高导致的响应速度跟不上触发频率，出现延迟，假死或卡顿的现象。
+
+
+
+
+ 【事件】
+
+            DOM事件
+                鼠标事件
+                 onclick	    鼠标点击某个对象
+                 ondblclick	鼠标双击事件
+                 oncontextmenu  鼠标右击
+
+                 onmousedown	鼠标按键被按下
+                 onmouseup	    鼠标按键被松开
+                 onmousemove	鼠标被移动
+                 onmouseout	    鼠标从某元素移开
+                 onmouseover	鼠标被移到某元素之上
+                 onmouseleave	鼠标从某元素移开
+                 onmouseenter	鼠标被移到某元素之上
+                 oninput
+                 onfocus 元素获得焦点
+                 onblur  元素失去焦点
+                 onchange  用户改变内容
+                键盘事件
+                 onkeydown 键盘按下
+                 onkeyup  键盘按键 弹起
+                 onkeypress  键盘按键 按下 以及弹起
+
+                 获取键位 keyCode码
+                     document.onkeydown = function(ev){
+                             var oEvent = ev || event;
+                             console.log(oEvent);
+                             console.log(oEvent.keyCode);
+                         }
+
+            拖拽 drag
+
+
+   //DOM0 属性的操作
+     //解绑  = null;
+
+
+     //DOM 2 事件监听  addEventListener
+     //实际开发，经常使用这种方法
+     // 团队开发，多用addEventListener。 因为不会互相影响 。
+     //解绑 ：removeaddEventListener
+
+     //事件监听 兼容写法
+         function addEvent(ele,e,fn){ //添加
+             if(ele.addEventListener){
+                 ele.addEventListener(e,fn);
+             }else if(ele.attachEvent){
+                 ele.attachEvent('on' + e,fn);
+             }else{
+                 ele['on' + e] = fn;
+             }
+         }
+         function removeEvent(ele,e,fn){ //移除
+             if(ele.removeEventListener){
+                 ele.addEventListener(e,fn);
+             }else if(ele.detachEvent){
+                 ele.detachEvent('on' + e,fn);
+             }else{
+                 ele['on' + e] = null;
+             }
+         }
+
+    【事件流】
+    一个事件发生后，会在子元素和父元素之间传播（propagation）。这种传播分成三个阶段。
+
+     第一阶段：从window对象传导到目标节点（上层传到底层），称为“捕获阶段”（capture phase）。
+     第二阶段：在目标节点上触发，称为“目标阶段”（target phase）。
+     第三阶段：从目标节点传导回window对象（从底层传回上层），称为“冒泡阶段”（bubbling phase）。
+
+        addEventListener('click',function(){},true); 事件类型  事件驱动 判断类型
+         //false 事件冒泡 从内往外
+         //true  事件捕获  从外往内
+
+    //事件捕获
+    box1.addEventListener('click',function(event){
+        alert('box1')
+    },true);
+    box2.addEventListener('click',function(event){
+        alert('box2')
+    },true);
+    box3.addEventListener('click',function(event){
+        alert('box3')
+    },true);
+
+     //阻止事件冒泡
+
+    function stopEvent(ev){
+        var event = ev ||window.event;
+        if(event && event.stopPropagation){
+            event.stopPropagation(); //不兼容 ie 低版本
+        }else {
+            event.cancelable = true; //兼容ie 678
+        }
+    }
+
+
+
+     //事件委托 ： 冒泡原理 目标元素
+    event.target || event.srcElement   //获取 目标元素
+
+    事件对象
+        ev||window.event;
+        3Da 坐标  可视坐标client  screen  page
+            跟随鼠标运动的盒子
+            放大镜/滚动条
+            推箱子游戏/fly birdie
+            贪吃蛇游戏/打飞机/俄罗斯方块/五子棋/
+    事件流
+        事件捕获
+            addEventListener(type, callback,true)
+        目标阶段
+        事件冒泡
+            addEventListener(type, callback,false)
+        阻止事件冒泡
+            stopPropagation/cacelbubble
+        事件委托：利用事件冒泡的原理
+            操作的目标元素 target/scrElement
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   同步异步
+        js代码 自上而下执行的时候，当我们遇到一种情况（需要等待才能执行），
+        此时js代码并不会等待，而是直接跳过它，进行下一步执行的执行
+
+        主任务队列（同步代码）
+            同步代码：一步一步地执行，遇到需要等待的直接跳过。
+        等待任务队列（异步代码）：谁的时间现到先执行谁
+            异步代码：直接跳过
+
+        定时器时间因子设置为零，也不是立即执行，每个浏览器有一个，
+        自己最小的等待和反应时间（谷歌：5~6，ie：10~13），
+        所以写零还是异步编程
+
+
+   正则
+     1、正则创建 的两种方式
+      let reg1 = /^\d+$/g; //字面量方式
+      let reg2 = new RegExp("^\\d+$","g"); //构造函数方式
+
+      open(三参数 意思)
+      readystate=0-4  status=400
+      ajax  函数接收参数可以有哪些
+      ajax callback
+      通过ajax 请求的数据  渲染到页面中 （模板字符串、结构赋值、数组迭代）
+
+   ajax
+
+
+
+   cookie
+
+        　
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/vue.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .bounce-enter-active {
+        animation: bounce-in .5s;
+        }
+        .bounce-leave-active {
+        animation: bounce-in .5s reverse;
+        }
+        @keyframes bounce-in {
+        0% {
+            transform: scale(0);
+        }
+        50% {
+            transform: scale(1.5);
+        }
+        100% {
+            transform: scale(1);
+        }
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        Vue的内置组件 
+        v-enter(定义进入过渡的开始状态 在元素插入被调用)     
+        v-enter-active(定义进入过渡的状态 在元素插入被调用)  
+        v-enter-to(定义进入过渡的结束状态)
+        v-lezve     v-leave-active  v-leave-to  (离开)
+
+        fade = v 
+     -->
+    <div id="app">
+        <button @click="show=!show">按钮</button>
+        <transition name="bounce">
+            <div v-if="show" style="width: 100px;height: 100px;background:aqua"></div>
+        </transition>
+    </div>
+    <script>
+        new Vue({
+            data:{
+                show:true
+            },
+            methods: {
+                
+            },
+        }).$mount("#app")
+    </script>
+</body>
+</html>

@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0d945a63-2366-475a-9539-4a2cdbf2b9b4" name="默认的" comment="" />
+    <ignored path="18班 JavaScript.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="18班 JavaScript" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="demo28-循环-while,for.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/javascript基础/demo28-循环-while,for.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4">
+              <caret line="21" column="9" lean-forward="false" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo29-break,continue.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/javascript基础/demo29-break,continue.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="509">
+              <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo30-真与假.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/javascript基础/demo30-真与假.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="49">
+              <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo31-数组.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/javascript基础/demo31-数组.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo32-JSON.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html/javascript基础/demo32-JSON.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="554">
+              <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo33-JSON案例.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/javascript基础/demo33-JSON案例.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/javascript基础/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="28">
+              <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+              <folding>
+                <element signature="e#4#125#0" expanded="false" />
+                <element signature="e#129#260#0" expanded="false" />
+                <element signature="e#264#400#0" expanded="false" />
+                <element signature="e#404#540#0" expanded="false" />
+                <element signature="e#544#678#0" expanded="false" />
+                <element signature="e#682#814#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tsconfig.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/javascript基础/tsconfig.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="点名-课堂.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/点名-课堂.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package_json" />
+        <option value="tsconfig.json" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>隐藏</find>
+      <find>alpha</find>
+      <find>iTarget</find>
+      <find>json[attr]</find>
+      <find>bStop</find>
+      <find>timer</find>
+      <find>400px</find>
+      <find>demo100-cookie</find>
+      <find>aaa</find>
+      <find>&quot;1&quot;</find>
+      <find>&quot;2&quot;</find>
+      <find>function</find>
+      <find>this</find>
+      <find>disY</find>
+      <find>l</find>
+      <find>的P</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/demo2-json的对象.html" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/demo3-json的对象.html" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/demo9-继承.html" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/demo12-引用.html" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/案例-拖拽/拖拽-2.html" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/案例-拖拽/Drag3.js" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/案例-拖拽/拖拽-3.html" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/案例-拖拽/LimitDrag.js" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/案例-拖拽/Drag.js" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第17课/代码/记录1/demo2-对象组成2.html" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第17课/代码/记录1/demo3-this.html" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第17课/代码/记录1/demo5-第一个面向对象的程序.html" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第17课/讲课流程.txt" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/demo1-json的对象.html" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/demo4-命名空间.html" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/demo5-继承.html" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/demo6-call.html" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/demo7-cal.html" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/demo8-继承.html" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/demo11-引用.html" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/demo10-继承.html" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/demo13-继承.html" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/案例-拖拽/拖拽-1.html" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/案例-拖拽/tuozhuai.js" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/案例-拖拽/tuozhuai-div1.js" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/案例-拖拽/tuozhuai-div2.js" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/案例-拖拽/拖拽.html" />
+        <option value="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/代码/课程流.txt" />
+        <option value="$PROJECT_DIR$/html/点名—随机电商.html" />
+        <option value="$PROJECT_DIR$/html/点名随机电商.html" />
+        <option value="$PROJECT_DIR$/html/案例/表格.html" />
+        <option value="$PROJECT_DIR$/html/案例/index.html" />
+        <option value="$PROJECT_DIR$/html/案例/yang/6个div.html" />
+        <option value="$PROJECT_DIR$/html/DOM/demo64-补充—事件绑定.html" />
+        <option value="$PROJECT_DIR$/html/javascript基础/demo13-变量.html" />
+        <option value="$PROJECT_DIR$/html/点名.html" />
+        <option value="$PROJECT_DIR$/html/javascript基础/demo14-变量类型.html" />
+        <option value="$PROJECT_DIR$/html/点名-课堂.html" />
+        <option value="$PROJECT_DIR$/html/javascript基础/demo15-求和.html" />
+        <option value="$PROJECT_DIR$/html/javascript基础/demo17-隐式类型转换.html" />
+        <option value="$PROJECT_DIR$/html/javascript基础/demo20-作用域.html" />
+        <option value="$PROJECT_DIR$/html/javascript基础/demo20-作用域-闭包.html" />
+        <option value="$PROJECT_DIR$/html/javascript基础/demo21-命名.html" />
+        <option value="$PROJECT_DIR$/html/javascript基础/demo24-全选、反选和不选.html" />
+        <option value="$PROJECT_DIR$/html/javascript基础/demo25-判断-if.html" />
+        <option value="$PROJECT_DIR$/html/javascript基础/demo27-判断-三元运算符.html" />
+        <option value="$PROJECT_DIR$/html/javascript基础/demo30-真与假.html" />
+        <option value="$PROJECT_DIR$/html/javascript基础/demo31-数组.html" />
+        <option value="$PROJECT_DIR$/html/javascript基础/demo33-JSON案例.html" />
+        <option value="$PROJECT_DIR$/html/javascript基础/demo34-json案例.html" />
+        <option value="$PROJECT_DIR$/html/javascript基础/demo32-JSON.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType ProjectPane="false" />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="18班 JavaScript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="18班 JavaScript" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="18班 JavaScript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="18班 JavaScript" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="18班 JavaScript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="18班 JavaScript" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/html/案例/yang" />
+      <recent name="$PROJECT_DIR$/html/javascript高级—2" />
+      <recent name="$PROJECT_DIR$/html/javascript高级/demo99-正则" />
+      <recent name="C:\Users\德正\Desktop\18班 JavaScript\html\javascript基础" />
+      <recent name="C:\Users\德正\Desktop\18班 JavaScript\html\javascript简介" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/html" />
+      <recent name="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码/案例-拖拽" />
+      <recent name="$PROJECT_DIR$/html/javascript高级—2/最后一周/第18课/课堂代码" />
+      <recent name="$PROJECT_DIR$/html/案例/无缝轮播/js" />
+      <recent name="$PROJECT_DIR$/html/案例/无缝轮播/img" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.demo5-继承.html">
+    <configuration name="demo4-cookie过期时间.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/18班 JavaScript/html/javascript高级—2/最后一周/第15课/记录/demo4-cookie过期时间.html" />
+    <configuration name="demo5-继承.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/18班 JavaScript/html/javascript高级—2/最后一周/第18课/课堂代码/demo5-继承.html" />
+    <configuration name="demo61-创建、插入和删除元素.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/18班 JavaScript/html/DOM/demo61-创建、插入和删除元素.html" />
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter />
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.demo61-创建、插入和删除元素.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.demo4-cookie过期时间.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.demo5-继承.html" />
+    </list>
+    <recent_temporary>
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.demo5-继承.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.demo4-cookie过期时间.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.demo61-创建、插入和删除元素.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0d945a63-2366-475a-9539-4a2cdbf2b9b4" name="默认的" comment="" />
+      <created>1514883353637</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1514883353637</updated>
+      <workItem from="1515677671129" duration="105000" />
+      <workItem from="1515684294761" duration="957000" />
+      <workItem from="1515686612400" duration="3000" />
+      <workItem from="1515811770286" duration="848000" />
+      <workItem from="1515892844620" duration="176000" />
+      <workItem from="1515978650366" duration="5175000" />
+      <workItem from="1515984250956" duration="16328000" />
+      <workItem from="1516063800395" duration="20991000" />
+      <workItem from="1516149521275" duration="3862000" />
+      <workItem from="1516157685983" duration="14000" />
+      <workItem from="1516157720038" duration="14000" />
+      <workItem from="1516157746226" duration="14674000" />
+      <workItem from="1516235589898" duration="16966000" />
+      <workItem from="1516322712045" duration="1669000" />
+      <workItem from="1516325349094" duration="16028000" />
+      <workItem from="1516409951541" duration="3201000" />
+      <workItem from="1516433947876" duration="1420000" />
+      <workItem from="1516581519312" duration="12079000" />
+      <workItem from="1516668068534" duration="94000" />
+      <workItem from="1516671216117" duration="2526000" />
+      <workItem from="1516677284864" duration="10413000" />
+      <workItem from="1516755296233" duration="19739000" />
+      <workItem from="1516798008438" duration="16000" />
+      <workItem from="1516840875750" duration="9868000" />
+      <workItem from="1516854743528" duration="2497000" />
+      <workItem from="1516862255159" duration="897000" />
+      <workItem from="1516863163203" duration="7025000" />
+      <workItem from="1516927199323" duration="624000" />
+      <workItem from="1516929442808" duration="8202000" />
+      <workItem from="1516946935082" duration="2542000" />
+      <workItem from="1516951151026" duration="3602000" />
+      <workItem from="1517014091876" duration="2878000" />
+      <workItem from="1517186437359" duration="3467000" />
+      <workItem from="1517191400634" duration="3270000" />
+      <workItem from="1517196335295" duration="1000000" />
+      <workItem from="1517197674265" duration="7808000" />
+      <workItem from="1517272337385" duration="4440000" />
+      <workItem from="1517359197684" duration="7000" />
+      <workItem from="1519611546205" duration="15915000" />
+      <workItem from="1520211150860" duration="12056000" />
+      <workItem from="1520232549407" duration="21348000" />
+      <workItem from="1520323509914" duration="20829000" />
+      <workItem from="1520472373497" duration="8031000" />
+      <workItem from="1520497336764" duration="38042000" />
+      <workItem from="1520910421502" duration="568000" />
+      <workItem from="1520911683222" duration="39711000" />
+      <workItem from="1521171497667" duration="16362000" />
+      <workItem from="1521428693582" duration="54000" />
+      <workItem from="1521428778604" duration="3872000" />
+      <workItem from="1521440551867" duration="50754000" />
+      <workItem from="1521698955949" duration="18845000" />
+      <workItem from="1521905682289" duration="553000" />
+      <workItem from="1521991142917" duration="346000" />
+      <workItem from="1522303965959" duration="342000" />
+      <workItem from="1522803008431" duration="4915000" />
+      <workItem from="1524462972201" duration="419000" />
+      <workItem from="1527641024950" duration="1349000" />
+      <workItem from="1530500352031" duration="14332000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="474068000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12986112" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909092" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282353" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/html/javascript高级-1/demo101-BOM/demo1-open.html</url>
+          <line>11</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/html/javascript高级-1/demo99-正则/demo5_找出所有的数字.html</url>
+          <line>37</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="12" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/html/javascript高级-1/demo85-绑定.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript高级-1/demo86-绑定.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript高级-1/demo87-拖拽0.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript高级-1/demo88-拖拽1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript高级-1/demo89-拖拽2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-475">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript高级-1/demo84-绑定.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript高级-1/demo69 - event对象.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-535">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript高级-1/demo70 - 事件冒泡.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript高级-1/demo71 - 解决事件冒泡.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1345">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript高级-1/demo72- 鼠标跟随.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-220">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript高级-1/demo73- 鼠标坐标.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript高级-1/demo74- 鼠标坐标问题.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript高级-1/demo75- 鼠标坐标封装.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript高级-1/demo76-一串跟着鼠标的Div.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript高级-1/demo78-提交留言.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript高级-1/demo79-阻止默认事件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript高级-1/demo80-鼠标右键.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript高级-1/demo81-只能输入数字的输入框.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/DOM/demo63-留言板.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/点名随机电商.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="934">
+          <caret line="74" column="16" lean-forward="false" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/案例/yang/6个div.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="81" column="23" lean-forward="false" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/案例/yang/弹出索引值.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/案例/表格.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript简介/demo4-if.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/DOM/demo64-补充—事件绑定.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding>
+            <marker date="1530500466111" expanded="true" signature="606:612" ph=" " />
+            <marker date="1530500466111" expanded="true" signature="612:618" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo13-变量.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/点名-口语.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo14-变量类型.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-107">
+          <caret line="28" column="56" lean-forward="false" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo15-求和.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo16-parseInt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="43" column="20" lean-forward="false" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo18-计算器.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="88" column="18" lean-forward="true" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo17-隐式类型转换.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="718">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo20-作用域.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo20-作用域-闭包.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo21-命名.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="712">
+          <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo22-运算符.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo23-隔行变色.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo24-全选、反选和不选.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="50" column="12" lean-forward="false" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
+          <folding>
+            <element signature="e#2466#3370#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo25-判断-if.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="820">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="e#516#532#0" expanded="false" />
+            <element signature="e#671#687#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo26-判断-switch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo27-判断-三元运算符.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="2" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo28-循环-while,for.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="21" column="9" lean-forward="false" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo29-break,continue.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo30-真与假.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo31-数组.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/点名-课堂.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+          <folding>
+            <element signature="e#4#125#0" expanded="false" />
+            <element signature="e#129#260#0" expanded="false" />
+            <element signature="e#264#400#0" expanded="false" />
+            <element signature="e#404#540#0" expanded="false" />
+            <element signature="e#544#678#0" expanded="false" />
+            <element signature="e#682#814#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo34-json案例.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="87" column="10" lean-forward="true" selection-start-line="87" selection-start-column="10" selection-end-line="87" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo33-JSON案例.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/javascript基础/demo32-JSON.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

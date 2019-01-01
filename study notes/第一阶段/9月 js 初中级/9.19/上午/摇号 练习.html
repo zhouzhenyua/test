@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">摇号</button>
+<div id="iput" style="width: 200px;height: 50px;border: 1px solid"></div>
+<script>
+    var oBtn = document.getElementById('btn');
+    var oIput = document.getElementById('iput');
+    console.log(oIput);
+    function yh(){
+
+    var result = "京",
+            area1 = "ABCEFGHJK",//=>0~8
+            area2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+
+    var str1 = Math.round(Math.random()*8),
+        cha1 =area1.charAt(str1);
+    result += cha1;
+    for (var i = 0; i < 5; i++) {
+        var str2 =Math.floor(Math.random()*35),
+                cha2 =area2.charAt(str2);
+        result += cha2;
+        }
+        return result;
+    }
+    console.log(yh());
+
+    var cont = 0;
+    oBtn.onclick = function(){
+        cont++;
+        if(cont > 3){
+            alert('只能摇三次！');
+            return
+        }
+        oIput.innerHTML = yh();
+    }
+
+</script>
+</body>
+</html>

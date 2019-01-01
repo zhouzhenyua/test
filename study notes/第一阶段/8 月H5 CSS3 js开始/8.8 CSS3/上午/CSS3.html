@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        figure{
+            width: 400px;
+            height: 340px;
+            margin: 50px auto;
+            position: relative;
+        }
+        img{
+            width: 400px;
+            height: 340px;
+        }
+        .layer{
+            width: 400px;
+            height: 340px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        figure:hover .bg{
+            opacity: 1;
+        }
+        .figure:hover .layer{
+            background: rgba(0,0,0,.5);
+        }
+        .bg {
+            width: 50px;
+            height:50px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            position: absolute;
+            background: url("../img/sprite.png")  0 -488px;
+            opacity:0;
+        }
+
+        .div1 ,.div2{
+            width: 100%;
+            box-sizing: border-box;
+            height: 100px;
+            bottom: 0;
+            color: #fff;
+            position: absolute;
+            opacity: 1;
+            background: rgba(0,0,0,0.5);
+        }
+        p{
+            padding: 5px 10px ;
+        }
+        .div2{
+            height: 100%;
+            top: -100%;
+            opacity: 0;
+
+        }
+        figure:hover .div1{
+            transition: all .3s;
+            opacity: 0;
+            bottom: -50%;
+        }
+        figure:hover .div2{
+            transition: all .3s;
+            top: 0;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <figure>
+        <img src="../img/1.jpg" alt="">
+        <div class="layer"></div>
+        <i class="bg"></i>
+        <div class="div1">
+            <p>216565</p>
+            <p>216565</p>
+            <p>216565</p>
+        </div>
+        <div class="div2">
+            <p>216565</p>
+            <p>216565</p>
+            <p>216565</p>
+        </div>
+    </figure>
+
+</body>
+</html>

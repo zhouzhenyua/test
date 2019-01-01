@@ -1,0 +1,104 @@
+
+
+
+html,body{
+    font-size: 100%;
+    background: #fff;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+
+.banner{
+    background: url("../img/banner.jpg");
+    min-height: 800px;
+}
+.logo a{
+    padding: 2em 1em 1em;
+    background: #c6c5c0;
+    color: #fff;
+    font-size: 2em;
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    display: inline-block;
+}
+.logo i{
+    font-size: 1em;
+    color: #fff;
+    left: -10px;
+    top: 5px;
+}
+.logo span{
+    display: block;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.nav1{
+    float: left;
+    margin-left: 12em;
+}
+.nav1 ul li{
+    display: inline-block;
+    margin: 0 0 0 10px;
+    float: left;
+}
+.nav1 ul li a{
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    font-family:'Josefin Sans', sans-serif;
+    padding: 45px 30px;
+    display: block;
+}
+.nav1 ul li span{
+    font-size: 1em;
+    color: #fff;
+    display: block;
+    text-align: center;
+    margin: 0.5em 0 0;
+}
+.nav1 ul li.active{
+    background: #6ea145;
+    color: #fff;
+}
+.li-hover{
+
+}
+.i{
+    display: block;
+    height: 32px;
+    width: 32px;
+    background: url("../img/img-sp.png") no-repeat;
+}
+.nav2 ul{
+    padding: 4em 0 0 0;
+}
+.nav2 ul li{
+   display: inline-block;
+}
+.facebook{
+    background-position:-5px -13px ;
+}
+.facebook:hover{
+    background-position:-5px -59px ;
+}
+.gogol{
+    background-position:-48px -13px ;
+}
+.gogol:hover{
+    background-position:-48px -58px ;
+}
+.twitter{
+    background-position:-86px -13px ;
+}
+.twitter:hover{
+    background-position:-86px -58px ;
+}
+
+
+
+
+
+
+
+

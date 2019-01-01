@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+//    var arr = [];
+//    for (var i = 0; i <= 100; i++) {
+//       arr.push(i)
+//    }
+//    console.log(arr);
+//    var arr = [];
+//    for (var i = 0; i <= 100; i++) {
+//        if(i%2 == 1){
+//            arr.push(i)
+//        }
+//    }
+//    console.log(arr);
+    
+    
+//    var arr = [];
+//for (var i = 0; i < 100; i++) {
+//
+//
+//    if(arr[i]%2 == 1){
+//        arr[i] = i+1;
+//    }
+//}
+//console.log(arr);
+
+
+
+
+//    var sum=[];
+//    for (var i = 1; i <= 100; i++) {
+//        sum[sum.length]=i;
+//    }
+//    console.log(sum);
+//
+//    var Arr=[];
+//    for (var i = 1; i < 100; i+=2) {
+//        Arr[Arr.length]=i;
+//    }
+//    console.log(Arr);
+
+
+//    1-100放到数组
+//    var arr = [];
+//for (var i = 0; i < 100; i++) {
+//    arr[i] = i + 1;
+//}
+//console.log(arr);
+
+//for (var i = 0; i < 100; i++) {
+//    arr[arr.length] = i;
+//}
+//console.log(arr);
+
+//    1-100  被3整除的数放到数组
+//var arr = [];
+//for (var i = 0; i < 100; i++) {
+//
+//    if(i%3 == 0){
+//        arr[i] = i + 1;
+//    }
+//}
+//console.log(arr);
+
+
+
+
+// 求一组数中的所有数的和 和 平均值
+//    var arr = [13,27,31];
+//var arr1 = 0;
+//for (var i = 0; i < arr.length; i++) {
+//    arr1+=arr[i];
+////    arr1/= arr.length-1;
+//}
+//console.log(arr1);
+//console.log(arr1/arr.length);
+
+//求一组数中的最大值
+//    var arr = [1,2,3,4,5];
+//
+//    var max = arr[0];//假设法
+//    var min = arr[0];//假设法
+//    var minindex = 0, maxindex = 0;
+//for (var i = 0; i < arr.length; i++) {
+//    if(max < arr[i]){
+//        max = arr[i];
+//        maxindex = i;
+//    }
+//    if(min > arr[i]){
+//        min = arr[i];
+//        minindex = i;
+//    }
+//}
+//console.log(min,max);
+//console.log(minindex,maxindex);
+
+//求一组数中的最大值和最小值，以及所在位置
+//    var arr = [1,2,3,4,5];
+//
+//var a =arr[0],b = arr [0],aIndex = 0,bIndex = 0;
+//
+//for (var i = 0; i < arr.length; i++) {
+//    if(a > arr[i]){
+//        a = arr[i];
+//        aIndex = i;
+//    }
+//    if(b < arr[i]){
+//        b = arr[i];
+//        bIndex = i ;
+//    }
+//}
+//console.log(a,b);
+//console.log(aIndex,bIndex);
+
+
+//将字符串数组用|或其他符号分割 :  刘备|关羽|张飞
+//    var arr4 = ["刘备","关羽","张飞"];
+//    var sep = '|',str = '';
+//for (var i = 0; i < arr4.length-1; i++) {
+//    str+=arr4[i]+sep;
+//}
+//console.log(str+arr4[arr4.length-1]);  //for 循环实现
+
+//    var arr4a =arr4.join('|');
+
+
+//将数组重复的去掉不重复的存入新数组
+//var arr = ["刘备",undefined,"关羽",null,0,0,"张飞",null,undefined,0];
+//
+//var c = [];
+//for (var i = 0; i < arr.length; i++) {
+//    for (var j = 0; j < c.length; j++) {
+//        if(arr[i] === c[j]){
+//            break;
+//        }
+//    }
+//    console.log(c);
+//    if(j === c.length){
+//        c.push(arr[i])
+//    }
+//}
+//console.log(c);
+
+
+var arr=[1,2,3,4,1,2,3,4,1,5,3];
+var a =[];
+//for (var i = 0; i < arr.length; i++) {
+//    var isTrue = false; //假设新数组中不存在这一项
+//
+//    for (var j = 0; j < a.length; j++) {
+//        if(arr[i] === a[j] ){
+//            isTrue = true;
+////            console.log(a);
+////            console.log(arr);
+//            break;
+//        }
+//    }
+//    if(!isTrue){
+//        a[a.length] = arr[i];
+//    }
+//}
+//console.log(a);
+
+
+for (var i = 0; i < arr.length; i++) {
+        if(a.indexOf(arr[i]) == -1){  //indexOf == -1  表示不存在    indexOf 判断是否在数组中存在
+            a.push(arr[i]);
+        }
+}
+console.log(a);
+
+
+//翻转数组
+//var arr6 = [1,2,3,4,5,6];
+//arr6.reverse();
+//console.log(arr6);
+
+</script>
+</body>
+</html>

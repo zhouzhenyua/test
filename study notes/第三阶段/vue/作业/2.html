@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/vue.min.js"></script>
+    <style scoped>
+            #tab {
+              width: 400px;
+              border: 1px solid #ccc;
+              margin: 60px auto 0;
+            }
+            .t-bar {
+              width: 400px;
+              background-color: #ccc;
+            }
+            .t-bar a {
+              float: left;
+              width: 100px;
+              height: 40px;
+              line-height: 40px;
+              text-align: center;
+              text-decoration: none;
+              color: #000;
+            }
+            .t-bar .active {
+              background-color: #0099ff;
+            }
+            .t-con div {
+              text-align: left;
+              height: 100px;
+            }
+          
+          </style>
+        
+</head>
+<body>
+    <div id="#tab">
+        <div class="t-bar">
+            <a href="javscript:;"
+             @click="tab(index" v-for="(item,index) in items"
+             :class="{active:index === curId}">{{items.item}}</a>
+        </div>
+        <div class="t-con">
+            <div v-show="index ==curId" v-for="(content,index) in contents">{{contents.content}}</div>
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el:"#tab",
+            data:{
+                curId:0,
+                    items:[
+                        {item:"11"},
+                        {item:"22"},
+                        {item:"33"},
+                        {item:"44"},
+                    ],
+                    contents:[
+                        {content:"11"},
+                        {content:"22"},
+                        {content:"33"},
+                        {content:"44"},
+                    ]
+        
+            },
+            methods:{
+                tab(index){
+                    this.curId = index;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

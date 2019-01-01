@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+<body>
+    <!-- 自定义指令 -->
+    <div id="app">
+        <div v-red style="width: 200px;height: 200px;border: 2px solid #000"></div>
+    </div>
+    <script>
+
+        Vue.directive("red",function(el){
+            // console.log(arguments)
+            el.style.background="#f00"
+        })
+        // 回调函数和钩子函数的区别？
+        Vue.directive("pic",{
+            // 只调用一次 ，只在指令绑定元素上第一次执行 
+            bind(){
+
+            },
+            // 被绑元素插入父节点时被调用 
+            inserted(){
+
+            },
+            // 模板更新时被调用 
+            update() {
+                
+            },
+            // 解绑 ，只调用一次 
+            unbind(){
+
+            },
+            // 在模板更新后再次调用后使用 
+            componentUpdated(){
+
+            }
+        })
+        // rawName  显示指令 
+        new Vue({
+            el:"#app",  // 挂载元素 
+        
+            methods:{ // 方法池 
+                
+        
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    全选
+
+    <input id="btn1" type="checkbox"> <br>
+    <input type="checkbox"> <br>
+    <input type="checkbox"> <br>
+    <input type="checkbox"> <br>
+    <input type="checkbox"> <br>
+    <input type="checkbox"> <br>
+    <script>
+        var oBtn=document.getElementsByTagName('input');
+
+        oBtn[0].onclick =function(){
+            for (var i = 0; i < oBtn.length; i++) {
+                console.log(i);
+//                oBtn[i].index=i;
+                oBtn[i].checked = oBtn[0].checked;  //checked 选中
+            }
+        }
+
+
+    </script>
+</body>
+</html>

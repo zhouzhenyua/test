@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>键盘事件</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background:#0b2c89 ;
+            margin: 20px  auto;
+        }
+        #div1{
+            width: 100px;
+            height: 100px;
+            background: pink;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="div">
+    <div id="div1"></div>
+</div>
+<script>
+
+//    document.onkeydown = function(){
+//        //键盘按下
+//        console.log('onkeydown');
+//    };
+//    document.onkeyup = function(){
+//        //键盘按键 弹起
+//        console.log('onkeyup');
+//    };
+//    document.onkeypress = function(){
+//        //键盘按键 按下 以及弹起
+//        console.log('onkeypress');
+//    };
+//
+//    document.onkeydown = function(ev){
+//        var oEvent = ev || event;
+//        console.log(oEvent);
+//        console.log(oEvent.keyCode);
+//    }
+    var oDiv = document.getElementById('div');
+    var oDiv1 = document.getElementById('div1');
+    document.onkeydown = function(ev){
+        var oEvent = ev || event;
+
+        if(oEvent.keyCode == 37){
+//            alert(oEvent.keyCode);
+            oDiv1.style.left = oDiv1.offsetLeft-10 +'px';
+            if(oDiv1.offsetLeft < 0){
+                oDiv1.style.left = 0
+            }
+        }else if(oEvent.keyCode == 40){
+//            alert(oEvent.keyCode);
+            oDiv1.style.top = oDiv1.offsetTop+10 +'px';
+            if(oDiv1.offsetTop > oDiv.offsetHeight - oDiv1.offsetHeight){
+                oDiv1.style.top = oDiv.offsetHeight-oDiv1.offsetHeight + 'px'
+            }
+        }else if(oEvent.keyCode == 39){
+//            alert(oEvent.keyCode);
+            oDiv1.style.left =oDiv1.offsetLeft+10 +'px';
+            if(oDiv1.offsetLeft > oDiv.offsetWidth - oDiv1.offsetWidth){
+                oDiv1.style.left = oDiv.offsetWidth-oDiv1.offsetWidth + 'px'
+            }
+        }else if(oEvent.keyCode == 38){
+//            alert(oEvent.keyCode);
+            oDiv1.style.top = oDiv1.offsetTop-10 +'px';
+            if(oDiv1.offsetTop < 0){
+                oDiv1.style.top=0
+            }
+        }
+    }
+
+
+
+
+</script>
+</body>
+</html>

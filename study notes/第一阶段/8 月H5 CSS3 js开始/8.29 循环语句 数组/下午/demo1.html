@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+//    var a=2;
+//    var num1 = 1;
+//    var num2 = 1;
+//    var num;
+
+//    for(i=1; i< a.length;i++){
+//        if( i == num1 + num2){
+//            num1 = num2;
+//            num2 = i;
+//            a++;
+//        }
+//    }
+//    console.log(num2);
+//    console.log(a);
+
+//for (var i = 0; i < 100; i++) {
+//
+//
+//}
+
+    var prev = 1,next = 1,sum =1;
+    while (next<100){
+        next = prev + next;
+        prev = next - prev;
+        sum++;
+    }
+console.log(sum);
+console.log(prev);
+
+
+</script>
+</body>
+</html>

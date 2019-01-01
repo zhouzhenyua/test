@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img,input{
+            display: block;
+            margin: 30px auto;
+        }
+        #text{
+            width: 550px;
+            height: 30px;
+            margin-bottom: 0;
+        }
+
+        #show{
+            width: 552px;
+            margin: auto;
+            border: 1px solid #000;
+        }
+        #show ul{
+            list-style: none;
+        }
+
+
+    </style>
+</head>
+<body>
+<img src="bd_logo1.png" width="270px" height="129px" alt="">
+<input type="text" id="text">
+<div id="show">
+    <ul>
+        <!--<li>3333</li>-->
+    </ul>
+
+    <script>
+
+        var oText = document.getElementById('text');
+        var oShow = document.getElementById('show');
+        var oUl = document.querySelector("#show ul");
+        var oLi = document.querySelector("#show li");
+//        console.log(oLi);
+        oText.onkeyup = function () {
+            var val = oText.value;
+            console.log(val);
+            var oScript = document.createElement("script");
+            oScript.src =
+//                    "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/s?wd=1&cb=ww";
+                    `http://suggestion.baidu.com/su?wd=${val}&cd=ww`;
+            console.log(val);
+            document.body.appendChild(oScript);
+        };
+
+
+        function ww(json){
+            console.log(json);
+        }
+//        function aaa(arg) {
+//            var data = arg.s;//保存从后台获取的数据
+//            oUl.innerHTML = "";
+//            if(data.length){
+//                oShow.style.display = 'block';
+//                data.forEach(function (el,index,self) {
+//                    var oLi = document.createElement("li");
+//                    oLi.innerText = el;
+//                    oLi.onclick = function(){
+//                        window.location.href= "https://www.baidu.com/s?wd"+el;
+//                    };
+//                    oUl.appendChild(oLi);
+//                })
+//            }else{
+//                oShow.style.display = 'none';
+//            }
+//        }
+    </script>
+    <!--<script src="https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/s?wd=11&cb=ww"></script>-->
+</div>
+</body>
+</html>

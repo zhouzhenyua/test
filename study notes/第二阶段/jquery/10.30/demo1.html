@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上午基础</title>
+    <script src="../jquery.min.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        html,body{
+            height: 2000px;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ff3f38;
+            margin: 10px;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box1 box2 box3">233</div>
+<!--<div>1212</div>-->
+<!--<span>233</span>-->
+
+<script>
+
+//    $('div').addClass('box3'); //添加
+//    $('div').removeClass('box3');//移除
+
+    /**
+     * width  innerWidth outerWidth
+     */
+
+//    $('div').width();//元素本身的宽度 width
+//    $('div').innerWidth();//本身的宽度+内边距  width+padding
+//    $('div').outerWidth();// 本身的宽度+内边距+边框  width+padding+border
+//    $('div').outerWidth(true);// 本身的宽度+内边距+边框+外边距   width+padding+border+margin
+//
+//    console.log($('div').width());
+//    console.log($('div').innerWidth());
+//    console.log($('div').outerWidth());
+//    console.log($('div').outerWidth(true));
+
+//  操作对象 元素(标签) 父子节点
+//    $('span').insertBefore('div'); // 把span插入到div的前面
+//    $('div').insertAfter('span'); // 把div插入到span后面
+
+
+//  如果是元素时，把所选元素，添加到后面对象当中。
+
+//    $('span').appendTo('div'); // 把span插入到div里面
+//  如果是标签则把标签和标签内容插入 元素内部的后面
+//    $('<span>2334</span>').appendTo('div'); // 把span内容插入到div里面
+
+
+//    被插入元素，会成为插入元素的子节点
+//  向目标开头插入匹配元素集合中的每个元素
+//    $().prependTo();
+
+//    向匹配元素集合中的每个元素开头插入由参数指定的内容
+//    $().prepend();
+
+//  删除dom节点
+//    $('div').remove('span');
+
+//
+//    $('div').click(function(){});
+
+/*
+* 事件绑定 可以添加多个事件  on live bind
+* jq版本 不同
+* on 2.0
+* live 1.7
+* bind 1.9
+*
+*
+* */
+
+
+//  事件委托    delegate() 动态数据
+//    $('div').on({
+//        'click':function(){
+//            alert(1);
+//            $('div').off(); //只让事件执行一次
+//        },
+//        'mouseover':function(){}
+//    });
+
+
+///  只让事件执行一次
+//    $().off();
+//
+//    $('div').on(
+//        'click mouseover',function(){
+//            alert(1);
+//            $('div').off('mouseover'); //只让事件执行一次
+//        }
+//    );
+
+//	设置或返回匹配元素相对滚动条顶部的偏移。
+//    $(window).on('scroll',function(){
+//        console.log($(window).scrollTop());
+//
+//    });
+
+
+
+
+
+</script>
+</body>
+</html>

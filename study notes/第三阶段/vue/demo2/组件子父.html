@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>子父组件</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+<body>
+<!-- 
+     
+        三类： 
+        基础组件 
+            模态框
+        业务组件  
+            包含复杂逻辑，涉及到大型业务处理
+        router-view.vue   
+            承载html  数据获取 页面交互等功能 
+        组件:
+            全局组件    
+            父子  pro 
+            子父 
+             兄弟(同级)
+            局部组件
+        组件api
+        prop     slot    event
+ -->
+
+    <div id="app">
+            <custom></custom>
+    </div>
+    <script >
+            // 子传父   $emit
+
+        Vue.component("custom",{
+            template:`
+                <div>我是父组件
+                    <div>{{getChild}}</div>                       
+                    <custom-list @receve ="get"></custom-list>
+                </div>
+            `,
+            data(){
+                return{
+                    getChild:""
+                }  
+            },
+            methods:{
+                get(val){
+                    this.getChild=val;
+                    console.log(arguments);
+                }
+            }
+        });
+        // vue1 $dispatch 
+        Vue.component("custom-list",{
+            template:`
+                <div>我是子组件
+                <button @click="send">发送</button>
+                </div>
+                
+            `,
+            data(){
+                return{
+                    child:"子信息"
+                }
+            },
+            methods:{
+                send(){
+                    // $emit  第一个参数为自定义事件
+                    // 第二个参数为发送的数据
+                    this.$emit("receve",this.child)
+                }
+            }
+        });
+        new Vue({
+            el:"#app",
+            deta(){
+
+            },
+            methods: {
+                
+            }
+        
+        })
+    </script>
+</body>
+</html>

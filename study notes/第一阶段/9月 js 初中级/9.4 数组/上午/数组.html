@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组的操作</title>
+</head>
+<body>
+<script>
+//    数组的操作： 增删查改
+    var arr = [1,2,345,2,42,4];
+
+//    arr.splice(0,1,0);
+
+//    delete arr[2]; //占位 只改变内容 索引不变
+//    console.log(arr);
+
+//    实现空数组
+//    var arr1 = [];
+//    var arr2 = new Array();
+//    arr.length = 0;
+
+
+//    克隆数组
+
+    var newArr = [];
+    for (var i = 0; i < arr.length; i++) {
+        newArr[i] =arr[i];
+    }
+
+    //通过数组的方法
+    var newArr0 = arr.slice();
+console.log(newArr0);
+
+
+</script>
+</body>
+</html>

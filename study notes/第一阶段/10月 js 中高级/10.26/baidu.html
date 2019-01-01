@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="../../jquery-1.10.1.js"></script>
+<body>
+ 
+
+请输入：<input  id="content" type="text" />
+
+
+<script type="text/javascript">
+    window.onload = function() {
+
+        //组装查询地址
+        var sugurl = "http://suggestion.baidu.com/su?wd=#content#&cb=window.baidu.sug";
+        var content = "新闻";
+        sugurl = sugurl.replace("#content#", content);
+
+        //定义回调函数
+        window.baidu = {
+            sug: function(json) {
+                console.log(json)
+            }
+        };
+
+        //动态添加JS脚本
+        var script = document.createElement("script");
+        script.src = sugurl;
+        document.getElementsByTagName("head")[0].appendChild(script);
+
+    }
+</script>
+
+
+</body>
+</html>

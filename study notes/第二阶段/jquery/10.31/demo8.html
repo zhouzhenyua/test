@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery.min.js"></script>
+    <script>
+        /*
+        *  wrap() 包裹 把文档里面所有的元素包装在对应元素内
+         * wrapAll()        将所有匹配的元素用单个元素包裹起来
+         * wrapInner()      将每一个匹配的元素的子内容(包括文本节点)用一个HTML结构包裹起来
+         * unWrap()     移除元素的父元素
+        *-90
+        * */
+        $(function () {
+            $('span').wrapInner('div')
+        })
+    </script>
+</head>
+<body>
+<div>
+    <p>ppp</p>
+    <div>
+        <p>p</p>
+        <span>span</span>
+        <span>span</span>
+    </div>
+
+</div>
+
+<button>clone</button>
+
+<!--<div>-->
+    <!--<p>233</p>-->
+    <!--<span>21</span>-->
+    <!--<span>444</span>-->
+<!--</div>-->
+
+<script>
+    /* clone  克隆
+    1、可以克隆一个元素
+    2、可以克隆操作行为
+    *
+    *
+    * wrap() 包装
+    * wrapAll()
+    * wrapInner()
+    * unWrap()
+    * */
+
+//    $('button').click(function(){
+//        $(this).clone(true).insertAfter(this)
+//    })
+
+
+
+
+
+</script>
+</body>
+</html>

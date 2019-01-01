@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //es6
+//    let
+    //暂时性死区 TDZ
+    //解构赋值
+// 两个数交换
+
+//    var a=1;
+//    var b =2;
+//    [a,b]=[b,a];
+
+
+    //... 拓展运算符  展开/剩余功能
+    //可以用来转换类数组为数组
+//    var arr =[a,b,c,d]
+//    [a,b,...c] =arr;
+//    console.log(a, b, c);
+//
+//
+//    //对象的解构赋值
+//
+//    var obj = {
+//        name:'laile',
+//        tel:444,
+//        age:45,
+//        ett:function(){
+//            console.log(chi);
+//        }
+//    };
+//
+//    console.log(obj.eat());
+
+
+//    var obj ={
+//        name:'张三',
+//        age:18,
+//        tep:[1,2,{
+//            e:1,
+//            w:12
+//        }],
+//        eat:{
+//           hanbao:['辣辣','','']
+//        }
+//    };
+//
+//    var {name,age,tep:[a,b,{e,w}],eat:{hanbao:[c,d,t]}} =obj;
+//    console.log(d);
+
+    //箭头函数  中没有自身的 this 主体
+    //箭头函数的 this继承自宿主环境
+
+    /*
+     变量作用域 ：和函数在哪执行无关，只和函数在哪定义有关
+     函数里的 this：只和函数在哪执行有关
+
+
+     es6 箭头函数 - 宿主环境
+
+
+
+
+     * */
+
+
+    //this 函数的上下文主体
+    //只能在函数中出现的
+/*
+*   1、return
+    2、arguments
+*   3、this  函数的上下文主体
+*   谁执行这个函数，this就指向谁/this就是谁
+*   (函数执行的时候 this = 函数. 前面的代码)
+*   自执行函数的this = window
+*   如果函数执行的时候，谁都没有执行，默认为windeow执行 this = window;
+*
+*
+* */
+
+
+
+
+
+
+//    function fn1(){
+//        console.log(1);
+//        console.log(this);
+//    }
+//    fn1();
+//    var obj ={
+//        fn2: function(){
+//        console.log(2);
+//        console.log(this);
+//        }
+//    };
+//
+//    obj.fn2();
+
+    var num =10;
+    var obj = {num:20};
+//    obj.fn = (function (num) {
+//        this.num = num * 3;
+//        num++;
+//        return function (n){
+//            this.num += n;
+//            num++;
+//            console.log(num);
+//        }
+//    })(obj.num);
+    
+    obj.fn = (num) =>{this.num =num *\ 3(n)=>{
+        this.num+=n;num++;
+        console.log(num);
+    }}(obj.num);
+    var fn = obj.fn;
+    fn(5);
+    obj.fn(10);
+    console.log(num, obj.num);
+
+
+
+
+//    var fullName ='language';
+//    var obj ={
+//        fullName :'javascript',
+//            prop:{
+//                getFulllName:() =>{
+//                    return this.fullName;
+//                }
+//    }
+//    };
+////   var {obj:{prop:{getFulllName}} = obj;
+//
+//    console.log(obj.prop.getFulllName());
+//    var test=obj.prop.getFulllName;
+//    console.log(test());
+
+
+</script>
+</body>
+</html>

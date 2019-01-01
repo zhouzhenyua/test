@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #daeom{
+            width: 200px;
+            height: 50px;
+            overflow: scroll;
+            padding: 10em;
+            border: 10em solid #0febc1;
+        }
+
+    </style>
+</head>
+<body>
+<div id="daeom">65111111111111201111111111111111111111111</div>
+<script>
+//    var dem = document.getElementById('daeom');
+//    dem.onscroll =function(){
+//        console.log(dem.scrollLeft);
+//
+//    };
+//    console.log(dem.scrollHeight);
+//    console.log(dem.scrollWidth);
+//    console.log(dem.scrollLeft);
+//    console.log(dem.scrollTop);
+    window.onscroll = function(){
+        var scrollTop = window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0;
+        console.log(scrollTop);
+        document.title = scrollTop;
+        console.log(scrollTop);
+    };
+
+    function scroll(){
+        return{
+            top:window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0,
+            left:window.pageXOffset||document.documentElement.scrollLeft||document.body.scrollLeft||0
+        };
+    }
+
+
+</script>
+</body>
+</html>

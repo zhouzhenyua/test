@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function aa(){
+        var arr = [100,2,3];
+        var arr1 = arr;
+        arr[0] = 1;
+        arr1 = [];
+        console.log(arr, arr1);
+    }
+//    aa();
+    console.log(aa);
+    alert(function aa(){
+        var arr = [1,2,3];
+        var arr1 = arr;
+        arr[0] = 1;
+        arr1 = [];
+        console.log(arr, arr1);
+    });
+    alert(aa());
+
+
+</script>
+</body>
+</html>

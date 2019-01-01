@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="js/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+<header id="header">
+    <!--导航部分-->
+    <div class="nav">
+        <div class="logo">
+            <a href="home%20page.html">
+                <img src="img/cslogo.png" alt="">
+            </a>
+        </div>
+        <div class="nav_list">
+            <a href="">
+                <span></span>
+                <h4>首页</h4>
+                <p>HOME</p>
+            </a>
+            <a href="">
+                <span></span>
+                <h4>新闻资讯</h4>
+                <p>NEWS</p>
+            </a>
+            <a href="">
+                <span></span>
+                <h4>精彩视频</h4>
+                <p>VIDEOS</p>
+            </a>
+            <a href="">
+                <span></span>
+                <h4>玩家攻略</h4>
+                <p>TIPS</p>
+            </a>
+            <a href="">
+                <span></span>
+                <h4>游戏资料</h4>
+                <p>GUIDES</p>
+            </a>
+            <a href="">
+            <span></span>
+            <h4>个人中心</h4>
+            <p>MEMBERS</p>
+            </a>
+            <div class="topbar2 in">
+
+            </div>
+        </div>
+    </div>
+    <!--隐藏的盒子 按钮-->
+    <div class="nav-btn on">
+        <em>快速指引</em>
+        <span></span>
+    </div>
+    <!--隐藏的盒子-->
+    <div class="nav_process_box">
+        <div class="nav_process">
+            <ul class="process">
+                <li class="step_01">
+                    <div class="step_btn">
+                        <a href="download.html">下载国服客户端</a>
+                    </div>
+
+                </li>
+                <li class="step_02">
+                    <p>客户端内注册
+                        <a href="" class="zh">CS:GO账号</a>
+                    </p>
+                    <span></span>
+                </li>
+                <li class="step_03">
+                    <p>注册并绑定
+                        <a href="" class="wm">完美通行证</a>
+                    </p>
+                    <span></span>
+                </li>
+                <li class="step_04">
+                    <p>方式1：完成荣耀认证免费获取CS:GO</p>
+                    <p>方式2：88元付费购买CS:GO</p>
+                    <p>方式3：国际服玩家直接回归</p>
+                </li>
+                <li class="step_05">
+                    <p>立即享受畅爽国服</p>
+                </li>
+            </ul>
+            <div class="process_1">
+                <span>官网内进行</span>
+            </div>
+            <div class="process_2">
+                <span>国服客户端进行</span>
+            </div>
+            <div class="process_3">
+                <span>可用国服客户端登录或在</span>
+                <a href="javascript:;">Steam加参数</a>
+                <span class="notes"></span>
+            </div>
+        </div>
+    </div>
+</header>
+</body>
+<script>
+    $(function(){
+        var num =0;
+        $('.nav-btn').on({
+            click:function(){
+                if(num ==0){
+                    $('.nav-btn').removeClass('on');
+                    num =1
+                }else {
+                    $('.nav-btn').addClass('on');
+                    num =0
+                }
+                $('.nav_process_box').slideToggle();
+            }
+        });
+        $(document).scroll(function(ev){
+            $('.nav_process_box').slideUp();
+        });
+        $(window).scroll(function(){
+            var w = $(window).scrollTop();
+            var hd = $('#header').offset().top;
+            if( w >= hd ){
+                $('#header').css({
+                    'position':'fixed',
+                    'top':'0'
+                })
+            }else {
+                $('#header').css({
+                    "position":"relative",
+                    'top':'0'
+                })
+            }
+        });
+
+        $('.zh').hover(function(){
+            $('.step_02>span').show();
+        },function(){
+            $('.step_02>span').hide();
+        });
+        $('.wm').hover(function(){
+            $('.step_03>span').show();
+        },function(){
+            $('.step_03>span').hide();
+        })
+
+    })
+</script>
+</html>

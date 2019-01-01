@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery.min.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top:50px;
+            left: 30px;
+            display: none;
+            /*background: #0febc1;*/
+        }
+        div:nth-of-type(1){
+            background: #2196F3;
+        }
+        div:nth-of-type(2){
+            background: #0febc1;
+        }
+        div:nth-of-type(3){
+            background: #ff3f38;
+        }
+        button{
+            position: relative;
+            top:0;
+            left: 50px;
+        }
+        button.now{
+            border: 1px solid #00b0e0;
+            background: #0febc1;
+        }
+        div.now{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<button class="now">111</button>
+<button>222</button>
+<button>333</button>
+
+<div class="now">111</div>
+<div>222</div>
+<div>333</div>
+
+
+<script>
+
+    /*
+     1、找到input 添加点击事件（click）;
+     2、问题：所有的按钮变成红色  解决：清空所有
+     3、找到对应的input 背景颜色变色
+     * 4、问题：所有的div 显示了 解决：让所以的div都消失
+     * 5、让对应的div显示
+    *
+    *
+    * */
+
+//    var oDiv = $('div');
+//    var oBtn = $('button');
+//    console.log(oDiv);
+//    console.log(oBtn);
+//
+//    for (let i = 0; i < oBtn.length; i++) {
+//        oBtn[i].onclick = function(){
+//        for (var j = 0; j < oDiv.length; j++) {
+//            // 让所有的 消失
+//            oDiv[j].className='';
+//            oBtn[j].className='';
+//            }
+//            //显示当前
+//            oDiv[i].className='now';
+//            oBtn[i].className='now';
+//        }
+//    }
+
+
+    $('button').click(function(){
+        $('button').attr('class','');
+        $(this).attr('class','now');
+
+        $('div').attr('class','');
+        $('div').eq($(this).index()).attr('class','now');
+
+    });
+
+//    $('div').each(function(index){
+//        $('button').click(function(index){
+//            $('div:eq('+ index +')')
+//        })
+//    })
+
+
+</script>
+</body>
+</html>

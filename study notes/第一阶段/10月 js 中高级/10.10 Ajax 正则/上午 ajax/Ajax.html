@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+</head>
+<body>
+<script>
+
+    //1、创建ajax实例
+    var xhr = new XMLHttpRequest();
+    //2、打开与服务器的连接
+    /*
+    * 'GET' 请求方式 get/post
+    * 'aaa.tet' 请求地址url
+    * false:异步  true :同步
+    * */
+    xhr.open('GET','aa.html',true);
+    //3、发送请求
+    xhr.send();
+    //4、等待服务器做出响应
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState == 4 && xhr.status == 200){
+            console.log(xhr.responseText);
+        }
+    }
+
+
+
+</script>
+</body>
+</html>

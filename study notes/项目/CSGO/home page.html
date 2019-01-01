@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSGO官方网站 - 反恐精英：全球攻势 - 全景UI风暴降临</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/welcome.js"></script>
+    <link rel="stylesheet" href="css/home%20page.css">
+</head>
+<body>
+<header>
+    <!--导航-->
+    <nav>
+        <a class="logo" href="home%20page.html"><img src="img/logo.png" alt=""></a>
+        <div class="menu">
+            <a href="index.html">进入官网</a>
+            <a href="javascript:;" id="zc">注册账号</a>
+            <a href="javascript:;">游戏充值</a>
+            <a href="javascript:;">客服中心</a>
+        </div>
+        <a href="download.html" class="download"></a>
+    </nav>
+
+</header>
+<article>
+    <!--第一部分-->
+    <div class="section1">
+        <div class="bg-video">
+            <video loop autoplay preload muted>
+                <source type="video/webm" src="video/nuke720p_2.webm">
+                <source type="video/mp4" src="video/nuke720p_2.mp4">
+            </video>
+        </div>
+        <div class="left-box">
+            <div class="banner-text">
+                <img src="img/main-banner-text.png" alt="">
+            </div>
+            <div class="news-box">
+                <div class="thumb">
+                    <video loop autoplay controls muted>
+                        <source type="video/webm" src="video/CSGO_UI.webm">
+                        <source type="video/mp4" src="video/CSGO_UI.mp4">
+                    </video>
+                </div>
+                <h2>全景UI风暴降临，颠覆性全新画面，不变的竞技经典！</h2>
+            </div>
+        </div>
+    </div>
+
+    <!--第二部分-->
+    <div class="section2">
+        <div class="bg">
+            <img src="img/bg_section2.jpg" alt="">
+        </div>
+        <div class="list">
+            <div class="item">
+                <a href="">
+                    <img src="img/person1_4f18f3d2d2bfb0b4bf081e8ed29fd08a.png" alt="">
+                    <video loop="" preload="" muted="">
+                        <source type="video/webm" src="video/LEFT_1_21.webm">
+                        <source type="video/mp4" src="video/LEFT_1_21.mp4">
+                    </video>
+                </a>
+            </div>
+            <div class="item">
+                <a href="">
+                    <img src="img/person1_4f18f3d2d2bfb0b4bf081e8ed29fd08a.png" alt="">
+                    <video loop="" preload="" muted="">
+                        <source type="video/webm" src="video/RIGHT_1_20.webm">
+                        <source type="video/mp4" src="video/RIGHT_1_20.mp4">
+                    </video>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--第三部分-->
+    <div class="section3">
+        <div class="list">
+            <div class="item">
+                <h3>武器展示</h3>
+                <a href="javascript:;">
+                    <div class="thumb">
+                        <img src="img/weapon.jpg" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <h3>活动专题</h3>
+                <a href="rearms.html">
+                    <div class="thumb"><img src="img/15db15691b0c83a329cdf025bb5be0601538209053.jpg" alt=""></div>
+                </a>
+            </div>
+            <div class="item">
+                <h3>攻略视频</h3>
+                <a href="javascript:;">
+                    <div class="thumb"><img src="img/a4758d5ab692d2c934a77078f41f8f611536650418.jpg" alt=""></div>
+                </a>
+            </div>
+        </div>
+        <div class="link-group">
+            <a href="index.html">进入官网</a>
+            <a href="download.html">下载游戏</a>
+        </div>
+    </div>
+
+    <!--第四部分-->
+    <div class="section4">
+        <div class="links">
+            <a href="javascript:;" class="zzfw" target="_blank" title="自助服务"></a>
+            <a href="javascript:;" class="txz" target="_blank" title="通行证查询"></a>
+            <a href="javascript:;" class="zxkf" target="_blank" title="在线客服"></a>
+            <a href="javascript:;" class="wb" target="_blank" title="微博"></a>
+            <a href="javascript:;" class="wx" target="_blank" title="微信"></a>
+            <a href="javascript:;" class="lt" target="_blank" title="论坛"></a>
+            <a href="javascript:;" class="wmdz" target="_blank" title="完美对战"></a>
+        </div>
+    </div>
+
+</article>
+<div id="csgo-side-float">
+    <a href="javascript:;" class="lnk-close"></a>
+    <a href="rearms.html" class="lnk-img">
+        <img src="img/251c140a03bd81f9966cb964f95fad111538192222.jpg" alt="">
+    </a>
+</div>
+<footer id="footerBox"></footer>
+<script>
+    $(function(){
+        $('#footerBox').load('footer.html');
+
+        $('.lnk-close').click(function(){
+            $('#csgo-side-float').animate({'right':"-158px",'display':"none"})
+        });
+
+        $('.section2 .item:eq(0)').hover(function(){
+                $(this).next().addClass('mask');
+            $(this).find($('video')).trigger('play')
+            }, function(){
+                $(this).next().removeClass('mask');
+            $(this).find($('video')).trigger('pause')
+            }
+        );
+        $('.section2 .item:eq(1)').hover(function(){
+                $(this).prev().addClass('mask');
+                $(this).find($('video')).trigger('play')
+            }, function(){
+                $(this).prev().removeClass('mask');
+                $(this).find($('video')).trigger('pause')
+            }
+        );
+        $('#zc').click(function(){
+            alert('您所有的账号注册流程，只能在客户端内完成，请您先下载客户端。')
+        })
+    })
+
+</script>
+</body>
+</html>

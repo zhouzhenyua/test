@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jquery.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        div{
+            width: 200px;
+            height: auto;
+            background: #A1C9FF;
+            position: relative;
+            /*margin: 0px auto;*/
+        }
+        .box1,.box2,.box3{
+            /*width: 100%;*/
+            height: auto;
+        }
+        h3{
+            font-size: 20px;
+            text-align: center;
+
+        }
+        ul li{
+            list-style: none;
+            text-align: center;
+            cursor: pointer;
+        }
+        ul li:hover{
+            background: #ff3f38;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="box1">
+    <h3>我的好友</h3>
+    <ul>
+        <li>1111</li>
+        <li>11112212</li>
+        <li>851320</li>
+        <li>89324512</li>
+    </ul>
+</div>
+<div class="box2">
+    <h3>企业好友</h3>
+    <ul>
+        <li>1111</li>
+        <li>11112212</li>
+        <li>851320</li>
+        <li>89324512</li>
+    </ul>
+</div>
+<div class="box3">
+    <h3>黑名单</h3>
+    <ul>
+        <li>1111</li>
+        <li>11112212</li>
+        <li>851320</li>
+        <li>89324512</li>
+    </ul>
+</div>
+<script>
+    $(function(){
+
+//        1. slideDown(): 带动画的展开
+//        2. slideUp(): 带动画的收缩
+//        3. slideToggle(): 带动画的切换展开/收缩
+
+        $('.box1 ul').hide();
+        $('.box2 ul').hide();
+        $('.box3 ul').hide();
+
+
+        $('.box1 h3').click(function(){
+            $('.box1 ul').slideToggle();
+            $('.box2 ul').hide();
+            $('.box3 ul').hide();
+        });
+        $('.box2 h3').click(function(){
+            $('.box2 ul').slideToggle();
+            $('.box1 ul').hide();
+            $('.box3 ul').hide();
+        });
+        $('.box3 h3').click(function(){
+            $('.box3 ul').slideToggle();
+            $('.box1 ul').hide();
+            $('.box2 ul').hide();
+        })
+
+
+
+    })
+
+
+</script>
+</body>
+</html>

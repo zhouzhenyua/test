@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>构造函数</title>
+</head>
+<body>
+<script>
+    /*
+    * 构造函数模式  结合this 使用  类
+    * 在构造函数中（类），this 指向所属类的实例
+    * 在js 对象中，每一种值 都有两种创建方式
+    *
+    * 字面量创建
+    * var num =5;
+    * 构造函数创建
+    * 在构造函数中，在this上面绑定的方法、属性
+    * 都属于每一个实例所私有的。
+    * var num =new Number(5);
+    *
+    * 构造函数为了和普通函数区分，一般首字母 大写。
+    *
+    *
+    *
+    * prototype 函数的原型属性
+    * 每一个函数都天生自带一个prototype 属性
+    * 每一个对象都天生自带一个_proto_ 属性
+    * prototype 存在每一个函数 的 公共方法和属性
+    *
+    *
+    *
+    *
+    *
+    *
+    * */
+    function Person(name,age){
+        //加工
+        this.name =name;
+        this.age =age;
+        this.eat =function(){}
+    }
+    //new person()  相当于创建了person类的实例
+    var sun = new Person();
+    var sun1 = new Person();
+
+    Person.prototype.eat =function(){}
+
+</script>
+</body>
+</html>

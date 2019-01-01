@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+
+        @media screen and (min-width: 200px){
+            .box{
+                width: 640px;
+                height: 500px;
+                background: #2f2f2f;
+            }
+            .box div{
+                float: left;
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                background: #A1C9FF;
+            }
+        }
+        @media screen and (min-width: 500px){
+            .box{
+                width: 640px;
+                height: 500px;
+                background: #00A78B;
+            }
+        }
+        @media screen and (min-width: 800px){
+            .box{
+                width: 640px;
+                height: 500px;
+                background: #ffe013;
+            }
+        }
+        @media screen and (min-width: 1068px){
+            .box{
+                width: 640px;
+                height: 500px;
+                background: #f10180;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--@media -->
+    <!---->
+    <!--max-width:1000px <=1000px -->
+    <!---->
+    <!--min-width:1000px >=1000px -->
+
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+</body>
+</html>

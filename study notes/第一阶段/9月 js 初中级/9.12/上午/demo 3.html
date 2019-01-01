@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 300px;
+            height: 50px;
+            margin: 50px auto 0;
+
+        }
+        #box div{
+            float: left;
+        }
+        #box div:nth-child(1){
+            width: 50%;
+            height: 100%;
+            background: #f9d8b4;
+        }
+        #box div:nth-child(2){
+            width: 50%;
+            height: 100%;
+            background: #fe533b;
+        }
+        #tex{
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+
+        }
+        #tex div{
+            display: none;
+            width: 100%;
+            height: 100%;
+
+        }
+        #tex div:nth-child(1){
+            display: block;
+            background: #ffffbb;
+        }
+        #tex div:nth-child(2){
+            background: #ffaaaa;
+        }
+        #tex div:nth-child(3){background: #ff33ff}
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div>1</div>
+        <div>2</div>
+    </div>
+    <div id="tex">
+        <div>1</div>
+        <div>2</div>
+    </div>
+<script>
+    var oTit = document.getElementById('box'),
+            oTi = oTit.getElementsByTagName('div'),
+        oTex = document.getElementById('tex'),
+            oTx = oTex.getElementsByTagName('div');
+
+    console.log(oTx);
+    console.log(oTi);
+
+
+    function aa(){
+        for (var i = 0; i < oTi.length; i++) {
+            oTi[i]=i;
+
+
+        }
+    }
+    //    function fn(){
+//        if(arguments.prototype == 'object'){
+//
+//        }else if(arguments.prototype =='arguments'){
+//
+//        }
+//    }
+
+//    index = 0;
+//    function xs(a,b,c){
+//        for (let i = 0; i < a.length; i++) {
+//            a[i][c] = function(){
+//                for (var j = 0; j < b.length; j++) {
+//                    b[j].classList.remove('act');
+//                    a[j].classList.remove('act')
+//                }
+//                b[i].classList.add('act');
+//                this.classList.add('act');
+//                index = i;
+//            }
+//        }
+//    }
+//    xs(oTi,oTx,'onclick')
+
+</script>
+</body>
+</html>

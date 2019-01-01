@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>serialize   serializeArray</title>
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+
+<form>
+    <input type="text" name="a" value="11">
+    <input type="text" name="b" value="22">
+    <input type="text" name="c" value="33">
+</form>
+<script>
+    /**
+     * serialize()  字符串序列化  对象表单
+     * serializeArray()
+     *
+     * ajax 的请求方式
+     *
+     * get  post  常用
+     *
+     * put  delete  测试用
+     *
+     * options:不推荐
+     *
+     *mock
+     *
+     * postman  接口测试工具
+     *
+     * 1、application/x-www-form-urlencoded  处理字符串请求
+     *
+     * 2、multipart/form-data  上传文件时需要设置
+     *
+     * 3、text/plain 处理文本
+     */
+
+//    serialize     数组序列化
+//    serializeArray    字段转数组
+
+
+    $(function(){
+
+        var aa = [
+            {"name":"a","value":11},
+            {"name":"b","value":111},
+            {"name":"c","value":1111111}
+        ];
+
+        console.log($('form').serializeArray());
+
+//        console.log($('form').serialize());
+
+    })
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件对象</title>
+</head>
+<body>
+<div style="width: 200px;height: 200px;background: #0febc1;position: absolute;top: 0;left: 0;"></div>
+<script>
+//鼠标事件
+
+//
+//    document.onclick = function(ev){
+//        var event = ev||window.event;
+//        console.log('client:'+ event.clientX + '--' + event.clientY); //相对于浏览器
+//
+//
+//        var pageX = event.pageX||event.clientX + document.documentElement.scrollLeft;
+//        var pageY = event.pageY||event.clientY + document.documentElement.scrollTop;
+//
+//
+//        console.log('page:' + pageX + '--' + pageY);//相对于页面
+//        //page 有兼容问题 ，IE6、7、8 不兼容
+//        console.log('screen:' + event.screenX + '--' + event.screenY); //相对于屏幕
+//    };
+
+
+//window.onload = function(){
+    var oDiv = document.getElementsByTagName('div')[0];
+
+
+    document.onmousemove = function (ev) {
+        var oEvent = ev || event;
+        var scrllTop = document.documentElement.scrollTop || document.body.scrollTop;
+        var scrllLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
+
+        oDiv.style.left = oEvent.clientX + scrllLeft + 'px';
+        oDiv.style.top = oEvent.clientY + scrllTop + 'px';
+
+    };
+    oDiv.onclick = function(){
+//        document.onmousemove = null;
+    };
+//}
+
+</script>
+</body>
+</html>

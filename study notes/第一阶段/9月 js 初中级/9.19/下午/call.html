@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this</title>
+</head>
+<body>
+<script>
+
+
+    function sum(x,y){
+        console.log(this);
+        return x+y;
+    }
+//    console.log(sum.call(1, 2, 3));
+
+
+//    var arr =[51,3,1,3,1,32,68,51];
+//
+//console.log(Math.max.apply(window, arr));
+//console.log(Math.min.apply(window, arr));
+//
+//
+//
+//    bind()
+
+    sum.call(undefined);//window
+    sum.call(null);//window
+    sum();//window
+
+
+</script>
+</body>
+</html>

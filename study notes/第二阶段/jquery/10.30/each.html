@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+<div>
+    <ul>
+        <li>33</li>
+        <li>32</li>
+        <li>44</li>
+        <li>66</li>
+    </ul>
+</div>
+<script>
+    $('li').each(function(i,item){
+        //第一个参数是下标， 第二个参数是当前元素
+
+        console.log(arguments); //可以查看 拥有的函数和方法
+
+        console.log(i);
+        $(item).html(i);
+
+
+    })
+
+</script>
+</body>
+</html>

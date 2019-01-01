@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+    <script src="../jquery.min.js"></script>
+    <link rel="stylesheet" href="../../reset.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div ul li{
+            width: 200px;
+            height: 200px;
+            /*border-radius: 50%;*/
+            border: 1px solid #f23030;
+            list-style: none;
+            float: left;
+            margin: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        #div ul li img:hover{
+            transform:scale(1.2) ;
+            transition: 1s;
+        }
+        #div ul li img{
+            width: 100%;
+            height: 100%;
+            border-radius: 200px;
+        }
+        #div ul li p{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        #div ul li span{
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<button id="btn">请求</button>
+<div id="div">
+    <ul class="clear">
+        <!--<li>-->
+            <!--<img src="" alt="">-->
+            <!--<p></p>-->
+        <!--</li>-->
+
+    </ul>
+</div>
+<script>
+    /*
+    *$.get(url).then(function(){})
+    *$.post(url).then(function(){})
+    * $.json()
+    *
+    *
+    *1、anywhwre
+    * 2、 live-server
+    * */
+//    $('#btn').click(function(){
+//        $.ajax({
+//            url:"https://app3.qdaily.com/wxapp/homes/index/0.json",
+//            type:"get",  //get  post
+//            data:{   //往后台传输的数据
+//
+//            },
+//            async:false,
+//            dataType:'json'
+//        }).done(function(result){
+//            console.log(result);
+////            $('#div').html(result)
+//        })
+//    });
+
+
+
+    // asy-mock 示例
+
+    $("#btn").click(function(){
+        $.ajax({
+            url:"https://www.easy-mock.com/mock/5bdab01ff1739457034b92ba/example/datal",
+            type:"get",   //get  post
+            data:{},        //往后台传输的数据    jsonp  callback
+            async:false,
+            dataType:"json"   // `` 模板字符串   ${}  解析模板
+        }).done(function(result){
+            var data = result.response.feeds;
+            console.log(result);
+            console.log(data);
+            for (var i = 0; i < data.length; i++) {
+                $('#div ul').append(`<li>
+                <img src="${data[i].image}">
+                <p>${data[i].post.description}</p>
+                <span>${data[i].post.title}</span>
+                </li>`)
+            }
+        })
+    });
+
+// 小鸟示例
+//    $("#btn").click(function(){
+//        $.ajax({
+//            url:"https://www.easy-mock.com/mock/5bdab01ff1739457034b92ba/example/birld",
+//            type:"get",   //get  post
+//            data:{},        //往后台传输的数据    jsonp  callback
+//            async:false,
+//            dataType:"json"   // `` 模板字符串   ${}  解析模板
+//        }).done(function(result){
+//            var data = result[0].data;
+//            console.log(result);
+//            console.log(data);
+//            for (var i = 0; i < data.length; i++) {
+//                $('#div ul').append(`<li>
+//                <img src="${data[i].coverImg}">
+//                <!--<span></span>-->
+//                </li>`);
+//                console.log(data);
+//            }
+//        })
+//    });
+
+
+
+//    $('#btn').click(function(){
+//
+//        $.getJSON("https://app3.qdaily.com/wxapp/homes/index/0.json?jsoncallback=?",function(data){
+//            console.log(data);
+//        })
+//    })
+
+
+</script>
+</body>
+</html>

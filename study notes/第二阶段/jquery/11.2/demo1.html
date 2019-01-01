@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--<script src="../jquery.min.js"></script>-->
+</head>
+<body>
+<script>
+
+    /*
+    * 必备
+    * 面向对象
+    * 兼容性
+    * 事件
+    * */
+
+    // 1、$()  $ is not defind
+    /*思路
+    1、回顾jq 写法 $() 函数
+    2、定义一个 $ 函数
+    * 1\ var $ = function(){}
+    * 2\ function(){}
+    *
+    * 3\(function($){})($) 封装块时采用，缺点取不到值
+    *
+    *
+    * */
+    // function $(){}  解决找不到$ 的问题
+
+
+    //2、 $() 没有任何功能
+    /*添加功能
+    1、获取元素  绑定事件
+    2、事件监听 addEventListener(event,fn,true/false)
+    3、如何获取到元素  方案：进行传参
+    4、封装函数  bindEvent(obj)
+    * */
+
+
+    //obj 元素    events事件    fn回调函数
+    function bindEvent(obj,events,fn){
+
+        if(obj.addEventListener){
+            //谷歌
+            obj.addEventListener(events,function(ev){
+               // fn =false   fn=undefined
+                if(fn==false){
+                    ev.preventDefault();
+                    ev.cancelBubble=true;
+                }
+            },false)
+        }else {
+            //ie
+            obj.attachEvent("on"+events,function(){
+                if(fn==false){
+                    window.event.cancelBubble =true;
+                    return false
+                }
+            })
+        }
+    }
+
+    function $(){}
+    $();  //函数 原生不存在 封装
+    $('div');  //获取元素   addEventListener(元素,事件,回调函数,true) 谷歌/火狐
+                          //  attachEvent('on'+eventtype)  ie
+
+
+
+
+
+    // 封装class 获取
+
+    function getByClass(oParents,aClass){
+        var arr =[];
+        var ele = oParents.getElementsByTagName('*');
+        for (var i = 0; i < ele.length; i++) {
+            if(ele[i].className==aClass){
+                arr.push(ele[i])
+            }
+        }
+        return arr
+    }
+
+
+
+    // 封装 style
+
+    function getStyle(obj,attr){
+        if(obj.currentStyle){
+            return obj.currentStyle[attr]
+        }else {
+            // false
+            // 兼容火狐低版本
+            // true
+            //getComputedStyle 兼容谷歌
+            return getComputedStyle(obj,false)[attr]
+        }
+    }
+
+
+
+    //封装转数组
+    function toArray(elems){
+        var arr=[];
+        for (var i = 0; i < elems.length; i++) {
+            arr.push(elems[i])
+        }
+        return arr;
+    }
+
+
+    //封装 $()
+
+
+
+
+</script>
+</body>
+</html>

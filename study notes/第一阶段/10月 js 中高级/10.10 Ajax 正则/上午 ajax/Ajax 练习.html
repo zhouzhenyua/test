@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+</head>
+<body>
+<script src="../ajax.js"></script>
+<script>
+    window.onload = function(){
+        ajax('package.json',function(str){
+
+            var arr = eval("("+str+")");;
+//            var arr = JSON.parse(str);
+//            let st =``;
+//            for (var i = 0; i < arr.length; i++) {
+//                st+=``
+//
+//            }
+            console.log(arr);
+            console.log(typeof arr);
+            console.log(typeof str);
+        },function(){
+            alert('失败')
+        })
+    }
+
+</script>
+</body>
+</html>
